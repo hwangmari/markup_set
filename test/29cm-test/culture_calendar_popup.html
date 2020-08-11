@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>culture_calendar</title>
+<link rel="stylesheet" href="common.css">
+<style media="screen">
+.culture_ly{padding:30px 25px;background:#181819;color:#a0a0a0}
+.culture_ly .trip{position:relative;padding:25px 0 8px;border-bottom:1px solid #d4d4d4}
+.culture_ly .trip:before{display:block;position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#00c1a5;content:''}
+.culture_ly .trip span:nth-child(2){float:right}
+.culture_dsc h4{margin:18px 0;font-weight:500;font-size:14px;color:#fff}
+.culture_dsc h3{margin-bottom:18px;font-weight:600;font-size:24px;color:#fff}
+.culture_dsc p{font-weight:200}
+.culture_slide{margin:25px -25px 35px}
+.culture_ly button{display:block;width:20px;height:20px;margin:0 auto;border:1px solid #d4d4d4}
+.culture_ly .btn{display:block;position:relative;margin:20px 0;padding:20px 0 20px 20px;background:#d8d8d8;font-weight:600;color:#000}
+.culture_ly .btn:after{display:inline-block;position:absolute;top:0;right:0;min-width:68px;height:100%;background:#000 url(https://img.29cm.co.kr/next29cm/event/calendar/calender_btn_bg.png) no-repeat center 22px;background-size:45%;border:1px solid #000;content:''}
+.culture_ly .btn_buy{background:#000;color:#fff}
+.culture_ly .btn_buy:after{background:#fff url(https://img.29cm.co.kr/next29cm/event/calendar/calender_btn_bg.png) no-repeat center 22px;background-size:45%}
+
+</style>
+</head>
+<body>
+<div class="culture_ly">
+	<p class="trip">
+		<span>#Trip 1</span>
+		<span>Exhibition</span>
+	</p>
+	<div class="culture_dsc">
+		<h4>‘그리는 것’의 특별한 가치를 만나보세요</h4>
+		<h3>I draw : 그리는 것보다 멋진 건 없어</h3>
+		<p>
+			디뮤지엄의 2019년 첫 기획전. 19세에 &#60;뉴요커&#62; 커버를 장식한 거장 일러스트레이터 피에르 르탕을 비롯해
+			오아물 루, 해티 스튜어트, 언스킬드 워커, 무나씨, 람한 등 독창적인 작업으로 주목받는
+			국내외 작가 16인의 대표작과 신작 총 350여 점을 모았어요. 일상과 상상의 신나는 표현, 바로 ‘그리는 것'!
+		</p>
+		<div class="culture_slide">
+			<img src="https://img.29cm.co.kr/campaign/fissler/img/m_slide2_4.jpg" alt="" style="width:100%"/>
+		</div>
+	</div>
+	<p class="info">
+		<span>날짜 : 2019.02.14 - 09.01</span>
+		<span>장소 : 디뮤지엄</span>
+		<span>문의 : 070-5097-0020</span>
+	</p>
+	<a href="#" title="바로가기" class="btn">인스타그램 바로가기</a>
+	<a href="#" title="바로가기" class="btn btn_buy">컬처박스 구매하기</a>
+	<!--팝업일 경우 닫기 버튼-->
+	<button tyle="button">x</button>
+</div>
+</body>
+</html>

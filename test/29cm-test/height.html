@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>UI test</title>
+<style>
+*{padding:0;margin:0;}
+/* .testbx{position:relative;display:flex;flex-wrap:wrap;border:2px solid #000;background:orange}
+.testbx>div{display:flex;align-items:center;justify-content:center;flex:1;height:100%}
+.testbx>div .in{padding:30px;box-sizing:border-box}
+.lftbx{background:#ffc107;padding-right:50%}
+.rgtbx{background:#cddc39;right:0;left:50%;position:absolute;top:0;bottom:0} */
+
+.testbx{table-layout: fixed;width: 100%;display:table;border:2px solid #000;background:orange}
+.testbx .row{display:table-row;background:red}
+.testbx .row>div{display:table-cell;}
+.testbx .row>div .in{padding:30px;box-sizing:border-box}
+.lftbx{background:#ffc107}
+.rgtbx{background:#cddc39}
+.bx{width:30px}
+</style>
+</head>
+<body style="padding:30px">
+    <div class="testbx">
+        <div class="row">
+            <div class="lftbx">
+                <div class="in">
+                    <p>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                        왼쪽 박스 임돠<br>
+                    </p>
+                </div>
+            </div>
+            <div class="bx">
+
+            </div>
+            <div class="rgtbx">
+                <div class="in">
+                    <p>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                        오른쪽 박스 임돠<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

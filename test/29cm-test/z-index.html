@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>z-index</title>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+    .bx{position:relative;width:200px;height:200px;border:4px solid #000}
+    .inbx{position:absolute;top:-25%;left:50%;width:200px;height:300px;border:1px solid #fff}
+    .inbx:hover{border:1px solid #000;background:#000!important}
+</style>
+<body style="padding:50px">
+    1<div class="bx" style="background:red;z-index:30">
+        <div class="inbx" style="background:red;z-index:10"></div>
+    </div>
+    2<div class="bx" style="background:orange;z-index:20">
+        <div class="inbx" style="background:orange;z-index:40"></div>
+    </div>
+    3<div class="bx" style="background:green;z-index:10">
+        <div class="inbx" style="background:green;z-index:10"></div>
+    </div>
+</body>
+</html>

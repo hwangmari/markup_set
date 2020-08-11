@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>test : mix-blend-mode</title>
+<link rel="stylesheet" href="common.css">
+<style media="screen">
+.project-main{overflow:hidden;visibility:visible;width:auto;height:50vh}
+.mask {position:relative;top:0;left:0;width:auto;height:100%}
+.mask-above {
+	display:flex;align-items:center;justify-content:center;
+	overflow:hidden;position:absolute;
+	top:0;right:0;bottom:0;left:0;z-index:3;
+	background:#6d6d6d;margin:0;padding:0;
+	/* mix-blend-mode:lighten; */
+	mix-blend-mode:screen;
+}
+.mask-above h5{font-family:"campton";font-weight:900;font-size:166px;line-height:156px;color:#333;mix-blend-mode:multiply}
+
+</style>
+</head>
+<body>
+<div class="project-main">
+	<div class="mask">
+		<div class="mask-above blend-lighten" style="">
+			<h5 class="cortilia-2 move-right split-typo blend-multiply" style="">
+			012345<br>
+			456789<br>
+			890+12
+			</h5>
+		</div>
+		<div class="mask-below">
+			<video class="myvideo" poster="../../assets/img/assets/cover.png" autoplay="" loop="" muted="" style="visibility:visible;opacity:1;">
+				<source type="video/webm" src="http://yebocreative.com/assets/img/project/cortilia/video.webm">
+				<source type="video/mp4" src="http://yebocreative.com/assets/img/project/cortilia/video.mp4">
+			</video>
+		</div>
+	</div>
+</div>
+<div class="project-main">
+	<div class="mask">
+		<div class="mask-above blend-lighten" style="background:#fff;mix-blend-mode: lighten;">
+			<h5 class="cortilia-2 move-right split-typo blend-multiply" style="color:#000">
+			ABCDE<br>
+			FGIJK<br>
+			LMNOP
+			</h5>
+		</div>
+		<div class="mask-below">
+			<video class="myvideo" poster="../../assets/img/assets/cover.png" autoplay="" loop="" muted="" style="visibility:visible;opacity:1;">
+				<source type="video/webm" src="http://yebocreative.com/assets/img/project/marvel/video.webm">
+				<source type="video/mp4" src="http://yebocreative.com/assets/img/project/marvel/video.mp4">
+			</video>
+		</div>
+	</div>
+</div>
+</body>
+</html>

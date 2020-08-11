@@ -1,0 +1,104 @@
+
+
+
+/*
+.calendar_section{background-repeat:no-repeat;background-size: cover;background-position:0 0 ;background-attachment:fixed;
+
+ transform:none;animation: full_change 16s infinite;animation-fill-mode:both ;transition: background-position .8s;transition-timing-function: ease-out;
+ background-image:url(../img/main_full_1.jpg);
+ background-image:url(../img/main_full_2.jpg);
+ background-image:url(../img/main_full_3.jpg);
+ background-image:url(../img/main_full_4.jpg);
+ background-image:url(../img/main_full_5.jpg);
+
+}
+@keyframes full_change {
+    0%,100%{
+		background-image:url(../img/main_full_1.jpg)
+    }
+    17%{
+		background-image:url(../img/main_full_1.jpg)
+    }
+    20%{
+		background-image:url(../img/main_full_2.jpg)
+    }
+    37%{
+		background-image:url(../img/main_full_2.jpg)
+    }
+    40%{
+		background-image:url(../img/main_full_3.jpg)
+    }
+    57%{
+		background-image:url(../img/main_full_3.jpg)
+    }
+    60%{
+		background-image:url(../img/main_full_4.jpg)
+    }
+    77%{
+		background-image:url(../img/main_full_4.jpg)
+    }
+    80%{
+		background-image:url(../img/main_full_5.jpg)
+    }
+    97%{
+		background-image:url(../img/main_full_5.jpg)
+    }
+} */
+
+
+.lay_popup{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5)}
+.lay_popup .lay_in{position:absolute;top:10%;left:50%;bottom:10%;width:800px;margin-left:-400px;background:#00c0a5;color:#fff;line-height:20}
+.lay_popup .scroll{overflow:auto;height:100%;padding:60px;box-sizing:border-box}
+.lay_popup button{display:block;position:absolute;top:0;right:0;width:60px;height:60px;border:1px solid #fff;color:#fff}
+.lay_action .lay_popup{display:block}
+
+
+.culture_wrap{font-family:"campton"}
+.calendar_section{min-height:540px;padding:0 0 0 25px;background:#000;color:#fff}
+.calendar_section .inner{position:relative}
+.bg_line i{position:absolute;top:0;bottom:0;width:1px;background:#fff;opacity:.07}
+.bg_line i:nth-child(1){left:0}
+.bg_line i:nth-child(2){left:14.2%}
+.bg_line i:nth-child(3){left:28.4%}
+.bg_line i:nth-child(4){left:42.6%}
+.bg_line i:nth-child(5){left:56.8%}
+.bg_line i:nth-child(6){left:71%}
+.bg_line i:nth-child(7){left:85.2%}
+.calendar_section h1{padding:30px 0 23px;font-size:18px;letter-spacing:7px;text-transform:uppercase;line-height:24px}
+.calendar_section .inner p{font-size:14px;font-weight: 300;}
+.calender{margin-top:70px}
+
+.week{position:relative;text-align:left}
+.week,.week_head{display:flex}
+.day{flex:1;height:52px;box-sizing:border-box;color:#7e7b7b}
+.week_head .day{height:40px;font-size:12px;font-weight:300;color:#d4d4d4;line-height:16px}
+.prve,.next{color:#ccc}
+
+.dayon{margin-top: 4px;
+    vertical-align: top;
+    line-height: 6px;
+    font-size: 1px;}
+.dayon .icon{display:inline-block;overflow:hidden;width:6px;height:6px;border-radius:50%;margin-right:3px}
+.dayon .icon_on{background:#a0a0a0;color:#a0a0a0}
+.dayon .icon_open{background:#00c0a5;color:#00c0a5}
+
+
+.day_list{background:#181819}
+.day_list p{position:relative;padding:30px 40px;font-size: 13px;  font-weight: 300;color:#a0a0a0}
+.day_list p:before{position:absolute;top:35px;left:25px;width:6px;height:6px;border-radius:50%;background:#a0a0a0;content:''}
+.day_list li{position:relative;}
+.day_list li:before{position:absolute;top:50%;left:25px;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:#00c0a5;content:''}
+.day_list li:after{position:absolute;top:50%;right:18px;width:16px;height:7px;margin-top:-4px;background:url(https://img.29cm.co.kr/next29cm/event/calendar/ico_line.png) no-repeat 0 0;background-size:16px 7px;content:''}
+.day_list li+li{border-top:1px solid #303033;}
+.day_list a{display:block;overflow:hidden;height:55px;padding:1px 54px 0 40px;box-sizing:border-box;text-overflow:ellipsis;white-space: nowrap; font-size: 16px;
+  font-weight: 300;color:#fff;line-height:54px;}
+
+.day_guide{padding:54px 0;background:#00c1a5;color:#000;text-align: center;;line-height:24px}
+.day_guide .txt:before{display:block;width:20px;height:1px;margin:0 auto 40px;background:#000;content:''}
+.day_guide .txt{font-size: 18px;}
+.day_guide .txt2{margin-top:96px;font-size: 11px;
+  font-weight: 600;letter-spacing: 4.3px;text-transform:uppercase}
+
+.btn_fixed_area .btn{overflow:hidden;position:fixed;bottom:25px;height:44px;line-height:44px;border-radius:22px;background:#fff}
+.btn_fixed_area .btn_buy{left:25px;padding:0 22px;font-size:14px;color:#303033}
+.btn_fixed_area .btn_top{right:25px;width:44px;background:url(https://img.29cm.co.kr/next29cm/event/calendar/btn_top.png) no-repeat 0 0;background-size:44px 44px;line-height: 100em;vertical-align:top}

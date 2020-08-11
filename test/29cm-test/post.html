@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>UI test</title>
+<style media="screen">
+*{padding:0;margin:0;}
+/* html{overflow:hidden;position:fixed;height: 100%;border:1px solid red} */
+.issue_banner{overflow:hidden;position:relative;background-repeat:no-repeat;background-size:cover;background-position:center center}
+.issue_banner_in{position:absolute;top:0;right:0;left:0;bottom:0;z-index:10;padding:100px 0 0;box-sizing:border-box}
+.issue_bg{overflow:hidden;position:relative;left:50%;width:100%;-ms-transform:translate(-50%, 0);-webkit-transform:translate(-50%, 0);transform:translate(-50%, 0);text-align:center}
+.issue_bg img{width:100%}
+.issue_banner .issue_dsc{display:block;max-width:1000px;margin:0 auto;padding:0 50px;font-weight:bold}
+.issue_banner .issue_dsc.lft{text-align:left}
+.issue_banner .issue_dsc.rgt{text-align:right}
+.issue_banner .issue_dsc.cnt{text-align:center}
+.issue_banner.hidden .issue_dsc,
+.issue_banner.hidden .ruler-dday-area{display:none}
+.issue_banner .issue_dsc .tit{max-width:420px;font-size:48px;word-break:keep-all;white-space:pre-wrap;line-height:1.2}
+.issue_banner .issue_dsc .dsc{font-size:34px}
+.issue_banner .issue_dsc .dsc2{margin-top:20px;font-size:16px;white-space:pre-wrap;line-height:1.62}
+.issue_banner .issue_dsc .discout{margin-top:10px;font-size:70px;font-weight:600}
+.ruler-dday-area{position:absolute;left:0;right:0;bottom:115px;width:100%;max-width:1000px;margin:0 auto;padding:0 50px;border:1px solid red;color:#fff}
+.issue_img{max-width:1000px;margin:0 auto;padding:0 50px;text-align:center}
+.issue_img img{max-width:1000px}
+@media screen and (min-width:541px){
+    .issue_bg{min-width:2000px}
+    .issue_banner{background-image:url(https://img.29cm.co.kr/next-edition/2018/12/10/a02138e87500468a8491662ccefdb691_20181210150301.jpg)}
+}
+@media screen and (max-width:540px){
+    .issue_banner{background-image:url(https://img.29cm.co.kr/next-edition/2018/12/10/77864102eb8a464eb7552067c5e641a8_20181210160657.jpg?width=600)}
+    .issue_banner:after{position:absolute;top:0;right:0;left:0;bottom:0;background:rgba(0,0,0,.3);content:''}
+    .issue_banner.hidden:after{background:none}
+    /* .issue_bg{display:none} */
+    .issue_banner_in{z-index:10;min-height:580px;padding:50px 0 190px}
+    .ruler-dday-area{width:auto;bottom:83px;padding:0 20px}
+    .issue_img{padding:0 20px}
+    .issue_img img{width:100%}
+    .issue_banner .issue_dsc{padding:0 20px}
+    .issue_banner .issue_dsc .tit{font-size:34px;line-height:1.29;font-weight:bold}
+    .issue_banner .issue_dsc .dsc2{font-size:14px;line-height:1.5;font-weight:400}
+    .issue_banner .issue_dsc .discout{font-size:60px;line-height:82px}
+}
+</style>
+
+</head>
+<body>
+<!--
+
+모바일
+https://img.29cm.co.kr/next-edition/2018/12/10/77864102eb8a464eb7552067c5e641a8_20181210160657.jpg?width=600
+
+-->
+<div class="issue_banner">
+    <div class="issue_bg">
+        <img src="https://img.29cm.co.kr/next-edition/2018/12/10/a02138e87500468a8491662ccefdb691_20181210150301.jpg" alt=""/>
+    </div>
+    <div class="issue_banner_in">
+        <div class="issue_img">
+            <img src="https://img.29cm.co.kr/next-edition/2017/08/11/8f90d795b593426bbab3a7b0763b8cfc_20170811192943.png" alt="타이틀 투명 이미지"/>
+        </div>
+        <div class="issue_dsc lft">
+            <h1 class="tit">title 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 </h1>
+            <p class="dsc2">테스트 ₩123456 contents 테스트 ₩123456 contents </p>
+            <div class="flagbx">
+                <span class="flags">#플래그</span>
+            </div>
+            <div class="discout">10%</div>
+        </div>
+
+        <div class="ruler-dday-area">날짜</div>
+    </div>
+</div>
+
+</body>
+</html>
