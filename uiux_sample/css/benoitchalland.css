@@ -1,0 +1,269 @@
+a img,button {
+	border:none
+}
+a,a:active,a:hover,button {
+	outline:0
+}
+a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,
+figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,
+object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video {
+	padding:0;
+	margin:0
+}
+#top-bar,body,html {
+	width:100%
+}
+#home-page,#nav,#top-bar {
+	text-align:center
+}
+#home-more-projects,#nav,#top-bar,.home-projects__title,.projects-list__title,body {
+	text-transform:uppercase;
+	letter-spacing:.08em
+}
+#home-more-projects,#nav,#top-bar,.project-scroll-btn,.projects-list__title,body {
+	letter-spacing:.08em
+}
+html {
+	box-sizing:border-box;
+	height:100%
+}
+*,:after,:before {
+	box-sizing:inherit
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+	display:block
+}
+li {
+	list-style-type:none
+}
+body {
+	min-height:100%;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-family:"Weissenhof Grotesk",Helvetica,Arial,sans-serif;
+	font-weight:400
+}
+a {
+	text-decoration:none;
+	color:#000
+}
+button {
+	cursor:pointer;
+	background:0 0
+}
+.page-id-home #site-name,button:disabled {
+	cursor:default
+}
+.no-js .lazyload {
+	display:none
+}
+.page {
+    padding-top:40px
+}
+#home-page {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    text-align:left
+}
+#home-projects {
+	padding:0 20px;
+    padding:0;
+}
+.home-projects__item {
+	display:block;
+	margin-bottom:20px;
+	color:#bfbfbf;
+    width:30.56%;
+    width:calc(27.78%+40px);
+    padding-left:40px;
+    margin-bottom:0;
+    text-align:left
+}
+.home-projects__title {
+	position:relative;
+	z-index:10;
+    display:block;
+    width:auto!important;
+    padding:10px 0 10px 40px;
+    margin-top:0!important;
+    color:#000;
+    font-size:11px;
+    line-height:1em;
+    font-weight:500
+}
+.home-projects__title::after {
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:5px;
+	background-color:currentColor
+}
+.no-js .home-projects__item:first-child .home-projects__title {
+    color:currentColor
+}
+.home-projects__item.selected .home-projects__title {
+    z-index:15
+}
+.home-projects__title::after {
+    content:none
+}
+.no-js #home-projects:hover .home-projects__title {
+    color:initial
+}
+.app-not-init #home-projects .home-projects__item:hover .home-projects__title,.home-projects__item.selected .home-projects__title,.no-js #home-projects .home-projects__item:hover .home-projects__title {
+    color:currentColor
+}
+.home-projects__title__left-line,.home-projects__title__right-line {
+	position:absolute;
+	top:50%;
+	left:0;
+	display:block;
+	height:1px;
+	margin-top:-2px;
+	background-color:currentColor;
+	visibility:hidden
+}
+.app-not-init .home-projects__item:first-child .home-projects__title__left-line,.app-not-init .home-projects__item:first-child .home-projects__title__right-line,.no-js .home-projects__item:first-child .home-projects__title__left-line,.no-js .home-projects__item:first-child .home-projects__title__right-line {
+	visibility:inherit
+}
+#home-projects:hover .home-projects__title__left-line,#home-projects:hover .home-projects__title__right-line {
+	visibility:hidden
+}
+.home-projects__title__left-line {
+	width:21px;
+	transform-origin:right
+}
+.home-projects__title__right-line {
+	left:174px;
+	right:0;
+	transform-origin:left
+}
+.home-projects__title__inner {
+	transition:color .4s;
+	color:currentColor;
+    position:relative;
+    display:inline-block;
+    padding-right:10px;
+    background-color:#fff;
+    z-index:2
+}
+.home-projects__image-wrapper {
+	line-height:0;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+
+    position:absolute;
+    top:40px;
+    right:80px;
+    bottom:40px;
+    left:27.78%;
+    z-index:2;
+    visibility:hidden;
+    overflow:hidden;
+    background-color:transparent
+}
+#home-projects .home-projects__item:hover .home-projects__title__left-line,#home-projects .home-projects__item:hover .home-projects__title__right-line {
+    visibility:inherit
+}
+#home-projects:hover .home-projects__image-wrapper {
+    visibility:hidden
+}
+#home-projects .home-projects__item:hover .home-projects__image-wrapper,.home-projects__item:first-child .home-projects__image-wrapper {
+    visibility:inherit
+}
+.home-projects__item.selected .home-projects__image-wrapper {
+    z-index:15
+}
+.home-projects__image-wrapper::before {
+    content:none
+}
+
+#home-projects .home-projects__item:hover .home-projects__title__left-line,#home-projects .home-projects__item:hover .home-projects__title__right-line {
+    visibility:inherit
+}
+#home-projects:hover .home-projects__image-wrapper {
+    visibility:hidden
+}
+#home-projects .home-projects__item:hover .home-projects__image-wrapper,.home-projects__item:first-child .home-projects__image-wrapper {
+    visibility:inherit
+}
+.home-projects__item.selected .home-projects__image-wrapper {
+    z-index:15
+}
+.home-projects__image-wrapper::before {
+    content:none
+}
+.home-projects__image-wrapper__link {
+    display:block
+}
+.home-projects__image-wrapper__ratio {
+	position:relative;
+	display:block;
+    transition:width .5s,height .5s;
+    overflow:hidden
+}
+.home-projects__image-wrapper__ratio::before {
+	content:"";
+	position:absolute;
+	top:1px;
+	right:1px;
+	bottom:1px;
+	left:1px;
+	background-color:currentColor
+}
+.home-projects__image {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:100%
+}
+.js .home-projects__image {
+	opacity:0;
+	backface-visibility:hidden
+}
+.home-projects__image.lazyloaded {
+	opacity:1;
+	transition:opacity .7s
+}
+.no-js .home-projects__image--portrait {
+	height:100%;
+	width:auto
+}
+.no-js .home-projects__image--landscape {
+	width:100%;
+	height:auto
+}
+.home-projects__color-wrapper {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:47.22%;
+	display:block;
+	visibility:hidden;
+	overflow:hidden
+}
+#home-projects:hover .home-projects__color-wrapper {
+	visibility:hidden
+}
+#home-projects .home-projects__item:hover .home-projects__color-wrapper,.home-projects__item:first-child .home-projects__color-wrapper {
+	visibility:inherit
+}
+.home-projects__color {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color:currentColor;
+	transform-origin:left
+}

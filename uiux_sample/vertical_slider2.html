@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="//idangero.us/swiper/dist/css/swiper.min.css">
+
+<!-- Demo styles -->
+<style>
+*{margin: 0;padding: 0;}
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet{background:#fff}
+.swiper-slide{}
+.swiper-slide div{}
+.slide1{background:#E91E63}
+.slide2{background:#cddc39}
+.slide3{background:#ffc107}
+.slide4{background:#4caf50}
+.slide5{background:#03a9f4}
+.slide6{background:#00bcd4}
+.slide7{background:#9c27b0}
+.slide8{background:#673ab7}
+.slide9{background:#3f51b5}
+.slide10{background:#ffc107}
+
+.swiper-slide-active .active{
+    flex:1;white-space: nowrap;font-size:60px;color:#fff;white-space: nowrap;
+	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+section .swiper-container2 {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+</style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+            <div class="active">Slide 1</div>
+        </div>
+        <div class="swiper-slide slide2"><div>Slide 2</div>
+            <section>
+                <!-- Swiper -->
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg)"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination2"></div>
+                </div>
+            </section>
+        </div>
+        <div class="swiper-slide slide3"><div class="active">Slide 3</div></div>
+        <div class="swiper-slide slide4"><div class="active">Slide 4</div></div>
+        <div class="swiper-slide slide5"><div class="active">Slide 5</div></div>
+        <div class="swiper-slide slide6"><div class="active">Slide 6</div></div>
+        <div class="swiper-slide slide7"><div class="active">Slide 7</div></div>
+        <div class="swiper-slide slide8"><div class="active">Slide 8</div></div>
+        <div class="swiper-slide slide9"><div class="active">Slide 9</div></div>
+        <div class="swiper-slide slide10"><div class="active">Slide 10</div></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="//idangero.us/swiper/dist/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+});
+
+var swiper2 = new Swiper('.swiper-container2', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+    },
+    pagination: {
+        el: '.swiper-pagination2',
+    },
+});
+</script>
+</body>
+</html>

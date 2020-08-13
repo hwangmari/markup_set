@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="//idangero.us/swiper/dist/css/swiper.min.css">
+
+<!-- Demo styles -->
+<style>
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 600px;
+}
+.swiper-pagination-bullet{background:#fff}
+.swiper-slide .slide-in-right{display:block;width:100%;color:#fff;text-align:left}
+.swiper-slide .slide-in-right span{display:block;width:100%;white-space: nowrap;}
+.swiper-slide:nth-child(even) .slide-in-right{color:#000;}
+.swiper-slide {display:flex;align-items:center}
+.slide-in-right dt,.slide-in-right dd{
+    position:relative;
+    margin:0;padding:10px 20px 0;opacity:0;box-sizing:border-box;
+    transform: translateX(500px);
+}
+.slide-in-right dt{font-size:50px;}
+.slide-in-right dt{font-size:40px;}
+.swiper-slide-active .slide-in-right dt{
+animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.swiper-slide-active .slide-in-right dd{
+	animation: slide-in-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:540px){
+    .swiper-slide {
+      width: 260px;
+      height: 320px;
+    }
+    .slide-in-right dt{font-size:25px}
+    .slide-in-right dd{font-size:18px}
+}
+</style>
+</head>
+<body style="background:#000">
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)">
+            <dl class="slide-in-right">
+                <dt><span>메리크리스마스</span></dt>
+                <dd>해피뉴이얼</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg">
+            <dl class="slide-in-right">
+                <dt><span>Merry Christmas</span></dt>
+                <dd>Happy Nes Year</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)">
+            <dl class="slide-in-right">
+                <dt>메리크리스마스</dt>
+                <dd>해피뉴이얼</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg">
+            <dl class="slide-in-right">
+                <dt>Merry Christmas</dt>
+                <dd>Happy Nes Year</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)">
+            <dl class="slide-in-right">
+                <dt>메리크리스마스</dt>
+                <dd>해피뉴이얼</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg">
+            <dl class="slide-in-right">
+                <dt>Merry Christmas</dt>
+                <dd>Happy Nes Year</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)">
+            <dl class="slide-in-right">
+                <dt>메리크리스마스</dt>
+                <dd>해피뉴이얼</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg">
+            <dl class="slide-in-right">
+                <dt>Merry Christmas</dt>
+                <dd>Happy Nes Year</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/21/3da03c2292b2423f9ad50f756e2e778f_20181121100351.jpg)">
+            <dl class="slide-in-right">
+                <dt>메리크리스마스</dt>
+                <dd>해피뉴이얼</dd>
+            </dl>
+        </div>
+        <div class="swiper-slide" style="background-image:url(https://img.29cm.co.kr/next-contents/2018/11/23/d8b0eda99b2e41aa8af37887d7462a61_20181123112905.jpg">
+            <dl class="slide-in-right">
+                <dt>Merry Christmas</dt>
+                <dd>Happy Nes Year</dd>
+            </dl>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="//idangero.us/swiper/dist/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+</script>
+</body>
+</html>

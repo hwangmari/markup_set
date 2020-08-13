@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>UIUX</title>
+<link rel="stylesheet" href="css/sample_03.css">
+<style>
+*{margin:0;padding:0}
+img{width:100%}
+.kenburns-top-left {position:absolute;top:0;right:0;bottom:0;left:0;background:url(https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg) no-repeat 50% 50%;background-size: cover;
+	animation: kenburns-top-left 3s ease-in-out infinite alternate both;
+}
+@keyframes kenburns-top-left {
+  0% {
+      transform: scale(1) translateY(0);
+      transform-origin: 50% 50%;
+  }
+  100% {
+    transform: scale(1.06) translateY(-15px);
+    transform-origin: 50% 50%;
+  }
+}
+.bxwrap{display:flex;align-items:center;justify-content:center;}
+.vertical_bx{position:relative;width:50%;margin:auto;padding-top:50%;box-sizing:border-box}
+.vertical_bxin{display:flex;    flex-wrap: wrap;position:absolute;top:0;right:0;bottom:0;left:0;}
+.vertical_bxin div{overflow:hidden;position:relative;flex:none;width:31%;padding-top:31%;margin:1.1515%;box-sizing:border-box}
+.vertical_bxin img{position: absolute;top:0;left:0;width:100%;}
+.scale-in-center{
+	animation: scale-in-center 1s  cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bx1{animation-delay:1.1s}
+.bx2{animation-delay:1.2s}
+.bx3{animation-delay:1.3s}
+.bx4{animation-delay:1.4s}
+.bx5{animation-delay:1.5s}
+.bx6{animation-delay:1.6s}
+.bx7{animation-delay:1.7s}
+.bx8{animation-delay:1.8s}
+.bx9{animation-delay:1.9s}
+
+</style>
+</head>
+<body>
+
+<div class="bxwrap " style="">
+    <div class="kenburns-top-left">
+
+    </div>
+    <div class="vertical_bx" style="">
+        <div class="vertical_bxin" style="">
+            <div class="scale-in-center bx1">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/ce40104b4f534dcd9e210dac5d928773_20181126145707.jpg" alt="" class="delay1">
+            </div>
+            <div class="scale-in-center bx2">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/5603a183c07b4d389c6280233ad350e9_20181126105029.jpg" alt="" class="delay2">
+            </div>
+            <div class="scale-in-center bx3">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/aa51ffaa463f47a1a872e0662747f4fc_20181126133841.jpg" alt="" class="delay3">
+            </div>
+            <div class="scale-in-center bx8">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/ce40104b4f534dcd9e210dac5d928773_20181126145707.jpg" alt="" class="delay1">
+            </div>
+            <div class="scale-in-center bx9">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/5603a183c07b4d389c6280233ad350e9_20181126105029.jpg" alt="" class="delay2">
+            </div>
+            <div class="scale-in-center bx4">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/aa51ffaa463f47a1a872e0662747f4fc_20181126133841.jpg" alt="" class="delay3">
+            </div>
+            <div class="scale-in-center bx7">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/ce40104b4f534dcd9e210dac5d928773_20181126145707.jpg" alt="" class="delay1">
+            </div>
+            <div class="scale-in-center bx6">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/5603a183c07b4d389c6280233ad350e9_20181126105029.jpg" alt="" class="delay2">
+            </div>
+            <div class="scale-in-center bx5">
+                <img src="https://img.29cm.co.kr/next-edition/2018/11/26/aa51ffaa463f47a1a872e0662747f4fc_20181126133841.jpg" alt="" class="delay3">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

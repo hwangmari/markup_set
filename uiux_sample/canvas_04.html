@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Drawing mouse path </title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var isLeftButtonPressed = false;
+var oldX = 0;
+var oldY = 0;
+
+// 컨텍스트 얻기
+var canvas;
+var context;
+
+function registerDrawingMode(event) {
+ var event = event || window.event;
+    var button = event.which || event.button;
+
+ if (button == 1) {
+  isLeftButtonPressed = true;
+  oldX = event.clientX;
+  oldY = event.clientY;
+ } else {
+  isLeftButtonPressed = false;
+ }
+}
+
+function releaseDrawingMode() {
+ isLeftButtonPressed = false;
+}
+
+function drawPath(event) {
+ if (isLeftButtonPressed) {
+  context.beginPath();
+
+  context.moveTo(oldX, oldY);
+  context.lineTo(event.clientX, event.clientY);
+  console.log(oldX+':'+oldY+':'+event.clientX+':'+event.clientY);
+
+  oldX = event.clientX;
+  oldY = event.clientY;
+
+  context.lineWidth = 2;
+  context.strokeStyle = '#FF9933';
+  context.stroke();
+
+ }
+}
+
+window.onload = function() {
+ canvas = document.getElementById('chart');
+ context = canvas.getContext('2d');
+}
+//-->
+</SCRIPT>
+</head>
+
+<body>
+
+<canvas id="chart" height="500" width="500" style='border:1px solid'
+        onmousemove='drawPath(event)'
+        onmousedown='registerDrawingMode(event)'
+        onmouseup='releaseDrawingMode()'></canvas>
+
+</body>
+</html>

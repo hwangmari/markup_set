@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>UIUX</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style>
+    .main_wrap{display:flex;justify-content:center;align-items:center;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;background:#000;color:#fff;text-align:center}
+    .main_wrap span{display:inline-block;padding:6%}
+    .top_bar{position:fixed;top:0;right:0;left:0;background:#fff;height:5%;animation:barplay 3s linear alternate}
+    .bottom_bar{position:fixed;left:0;right:0;bottom:0;background:#fff;height:5%;animation:barplay 3s linear alternate}
+    /* @keyframes barplay {
+        0%{height:50%}
+        100%{height:5%}
+    } */
+    .main_wrap ul{position:fixed;bottom:20px;right:20px;color:#000}
+    .main_wrap ul li{display:inline-block;padding-right:5px}
+    .main_wrap .heart_icon{position:relative;width:15px;height:60px}
+    .main_wrap .heart_icon i{position:absolute;bottom:0;right:0;display:inline-block;width:10px;height:10px;border-radius:5px;background:red;animation:heartplay 1s linear alternate}
+    .main_wrap .heart_icon .i2{left:0;bottom:12px;opacity:.8}
+    .main_wrap .heart_icon .i3{bottom:24px;opacity:.6}
+    .main_wrap .heart_icon .i4{left:0;bottom:36px;opacity:.4}
+    .main_wrap .heart_icon .i5{bottom:48px;opacity:.2}
+    @keyframes heartplay {
+        0%{bottom:0;right:0}
+
+    }
+</style>
+</head>
+<body>
+<div class="main_wrap">
+    <div class="top_bar"></div>
+    <div class="bottom_bar"></div>
+    <span>29CM</span>
+    <div class="heart_icon">
+        <i></i>
+        <i class="i2"></i>
+        <i class="i3"></i>
+        <i class="i4"></i>
+        <i class="i5"></i>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>브라우저 고정 탭</title>
+<style>
+* {margin:0;padding:0}
+ul,ol{list-style:none}
+
+body {}
+main {display:flex;align-items:center;justify-content:center}
+img{width: 100%}
+ul{width:320px;margin:0 auto;}
+li{padding:30px 20px 50px;text-align:right}
+.bx{margin-top: -14px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;}
+p{    margin-top: 10px;
+    font-size: 15px;
+    line-height: 24px;}
+.up {
+	animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+	animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translateY(10px);
+	animation-timing-function: ease-out;
+  }
+  75% {
+    transform: translateY(-10px);
+	animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+	animation-timing-function: ease-out;
+  }
+}
+.down {
+	animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-bottom {
+	0% {
+      transform: translateY(0);
+      animation-timing-function: ease-in;
+    }
+    25% {
+      transform: translateY(10px);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: translateY(-10px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0);
+     animation-timing-function: ease-out;
+    }
+}
+
+
+</style>
+<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <main>
+        <div class="">
+            <ul>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+                <li>
+					<img src="https://img.29cm.co.kr/next-edition/2018/11/22/26d1127e9603498fa75eb77cc9149da3_20181122113309.jpg" alt=""/>
+                    <div class="bx">
+						빈티지한 요소를 담은 여로에 입점 기념 -10%
+                    </div>
+					<p>빈티지 가방들의 특성에 대해 연구하고 고가구와 같은 오래된 것들이 지닌 형태를 모티브로 하여 디자인하는 여로에가 입점되었습니다. 코트 위에 가볍게 매기 좋은 미니 백으로 가죽, 컬러 모든 것이 고급스럽습니다. 직접 경험해 보세요. 입점 기념 10% 할인 중</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+<script>
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('.bx').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+},250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('.bx').removeClass('down').addClass('up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('.bx').removeClass('up').addClass('down');
+        }
+    }
+
+    lastScrollTop = st;
+}
+</script>
+
+</body>
+</html>

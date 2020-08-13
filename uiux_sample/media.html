@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>calender</title>
+<style>
+*{margin:0;padding:0}
+
+.calender{border:1px solid #ccc;border-width:0 1px 1px 0;background:#fff}
+.week{position:relative}
+.week .day:first-child{background:#eee}
+.week .day:last-child{background:#eee}
+.week,.week_head{display:flex;}
+.day{flex:1;height:150px;padding:10px;border:1px solid #ccc;border-width:1px 0 0 1px;box-sizing:border-box;}
+.week_head .day{display:flex;align-items: center;justify-content:center;height:50px;text-align:center;}
+.prve,.next{color:#ccc}
+.info1:after{display:flex;align-items:center;justify-content:center;position:absolute;top:1px;right:0;bottom:0;left:1px;border:6px dashed rgba(33,150,143,0.3);background:rgba(33,150,143,0.09);content:''}
+.calender .week:nth-child(4):after{left:42.9%;border-right:0;text-align:center;color:#21968f8d;content:'컬처 캘린더 정보 기간 : 2019.03.15~03.25';}
+.calender .week:nth-child(5):after{right:28.5%;border-left:0;}
+</style>
+</head>
+<body style="padding:30px;background:aliceblue">
+    <h1>3월</h1>
+    <div class="calender">
+        <div class="week_head">
+            <div class="day">
+                일
+            </div>
+            <div class="day">
+                월
+            </div>
+            <div class="day">
+                화
+            </div>
+            <div class="day">
+                수
+            </div>
+            <div class="day">
+                목
+            </div>
+            <div class="day">
+                금
+            </div>
+            <div class="day">
+                토
+            </div>
+        </div>
+        <div class="week">
+            <div class="day prve">
+                27
+            </div>
+            <div class="day prve">
+                28
+            </div>
+            <div class="day prve">
+                29
+            </div>
+            <div class="day prve">
+                30
+            </div>
+            <div class="day prve">
+                31
+            </div>
+            <div class="day">
+                1
+            </div>
+            <div class="day">
+                2
+            </div>
+        </div>
+        <div class="week">
+            <div class="day">
+                3
+            </div>
+            <div class="day">
+                4
+            </div>
+            <div class="day">
+                5
+            </div>
+            <div class="day">
+                6
+            </div>
+            <div class="day">
+                7
+            </div>
+            <div class="day">
+                8
+            </div>
+            <div class="day">
+                9
+            </div>
+        </div>
+        <div class="week info1">
+            <div class="day">
+                10
+            </div>
+            <div class="day">
+                11
+            </div>
+            <div class="day">
+                12
+            </div>
+            <div class="day">
+                13
+            </div>
+            <div class="day">
+                14
+            </div>
+            <div class="day">
+                15
+            </div>
+            <div class="day">
+                16
+            </div>
+        </div>
+        <div class="week info1">
+            <div class="day">
+                17
+            </div>
+            <div class="day">
+                18
+            </div>
+            <div class="day">
+                19
+            </div>
+            <div class="day">
+                20
+            </div>
+            <div class="day">
+                21
+            </div>
+            <div class="day">
+                22
+            </div>
+            <div class="day">
+                23
+            </div>
+        </div>
+        <div class="week">
+            <div class="day">
+                24
+            </div>
+            <div class="day">
+                25
+            </div>
+            <div class="day">
+                26
+            </div>
+            <div class="day">
+                27
+            </div>
+            <div class="day">
+                28
+            </div>
+            <div class="day next">
+                1
+            </div>
+            <div class="day next">
+                2
+            </div>
+        </div>
+    </div>
+
+    <style media="screen">
+        .calender_list{overflow:auto;margin-top:20px;padding:0 20px;border:1px solid #ccc;background:#fff}
+        .calender_list ul{display:flex;margin:0 20px 0 -10px;padding:0 20px 0 0}
+        .calender_list li{flex:none;width:200px;padding:20px 0 20px 10px}
+        .calender_list li a{display:block;width:200px;height:360px;padding:30px;background:#ccc;border:1px solid #ccc;color:#ccc;box-sizing:border-box}
+        .calender_list li a:hover{background:#fff;border:10px double red;color:red}
+
+    </style>
+    <div class="calender_list">
+        <ul>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                컬처 캘린더 정보<br>
+                기간 : 2019.03.15~03.25
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>UIUX</title>
+<style>
+*{margin:0;padding:0}
+</style>
+</head>
+<body style="background:#000">
+
+<canvas id="myCanvas" width="700" height="200"></canvas>
+
+<script>
+
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+
+	ctx.font = "20px Georgia";
+	ctx.strokeText("Hello World!", 10, 50);
+
+	ctx.font = "70px Verdana";
+
+	// Create gradient
+	var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+	gradient.addColorStop("0", "magenta");
+	gradient.addColorStop("0.5", "blue");
+	gradient.addColorStop("1.0", "red");
+
+	// Fill with gradient
+	ctx.strokeStyle = gradient;
+	ctx.strokeText("Big smile!", 10, 90);
+</script>
+</body>
+</html>

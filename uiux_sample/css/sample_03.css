@@ -1,0 +1,116 @@
+/* 전구느낌 */
+.text-flicker-in-glow{color:#fff;animation:text-flicker-in-glow 4s linear both}
+
+@-webkit-keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}@keyframes text-flicker-in-glow{0%{opacity:0}10%{opacity:0;text-shadow:none}10.1%{opacity:1;text-shadow:none}10.2%{opacity:0;text-shadow:none}20%{opacity:0;text-shadow:none}20.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.25)}20.6%{opacity:0;text-shadow:none}30%{opacity:0;text-shadow:none}30.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.5%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}30.6%{opacity:0;text-shadow:none}45%{opacity:0;text-shadow:none}45.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}50%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.45),0 0 60px rgba(255,255,255,.25)}55.1%{opacity:0;text-shadow:none}57%{opacity:0;text-shadow:none}57.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35)}60.1%{opacity:0;text-shadow:none}65%{opacity:0;text-shadow:none}65.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.35),0 0 100px rgba(255,255,255,.1)}75.1%{opacity:0;text-shadow:none}77%{opacity:0;text-shadow:none}77.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.4),0 0 110px rgba(255,255,255,.2),0 0 100px rgba(255,255,255,.1)}85.1%{opacity:0;text-shadow:none}86%{opacity:0;text-shadow:none}86.1%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}100%{opacity:1;text-shadow:0 0 30px rgba(255,255,255,.6),0 0 60px rgba(255,255,255,.45),0 0 110px rgba(255,255,255,.25),0 0 100px rgba(255,255,255,.1)}}
+
+
+/* 상품 떨어지는거  */
+.bounce-in-top01{-webkit-animation:bounce-in-top 6.1s linear both infinite alternate;animation:bounce-in-top 6.1s linear both infinite alternate}
+.bounce-in-top02{-webkit-animation:bounce-in-top 6.2s linear both infinite alternate;animation:bounce-in-top 6.2s linear both infinite alternate}
+.bounce-in-top03{-webkit-animation:bounce-in-top 6.3s linear both infinite alternate;animation:bounce-in-top 6.3s linear both infinite alternate}
+.bounce-in-top04{-webkit-animation:bounce-in-top 8.4s linear both infinite alternate;animation:bounce-in-top 8.4s linear both infinite alternate}
+.bounce-in-top05{-webkit-animation:bounce-in-top 8.5s linear both infinite alternate;animation:bounce-in-top 8.5s linear both infinite alternate}
+.bounce-in-top06{-webkit-animation:bounce-in-top 6.6s linear both infinite alternate;animation:bounce-in-top 6.6s linear both infinite alternate}
+.bounce-in-top07{-webkit-animation:bounce-in-top 6.7s linear both infinite alternate;animation:bounce-in-top 6.7s linear both infinite alternate}
+.bounce-in-top08{-webkit-animation:bounce-in-top 5.8s linear both infinite alternate;animation:bounce-in-top 5.8s linear both infinite alternate}
+.bounce-in-top09{-webkit-animation:bounce-in-top 5.9s linear both infinite alternate;animation:bounce-in-top 5.9s linear both infinite alternate}
+.bounce-in-top10{-webkit-animation:bounce-in-top 7s linear both infinite alternate;animation:bounce-in-top 7s linear both infinite alternate}
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-600px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(200px);
+    animation-timing-function: ease-out;
+    opacity: .8;
+  }
+  55% {
+    transform: translateY(-165px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(50px);
+    animation-timing-function: ease-out;
+    opacity: .6;
+  }
+  81% {
+    transform: translateY(-228px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: .3;
+  }
+  100% {
+    transform: translateY(200px);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+.bounce-in-top11{-webkit-animation:bounce-in-top2 8.1s linear both infinite alternate;animation:bounce-in-top2 8.1s linear both infinite alternate}
+.bounce-in-top12{-webkit-animation:bounce-in-top2 8.2s linear both infinite alternate;animation:bounce-in-top2 8.2s linear both infinite alternate}
+.bounce-in-top13{-webkit-animation:bounce-in-top2 9.3s linear both infinite alternate;animation:bounce-in-top2 9.3s linear both infinite alternate}
+.bounce-in-top14{-webkit-animation:bounce-in-top2 9.4s linear both infinite alternate;animation:bounce-in-top2 9.4s linear both infinite alternate}
+.bounce-in-top15{-webkit-animation:bounce-in-top2 6.5s linear both infinite alternate;animation:bounce-in-top2 6.5s linear both infinite alternate}
+.bounce-in-top16{-webkit-animation:bounce-in-top2 6.6s linear both infinite alternate;animation:bounce-in-top2 6.6s linear both infinite alternate}
+.bounce-in-top17{-webkit-animation:bounce-in-top2 5.7s linear both infinite alternate;animation:bounce-in-top2 5.7s linear both infinite alternate}
+.bounce-in-top18{-webkit-animation:bounce-in-top2 7.8s linear both infinite alternate;animation:bounce-in-top2 7.8s linear both infinite alternate}
+.bounce-in-top19{-webkit-animation:bounce-in-top2 5.9s linear both infinite alternate;animation:bounce-in-top2 5.9s linear both infinite alternate}
+.bounce-in-top20{-webkit-animation:bounce-in-top2 9s linear both infinite alternate;animation:bounce-in-top2 9s linear both infinite alternate}
+
+@keyframes bounce-in-top2 {
+  0% {
+    transform: translateY(-700px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(100px);
+    animation-timing-function: ease-out;
+    opacity: .2;
+  }
+  55% {
+    transform: translateY(-405px);
+    animation-timing-function: ease-in;
+    opacity: .6;
+  }
+  72% {
+    transform: translateY(250px);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-128px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: .3;
+  }
+  100% {
+    transform: translateY(700px);
+    animation-timing-function: ease-out;
+  }
+}
+
+
+/* 배경 */
+.bg-pan-bottom {
+    background-image: linear-gradient(0deg,#cc6aa5,#3e91cc,#cc6aa5);
+    background-position:50% 50%;
+    background-size: 100% 1200%;
+	-webkit-animation: bg-pan-bottom 12s linear infinite both;
+	        animation: bg-pan-bottom 12s linear infinite both;
+}
+@-webkit-keyframes bg-pan-bottom {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+@keyframes bg-pan-bottom {
+    0% {
+      background-position: 50% 0%;
+    }
+    100% {
+      background-position: 50% 100%;
+    }
+}
