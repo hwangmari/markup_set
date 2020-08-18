@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/*-----------------------------------------------------------------------------
+
+version:   1.0
+date:      02/15/17
+author:    hwangmari
+email:     hwangmari@29cm.co.kr
+
+website:
+
+version history: 1.0 - Make css for template app
+-----------------------------------------------------------------------------*/
+
+@mixin flex (){
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex_align ( $alignitems, $justifycontent, $flexwrap){
+  -webkit-align-items: $alignitems;
+  align-items: $alignitems;
+  -webkit-justify-content: $justifycontent;
+  justify-content: $justifycontent ;
+  flex-wrap:$flexwrap;
+}
+
+@mixin position ( $position, $top, $right, $bottom, $left){
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin bxsize ($w, $h, $m, $p ,$bxs) {
+	width: $w;
+	height: $h;
+  margin: $m;
+  padding: $p;
+  box-sizing: $bxs;
+}
+
+@mixin bg-opacity ($color, $opacity) {
+	background: rgba($color, $opacity);
+}
+
+@mixin bg-gradient($startColor: #3C3C3C, $endColor: #999999) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+	background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+	background-image:      -o-linear-gradient(top, $startColor, $endColor);
+	background-image:         linear-gradient(top, $startColor, $endColor);
+	background: rgba(248,80,50,1);
+	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 23%, rgba(246,41,12,1) 39%, rgba(240,47,23,1) 51%, rgba(240,47,23,1) 78%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(23%, rgba(241,111,92,1)), color-stop(39%, rgba(246,41,12,1)), color-stop(51%, rgba(240,47,23,1)), color-stop(78%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 23%, rgba(246,41,12,1) 39%, rgba(240,47,23,1) 51%, rgba(240,47,23,1) 78%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 23%, rgba(246,41,12,1) 39%, rgba(240,47,23,1) 51%, rgba(240,47,23,1) 78%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 23%, rgba(246,41,12,1) 39%, rgba(240,47,23,1) 51%, rgba(240,47,23,1) 78%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 23%, rgba(246,41,12,1) 39%, rgba(240,47,23,1) 51%, rgba(240,47,23,1) 78%, rgba(231,56,39,1) 100%);
+}
+
+@mixin dsc ($size, $lineheight) {
+  font:{
+    size:$size;
+  }
+  line-height: $lineheight;
+}
+
+@mixin ellipsis () {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+@mixin blind () {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+@mixin clearbx () {
+  &:after{
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+@mixin placeholder ($fontsize, $color){
+  &::-webkit-input-placeholder {
+    font-size: $fontsize;
+    color: $color;
+  }
+  &::-moz-placeholder {
+     font-size: $fontsize;
+     color: $color;
+   }
+  &::-ms-input-placeholder {
+    font-size: $fontsize;
+    color: $color;
+  }
+  &::-moz-placeholder {
+    font-size: $fontsize;
+    color: $color;
+  }
+}
+
+
+
+@mixin mix-position ($position, $top, $lft, $rgt, $btm)  {
+  position: $position;
+  top: $top;
+  left: $lft;
+  right: $rgt;
+  bottom: $btm;
+}
+@mixin mix-flex ($flex, $flexwrap, $justifycontent, $alignitems){
+  display: $flex;
+  flex-wrap: $flexwrap;
+  justify-content: $justifycontent ;
+  align-items: $alignitems;
+}
+@mixin mix-box-size ($w, $h, $m, $p) {
+  width: $w;
+  height: $h;
+  margin: $m;
+  padding: $p;
+}
+@mixin mix-bg ($bg-color, $bg-img, $bg-repeat, $bg-position, $bg-size) {
+  background-color: $bg-color;
+  background-image: $bg-img;
+  background-repeat: $bg-repeat;
+  background-position: $bg-position;
+  background-size: $bg-size;
+}
+@mixin mix-docs ($size, $weight, $lineheight, $letterspacing, $color) {
+  font:{
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $lineheight;
+  letter-spacing: $letterspacing;
+  color: $color;
+}

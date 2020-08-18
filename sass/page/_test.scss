@@ -1,0 +1,17 @@
+
+.mixin_testbx{
+    & div{
+      flex: none;
+      @include mix-box-size (100px, 100px, null, null);
+      border:1px solid red;
+      background: #fff;
+    }
+    @include mix-position (absolute, 100px, 100px, null, null);
+    @include mix-flex (flex, null, center, center);
+    @include mix-box-size (300px, 300px, null, null);
+    border:1px solid red;
+    background: #ccc;
+    @include mix-docs (22px, null, 30px, null, red);
+    text-align: center;
+
+}
