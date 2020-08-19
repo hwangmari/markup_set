@@ -1,0 +1,368 @@
+.content_cnt {
+    width:1000px;
+    margin:0 auto;
+    padding: 70px 0 200px;
+}
+
+.module_imgbx {
+    position: relative;
+    max-width:1000px;
+    margin: 0 auto;
+    img {
+        display:block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .btn_edit {
+        @include mix-position (absolute, 10%, 10%, null, null);
+        @include mix-box-size (300px, 300px, null, null);
+        background:rgba(255,0,0,.3);
+        color:#fff;
+        font-size:30px;
+    }
+    .img_dsc {
+        @include mix-position (absolute,0, 0, 0, 0 );
+        @include flex ();
+        padding: 70px;
+        color:#fff;
+        .inbx {
+            -webkit-flex: 1;
+            flex: 1;
+        }
+        h1 {
+            @include dsc (34px , 1.5);
+            font-weight: 500;
+        }
+        p {
+            margin-top:30px;
+            @include dsc (16px , 1.6);
+        }
+        .btn {
+            margin-top:40px;
+        }
+        &.toplft {
+            @include flex_align(flex-start, flex-start, wrap);
+        }
+        &.cnt, &.evt_end, &.brand_go{
+            @include flex_align(center, center, nowrap);
+            text-align: center;
+        }
+        &.btmrgt {
+            @include flex_align(flex-end, flex-end, nowrap);
+            text-align:right;
+        }
+        &.evt_end {
+        background:rgba(0,0,0,.7);
+            p {
+                margin-top:0;
+            }
+        }
+        &.brand_go {
+            p {
+                margin-top:0;
+                @include dsc (20px , 1.5);
+            }
+        }
+    }
+}
+
+.reddot {
+    position:absolute;
+    .btn_dot {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $color_crimson;
+    }
+    .reddot_prd {
+        display: none;
+        @include mix-position (relative,  -40px, 40px, null, null);
+        width: 180px;
+        min-height: 200px;
+        padding: 15px;
+        background: #fff;
+    }
+    &:hover {
+        z-index: 10;
+        .reddot_prd {
+            display: block;
+            .prd_brand_go, .heart_area {
+                display: none;
+            }
+        }
+    }
+}
+
+.module_swiper {
+    position: relative;
+    padding: 50px 0;
+    .swiper_container {
+        a {
+            display: block;
+            &.content_rgt {
+                text-align: right;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .btnbx{
+        a {
+        @include position (absolute, 50%, null, null, null);
+        @include bg-opacity (#000, .2);
+        &.btn_prev {
+            left: 0;
+        }
+        &.btn_next {
+            right: 0;
+        }
+    }
+}
+
+.swiper_page {
+    @include position (absolute, null, 0, 0, 0);
+        text-align: center;
+    a {
+        overflow:hidden;
+        display: inline-block;
+        padding: 6px;
+        span {
+            display: block;
+            @include bxsize (16px, 16px, null, null, null);
+            border-radius: 50%;
+            @include bg-opacity (#000, .3);
+            line-height: 100em;
+            vertical-align: top;
+        }
+        &.on {
+            span {
+                @include bg-opacity (#000, 1);
+                }
+            }
+        }
+    }
+}
+
+.swiper_img {
+    .module_imgbx {
+        margin: 0 80px;
+    }
+    .btnbx {
+        a {
+            width: 50px;
+            height: 100px;
+            margin-top: -50px;
+        }
+    }
+}
+
+.swiper_prd {
+    .btnbx {
+        a {
+            width: 30px;
+            height: 84px;
+            margin-top: -42px;
+        }
+    }
+    .prd_area {
+        @include flex ();
+        @include flex_align(center, center, wrap);
+        margin: 0 50px 0 20px;
+        .prd_s {
+            -webkit-flex: 1;
+            flex: 1;
+            height:84px;
+            margin:0 0 0 30px;
+        }
+    }
+}
+
+.module_tile {
+    margin:0 auto;
+    @include flex ();
+    @include flex_align(center, center, wrap);
+    .tilebx {
+        width:50%;
+    }
+    .prd_s {
+        margin: 0 15% 60px;
+        border-top: 0;
+    }
+}
+
+.module_prd_wrap {
+    .prd_section {
+        margin: 30px 0 0 -3.33%;
+        @include clearbx ();
+        & > li {
+            float: left;
+            width: 30%;
+            margin-left: 3.33%;
+        }
+    }
+    .prd_section2 {
+        margin: 30px 0 0 -2%;
+        @include clearbx ();
+        & > li {
+            float: left;
+        width: 48%;
+        margin-left: 2%;
+        }
+    }
+    .prd_b, .heart_area {
+        text-align:left;
+    }
+    .heart_area {
+        .heart {
+            position:relative;
+            padding-left:20px;
+            margin-right:30px;
+            height:auto;
+            .svg__icon__heart {
+                position:absolute;top:0;left:0;
+                width:15px;
+            }
+        }
+    }
+}
+
+.module_bigbanner {
+    .heart_area{
+        position:relative;
+        margin-top:42px;
+        .svg__icon__heart{
+            width:40px;
+            max-height:22px;
+        }
+        .count{
+            margin-top:10px;
+            font-size:12px;
+        }
+        .btn_facebook {
+            position:absolute;
+            top:0;
+            right:40px;
+            width:40px;
+            height:40px;
+            border:2px solid #000;
+            border-radius:50%;
+            line-height:40px;
+            font-size:26px;
+            font-weight:bold;
+        }
+    }
+}
+
+@media screen and (max-width: $screen_mweb) {
+    .content_cnt ,.module_tile .tilebx {
+        width:auto;
+    }
+    .module_swiper {
+        .module_imgbx {
+            margin:0;
+        }
+        .swiper_page {
+            bottom: 20px;
+            padding: 0 30px;
+            @include flex ();
+            a {
+                -webkit-flex: 1;
+                flex: 1;
+                padding: 0;
+                span {
+                    width:100%;
+                    height:10px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .prd_section {
+        margin: 30px 0 0;
+        @include clearbx ();
+        & > li {
+            float: left;
+            width: 50%;
+            margin-left: 0;
+        }
+        .info {
+            padding: 0 10px;
+        }
+        .prd_brand_go {
+            display:none;
+        }
+    }
+    .prd_section2 {
+        margin: 30px 20px 0;
+        @include clearbx ();
+        & > li {
+            float: left;
+            width: 100%;
+        }
+    }
+    .module_swiper {
+        .module_imgbx {
+          margin:0;
+        }
+        .swiper_page {
+            bottom: 20px;
+            padding: 0 30px;
+            @include flex ();
+            a {
+                -webkit-flex: 1;
+                flex: 1;
+                padding: 0;
+                span {
+                    width:100%;
+                    height:10px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .module_prd_wrap {
+        .prd_section {
+            margin: 20px 0 0;
+            @include clearbx ();
+            & > li {
+                float: left;
+                width: 50%;
+                margin-left: 0;
+            }
+            .info ,.heart_area {
+                padding: 0 20px;
+            }
+            .prd_brand_go {
+                display:none;
+            }
+        }
+        .prd_section2 {
+            margin: 20px 20px 0;
+            @include clearbx ();
+            & > li {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    .module_imgbx {
+        .img_dsc {
+            padding: 30px;
+            &.brand_go {
+                text-align:left;
+                p {
+                    margin-top:0;
+                    @include dsc (20px , 1.5);
+                }
+            }
+            .heart_area {
+                position:absolute;
+                top:50%;
+                right:25px;
+                margin-top: -25px;
+            }
+        }
+    }
+}

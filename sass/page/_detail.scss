@@ -1,0 +1,42 @@
+
+
+.evt_banner {
+  @include flex ();
+  @include flex_align(center, center, nowrap);
+  padding: 50px 0;
+  background: rgba(0,0,0,.8);
+  text-align:center;
+  color: #fff;
+  line-height:26px;
+}
+
+.detail_categroy {
+  margin-top: 20px;
+  @include flex ();
+  @include flex_align(center, center, nowrap);
+  & > li {
+    position: relative;
+    margin: 0 10px;
+    & + li:before {
+      position:absolute;
+      top:0;
+      left:-10px;
+      width:1px ;
+      height: 30px;
+      background:#ccc;
+      content: '';
+    }
+  }
+}
+
+.labeling_dsc {
+  @include flex ();
+  border-bottom: 1px solid #000;
+  .tbl_section {
+    -webkit-flex: 1;
+    flex: 1;
+    & +.tbl_section {
+      margin-left:30px;
+    }
+  }
+}

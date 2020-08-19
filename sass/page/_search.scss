@@ -1,0 +1,53 @@
+.search_wrap {
+  @include position (fixed, 0, 0, 0, 0);
+  z-index: 100;
+  background: #fff;
+  .search_in{
+    max-width:800px;
+    margin:0 auto;
+  }
+  .inpbx {
+    position: relative;
+    border-bottom: 4px solid #000;
+    input {
+      border: 0;
+      background: #fff;
+      @include dsc (36px, 60px);
+      color: #000;
+      @include placeholder (36px, #000);
+    }
+  }
+  .btn_search {
+    @include position (absolute, null, 0, 0, null);
+    @include bxsize (60px, 60px, null, null, null);
+    border: 1px solid #ccc;
+  }
+  .btn_clr {
+    display: block;
+    @include bxsize (80px, 80px, 70px auto, null, null);
+    border: 1px solid #ccc;
+  }
+  .btn_del {
+    @include bxsize (30px, 30px, null, null, null);
+    @include dsc (12px, 30px);
+  }
+  .search_lst {
+    @include flex ();
+    margin-top: 30px;
+    & > div {
+      width: 40%;
+      padding-right:10%;
+    }
+    h2 {
+      @include dsc (14px, 30px);
+    }
+    ul {
+      margin-top: 10px;
+      a {
+        @include dsc (16px, 2.5);
+        color: #000;
+        @include ellipsis ();
+      }
+    }
+  }
+}
