@@ -115,25 +115,44 @@ version history: 1.0 - Make css for template app
 
 
 
-@mixin mix-position ($position, $top, $lft, $rgt, $btm)  {
+@mixin mix-position ( $position, $top, $lft, $rgt, $btm)  {
   position: $position;
   top: $top;
   left: $lft;
   right: $rgt;
   bottom: $btm;
 }
+
+@mixin mix-absolute ( $top, $lft, $rgt, $btm)  {
+  position: absolute;
+  top: $top;
+  left: $lft;
+  right: $rgt;
+  bottom: $btm;
+}
+
 @mixin mix-flex ($flex, $flexwrap, $justifycontent, $alignitems){
   display: $flex;
   flex-wrap: $flexwrap;
   justify-content: $justifycontent ;
   align-items: $alignitems;
 }
+
 @mixin mix-box-size ($w, $h, $m, $p) {
   width: $w;
   height: $h;
   margin: $m;
   padding: $p;
 }
+@mixin mix-box-wh ($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin mix-box-mp ($m, $p) {
+  margin: $m;
+  padding: $p;
+}
+
 @mixin mix-bg ($bg-color, $bg-img, $bg-repeat, $bg-position, $bg-size) {
   background-color: $bg-color;
   background-image: $bg-img;

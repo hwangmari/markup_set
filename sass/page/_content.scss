@@ -240,11 +240,8 @@
             font-size:12px;
         }
         .btn_facebook {
-            position:absolute;
-            top:0;
-            right:40px;
-            width:40px;
-            height:40px;
+            @include mix-absolute (0, null, 40px, null);
+            @include mix-box-wh (40px, 40px);
             border:2px solid #000;
             border-radius:50%;
             line-height:40px;
@@ -358,9 +355,7 @@
                 }
             }
             .heart_area {
-                position:absolute;
-                top:50%;
-                right:25px;
+                @include mix-position (absolute, 50%, null, 25px, null);
                 margin-top: -25px;
             }
         }

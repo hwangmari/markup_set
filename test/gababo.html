@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" href="gababo.css">
+<title>UI test</title>
+</head>
+<body>
+<!-- user 기준에 결과값을 따라 스타일을 준다. user_win user_lose user_draw -->
+<section class="user_win">
+    <!-- ga 가위
+        ba 바위
+        bo 보
+    -->
+    <!--  selectbx 에 있는 버튼을 클릭과 동시에 랜덤이 멈춘다. -->
+    <div class="gababo ga computer">
+        <div class="inbx">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="result">
+        vs
+        <!-- 결과값
+        이겼다 >>>>> user_win
+        졌다 <<<<<user_lose
+        비겼다 = user_draw
+     -->
+    </div>
+
+    <div class="user">
+        <!-- selectbx 에 있는 버튼을 클릭할 경우 gababo에 결과값에 클릭한 버튼 값을 전달 한다. -->
+        <!-- selectbx 에 있는 버튼을 클릭값과  computer 랜덤 결과값을 매칭하여 result에 최종를 나타낸다. -->
+        <div class="selectbx">
+            <button type="button" name="button" class="btn btn_ga">가위</button>
+            <button type="button" name="button" class="btn btn_ba">바위</button>
+            <button type="button" name="button" class="btn btn_bo">보</button>
+        </div>
+        <div class="gababo ga ba bo">
+            <div class="inbx">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- [D] 리셋 버튼을 누르면 computer는 랜덤으로 돈다. -->
+<button type="button" name="button" class="btn btn_reset">다시결투!</button>
+</body>
+</html>

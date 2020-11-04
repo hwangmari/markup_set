@@ -1,81 +1,1904 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------------
+
+version:   1.0
+date:      02/15/17
+author:    hwangmari
+email:     hwangmari@29cm.co.kr
+
+website:
+
+version history: 1.0 - Make css for template app
+-----------------------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+caption span {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+em, address {
+  font-style: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input, textarea {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+@font-face {
+  font-family: "campton";
+  font-weight: 100;
+  src: local("Campton W00 Thin"), local("Campton-W00-Thin"), url("//image.29cm.co.kr/fonts/campton/b6517a55-91d1-4fd5-accc-bbc44c2a1268.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 200;
+  src: local("Campton W00 ExtraLight"), local("Campton-W00-ExtraLight"), url("//image.29cm.co.kr/fonts/campton/37009395-1130-4922-9b9a-c93c29f9b42a.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 300;
+  src: local("Campton W00 Light"), local("Campton-W00-Light"), url("//image.29cm.co.kr/fonts/campton/21126dbb-43aa-4675-a8ab-dce7f5e374ce.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 400;
+  src: local("Campton W00 Book"), local("Campton-W00-Book"), url("//image.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 500;
+  src: local("Campton W00 Medium"), local("Campton-W00-Medium"), url("//image.29cm.co.kr/fonts/campton/ca3a70c8-d6a1-46d3-997c-4a26498eefa9.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 600;
+  src: local("Campton W00 SemiBold"), local("Campton-W00-SemiBold"), url("//image.29cm.co.kr/fonts/campton/5ee11613-bc94-479b-bf86-5b2b6a68f55d.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 700;
+  src: local("Campton W00 Bold"), local("Campton-W00-Bold"), url("//image.29cm.co.kr/fonts/campton/d01b7dbc-e431-40e4-a193-e4050a6b945d.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 800;
+  src: local("Campton W00 ExtraBold"), local("Campton-W00-ExtraBold"), url("//image.29cm.co.kr/fonts/campton/3c965a6b-54fa-4259-9907-2c3fdd955bc4.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 900;
+  src: local("Campton W00 Black"), local("Campton-W00-Black"), url("//image.29cm.co.kr/fonts/campton/5ca5ef66-4367-4c90-8612-ef45818a599f.woff") format("woff");
+}
+body {
+  min-width: 1000px;
+  -webkit-text-size-adjust: none;
+}
+@media screen and (max-width: 540px) {
+  body {
+    min-width: 320px;
+    max-width: 540px;
+  }
+}
+
+body, input, select, textarea, button, a {
+  font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic, "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
+}
+
+/*-----------------------------------------------------------------------------
+
+version:   1.0
+date:      02/15/17
+author:    hwangmari
+email:     hwangmari@29cm.co.kr
+
+website:
+
+version history: 1.0 - Make css for template app
+-----------------------------------------------------------------------------*/
+.category_main_wrap {
+  position: relative;
+  z-index: 10;
+  min-width: 1000px;
+  margin: 40px 0 0;
+}
+.category_main_wrap .nav_category {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+  width: 250px;
+  margin: 25px 0 0;
+  padding: 25px;
+}
+
+.main_swiper {
+  position: relative;
+  width: 100%;
+  height: 680px;
+}
+.main_swiper .swiper_container > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.main_swiper .swiper_container a {
+  display: block;
+  height: 680px;
+  padding: 0 100px 0 380px;
+  line-height: 680px;
+}
+.main_swiper .swiper_container a.content_rgt {
+  text-align: right;
+}
+.main_swiper .swiper_container a img {
+  vertical-align: middle;
+}
+.main_swiper .btnbx a {
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 200px;
+  margin-top: -100px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.main_swiper .btnbx a.btn_prev {
+  left: 275px;
+}
+.main_swiper .btnbx a.btn_next {
+  right: 0;
+}
+.main_swiper .swiper_page {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  text-align: center;
+}
+.main_swiper .swiper_page a {
+  overflow: hidden;
+  display: inline-block;
+  padding: 8px;
+}
+.main_swiper .swiper_page a span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 100em;
+  vertical-align: top;
+}
+.main_swiper .swiper_page a.on span {
+  background: white;
+}
+
+.mdpick_swiper {
+  position: relative;
+  width: 100%;
+}
+.mdpick_swiper .swiper_container a {
+  display: block;
+}
+.mdpick_swiper .btnbx a {
+  position: absolute;
+  top: 50%;
+  width: 74px;
+  height: 74px;
+  margin-top: -130px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.mdpick_swiper .btnbx a.btn_prev {
+  left: -74px;
+}
+.mdpick_swiper .btnbx a.btn_next {
+  right: -74px;
+}
+.mdpick_swiper .swiper_page {
+  position: absolute;
+  right: 0;
+  bottom: 165px;
+  left: 0;
+  text-align: center;
+}
+.mdpick_swiper .swiper_page a {
+  overflow: hidden;
+  display: inline-block;
+  padding: 5px;
+}
+.mdpick_swiper .swiper_page a span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 100em;
+  vertical-align: top;
+}
+.mdpick_swiper .swiper_page a.on span {
+  background: white;
+}
+
+.category_mdpick {
+  padding-bottom: 80px;
+  display: -webkit-flex;
+  display: flex;
+}
+.category_mdpick .pick_area {
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 40px 74px;
+  background: #ebebeb;
+}
+.category_mdpick .pick_area + .pick_area {
+  margin-left: 2%;
+}
+.category_mdpick .pick_area h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+  line-height: 2;
+  text-align: center;
+}
+.category_mdpick .pick_area .info {
+  margin-top: 50px;
+}
+@media screen and (max-width: 1600px) {
+  .category_mdpick .pick_area {
+    padding: 40px 0;
+  }
+  .category_mdpick .btnbx a {
+    width: 20%;
+  }
+  .category_mdpick .btnbx a.btn_prev {
+    left: 0;
+  }
+  .category_mdpick .btnbx a.btn_next {
+    right: 0;
+  }
+  .category_mdpick .prd_b {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+}
+
+.tab_wrap {
+  position: relative;
+  padding: 0 120px 110px;
+  background: #000;
+}
+.tab_wrap .tab_section ul {
+  margin: 0 -120px;
+}
+.tab_wrap .tab_swiper {
+  margin-top: 50px;
+}
+.tab_wrap .tab_swiper .info {
+  color: #fff;
+}
+.tab_wrap .tab_swiper .heart_area .svg__icon__heart {
+  color: #fff;
+}
+.tab_wrap .tab_swiper .heart_area .svg__icon__heart path {
+  stroke: #fff;
+}
+.tab_wrap .tab_swiper .heart_area .count {
+  color: #fff;
+}
+.tab_wrap .tab_swiper .btnbx a {
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin-top: -115px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.tab_wrap .tab_swiper .btnbx a.btn_prev {
+  left: 0;
+}
+.tab_wrap .tab_swiper .btnbx a.btn_next {
+  right: 0;
+}
+.tab_wrap .tab_swiper .swiper_page {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  text-align: center;
+}
+.tab_wrap .tab_swiper .swiper_page a {
+  overflow: hidden;
+  display: inline-block;
+  padding: 5px;
+}
+.tab_wrap .tab_swiper .swiper_page a span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 100em;
+  vertical-align: top;
+}
+.tab_wrap .tab_swiper .swiper_page a.on span {
+  background: white;
+}
+@media screen and (max-width: 1600px) {
+  .tab_wrap {
+    padding: 0 60px 110px;
+    background: #000;
+  }
+  .tab_wrap .tab_section ul {
+    margin: 0 -60px;
+  }
+  .tab_wrap .tab_swiper li + li {
+    margin-left: 10px;
+  }
+  .tab_wrap .tab_swiper .btnbx a {
+    width: 60px;
+  }
+}
+
+.tab_swiper ul {
+  display: -webkit-flex;
+  display: flex;
+}
+.tab_swiper li {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.tab_swiper li + li {
+  margin-left: 40px;
+}
+
+.category_content .category_section {
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 50px 0 300px;
+}
+
+.category_feed > ul {
+  display: -webkit-flex;
+  display: flex;
+  margin-left: -40px;
+}
+.category_feed > ul li {
+  padding: 0 0 60px 40px;
+}
+
+.category_top_feed {
+  padding: 80px 0;
+}
+.category_top_feed .feed_area {
+  margin-top: 34px;
+}
+.category_top_feed .feed_area:after {
+  position: absolute;
+  top: -30px;
+  width: 200px;
+  height: 4px;
+  background: #000;
+  content: "";
+}
+.category_top_feed .dscbx {
+  margin-top: 20px;
+}
+.category_top_feed .dscbx h1 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+.category_top_feed .dscbx p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.category_top_feed:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.category_top_feed .top_feed1 {
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+.category_top_feed .top_feed1 .feed_area:after {
+  right: -20px;
+}
+.category_top_feed .top_feed1 .imgbx {
+  height: 60%;
+}
+.category_top_feed .top_feed1 .dscbx {
+  padding-left: 50px;
+}
+.category_top_feed .top_feed2 {
+  float: left;
+  width: 33%;
+  margin-top: 40%;
+}
+.category_top_feed .top_feed2 .feed_area:after {
+  left: -20px;
+}
+.category_top_feed .top_feed2 .dscbx {
+  padding-right: 50px;
+}
+.category_top_feed .top_feed3 {
+  float: right;
+  width: 63%;
+  margin-top: 10%;
+}
+.category_top_feed .top_feed3 .feed_area:after {
+  left: -20px;
+}
+.category_top_feed .top_feed3 .imgbx {
+  width: 49%;
+}
+.category_top_feed .top_feed3 .dscbx {
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  margin-left: 40px;
+  padding-right: 50px;
+}
+
+.dday_area {
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.dday_area .dday_date {
+  position: absolute;
+  bottom: -30px;
+  color: #000;
+  font-size: 0.825em;
+}
+.dday_area .dday_date.start {
+  left: 0;
+}
+.dday_area .dday_date.end {
+  right: 0;
+  color: rgba(0, 0, 0, 0.24);
+}
+.dday_area .dday {
+  position: relative;
+  height: 4px;
+  background: #e4e4e4;
+  margin-top: 74px;
+}
+.dday_area .day_remain {
+  top: -60px;
+}
+
+.day_remain {
+  display: none;
+  position: absolute;
+  min-width: 48px;
+  padding: 5px 10px;
+  background: #ff4800;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-family: "campton";
+  font-weight: 800;
+}
+.day_remain:after {
+  display: block;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #ff4800 transparent transparent transparent;
+  content: "";
+}
+.day_remain.active {
+  display: block;
+}
+
+.category_tab {
+  border: 1px solid #d4d4d4;
+  display: -webkit-flex;
+  display: flex;
+}
+.category_tab .tab_category {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.category_tab .search_btnbx {
+  border-left: 1px solid #d4d4d4;
+  width: 100px;
+}
+.category_tab .search_btnbx .resultbx {
+  height: 46px;
+  padding-top: 14px;
+  border: 0;
+}
+.category_tab .search_btnbx .resultbx:after {
+  top: 21px;
+}
+.category_tab .view_btnbx .btn {
+  width: 46px;
+  height: 46px;
+  border-left: 1px solid #d4d4d4;
+}
+
+.search_control {
+  margin-top: 50px;
+}
+.search_control button.btn_reset {
+  text-decoration: underline;
+  border: 0;
+  padding: 0;
+  background: #fff;
+  outline: none;
+  color: #5d5d5d;
+  font-size: 15px;
+}
+.search_control .brand__top {
+  position: relative;
+}
+.search_control .brand__top .btn_reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.search_control .contral_tit {
+  font-size: 14px;
+}
+.search_control .contral_tit:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.search_control .contral_tit .num strong {
+  color: #375fff;
+}
+
+.content_cnt {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 70px 0 200px;
+}
+
+.module_imgbx {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.module_imgbx img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.module_imgbx .btn_edit {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 0, 0, 0.3);
+  color: #fff;
+  font-size: 30px;
+}
+.module_imgbx .img_dsc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  padding: 70px;
+  color: #fff;
+}
+.module_imgbx .img_dsc .inbx {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.module_imgbx .img_dsc h1 {
+  font-size: 34px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.module_imgbx .img_dsc p {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.module_imgbx .img_dsc .btn {
+  margin-top: 40px;
+}
+.module_imgbx .img_dsc.toplft {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.module_imgbx .img_dsc.cnt, .module_imgbx .img_dsc.evt_end, .module_imgbx .img_dsc.brand_go {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.module_imgbx .img_dsc.btmrgt {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  text-align: right;
+}
+.module_imgbx .img_dsc.evt_end {
+  background: rgba(0, 0, 0, 0.7);
+}
+.module_imgbx .img_dsc.evt_end p {
+  margin-top: 0;
+}
+.module_imgbx .img_dsc.brand_go p {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.reddot {
+  position: absolute;
+}
+.reddot .btn_dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff4800;
+}
+.reddot .reddot_prd {
+  display: none;
+  position: relative;
+  top: -40px;
+  left: 40px;
+  width: 180px;
+  min-height: 200px;
+  padding: 15px;
+  background: #fff;
+}
+.reddot:hover {
+  z-index: 10;
+}
+.reddot:hover .reddot_prd {
+  display: block;
+}
+.reddot:hover .reddot_prd .prd_brand_go, .reddot:hover .reddot_prd .heart_area {
+  display: none;
+}
+
+.module_swiper {
+  position: relative;
+  padding: 50px 0;
+}
+.module_swiper .swiper_container a {
+  display: block;
+}
+.module_swiper .swiper_container a.content_rgt {
+  text-align: right;
+}
+.module_swiper .swiper_container a img {
+  vertical-align: middle;
+}
+.module_swiper .btnbx a {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.module_swiper .btnbx a.btn_prev {
+  left: 0;
+}
+.module_swiper .btnbx a.btn_next {
+  right: 0;
+}
+.module_swiper .swiper_page {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.module_swiper .swiper_page a {
+  overflow: hidden;
+  display: inline-block;
+  padding: 6px;
+}
+.module_swiper .swiper_page a span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  line-height: 100em;
+  vertical-align: top;
+}
+.module_swiper .swiper_page a.on span {
+  background: black;
+}
+
+.swiper_img .module_imgbx {
+  margin: 0 80px;
+}
+.swiper_img .btnbx a {
+  width: 50px;
+  height: 100px;
+  margin-top: -50px;
+}
+
+.swiper_prd .btnbx a {
+  width: 30px;
+  height: 84px;
+  margin-top: -42px;
+}
+.swiper_prd .prd_area {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 50px 0 20px;
+}
+.swiper_prd .prd_area .prd_s {
+  -webkit-flex: 1;
+  flex: 1;
+  height: 84px;
+  margin: 0 0 0 30px;
+}
+
+.module_tile {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.module_tile .tilebx {
+  width: 50%;
+}
+.module_tile .prd_s {
+  margin: 0 15% 60px;
+  border-top: 0;
+}
+
+.module_prd_wrap .prd_section {
+  margin: 30px 0 0 -3.33%;
+}
+.module_prd_wrap .prd_section:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.module_prd_wrap .prd_section > li {
+  float: left;
+  width: 30%;
+  margin-left: 3.33%;
+}
+.module_prd_wrap .prd_section2 {
+  margin: 30px 0 0 -2%;
+}
+.module_prd_wrap .prd_section2:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.module_prd_wrap .prd_section2 > li {
+  float: left;
+  width: 48%;
+  margin-left: 2%;
+}
+.module_prd_wrap .prd_b, .module_prd_wrap .heart_area {
+  text-align: left;
+}
+.module_prd_wrap .heart_area .heart {
+  position: relative;
+  padding-left: 20px;
+  margin-right: 30px;
+  height: auto;
+}
+.module_prd_wrap .heart_area .heart .svg__icon__heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+}
+
+.module_bigbanner .heart_area {
+  position: relative;
+  margin-top: 42px;
+}
+.module_bigbanner .heart_area .svg__icon__heart {
+  width: 40px;
+  max-height: 22px;
+}
+.module_bigbanner .heart_area .count {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.module_bigbanner .heart_area .btn_facebook {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 540px) {
+  .content_cnt, .module_tile .tilebx {
+    width: auto;
+  }
+
+  .module_swiper .module_imgbx {
+    margin: 0;
+  }
+  .module_swiper .swiper_page {
+    bottom: 20px;
+    padding: 0 30px;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .module_swiper .swiper_page a {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 0;
+  }
+  .module_swiper .swiper_page a span {
+    width: 100%;
+    height: 10px;
+    border-radius: 0;
+  }
+
+  .prd_section {
+    margin: 30px 0 0;
+  }
+  .prd_section:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  .prd_section > li {
+    float: left;
+    width: 50%;
+    margin-left: 0;
+  }
+  .prd_section .info {
+    padding: 0 10px;
+  }
+  .prd_section .prd_brand_go {
+    display: none;
+  }
+
+  .prd_section2 {
+    margin: 30px 20px 0;
+  }
+  .prd_section2:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  .prd_section2 > li {
+    float: left;
+    width: 100%;
+  }
+
+  .module_swiper .module_imgbx {
+    margin: 0;
+  }
+  .module_swiper .swiper_page {
+    bottom: 20px;
+    padding: 0 30px;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .module_swiper .swiper_page a {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 0;
+  }
+  .module_swiper .swiper_page a span {
+    width: 100%;
+    height: 10px;
+    border-radius: 0;
+  }
+
+  .module_prd_wrap .prd_section {
+    margin: 20px 0 0;
+  }
+  .module_prd_wrap .prd_section:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  .module_prd_wrap .prd_section > li {
+    float: left;
+    width: 50%;
+    margin-left: 0;
+  }
+  .module_prd_wrap .prd_section .info, .module_prd_wrap .prd_section .heart_area {
+    padding: 0 20px;
+  }
+  .module_prd_wrap .prd_section .prd_brand_go {
+    display: none;
+  }
+  .module_prd_wrap .prd_section2 {
+    margin: 20px 20px 0;
+  }
+  .module_prd_wrap .prd_section2:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  .module_prd_wrap .prd_section2 > li {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .module_imgbx .img_dsc {
+    padding: 30px;
+  }
+  .module_imgbx .img_dsc.brand_go {
+    text-align: left;
+  }
+  .module_imgbx .img_dsc.brand_go p {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .module_imgbx .img_dsc .heart_area {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -25px;
+  }
+}
+.evt_banner {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+  line-height: 26px;
+}
+
+.detail_categroy {
+  margin-top: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.detail_categroy > li {
+  position: relative;
+  margin: 0 10px;
+}
+.detail_categroy > li + li:before {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 1px;
+  height: 30px;
+  background: #ccc;
+  content: "";
+}
+
+.labeling_dsc {
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1px solid #000;
+}
+.labeling_dsc .tbl_section {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.labeling_dsc .tbl_section + .tbl_section {
+  margin-left: 30px;
+}
+
+.feed_section {
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  padding: 30px 0 155px;
+  border-bottom: 1px solid #d4d4d4;
+}
+.feed_section:after, .feed_section:before {
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: unll;
+  width: 1px;
+  background: #d4d4d4;
+  content: "";
+}
+.feed_section > ul {
+  box-sizing: border-box;
+}
+.feed_section > ul > li:first-child .feed_area {
+  margin-top: 0;
+}
+.feed_section .feed_coupon {
+  margin-top: 82px;
+}
+.feed_section .feed_coupon .couponbx {
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.feed_section .feed_coupon .couponbx > div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333;
+  font-size: 50px;
+}
+
+.seaction_banner {
+  position: relative;
+}
+.seaction_banner li:first-child:after {
+  position: absolute;
+  top: -30px;
+  left: -3%;
+  width: 200px;
+  height: 4px;
+  background: #000;
+  content: "";
+}
+
+.feed_section .module_swiper {
+  padding: 0;
+}
+.feed_section .feed_area {
+  margin-top: 120px;
+}
+.feed_section .feed_area:after {
+  position: absolute;
+  top: -30px;
+  width: 200px;
+  height: 4px;
+  background: #000;
+  content: "";
+}
+.feed_section .feed_rgt {
+  text-align: right;
+}
+.feed_section .feed_rgt .feed_area:after {
+  right: -5%;
+}
+.feed_section .feed_lft {
+  text-align: left;
+}
+.feed_section .feed_lft .feed_area:after {
+  left: -5%;
+}
+.feed_section .btn_link {
+  margin-top: 15px;
+}
+@media screen and (max-width: 540px) {
+  .feed_section .feed_area {
+    margin-top: 50px;
+  }
+  .feed_section .feed_area:after {
+    position: absolute;
+    top: 72%;
+    width: 40px;
+    height: 4px;
+    background: #000;
+    content: "";
+  }
+  .feed_section .feed_rgt {
+    padding: 0 60px 40px 10px;
+    text-align: right;
+  }
+  .feed_section .feed_rgt .feed_area:after {
+    right: -5%;
+  }
+  .feed_section .feed_lft {
+    padding: 0 10px 40px 60px;
+    text-align: left;
+  }
+  .feed_section .feed_lft .feed_area:after {
+    left: -5%;
+  }
+  .feed_section .feed_coupon {
+    margin-top: 0;
+  }
+}
+
+.feed_section .btnbx {
+  display: none;
+}
+.feed_section .swiper_page {
+  display: none;
+}
+@media screen and (max-width: 540px) {
+  .feed_section .btnbx {
+    display: block;
+  }
+  .feed_section .swiper_page {
+    display: block;
+  }
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+.btn.btn_link {
+  padding: 6px 9px 4px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 11px;
+  line-height: 15px;
+  color: #000;
+}
+.btn.btn_home {
+  position: relative;
+  padding: 20px 90px 18px 18px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  font-family: "campton";
+}
+.btn.btn_bd_txt {
+  background: #fff;
+  border-bottom: 1px solid #a0a0a0;
+  font-size: 13px;
+  line-height: 15px;
+  color: #a0a0a0;
+}
+.btn.btn_more {
+  margin-top: 20px;
+  padding: 10px 15px 10px;
+  border: 1px solid #5d5d5d;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+.btn.btn_sizehelp {
+  width: 100%;
+  height: 40px;
+  background: #303033;
+  font-size: 13px;
+  line-height: 40px;
+  font-family: "campton";
+  color: #fff;
+}
+.btn.btn_shopbag, .btn.btn_buynow {
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  font-family: "campton";
+  font-weight: 600;
+  color: #fff;
+}
+.btn.btn_shopbag {
+  background: #303033;
+}
+.btn.btn_buynow {
+  background: #ff4800;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.search_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+}
+.search_wrap .search_in {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.search_wrap .inpbx {
+  position: relative;
+  border-bottom: 4px solid #000;
+}
+.search_wrap .inpbx input {
+  border: 0;
+  background: #fff;
+  font-size: 36px;
+  line-height: 60px;
+  color: #000;
+}
+.search_wrap .inpbx input::-webkit-input-placeholder {
+  font-size: 36px;
+  color: #000;
+}
+.search_wrap .inpbx input::-moz-placeholder {
+  font-size: 36px;
+  color: #000;
+}
+.search_wrap .inpbx input::-ms-input-placeholder {
+  font-size: 36px;
+  color: #000;
+}
+.search_wrap .inpbx input::-moz-placeholder {
+  font-size: 36px;
+  color: #000;
+}
+.search_wrap .btn_search {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+}
+.search_wrap .btn_clr {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 70px auto;
+  border: 1px solid #ccc;
+}
+.search_wrap .btn_del {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.search_wrap .search_lst {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 30px;
+}
+.search_wrap .search_lst > div {
+  width: 40%;
+  padding-right: 10%;
+}
+.search_wrap .search_lst h2 {
+  font-size: 14px;
+  line-height: 30px;
+}
+.search_wrap .search_lst ul {
+  margin-top: 10px;
+}
+.search_wrap .search_lst ul a {
+  font-size: 16px;
+  line-height: 2.5;
+  color: #000;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+.mixin_testbx {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  background: #ccc;
+  font-size: 22px;
+  line-height: 30px;
+  color: red;
+  text-align: center;
+}
+.mixin_testbx div {
+  flex: none;
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  background: #fff;
+}
+
+@font-face {
+  font-family: "campton";
+  font-weight: 100;
+  src: local("Campton W00 Thin"), local("Campton-W00-Thin"), url("//img.29cm.co.kr/fonts/campton/b6517a55-91d1-4fd5-accc-bbc44c2a1268.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 200;
+  src: local("Campton W00 ExtraLight"), local("Campton-W00-ExtraLight"), url("//img.29cm.co.kr/fonts/campton/37009395-1130-4922-9b9a-c93c29f9b42a.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 300;
+  src: local("Campton W00 Light"), local("Campton-W00-Light"), url("//img.29cm.co.kr/fonts/campton/21126dbb-43aa-4675-a8ab-dce7f5e374ce.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 400;
+  src: local("Campton W00 Book"), local("Campton-W00-Book"), url("//img.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 500;
+  src: local("Campton W00 Medium"), local("Campton-W00-Medium"), url("//img.29cm.co.kr/fonts/campton/ca3a70c8-d6a1-46d3-997c-4a26498eefa9.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 600;
+  src: local("Campton W00 SemiBold"), local("Campton-W00-SemiBold"), url("//img.29cm.co.kr/fonts/campton/5ee11613-bc94-479b-bf86-5b2b6a68f55d.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 700;
+  src: local("Campton W00 Bold"), local("Campton-W00-Bold"), url("//img.29cm.co.kr/fonts/campton/d01b7dbc-e431-40e4-a193-e4050a6b945d.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 800;
+  src: local("Campton W00 ExtraBold"), local("Campton-W00-ExtraBold"), url("//img.29cm.co.kr/fonts/campton/3c965a6b-54fa-4259-9907-2c3fdd955bc4.woff") format("woff");
+}
+@font-face {
+  font-family: "campton";
+  font-weight: 900;
+  src: local("Campton W00 Black"), local("Campton-W00-Black"), url("//img.29cm.co.kr/fonts/campton/5ca5ef66-4367-4c90-8612-ef45818a599f.woff") format("woff");
+}
+body, input, select, textarea, button, a {
+  -webkit-text-size-adjust: none;
+  font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic, "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
+}
+
+/* Custom */
+/*section {
+    padding: 20px;
+}
+
+@media (min-width: 540px) {
+
+	body {
+		min-width: 1000px;
+	}
+
+}*/
+/*# sourceMappingURL=style.css.map */
+@media screen and (min-width: 541px) {
+  body {
+    padding-top: 250px;
+  }
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* add */
+.svg {
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1000em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.svg_combined_black {
+  width: 43px;
+  height: 8px;
+  background-image: url(../../svg/combined-shape-black.svg);
+}
+
+.svg_combined_grey {
+  width: 33px;
+  height: 8px;
+  background-image: url(../../svg/combined-shape-grey.svg);
+}
+
+.svg_combined_white {
+  width: 43px;
+  height: 8px;
+  background-image: url(../../svg/combined-shape-white.svg);
+}
+
+.svg_close_01 {
+  width: 82px;
+  height: 82px;
+  background-image: url(../../svg/close-bt-01.svg);
+}
+
+.svg_close_02 {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../svg/close-bt-02.svg);
+}
+
+.svg_close_03 {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../svg/close-bt-03.svg);
+}
+
+.svg_del_x_01 {
+  width: 8px;
+  height: 8px;
+  background-image: url(../../svg/del-x-01.svg);
+}
+
+.svg_del_x_02 {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../svg/del-x-02.svg);
+}
+
+.svg_prve_b_01 {
+  width: 40px;
+  height: 80px;
+  background-image: url(../../svg/prve-b-01.svg);
+}
+
+.svg_next_b_01 {
+  width: 40px;
+  height: 80px;
+  background-image: url(../../svg/next-b-01.svg);
+}
+
+.svg_prve_w_01 {
+  width: 40px;
+  height: 80px;
+  background-image: url(../../svg/prve-w-01.svg);
+}
+
+.svg_next_w_01 {
+  width: 40px;
+  height: 80px;
+  background-image: url(../../svg/next-w-01.svg);
+}
+
+.svg_play {
+  width: 150px;
+  height: 150px;
+  background-image: url(../../svg/play-bt.svg);
+}
+
+.svg_facebook {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../svg/facebook.svg);
+}
+
+.svg_search_big {
+  width: 40px;
+  height: 42px;
+  background-image: url(../../svg/search-big.svg);
+}
+
+.svg_search_small {
+  width: 16px;
+  height: 17px;
+  background-image: url(../../svg/search-small.svg);
+}
+
+.svg_heart_big_b {
+  width: 26px;
+  height: 22px;
+  background-image: url(../../svg/heart-big-b.svg);
+}
+
+.svg_heart_big_r {
+  width: 26px;
+  height: 22px;
+  background-image: url(../../svg/heart-big-r.svg);
+}
+
+.svg_heart_big_w {
+  width: 26px;
+  height: 22px;
+  background-image: url(../../svg/heart-big-w.svg);
+}
+
+.svg_heart_small_b {
+  width: 16px;
+  height: 14px;
+  background-image: url(../../svg/heart-small-b.svg);
+}
+
+.svg_heart_small_r {
+  width: 16px;
+  height: 14px;
+  background-image: url(../../svg/heart-small-r.svg);
+}
+
+.svg_review {
+  width: 13px;
+  height: 14px;
+  background-image: url(../../svg/review.svg);
+}
+
+.svg_login {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../svg/login-icon.svg);
+}
+
+.svg_my {
+  width: 16px;
+  height: 19px;
+  background-image: url(../../svg/my-icon.svg);
+}
+
+.svg_cart {
+  width: 16px;
+  height: 19px;
+  background-image: url(../../svg/cart-icon.svg);
+}
+
+.svg_heart {
+  width: 18px;
+  height: 16px;
+  background-image: url(../../svg/heart-icon.svg);
+}
+
+.svg_navi_open {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../svg/navi-open.svg);
+}
+
+.svg_open_b {
+  width: 10px;
+  height: 5px;
+  background-image: url(../../svg/open-b.svg);
+}
+
+.svg_open_g {
+  width: 10px;
+  height: 5px;
+  background-image: url(../../svg/open-g.svg);
+}
+
+.svg_price {
+  width: 30px;
+  height: 20px;
+  background-image: url(../../svg/price.svg);
+}
+
+.svg_photo {
+  width: 15px;
+  height: 15px;
+  background-image: url(../../svg/photo.svg);
+}
+
+.svg_list_01 {
+  width: 14px;
+  height: 14px;
+  background-image: url(../../svg/list-icon-01-b.svg);
+}
+
+.svg_list_02 {
+  width: 20px;
+  height: 12px;
+  background-image: url(../../svg/list-icon-02-b.svg);
+}
+
+.svg_more {
+  width: 28px;
+  height: 16px;
+  background-image: url(../../svg/more.svg);
+}
+
+/*button*/
+.btn {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn_link {
+  padding: 6px 9px 4px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 11px;
+  line-height: 15px;
+  color: #000;
+}
+
+.btn_home {
+  position: relative;
+  padding: 20px 90px 18px 18px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.btn_home:after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 43px;
+  height: 8px;
+  margin-top: -4px;
+  background: transparent url(../../svg/combined-shape-white.svg) no-repeat;
+  content: "";
+}
+
+.btn_view {
+  position: relative;
+  padding: 14px 90px 14px 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #5d5d5d;
+}
+
+.btn_view:after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 33px;
+  height: 8px;
+  margin-top: -4px;
+  background: transparent url(../../svg/combined-shape-grey.svg) no-repeat;
+  content: "";
+}
+
+.btn_bd_txt {
+  background: #fff;
+  border-bottom: 1px solid #a0a0a0;
+  font-size: 13px;
+  line-height: 15px;
+  color: #a0a0a0;
+}
+
+.btn_more {
+  margin-top: 20px;
+  padding: 10px 15px 10px;
+  border: 1px solid #5d5d5d;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.btn_sizehelp {
+  width: 100%;
+  height: 40px;
+  background: #303033;
+  font-size: 13px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.btn_shopbag, .btn_buynow {
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn_shopbag {
+  background: #303033;
+}
+
+.btn_buynow {
+  background: #ff4800;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/*heart */
+.heart_area {
+  overflow: hidden;
+  text-align: center;
+}
+
+.heart_area button {
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+}
+
+.heart_area .count {
+  font-size: 11px;
+  color: #5d5d5d;
+}
+
+.heart_area .active .count {
+  color: #ff4800;
+}
+
+.heart i {
+  width: 16px;
+  height: 14px;
+  background-image: url(../../svg/heart-small-b.svg);
+}
+
+.heart.active i {
+  background-image: url(../../svg/heart-small-r.svg);
+}
+
+.review i {
+  width: 13px;
+  height: 14px;
+  background-image: url(../../svg/review.svg);
+}
+
+.review.active i {
+  background-image: url(../../svg/review-r.svg);
+}
+
 /*
-Error: Undefined mixin 'mix-position'.
-        on line 3 of /Users/kakao_ent/markup_set/sass/page/_test.scss, in `mix-position'
-        from line 3 of /Users/kakao_ent/markup_set/sass/page/_test.scss
-        from line 14 of /Users/kakao_ent/markup_set/sass/style.scss
+.dday_area{position:relative;margin:0 auto;box-sizing:border-box}
+.dday_area .dday_date{position:absolute;bottom:-30px;color:#000;font-size:.825em}
+.dday_area .dday_date.start{left:0}
+.dday_area .dday_date.end{right:0;color:rgba(0,0,0,0.24)}
+.dday_area .dday{position:relative;height:4px;background:#e4e4e4;margin-top:74px}
+.dday_area .day_remain{top:-60px}
+.day_remain{display:none;position:absolute;min-width:48px;padding:5px 10px;background:#ff4800;color:#fff;font-size:14px;text-align:center;font-family:"campton";font-weight:800}
+.day_remain:after{display:block;position:absolute;bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;border-style:solid;border-width:6px 6px 0 0;border-color:#ff4800 transparent transparent transparent;content:''}
+.day_remain.active{display:block}*/
+/* 가이드 */
+.my_guide_tit {
+  font-size: 16px;
+}
 
-1: @charset "UTF-8";
-2: 
-3: @import "base/reset";
-4: @import "base/mixin";
-5: 
-6: @import "page/category";
-7: @import "page/content";
-8: @import "page/detail";
+.my_guide_info {
+  margin-top: 10px;
+}
 
-Backtrace:
-/Users/kakao_ent/markup_set/sass/page/_test.scss:3:in `mix-position'
-/Users/kakao_ent/markup_set/sass/page/_test.scss:3
-/Users/kakao_ent/markup_set/sass/style.scss:14
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
-/private/var/folders/73/336l7ywn69q26c954f0ldvx40000gn/T/AppTranslocation/D5D63238-9561-4040-8188-67BA59578647/d/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'mix-position'.\A         on line 3 of /Users/kakao_ent/markup_set/sass/page/_test.scss, in `mix-position'\A         from line 3 of /Users/kakao_ent/markup_set/sass/page/_test.scss\A         from line 14 of /Users/kakao_ent/markup_set/sass/style.scss\A \A 1: @charset \"UTF-8\";\A 2: \A 3: @import \"base/reset\";\A 4: @import \"base/mixin\";\A 5: \A 6: @import \"page/category\";\A 7: @import \"page/content\";\A 8: @import \"page/detail\";"; }
+.my_guide_info dt {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  color: #5d5d5d;
+}
+
+.my_guide_info dd {
+  font-size: 12px;
+  line-height: 24px;
+  color: #5d5d5d;
+}
+
+.my_guide_info li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 32px;
+  color: #303033;
+}
+
+.my_guide_info li:after {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+  content: "";
+}
+
+@media screen and (max-width: 540px) {
+  .my_guide_info li {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .my_guide_info li:after {
+    top: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
