@@ -9,37 +9,37 @@
 		num = parseInt (Math.random() * 3)
 		if (num === 0 ) computer = "ga"
 		else if ( num === 1 ) computer = "ba"
-		else if ( num === 2 ) computer = "bo"	
+		else if ( num === 2 ) computer = "bo"
 	}
-	
+
 	let timer = setInterval (ACTION, 200);
 
 	function SEND (my) {
 		clearInterval(timer)
-		
+
 		my3 = my
 		if ( computer === my ) print = "비겼다 ~ㅅ ~"
-		else if ( computer === "ga" && my === "ba" ) print = "이겼다 +ㅅ +" 
+		else if ( computer === "ga" && my === "ba" ) print = "이겼다 +ㅅ +"
 		else if ( computer === "ga" && my === "bo" ) print = "졌다 ㅜ ㅜ"
 
-		else if ( computer === "ba" && my === "bo" ) print =  "이겼다 +ㅅ +" 
+		else if ( computer === "ba" && my === "bo" ) print =  "이겼다 +ㅅ +"
 		else if ( computer === "ba" && my === "ga" ) print = "졌다 ㅜ ㅜ"
 
-		else if ( computer === "bo" && my === "ga" ) print = "이겼다 +ㅅ +" 
+		else if ( computer === "bo" && my === "ga" ) print = "이겼다 +ㅅ +"
 		else if ( computer === "bo" && my === "ba" ) print = "졌다 ㅜ ㅜ"
 
 
 
 		if ( computer === my )  print_result ="user_draw"
-		else if ( computer === "ga" && my === "ga") print_result = "user_win" 
+		else if ( computer === "ga" && my === "ga") print_result = "user_win"
 		else if ( computer === "ga" && my === "bo" )  print_result = "user_lose"
 
-		else if ( computer === "ba" && my === "bo" ) print_result = "user_win" 
+		else if ( computer === "ba" && my === "bo" ) print_result = "user_win"
 		else if ( computer === "ba" && my === "ga" ) print_result = "user_lose"
 
-		else if ( computer === "bo" && my === "ga" ) print_result = "user_win" 
+		else if ( computer === "bo" && my === "ga" ) print_result = "user_win"
 		else if ( computer === "bo" && my === "ba" ) print_result = "user_lose"
-		
+
 
 	}
 
@@ -66,11 +66,11 @@
 			</div>
 		</div>
 		<div class="result">
-			vs 
+			vs
 			<!-- 결과값 = 이겼다 user_win / 졌다 user_lose / 비겼다 user_draw -->
 			<strong>{print}</strong>
 		</div>
-	
+
 		<div class="user">
 			<!-- selectbx 에 있는 버튼을 클릭할 경우 gababo에 결과값에 클릭한 버튼 값을 전달 한다. -->
 			<!-- selectbx 에 있는 버튼을 클릭값과  computer 랜덤 결과값을 매칭하여 result에 최종를 나타낸다. -->
