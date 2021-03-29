@@ -1,0 +1,90 @@
+<style>
+.colorpicker{display:inline-block;position:relative}
+.colorpicker .colorbx_set{position:relative}
+.colorpicker .colorbx_set ul{overflow:hidden;clear:both}
+.colorpicker .colorbx_set ul li{float:left;overflow:hidden;margin:0 15px 15px 0}
+.colorpicker .colorbx_set ul li>span{position:relative;overflow:hidden}
+.colorpicker .colorbx_set ul li:first-child{margin-left:0}
+.colorpicker .colorbx_set ul svg{position:absolute;top:50%;left:50%;z-index:10;margin-top:-5px;margin-left:-6px}
+.colorpicker .colorbx_set ul input{position:absolute;top:-100%;left:-100%;z-index:-10;width:13px;height:13px;background:transparent}
+.colorpicker .colorbx_set ul input:checked+svg{display:inline-block !important}
+.colorpicker .colorbx_set ul .pick_color{display:inline-block;overflow:hidden;position:relative;width:20px;height:20px;color:#000;text-indent:-100em;vertical-align:top;box-sizing:border-box;text-align: center}
+.colorpicker .colorbx_set ul .pick_color:hover:before{position:absolute;top:0;right:0;left:0;bottom:0;border:1px solid #58adfc;box-sizing:border-box;content:''}
+</style>
+
+<!-- <div class="colorpicker"> -->
+    <div class="colorbx_set">
+      <ul>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_1"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_1" class="pick_color" style="background:#f00">red</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_2"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_2" class="pick_color" style="background:#ffa700">orange</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_3"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(0, 0, 0); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_3" class="pick_color" style="background:#fbd600">yellow</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_4"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_4" class="pick_color" style="background:#00ba00">green</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_5"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_5" class="pick_color" style="background:#86d3ee">light blue</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_6"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_6" class="pick_color" style="background:#3100ff">blue</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_7"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_7" class="pick_color" style="background:#16248d">dark blue</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_8"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(0, 0, 0); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_8" class="pick_color" style="border:1px solid #d4d4d4;background:#fff">white</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_9"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(0, 0, 0); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_9" class="pick_color" style="background:#c6c6c6">gray</label>
+              </span>
+          </li>
+          <li>
+              <span>
+                  <input type="checkbox" id="input_color_picker2_10"/>
+                  <svg viewBox="0 0 24 24" style="display: none; fill: rgb(255, 255, 255); height: 10px; width: 12px; user-select: none;"><path d="M22.166,3.385L8.138,18.465l-6.25-7.163c-0.384-0.405-1.028-0.412-1.432-0.023c-0.401,0.385-0.413,1.026-0.028,1.435 l6.951,7.886c0.194,0.199,0.444,0.388,0.73,0.31c0.262,0,0.517-0.105,0.7-0.287L23.57,4.838c0.401-0.385,0.417-1.03,0.026-1.43 C23.207,3.007,22.566,3,22.166,3.385z"></path></svg>
+                  <label for="input_color_picker2_10" class="pick_color" style="background:#000">black</label>
+              </span>
+          </li>
+      </ul>
+    </div>
+<!-- </div> -->

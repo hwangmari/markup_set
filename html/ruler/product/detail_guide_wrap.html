@@ -1,0 +1,101 @@
+<style>
+.guide_dsc .dsc_tit{position:relative}
+@media screen and (min-width:541px){
+    .guide_dsc{padding-top:40px}
+    .guide_dsc .dsc_tit{margin:60px 0 20px;border-bottom:4px solid #000}
+    .guide_dsc .dsc_tit .item_tit{padding-bottom:10px}
+    .guide_dsc .dsc_lst li{position:relative;padding-left:12px;font-size:15px;color:#303033;line-height:2.13}
+    .guide_dsc .dsc_lst li:after{position:absolute;top:14px;left:0;width:4px;height:4px;border-radius:100%;background:#303033;content:''}
+}
+@media screen and (max-width:540px){
+    .guide_dsc{margin-top:0;padding:0 20px;background:#fff}
+    .guide_dsc .dsc_tit .item_tit{margin-top:22px;font-size:14px;color:#000;margin-bottom:8px;font-weight:700}
+    .guide_dsc .dsc_lst li{margin-top:15px;font-size:14px;line-height:22px}
+    .guide_dsc .dsc_lst{padding-bottom:10px}
+}
+.btn_close{display:block;position:absolute;top:0}
+.btn_close ruler-svg-icon-close{display:block;vertical-align:top}
+@media screen and (min-width:541px){
+    .btn_close{right:0;width:80px;height:80px;padding:20px}
+    .btn_close ruler-svg-icon-close{width:40px;height:40px}
+    .btn_close g{stroke-width:2px!important}
+}
+@media screen and (max-width:540px){
+    .btn_close{left:0;width:60px;height:60px;padding:18px}
+    .btn_close ruler-svg-icon-close{width:22px;height:22px}
+    .btn_close g{stroke-width:6px!important}
+}
+.btn_action{width:100%;height:40px;background:#303033;font-size:13px;line-height:40px;color:#fff}
+
+.lay_content{position:relative}
+.lay_content header{display:none}
+.lay_content header .btn_close{display:none}
+.lay_content footer{position:absolute;top:0;right:0}
+.lay_content footer .btn_action{background:#000}
+.lay_content header h2 ruler-svg-icon-next{display:none}
+@media screen and (max-width:540px){
+    .lay_content header{display:block;border-top:1px solid #d4d4d4}
+    .lay_content header h2{margin-top:0;padding:21px 20px 20px;font-size:15px}
+    .lay_content header h2 ruler-svg-icon-next{display:block;position:absolute;right:20px;top:50%;width:6px;height:12px;pointer-events:none;margin-top:-6px;line-height:12px;vertical-align:top}
+    .lay_content section{display:none;position:absolute;top:60px;left:0;right:0;bottom:0;overflow:auto}
+    .lay_content footer{display:none}
+    .lay_open{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:#fff}
+    .lay_open header{position:absolute;top:0;left:0;right:0;height:60px;z-index:10;border-top:0;padding:0;text-align:center}
+    .lay_open header h2{padding:17px 20px;font-weight:500;font-size:20px}
+    .lay_open header h2 ruler-svg-icon-next{display:none}
+    .lay_open header .btn_close{display:block;position:absolute;top:0;left:0}
+    .lay_open footer{display:block;position:fixed;top:auto;left:0;right:0;bottom:0;padding:10px}
+    .lay_open section{display:block;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0);-webkit-perspective: 0}
+}
+.isInApp .container{display:none}
+.isInApp .footer{display:none}
+</style>
+<div class="lay_content guide_wrap">
+    <header>
+        <div class="dsc_btnbx">
+            <span class="btn btn_close">
+                <ruler-svg-icon-close strokewidth="5">
+                    <svg viewBox="0 0 84 82" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                        <g stroke-linecap="square" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 5;">
+                            <path d="M82.655.345L1.156 81.844M82.655 81.655L1.156.156"></path>
+                        </g>
+                    </svg>
+                </ruler-svg-icon-close>
+            </span>
+            <h2 class="item_tit">배송정보, 교환/환불안내
+                <ruler-svg-icon-next stroke="#d8d8d8" strokewidth="5">
+                    <svg viewBox="0 0 42 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                        <path d="M1 0l40 40.083L1.166 80" style="fill: none; fill-rule: evenodd; stroke: rgb(216, 216, 216); stroke-width: 5;"></path>
+                    </svg>
+                </ruler-svg-icon-next>
+            </h2>
+        </div>
+    </header>
+    <section>
+        <div class="guide_dsc">
+            <div class="dsc_tit">
+                <h2 class="item_tit">배송정보</h2>
+            </div>
+            <ul class="dsc_lst">
+                <li>Delivery 브랜드 업체발송은 상품설명에 별도로 기입된 브랜드 알림 배송공지 기준으로 출고되고 브랜드마다 개별 배송비가 부여됩니다.</li>
+                <li>Delivery 29CM 자체발송은 오후 3시까지 결제확인된 주문은 당일 출고되고 5만원 이상 주문은 무료배송, 5만원 미만은 3,000원의 배송비가 추가됩니다.</li>
+                <li>SPECIAL ORDER, PT 등 예약주문은 상세설명의 출고일정을 확인하시기 바랍니다.</li>
+                <li>구두, 액세서리, 침구, 액자, 가구 등 상품설명의 제작기간을 숙지해주시기 바랍니다.</li>
+                <li>가구 및 일부 상품, 제주도를 포함한 도서산간 지역은 추가배송비 입금요청이 있을 수 있습니다.</li>
+            </ul>
+            <div class="dsc_tit">
+                <h2 class="item_tit">교환, 환불, A/S 안내</h2>
+            </div>
+            <ul class="dsc_lst">
+                <li>상품 수령일로부터 7일 이내 반품 / 환불 가능합니다.</li>
+                <li>변심 반품의 경우 왕복배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
+                <li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
+                <li>출고 이후 환불요청 시 상품 회수 후 처리됩니다.</li>
+                <li>얼리 등 주문제작상품 / 카메라 / 밀봉포장상품 등은 변심에 따른 반품 / 환불이 불가합니다.</li>
+                <li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
+                <li>특정브랜드의 상품설명에 별도로 기입된 교환 / 환불 / AS 기준이 우선합니다.</li>
+                <li>구매자가 미성년자인 경우에는 상품 구입 시 법정대리인이 동의하지 아니하면 미성년자 본인 또는 법정대리인이 구매취소 할 수 있습니다.  </li>
+            </ul>
+        </div>
+    </section>
+</div>

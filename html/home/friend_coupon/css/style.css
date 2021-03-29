@@ -1,0 +1,163 @@
+/* event_main */
+.event_main{position:relative;background:#1d3294;color:#fff;text-align:center}
+.event_main h2{padding:118px 0 30px;font-weight:normal;font-size:72px;line-height:88px;letter-spacing:-.8px;word-break:keep-all;}
+.event_main .desc{font-weight:200;font-size:24px;line-height:40px;letter-spacing:-.2px}
+.event_main .pc_on{display:block;height:552px;background:url(img/cometogether.png) no-repeat 50% 110px}
+.event_main .black{height:76px;background:#000;color:#fff;font-weight:300;font-size:24px;line-height:76px;letter-spacing:-.4px}
+
+.desc_title{max-width:905px;height:126px;border:2px solid #000;margin:160px auto 0;font-weight:bold;font-size:48px;letter-spacing:-1.7px;line-height:126px;text-align:center;box-shadow:15px 15px #000;}
+
+@media screen and (max-width:540px){
+
+    .event_main h2{padding:30px 0 20px;font-size:42px;line-height:55px;letter-spacing:-.6px}
+    .event_main .desc{padding:0 50px 0 51px;font-size:16px;line-height:27px;letter-spacing:-.1px}
+    .event_main .mb_bg{display:block;position:relative;height:253px;background:url(img/cometogether@2x.png) no-repeat 50% 50px;background-size:contain}
+    .event_main .mb_bg:after{display:block;clear:both;position:absolute;bottom:-15px;left:50%;margin-left:-15px;width:30px;height:30px;background:url(img/scroll-up@2x.png) no-repeat;background-size:contain;z-index:10;content:""}
+    .event_main .pc_on{display:none}
+}
+
+/* 쿠폰 발급 안내 영역 */
+
+.coupon_info .bg{display:block;overflow:hidden;width:120px;height:54px;margin:160px auto 0;background:url(img/ic-step-01.png) no-repeat;line-height:100em;vertical-align:top}
+.coupon_info .bg2{margin-top:180px;background-image:url(img/ic-step-02.png)}
+.coupon_info .bg3{margin-top:180px;background-image:url(img/ic-step-03.png)}
+.coupon_info strong{display:block;padding:30px 0;font-weight:500;font-size:38px;line-height:42px;letter-spacing:-1.4px;text-align:center;word-break:keep-all}
+.coupon_info .txt{display:block;font-size:24px;line-height:40px;letter-spacing:-.2px;text-align:center;word-break:keep-all}
+.coupon_info .txt2{padding-bottom:168px}
+
+@media screen and (max-width:540px){
+
+    .coupon_info_wrap{padding:18px 0}
+    .coupon_info{padding:40px 0}
+    .coupon_info .bg{width:65px;height:34px;margin:0 auto;background:url(img/step-01@2x.png) no-repeat;background-size:contain}
+    .coupon_info .bg2{background-image:url(img/step-02@2x.png)}
+    .coupon_info .bg3{background-image:url(img/step-03@2x.png)}
+    .coupon_info strong{padding:20px 43px 15px 46px;font-weight:550;font-size:24px;line-height:36px;letter-spacing:-.8px}
+    .coupon_info .txt{padding:0 52px 0 58px;font-size:16px;line-height:26px;letter-spacing:-.6px}
+    .coupon_info .txt2{padding:0 78px 0 80px}
+
+}
+
+
+/* 아이디 입력 & 쿠폰 발급 영역 */
+.friend_wrap{background:#1d3294}
+.user_submit{overflow:hidden;position:relative;max-width:470px;margin:0 auto;padding:250px 32px 40px 30px}
+.submit1{padding-top:300px}
+.id_txt{padding-bottom:15px;font-size:24px;line-height:27px;letter-spacing:-.2px;color:#fff}
+.btn{display:block;position:relative;vertical-align:top;box-sizing:border-box}
+.inpbx{position:relative;margin:0 auto;padding-right:70px;border:2px solid #000;}
+.inptext{display:block;width:100%;height:105px;padding:0 60px 0 19px;font-size:24px;line-height:30px;letter-spacing:-.2px;box-sizing:border-box}
+.btn_com{position:absolute;top:0;right:0;width:100px;height:105px;border:0;background:#939cc9;font-size:20px;color:#dcdcdc}
+
+
+@media screen and (max-width:540px){
+
+    .user_submit{overflow:hidden;position:relative;max-width:470px;margin:0 auto;padding:155px 32px 40px 30px}
+    .id_txt{padding-bottom:8px;font-size:17px;line-height:1.06;letter-spacing:-.1px}
+    .btn{display:block;position:relative;vertical-align:top;box-sizing:border-box}
+    .inpbx{position:relative;margin:0 auto;padding-right:70px;border:2px solid #000;}
+    .inptext{display:block;width:100%;height:70px;padding:0 60px 0 19px;font-size:16px;line-height:20px;letter-spacing:-.1px;box-sizing:border-box}
+    .btn_com{position:absolute;top:0;right:0;width:70px;height:70px;font-size:16px}
+}
+
+/* 내 아이디 입력 활성화
+.btn_com{background:#000;color;#fff}*/
+
+/* 말풍선
+.user_submit:before{display:block;clear:both;position:absolute;top:71px;left:174px;width:28px;height:21.7px;border:1px solid #000;background-color:#fff;font-weight:bold;line-height:25px;text-align:center;content:"1"}*/
+
+/* 캐릭터 */
+.submit1:after{display:block;clear:both;position:absolute;top:135px;left:50%;width:148px;height:210px;margin-left:-74px;background:url(img/ic-01.png) no-repeat;background-size:contain;content:""}
+.submit2:after{display:block;clear:both;position:absolute;top:72px;left:50%;width:190px;height:222px;margin-left:-70px;background:url(img/ic-02-deactivated.png) no-repeat;background-size:contain;content:""}
+.submit3:after{display:block;clear:both;position:absolute;top:80px;left:50%;width:200px;height:212px;margin-left:-75px;background:url(img/ic-03-deactivated.png) no-repeat;background-size:contain;content:""}
+.submit4:after{display:block;clear:both;position:absolute;top:80px;left:50%;width:210px;height:215px;margin-left:-80px;background:url(img/ic-04-deactivated.png) no-repeat;background-size:contain;content:""}
+
+    @media screen and (max-width:540px){
+
+        .submit1:after{top:44px;left:50%;width:98px;height:141px;margin-left:-50px;background:url(img/ic-01@2x.png) no-repeat;background-size:contain}
+        .submit2:after{top:34px;left:50%;width:123px;height:148px;margin-left:-62px;background:url(img/ic-02-deactivated@2x.png) no-repeat;background-size:contain}
+        .submit3:after{top:40px;left:50%;width:133px;height:142px;margin-left:-66px;background:url(img/ic-03-deactivated@2x.png) no-repeat;background-size:contain}
+        .submit4:after{top:38px;left:50%;width:139px;height:144px;margin-left:-70px;background:url(img/ic-04-deactivated@2x.png) no-repeat;background-size:contain}
+
+    }
+
+/* 아이디 입력 비활성화 */
+.friend_wrap .off .inptext{border:0;background:#a3a9ce}
+.friend_wrap .off .btn{background:#939cc9;color:#dcdcdc}
+.friend_wrap .off .id_txt{color:#a3a9ce}
+.friend_wrap .inpbx span{display:none}
+.friend_wrap .off .inpbx span{display:block;position:absolute;top:27px;left:26px;min-width:248px;font-size:24px;color:#293361}
+
+/* 쿠폰 다운 확인 */
+.coupon_down{padding:45px 0 87px 0;color:#fff;text-align:center}
+.coupon_down .down_q{padding:120px 0 50px;font-size:38px;line-height:56px;letter-spacing:-1.4px}
+.coupon_down .coupon_bg{position:relative;width:495px;height:248px;margin:0 auto 50px;background:url(img/coupon-12-copy.png) no-repeat}
+.coupon_down .coupon_bg span{display:inline-block;position:absolute;left:50%;top:0;margin-left:-90px;font-weight:500;font-size:142px;line-height:204px;color:#375fff}
+.coupon_down .coupon_bg i{font-size:81px;font-style:normal}
+.coupon_down em{display:block;position:relative;margin-top:110px;font-weight:100;font-size:24px;line-height:40px;letter-spacing:-.2px}
+.coupon_down em:before{display:block;clear:both;position:absolute;top:-60px;left:50%;margin-left:-23px;width:45px;height:45px;background:url(img/ic-exclamatio@2x.png) no-repeat;background-size:contain;content:""}
+
+@media screen and (max-width:540px){
+
+    .friend_wrap .off .inpbx span{top:18px;left:18px;min-width:165px;font-size:16px}
+    .coupon_down .down_q{padding:0 63px 40px 64px;font-size:24px;line-height:36px}
+    .coupon_down .coupon_bg{width:275px;height:138px;margin:0 auto 83px;background:url(img/coupon-0@2x.png) no-repeat;background-size:contain}
+    .coupon_down .coupon_bg span{margin-left:-50px;font-weight:500;font-size:79px;line-height:113.3px}
+    .coupon_down .coupon_bg i{font-size:45px}
+    .coupon_down em{font-size:16px;line-height:26px;letter-spacing:-.4px}
+    .coupon_down em:before{top:-50px;margin-left:-15px;width:30px;height:30px;background:url(img/ic-exclamatio@2x.png) no-repeat}
+
+}
+
+/* 쿠폰 사용 기간 + 쿠폰 설명 */
+.coupon_desc{text-align:center}
+.title2{margin-top:140px}
+.title3{margin-top:0px}
+.coupon_desc .coupon_date{padding:120px 0 30px;font-size:38px;line-height:42px;color:#303033}
+.coupon_desc span{font-size:24px;line-height:40px;letter-spacing:-.2px;}
+.app_down{position:relative;margin-top:70px}
+.app_down:after{display:none}
+.app_down p{padding:90px 0 35px;font-weight:500;font-size:38px;line-height:42px;letter-spacing:-1.4px;color:#000}
+.app_down a{overflow:hidden;margin-bottom:74px;display:inline-block;width:91px;height:100px;background:url(img/googleplay.png) no-repeat;background-size:contain;line-height:100em;vertical-align:top}
+.app_down .app_store{margin-left:65px;background-image:url(img/app-store.png)}
+.share p{padding:120px 0 54px;font-size:24px;line-height:40px;letter-spacing:-.2px;color:#000}
+.share a{overflow:hidden;margin-bottom:90px;display:inline-block;width:90px;height:90px;background:url(img/facebook-bt-copy.png) no-repeat;line-height:100em;vertical-align:top}
+.share .kakaotalk{margin-left:65px;background-image:url(img/url-bt.png)}
+.coupon_desc dl{margin-top:110px;padding:150px 347px 217px 314px;background:#f2f2f2;text-align:left}
+.coupon_desc dt{padding-bottom:30px;font-weight:600;font-size:28px;line-height:40px;letter-spacing:-.1px}
+.coupon_desc dd{position:relative;padding:0 0 20px 20px;font-size:18px;line-height:42px;letter-spacing:-.1px;color:#000}
+.coupon_desc dd:after{position:absolute;top:17px;left:5px;width:4px;height:4px;border-radius:50%;background:#5b5b5b;content:''}
+.coupon_desc .blit_no{margin-bottom:60px;position:static;margin-left:-10px}
+
+.mb_on{display:none}
+.pc_on{display:block}
+
+@media screen and (max-width:540px){
+    .desc_title{max-width:315px;height:65px;border:2px solid #000;margin:70px auto 0;font-weight:bold;font-size:26px;letter-spacing:-.7px;line-height:74px;text-align:center;box-shadow:7px 7px #000;}
+
+    .title2{margin-top:20px}
+    .title3{margin-top:0px}
+    .coupon_desc .coupon_date{padding:50px 96px 30px 48px;font-size:24px;line-height:36px}
+    .coupon_desc span{font-size:16px;line-height:26px;letter-spacing:-.6px;}
+    .app_down{position:relative;margin-top:70px}
+    .app_down:after{display:block;clear:both;position:absolute;left:50%;top:-10px;margin-left:-148px;width:296px;height:1px;background:#979797;content:""}
+    .app_down p{padding:50px 96px 25px 97px;font-weight:600;line-height:36px;letter-spacing:-.8px;color:#303033}
+    .app_down a{overflow:hidden;margin-bottom:74px;display:inline-block;width:55px;height:60px;background:url(img/googleplay@2x.png) no-repeat;background-size:contain;line-height:100em;vertical-align:top}
+    .app_down .app_store{margin-left:30px;background-image:url(img/app-store@2x.png)}
+    .share p{padding:55px 47px 44px;line-height:26px;letter-spacing:-.8px}
+    .share a{overflow:hidden;margin-bottom:90px;display:inline-block;width:60px;height:60px;background:url(img/facebook-bt-copy@2x.png) no-repeat;background-size:contain;line-height:100em;vertical-align:top}
+    .share .kakaotalk{margin-left:30px;background-image:url(img/kakao-bt-copy@2x.png)}
+    .coupon_desc dl{max-width:315px;margin:0 auto;padding:60px 34px 99px 30px}
+    .coupon_desc dt{padding-bottom:20px;font-weight:500px;font-size:20px;line-height:24px;letter-spacing:-.6px}
+    .coupon_desc dd{position:relative;padding:0 0 20px 20px;font-size:15px;line-height:26px;letter-spacing:-.5px;color:#4a4a4a}
+    .coupon_desc dd:after{position:absolute;top:5px;left:5px;width:4px;height:4px;border-radius:50%;background:#5b5b5b;content:''}
+    .coupon_desc .blit_no{margin-bottom:60px;position:static;margin-left:-10px}
+
+
+
+
+
+
+    .mb_on{display:block}
+    .pc_on{display:none}
+}

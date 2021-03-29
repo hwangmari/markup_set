@@ -1,0 +1,66 @@
+.checkout__form{}
+.checkout__form .mCSB_container{margin-right:0}
+.checkout__form .order__list{padding-bottom:15px;height:230px;border-bottom:1px solid #000}
+.checkout__form .order__list .order__body{overflow:hidden}
+.checkout__form .order__list .order__body .product{overflow:hidden;display:table;margin-top:30px;width:100%;table-layout: fixed;}
+.checkout__form .order__list .order__body .product .product__image{box-sizing:border-box;display:table-cell;vertical-align:top;padding-right:4%;width:90px;height:90px}
+.checkout__form .order__list .order__body .product .product__image img{width:100%}
+.checkout__form .order__list .order__body .product .product__information{display:table-cell;vertical-align:top;width:65%}
+.checkout__form .order__list .order__body .product .product__information .brand__name{font-size:0.75rem;text-decoration:underline;font-weight:500;color:#000}
+.checkout__form .order__list .order__body .product .product__information .brand__name::after{content:'';display:block}
+.checkout__form .order__list .order__body .product .product__information .brand__name+.product__name{margin-top:10px}
+.checkout__form .order__list .order__body .product .product__information .product__name{display:inline-block;font-size:13px;line-height:1.222em;font-weight:500;text-decoration:none;color:#000}
+.checkout__form .order__list .order__body .product .product__information .product__price{margin-top:4px;font-size:13px;color:#000;line-height:1.714em}
+.checkout__form .order__list .order__body .product .product__information .product__price--original{display:block;color:#a0a0a0}
+.checkout__form .order__list .order__body .product .product__information .product__price--discount{display:block}
+.checkout__form .order__list .order__body .product .product__information .product__option{margin-top:15px;font-size:13px;line-height:1.83em;color:#5d5d5d}
+.checkout__form .order-price{margin-top:20px}
+.checkout__form .order-price table{border:0}
+.checkout__form .order-price table tbody tr th,.checkout__form .order-price table tbody tr td{padding:10px 0;border:0;font-size:13px;color:#000}
+.checkout__form .order-price table tbody tr td{text-align:right;font-size:15px}
+.checkout__form .order-price table tbody tr .price--total{font-size:20px}
+.checkout__form .order-agree{position:relative;margin-top:10px;font-size:13px;color:#5d5d5d}
+.checkout__form .order-agree input[type=checkbox].checkbox{width:27px;height:27px}
+.checkout__form .order-agree input[type=checkbox].checkbox+.label-text{color:#5d5d5d;position:absolute;line-height:1.3333em}
+.checkout__form .button-checkout__wrap{margin-top:30px}
+.checkout__form .button-checkout__wrap .button--checkout{width:100%}
+
+
+.order__info__wrap{width:60%;float:left}
+.order__info__wrap .order__table table{border-top:0}
+.order__info__wrap .order__table table tbody tr th,.order__info__wrap .order__table table tbody tr td{border:0;vertical-align:top;padding:0;padding-top:15px}
+.order__info__wrap .order__table table tbody tr th label,.order__info__wrap .order__table table tbody tr td label{padding:0}
+.order__info__wrap .order__table table tbody tr:first-child th,.order__info__wrap .order__table table tbody tr:first-child td{padding-top:0}
+.order__info__wrap .order__table table tbody tr th{padding-top:25px}
+.order__info__wrap .order-notice{margin-top:10px;font-size:0.75rem;line-height:1.833em;color:#5d5d5d}
+.order__info__wrap .order__info{border:0;border-top:6px solid #000;margin:0;padding-bottom:45px;border-radius:0}
+.order__table{margin-top:30px}
+.input--text{border:1px solid #a6a6a6;box-sizing:border-box;padding:10px;width:100%;max-width:210px}
+.input--text input{width:100%;height:18px;margin:0;border:0;border-radius:0;box-shadow:none;padding:0;font-size:0.75rem;line-height:1.5em;vertical-align:top}
+.info--address .checkbox-detail{margin-top:15px}
+.info--address .checkbox-save{margin-top:5px}
+.info--address .input--text{margin-top:10px;max-width:480px}
+.info--address .input--text:first-child{margin-top:0}
+.input-zipcode .input--search{display:inline-block;width:50%;max-width:210px;text-align:center}
+.input-zipcode .input--search input{width:40%;text-align:center}
+.input-zipcode .order-button{height:40px;vertical-align:top}
+.info--phone{display:table;width:100%;max-width:210px;box-sizing:border-box}
+.info--phone .input--tel{display:table-cell;border:1px solid #a6a6a6;padding:10px;box-sizing:border-box}
+.info--phone .input--tel input{width:100%;height:auto;margin:0;border:0;border-radius:0;box-shadow:none;padding:0;font-size:0.875rem;line-height:1.14em;vertical-align:middle;text-align:center}
+
+
+.order__info__wrap .order__pay{border:0;border-top:6px solid #000;margin:0;padding-bottom:45px;border-radius:0}
+.order__info__wrap .order__pay .order__body{margin-top:30px}
+
+@media screen and (max-width:540px){
+    .order__info__wrap{float:none;width:100%}
+    .order__info,.checkout__form{float:none;width:100%}
+    .button-checkout__wrap{position:fixed;bottom:0;left:0;right:0;z-index:10}
+}
+@media screen and (min-width:541px){
+.m_view{display:none}
+.order__info__wrap{position:relative;padding-right:40%}
+.form1{position:absolute;top:0;right:0;width:37%;height:250px;padding:0 30px;border:6px solid #000;border-bottom:0;box-sizing: border-box;}
+.form2{position:absolute;top:250px;right:0;width:37%;height:300px;padding:0 30px;border:6px solid #000;border-width:0 6px;box-sizing: border-box;}
+.form3{position:absolute;top:550px;right:0;width:37%;padding:0 30px 30px;border:6px solid #000;border-top:0;box-sizing: border-box;}
+}

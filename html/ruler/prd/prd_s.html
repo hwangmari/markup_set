@@ -1,0 +1,64 @@
+<style>
+.prd_s{position:relative;margin-top:20px;padding:15px 65px 10px 0;border-top:1px solid #d4d4d4;box-sizing:border-box}
+.prd_s > a{display:block;position:relative;padding:0 10px 0 70px;color:#000}
+.prd_s:after{position:absolute;top:0;right:65px;bottom:0;border-left:1px solid #d4d4d4;content:''}
+.prd_s .imgbx{overflow:hidden;position:absolute;top:0;left:0;width:52px;height:52px}
+.prd_s .imgbx img{width:100%}
+.prd_s .info{font-size:11px;line-height:16px;color:#000}
+.prd_s .brand{font-weight:500}
+.prd_s .price{margin-top:6px;font-size:10px;line-height:13px;vertical-align:top}
+.prd_s .price .num{font-size:11px;line-height:13px}
+.prd_s .price .discount strong{color:#ff4800;font-weight:400}
+.prd_s .heart_area{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;flex-wrap:nowrap;position:absolute;top:0;right:0;bottom:0;width:65px}
+.prd_s .heart_area button{display:block;vertical-align:top}
+.prd_s .heart_area .active{color:#ff4800}
+.prd_s .heart_area .count{display:block;margin:0;text-align:center}
+.prd_s .heart_area .count i{display:inline-block;overflow:hidden;width:1px;height:1px;vertical-align:top;color:transparent}
+
+@media screen and (min-width:541px) and (max-width:1200px){
+    .prd_s > a{padding:0 10px 60px 0 }
+    .prd_s .imgbx{top:auto;bottom:0;margin-top:10px;}
+}
+</style>
+
+
+<!-- <div class="prd_s"> -->
+    <a href="#">
+        <div class="imgbx">
+            <img src="https://img.29cm.co.kr/next-edition/2018/08/31/7ebc7462f80d4eb494fb4bafe1ebd260_20180831113903.jpg" alt=""/>
+        </div>
+        <div class="info">
+            <div class="brand">
+                TACS Watch
+            </div>
+            <div class="name">
+                Drop－D TS1009C
+                (Absolute Black)
+            </div>
+            <div class="price">
+                <!-- [D] 판매가  -->
+                <!--
+                <div class="sellprice">
+                    <strong><span class="num">[10%] 207,000</span>원</strong>
+                </div>
+                -->
+                <!-- [D] 할인가 -->
+                <div class="discount">
+                    <!-- <span class="sell"><span class="num">300,000</span>원</span> -->
+                    <strong><span class="num">[10%] 207,000</span>원</strong>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="heart_area">
+        <button type="button" class="heart">
+            <i class="svg">하트</i>
+            <span class="count">3</span>
+        </button>
+        <!--
+        <button type="button" class="review">
+            <i class="svg">하트</i>
+            <span class="count">3</span>
+        </button> -->
+    </div>
+<!-- </div> -->

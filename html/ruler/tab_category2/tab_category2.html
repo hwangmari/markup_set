@@ -1,0 +1,29 @@
+<style>
+.tab_category2 ul:after{display:table;clear:both;content:''}
+.tab_category2 li{float:left}
+.tab_category2 li a{display:inline-block;position:relative;color:#000;font-weight:300}
+
+@media screen and (min-width:541px){
+    .tab_category2 {display:-webkit-flex;display:flex;justify-content:center;margin:90px 0}
+    .tab_category2 li{padding:0 30px}
+    .tab_category2 li a{font-size:20px;line-height:40px;}
+    .tab_category2 li a.active{font-size:26px;font-weight:800}
+    .tab_category2 li a.active:before{position:absolute;top:60%;left:18px;z-index:-1;background:#ff4800;width:96%;height:20px;content:''}
+    .tab_category2 li a.active:after{display: block;position:absolute;bottom:-10px;left:60%;width: 0;height: 0;margin-left: -6px;border-style: solid;border-width: 6px 6px 0 6px;border-color: #ff4800 transparent transparent transparent;content:''}
+    .tab_category2 li+li:before{display:inline-block;width:1px;height:40px;margin:0 30px 0 0;background:#d4d4d4;vertical-align:top;content:''}
+}
+@media screen and (max-width:540px){
+    .tab_category2{padding:20px;border:1px solid #ccc;border-width:1px 0}
+    .tab_category2 li{width:33.33%;text-align:center}
+    .tab_category2 li a{font-size:15px;line-height:20px;}
+    .tab_category2 li a.active{font-weight:600}
+}
+</style>
+
+<!-- <div class="tab_category2"> -->
+    <ul>
+        <li><a href="#" class="active">PRODUCT (121233) </a></li>
+        <li><a href="#">BRAND (123)</a></li>
+        <li><a href="#">POST (123)</a></li>
+    </ul>
+<!-- </div> -->

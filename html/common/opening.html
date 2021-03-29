@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>서버교체</title>
+<style>
+
+*{margin:0;padding:0;font-family:"Campton","AppleSDGothicNeo"}
+@font-face{
+    font-family:"campton";
+    src:local("Campton W00 Book"), local("Campton-W00-Book"), url("https://image.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+.opening_wrap{position:absolute;top:0;right:0;bottom:0;left:0}
+.dsc p{font-size:16px;line-height:26px}
+.time h2{font-size:14px}
+.time h2:before{display:block;width:30px;height:2px;content:''}
+.logo{width:100px}
+@media screen and (min-width:541px){
+    .opening_wrap{display:flex;align-items:center;justify-content:center;background:#303030;color:#000}
+    .opening_ct{width:500px;height:560px;padding:46px 50px;background:#fff;box-shadow:20px 20px 50px rgba(0,0,0,0.8);box-sizing:border-box}
+    .dsc h1{font-size:48px;line-height:46px;font-weight:normal}
+    .dsc p{margin-top:20px;font-weight:500}
+    .time h2{font-weight:800}
+    .time h2:before{margin:103px 0 29px;background:#000}
+    .time p{margin-top:10px;font-size:24px;font-weight:600}
+    .logo{margin-top:84px}
+    .m_veiw{display:none}
+}
+@media screen and (max-width:540px){
+    .opening_wrap{background:#000;color:#fff}
+    .opening_ct{padding:48px 30px}
+    .opening_ct span{display:block}
+    .dsc h1{font-size:40px;line-height:42px;font-weight:500}
+    .dsc p{margin-top:21px;font-weight:300}
+    .dsc span{margin-top:27px}
+    .time h2{font-weight:500}
+    .time h2:before{margin:107px 0 20px;background:#fff}
+    .time p{margin-top:20px;font-size:24px}
+    .time span{font-size:34px;font-weight:600}
+    .logo{position:absolute;bottom:30px;left:30px}
+}
+</style>
+</head>
+<body>
+<div class="opening_wrap">
+    <div class="opening_ct">
+        <div class="dsc">
+            <h1>29CM<br>RENEWAL</h1>
+            <p>더 나은 서비스를 위해 일시적으로 <br class="m_veiw">접속이 제한됩니다<br><span>이용에 불편을 드려 대단히 죄송합니다</span></p>
+        </div>
+        <div class="time">
+            <h2>서비스 중단 일시</h2>
+            <p>2018.02.09 (금) <span>00:00 ~ 06:00</span></p>
+        </div>
+        <img src="https://img.29cm.co.kr/next29cm/logo_29cm.png" alt="29cm" class="logo"/>
+    </div>
+</div>
+
+</body>
+</html>

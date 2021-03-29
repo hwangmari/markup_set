@@ -1,0 +1,421 @@
+<style>
+/* 페이지 공통 */
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+    .pc_view{display:none}
+    .m_view{display:block}
+}
+</style>
+<style>
+.filter_wrap{position:relative;height:100%;margin:0 auto}
+.filter_top{position:relative}
+.filter_top .btn_reset{color:#303033;font-size:14px}
+.filter_top .btn_reset{position:absolute;top:0;right:0;text-decoration:underline;border:0;padding:0;outline:none;line-height:20px}
+.contral_tit{display:block;margin-right:60px;font-size:14px;font-weight:600;color:#000}
+.contral_tit:after{display:table;clear:both;content:''}
+.contral_tit .num{font-weight:300}
+.contral_tit .num span{color:#375fff}
+
+.filter_optlst .ckbx2{display:block;position:relative;font-size:0}
+.filter_optlst .ckbx2 input{position:absolute;top:0;left:0;width:1px;height:1px;outline: none}
+.filter_optlst .ckbx2 label{display:block;overflow:hidden;position:relative;max-width:100%;white-space:nowrap;text-overflow:ellipsis;box-sizing:border-box}
+
+@media (min-width:541px){
+    .filter+.filter{margin-top:40px}
+    .filter_title{padding:10px 0 0}
+    .filter_option{margin-top:10px}
+}
+
+@media (max-width:540px) {
+    .contral_tit{margin:0;padding-right:19px}
+    .filter_title{width:90px;background:#eee;font-size:14px;color:#000;line-height:60px;text-align:right;box-sizing:border-box}
+    .filter_option_in{overflow:auto;position:absolute;top:0;left:90px;right:0;bottom:0;padding:0 20px;background:#fff}
+    .filter .filter_option{display:none}
+    .filter.opened_option .filter_title{background:#fff}
+    .filter.opened_option .filter_option{display:block;z-index:10}
+    .filter_top .btn_reset,.contral_tit .num{display:none}
+    .filter_inner .filter_optlst li{border-top:1px solid #e4e4e4}
+    .filter_inner .filter_optlst li:first-child{border-top:0}
+    .filter_inner .ckbx2 label{padding-right:70px;font-size:15px;color:#000;line-height:60px}
+    .filter_inner .ckbx2 label:after{position:absolute;top:50%;right:0;width:13px;height:10px;margin-top:-5px;background:gray;content:''}
+    .filter_inner .ckbx2 label .num{position:absolute;top:0;right:23px;font-size:12px;color:#a0a0a0;text-align:right}
+    .filter_inner .ckbx2 label .txt_gray{color:#a0a0a0}
+    .filter_inner .ckbx2 input:checked+label:after{background:#375fff}
+    .filter_inner .ckbx2 input:checked+label .num{color:#375fff}
+    .filter_inner_in{overflow:auto;position:relative;height:100%}
+}
+</style>
+
+<style>
+.filter_btnarea{display:none}
+@media (max-width:540px) {
+    .filter_btnarea{display:block;height:50px;border:1px solid #ccc;border-width:1px 0;}
+    .filter_btnarea:after{display:block;clear:both;content:''}
+    .filter_btnarea .btn{float:left;width:50%;height:50px;}
+
+    .filter_inner:before{display:none;position:absolute;top:0;left:0;bottom:0;width:90px;padding:50px 0 170px;background:#eee;content:''}
+    .filter_inner .filier_reset{display:none}
+    .filter_inner .filter_inner_in{display:none}
+    .filter_inner .filter_search_btn{display:none}
+
+    .filter_btnarea:hover +.filter_inner .filier_reset{display:block}
+    .filter_btnarea:hover +.filter_inner{overflow:auto;position:fixed;top:0;left:0;right:0;bottom:0;z-index:10;padding:50px 0 170px;background:#fff;box-sizing:border-box}
+    .filter_btnarea:hover +.filter_inner:before{display:block}
+    .filter_btnarea:hover +.filter_inner .filter_inner_in{display:block}
+    .filter_btnarea:hover +.filter_inner .filter_search_btn{display:block}
+    .filter_btnarea:hover +.filter_inner .filter_bot{position:fixed;left:0;right:0;bottom:0;z-index:10;border-top:1px solid #ccc;background:#fff}
+
+    .filter_open .filier_reset{display:block}
+    .filter_open{overflow:auto;position:fixed;top:0;left:0;right:0;bottom:0;z-index:10;padding:50px 0 170px;background:#fff;box-sizing:border-box}
+    .filter_open:before{display:block}
+    .filter_open .filter_inner_in{display:block;border-bottom:1px solid red}
+    .filter_open .filter_search_btn{display:block}
+    .filter_open .filter_bot{position:fixed;left:0;right:0;bottom:0;z-index:10;border-top:1px solid #ccc;background:#fff}
+}
+</style>
+<div class="filter_btnarea">
+    <button type="button" class="btn btn_soting">베스트순</button>
+    <button type="button" class="btn btn_filter">필터</button>
+</div>
+<!--  필터 버튼  filter_open 추가 -->
+<div class="filter_inner">
+
+    <style>
+    .filier_reset{display:none;}
+    @media (max-width:540px) {
+        .filier_reset{display:block;position:fixed;top:0;left:0;right:0;z-index:10;height:50px;border-bottom:1px solid #ccc;background:#fff }
+        .filier_reset .btn{position:absolute;top:0;width:50px;height:50px;}
+        .filier_reset .btn_clr{left:0;}
+        .filier_reset .btn_reset{right:0;}
+    }
+    </style>
+    <div class="filier_reset">
+        <button type="button" class="btn btn_clr">닫기</button>
+        <button type="button" class="btn btn_reset">Reset</button>
+    </div>
+
+    <div class="filter_inner_in">
+        <!--  [D] Mobile에서 .contral_tit 클릭시, 해당 버튼 부모 .filter에 .opened_option 클래스 추가  -->
+        <div class="filter">
+            <div class="filter_title">
+                <div class="filter_top">
+                    <a href="#filter_category" class="contral_tit">카테고리 <span class="num">(216) / <span>0</span></span></a>
+                    <button type="button" class="btn_reset">Reset all</button>
+                </div>
+            </div>
+            <div id="filter_category" class="filter_option">
+                <div class="filter_option_in">
+                    <style>
+                    .filter_lst_wrap{overflow:auto;max-height:300px;padding:20px 0 0;border-top:2px solid #000}
+                    .filter_lst_wrap h2{font-size:14px;color:#000;font-weight:bold}
+                    .filter_lst_wrap label{font-size:16px;color:#5d5d5d;line-height:1.5;font-weight:300}
+                    .filter_lst li{margin-top:16px}
+                    @media (max-width:540px) {
+                        .filter_lst_wrap{max-height:100%;padding:0;border:0}
+                        .filter_lst li{margin-top:0}
+                    }
+                    </style>
+                    <div class="filter_lst_wrap">
+                        <h2 class="pc_view">CATEGORY</h2>
+                        <ul class="filter_optlst filter_lst">
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand_850">
+                                    <label for="brand_850">WOMEN / bag WOMEN / bag WOMEN / bag <span class="num">(1234)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand_850_2">
+                                    <label for="brand_850_2">MEN / bag <span class="num">(567)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand_850_3">
+                                    <label for="brand_850_3">MEN / bag <span class="num">(567)</span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter opened_option">
+            <div class="filter_title">
+                <div class="filter_top">
+                    <a href="#filter_brand" class="contral_tit">브랜드 <span class="num">(216) / <span>0</span></span></a>
+                    <button type="button" class="btn_reset">Reset</button>
+                </div>
+            </div>
+            <div id="filter_brand" class="filter_option">
+                <div class="filter_option_in">
+                    <style>
+                    .brand_lst_wrap{overflow:auto;max-height:300px;padding-bottom:20px;border-bottom:1px solid #d4d4d4}
+                    .brand_lst_wrap label{font-size:16px;line-height:1.5}
+                    .searchbx{position:relative;border:1px solid #a0a0a0}
+                    .searchbx .inpbx{display:block;margin-right:48px;height:38px;padding:0;border:0;background:#fff;vertical-align:top;box-sizing:border-box}
+                    .searchbx .inpbx input{display:block;width:100%;height:100%;padding:0 10px;background:transparent;color:#000;outline:none;font-size:13px;line-height:32px;vertical-align:top;-webkit-appearance:none}
+                    .searchbx .btn{top:0;right:0;width:38px;height:38px;background-size:17px auto;opacity:.35}
+                    .searchbx .btn{position:absolute;top:0;right:0;width:38px;height:38px;padding:0;background:url(//image.29cm.co.kr/mall/svg/icon_search_v2.svg) 50% 50%/17px auto no-repeat}
+                    .searchbx .btn span{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0)}
+
+                    .brand_lst{margin-top:12px}
+                    .brand_lst li{margin-top:16px}
+                    @media (max-width:540px) {
+                        .brand_lst_wrap{max-height:100%;padding-bottom:0;border-bottom:0}
+                        .brand_lst,.brand_lst li{margin-top:0}
+                        .searchbx{margin:14px 0 11px;border:0;border-radius:999px;background:#e4e4e4}
+                        .searchbx .inpbx{height:34px;margin-right:34px;background:none}
+                        .searchbx .inpbx input{padding:0 0 0 20px}
+                        .searchbx .btn{height:34px;opacity:1}
+                    }
+                    </style>
+                    <div class="searchbx">
+                        <span class="inpbx">
+                            <input type="search"/>
+                        </span>
+                        <button type="submit" class="btn"><span>검색</span></button>
+                    </div>
+                    <div class="brand_lst_wrap">
+                        <ul class="filter_optlst brand_lst">
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand2_850">
+                                    <label for="brand2_850">세이모온도 <span class="txt_gray">Gardenhada Gardenhada</span> <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand2_850_2">
+                                    <label for="brand2_850_2">세이모온도 <span class="txt_gray">Gardenhada</span> <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand2_850_3">
+                                    <label for="brand2_850_3">세이모온도 <span class="txt_gray">Gardenhada</span> <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand2_850_4">
+                                    <label for="brand2_850_4">세이모온도 <span class="txt_gray">Gardenhada Gardenhada</span> <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="filter_title">
+                <a href="#filter_price" class="contral_tit">가격</a>
+            </div>
+            <div id="filter_price" class="filter_option">
+                <div class="filter_option_in">
+                    <style>
+                    .rangebx{margin-bottom:20px;padding:0 0 20px;border-bottom:1px solid #d4d4d4}
+                    .rangebx_line{position:relative;height:4px;background:#d4d4d4;width:100%}
+                    .rangebx_line span{position:absolute;top:0;bottom:0;background:#3864fc}
+                    .rangebx_line i{position:absolute;top:-9px;overflow:hidden;display:inline-block;width:30px;height:20px;border:solid 1px #d4d4d4;border-radius:10px;  box-shadow:1px 1px 0 0 rgba(0, 0, 0, 0.3);background:#fff;cursor:pointer;line-height:1000em;}
+                    .range_num{display:table;width:100%;margin-top:30px;font-size:14px;font-weight:600}
+                    .range_num .num_dwn{display:table-cell}
+                    .range_num .num_up{display:table-cell;text-align:right}
+                    @media (max-width:540px) {
+                    }
+                    </style>
+                    <div class="pc_view">
+                        <div class="rangebx">
+                            <div class="rangebx_line">
+                                <span style="left:10%;right:50%"></span>
+                                <i class="range_dwn" style="left:10%;">가격</i>
+                                <i class="range_up" style="left:50%;">가격</i>
+                            </div>
+                            <div class="range_num">
+                                <span class="num_dwn">0원</span>
+                                <span class="num_up">120,000원</span>
+                            </div>
+                        </div>
+                        <span class="ckbx">
+                              <!-- [D] jquery include -->
+                        </span>
+                    </div>
+                    <div class="m_view">
+                        <ul class="filter_optlst price_lst">
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850">
+                                    <label for="brand3_850">5만원 이하 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_2">
+                                    <label for="brand3_850_2">5만원 ~ 10만원 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_3">
+                                    <label for="brand3_850_3">10만원 ~ 20만원 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_4">
+                                    <label for="brand3_850_4">20만원 ~ 30만원 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_5">
+                                    <label for="brand3_850_5">30만원 ~ 40만원 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_6">
+                                    <label for="brand3_850_6">40만원 ~ 50만원 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="ckbx2">
+                                    <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand3_850_7">
+                                    <label for="brand3_850_7">50만원 이상 <span class="num">(256)</span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="filter_title">
+                <a href="#filter_size" class="contral_tit">사이즈</a>
+            </div>
+            <div id="filter_size" class="filter_option">
+                <div class="filter_option_in">
+                    <style>
+                    .sizecklist li{float:left;width:50%;margin:8px 0}
+                    .sizecklist:after{display:block;clear:both;content:''}
+                    .sizecklist{padding-bottom:20px;border-bottom:1px solid #d4d4d4}
+                    </style>
+                    <ul class="sizecklist">
+                        <li>
+                            <span class="ckbx">
+                                <!-- [D] jquery include -->
+                            </span>
+                        </li>
+                        <li>
+                            <span class="ckbx">
+                                <!-- [D] jquery include -->
+                            </span>
+                        </li>
+                        <li>
+                            <span class="ckbx">
+                                <!-- [D] jquery include -->
+                            </span>
+                        </li>
+                        <li>
+                            <span class="ckbx">
+                                <!-- [D] jquery include -->
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="filter_title">
+                <a href="#filter_color" class="contral_tit">색상</a>
+            </div>
+            <div id="filter_color" class="filter_option">
+                <div class="filter_option_in">
+                    <style>
+                    .colorpicker{margin-top:10px;padding-bottom:20px;border-bottom:1px solid #d4d4d4}
+                    @media (max-width:540px) {
+                        .colorpicker{margin:0;padding:0;border-top:1px solid #e4e4e4;border-bottom:0}
+                    }
+                    </style>
+                    <ul class="filter_optlst color_lst">
+                        <li>
+                            <span class="ckbx2">
+                                <input class="brand_checkbox" name="brand_checkbox" type="checkbox" id="brand5_850">
+                                <label for="brand5_850">All Colors <span class="num">(256)</span></label>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="colorpicker">
+                          <!-- [D] jquery include -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="filter_bot">
+        <style>
+        .filter_bot{display:none}
+        @media (max-width:540px) {
+            .filter_bot{display:block}
+            .filter_bot .ckbx label{font-size:14px;color:#000}
+            .filter_bot .btn_search_chk{display:block;width:100%;height:60px;margin-top:17px;border-radius:2px;background:#375fff;font-size:17px;color:#fff}
+            .filter_bot .btn_search_chk .num{font-size:20px}
+            .filter_slide{overflow-x:auto;padding:10px;}
+            .filter_search_btn{padding:0 10px 10px;}
+            .filter_chklst:after{display:block;clear:both;content:''}
+            .filter_chklst li{float:left;margin-left:6px}
+            .filter_chklst li:first-child{margin-left:0}
+            .filter_chklst .btn_chk{position:relative;height:32px;padding:0 34px 0 10px;border-radius:2px;background:#375fff;font-size:12px;color:#fff;vertical-align:top}
+            .filter_chklst .btn_chk:after{position:absolute;top:50%;right:6px;width:18px;height:18px;margin-top:-9px;background:url(../img/ico_delete.png) no-repeat;background-size:100% 100%;content:''}
+            .filter_chklst .btn_chk.color{padding-left:0;background:none}
+            .filter_chklst .btn_chk.color .in_color{display:inline-block;width:32px;height:32px;border:1px solid #d4d4d4;border-radius:999em;vertical-align:top;box-sizing:border-box}
+        }
+        </style>
+        <div class="filter_slide">
+            <!--[D] 선택된 li slide, .filter_chklst width = (li의 width값 + li 사이 간격 6px) * li 갯수 -->
+            <ul class="filter_chklst" style="width:800px">
+                <li>
+                    <button type="button" class="btn_chk">Women / Blog</button> <!--[D] 선택된 label text값 .btn_chk에 입력 -->
+                </li>
+                <li>
+                    <button type="button" class="btn_chk">로우로우</button> <!--[D] 선택된 label text값 .btn_chk에 입력 -->
+                </li>
+                <li>
+                    <button type="button" class="btn_chk color"><span class="in_color" style="border-color:#bb193e;background-color:#bb193e"></span></button> <!--[D] .in_color에 선택된 color값 inline-line style 선언 -->
+                </li>
+                <li>
+                    <button type="button" class="btn_chk color"><span class="in_color" style="border-color:#ccc;background-color:#fff"></span></button> <!--[D] .in_color에 선택된 color값 inline-line style 선언 -->
+                </li>
+            </ul>
+        </div>
+        <div class="filter_search_btn">
+            <style>
+            .ckbx{display:inline-block;overflow:hidden;position:relative;min-width:20px;height:20px;line-height:20px;vertical-align:top}
+            .ckbx input{position:absolute;top:-100%;left:-100%;z-index:-10;width:13px;height:13px;background:transparent}
+            .ckbx label{display:inline-block;position:relative;z-index:10;height:20px;padding-left:20px;text-indent:10px;font-size:12px;line-height:20px;box-sizing:border-box;cursor:pointer;vertical-align:top}
+            .ckbx ruler-svg-icon-ck{position:absolute;top:0;left:0;width:20px;height:20px;box-sizing:border-box;border:1px solid #a0a0a0;text-align:center}
+            .ckbx input[type=checkbox]:checked + ruler-svg-icon-ck{border-color:#375fff;background:#375fff}
+            .ckbx input[type=checkbox]:disabled + ruler-svg-icon-ck{border-color:#eee;background:#eee}
+
+            </style>
+
+            <span class="ckbx">
+                <input type="checkbox" id="idckckbx" value=""/>
+                <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                <label for="idckckbx" title=""></label>
+            </span>
+
+            <button type="button" class="btn_search_chk"><span class="num">2345</span>개의 상품보기</button>
+        </div>
+
+    </div>
+</div>

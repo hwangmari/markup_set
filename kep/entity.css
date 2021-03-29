@@ -1,0 +1,20 @@
+
+.wrap{height:100vh;padding:20px;background:#555;box-sizing:border-box;word-break: break-all;font-size:14px;line-height:1.2}
+.lftbx,.rgtbx{position:relative;}
+.profilebx{position:absolute;top:12px;left:0;width:40px;height:40px;border-radius:50%;overflow:hidden;}
+.profilebx img{width:100%}
+
+.lftbx{padding:10px 0 10px 40px}
+
+.rgtbx{padding:10px 0 10px 20%}
+
+
+.talkbx{display:inline-block;max-width:70%;margin-left:10px;padding:16px 15px 14px;border-radius:25px 25px 25px 0;background:#fff;}
+
+.optionbx{margin-top:25px}
+.optionbx h2{padding-left:25px;color:#fff;font-size:14px}
+.optionlist{margin-top:10px;padding:10px 20px;border-radius:12px;background:#fff;}
+.optionlist li{margin-top:10px;height:30px;line-height:30px;background:#eee}
+.optionlist button{display:block;width:100%;margin-top:10px;height:30px;border-radius:8px;line-height:30px;background:#ddd}
+
+.option_detail{margin-top:10px;padding:20px;border-radius:12px;background:#fff;text-align:center}

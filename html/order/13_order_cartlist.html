@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>장바구니</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order.css">
+</head>
+<body>
+<div class="header_wrap">
+	<!-- [D] jquery include -->
+</div>
+
+<div class="container-s">
+	<div class="container-order">
+		<!--- content : start -->
+		<div class="container-header">
+			<ol class="order-flow">
+				<li class="active">SHOPPING BAG</li>
+				<li>ORDER</li>
+				<li>ORDER CONFIRMED</li>
+			</ol>
+		</div>
+		
+		<!-- 개편 이벤트 -->
+		<style>
+		.renewal_evt_wrap{display:table;width:100%;margin-bottom:92px;table-layout:fixed}
+		.renewal_evt_wrap .inner{display:table-cell;position:relative;height:150px;padding-left:20px;vertical-align:middle}
+		.renewal_evt_wrap .inner:first-child{width:67%;padding-left:37px;background:#303033;color:#fff}
+		.renewal_evt_wrap .price{font-size:70px}
+		.renewal_evt_wrap .price .ko{font-size:18px}
+		.renewal_evt_wrap .btn_go{position:absolute;top:50%;right:0;height:100%;padding-right:12%;font-size:18px;font-weight:500;color:#fff;transform:translate(0,-50%);-ms-transform:translate(0,-29%)}
+		.renewal_evt_wrap .btn_go:before,.renewal_evt_wrap .btn_detail:before{display:inline-block;height:100%;vertical-align:middle;content:''}
+		.renewal_evt_wrap .btn_detail{display:block;width:100%;height:100%;border:1px solid #303033;font-size:18px;font-weight:500;color:#000;text-align:center}
+		.renewal_evt_wrap .info_txt{position:absolute;left:37px;bottom:-50px;margin-top:20px;font-size:16px;color:#ff4800;line-height:30px}
+		.renewal_evt_wrap .pc_view{display:block}
+		.renewal_evt_wrap .m_view{display:none}
+		@media screen and (max-width:1400px){
+			.renewal_evt_wrap .btn_go{padding-right:30px}
+		}
+		@media screen and (max-width:540px){
+			.renewal_evt_wrap{display:block;width:auto;margin:0 -20px 30px}
+			.renewal_evt_wrap .inner{display:block;height:auto;padding:0 20px;background:#d4d4d4}
+			.renewal_evt_wrap .inner:first-child{width:auto;padding:27px 20px 20px}
+			.renewal_evt_wrap .price{font-size:22px;line-height:32px}
+			.renewal_evt_wrap .price .m_view{display:inline-block}
+			.renewal_evt_wrap .btn_go{position:static;height:auto;padding:0;font-size:22px;font-weight:normal;line-height:32px}
+			.renewal_evt_wrap .btn_go:before,.renewal_evt_wrap .btn_detail:before{display:none}
+			.renewal_evt_wrap .btn_detail{width:auto;height:auto;border:0;font-size:16px;color:#000;line-height:70px;text-align:left}
+			.renewal_evt_wrap .info_txt{position:static;font-size:14px;line-height:22px}
+			.renewal_evt_wrap .pc_view{display:none}
+			.renewal_evt_wrap .m_view{display:block}
+		}
+		</style>
+		<div class="renewal_evt_wrap">
+			<div class="inner">
+				<p class="price">20,000,900 <span class="ko pc_view">이천만 구백원</span> <span class="m_view">원</span></p>
+				<a href="#" class="btn_go">무료 결제 쇼핑 리스트 제출하기 &gt;</a>
+				<p class="info_txt">쇼핑 리스트 제출은 상품 구매에 <br class="m_view">아무 영향을 미치지 않으니 안심하세요</p>
+			</div>
+			<div class="inner">
+				<a href="#" class="btn_detail">이벤트 자세히보기 &gt;</a>
+			</div>
+		</div>
+		<!-- //개편 이벤트 -->
+
+		<!-- 회원정보 노출 -->
+		<style>
+		.cart__header{padding-bottom:15px}
+		.cart__header .user-info{line-height:1.25em;font-size:0.9375rem}
+		.cart__header .user-info dt{color:#5d5d5d;display:inline-block}
+		.cart__header .user-info dd{display:inline-block;padding-left:8px;color:#000}
+		.cart__header .user-info dd+dt::before{margin-left:12px;margin-right:15px;content:'|';color:#ddd}
+		</style>
+		<div class="cart__header">
+			<dl class="user-info">
+				<dt>회원 등급</dt>
+				<dd>[STAFF]</dd>
+				<dt>보유 마일리지</dt>
+				<dd>2,121P</dd>
+				<dt>사용가능 쿠폰</dt>
+				<dd>7개</dd>
+			</dl>
+		</div>
+
+		<form action="CartProcess.asp" method="post" name="frmCart" onsubmit="return false;">
+			<style>
+			.cart-wrap{float:none;width:100%;margin-bottom:3.75%}
+			</style>
+			<div class="order-wrap1 cart-wrap">
+				<style>
+					.container-order .order-control{display:none}
+					@media screen and (max-width:540px){
+						.container-order .order-control{display:block;overflow:hidden;padding-top:30px}
+						.container-order .order-control .checkbox-basic{float:left}
+						.container-order .order-control .checkbox-basic .label-text{font-size:14px;vertical-align:top}
+						.container-order .order-control .button--remove{float:right;border:0;padding:0;background:none;text-indent:0;line-height:1.25}
+						.container-order .order-control .button--remove:hover,.container-order .order-control .button--remove:active{background:none}
+						.container-order .order-control .button--remove button{font-size:14px;color:#999}
+					}
+				</style>
+				<!--[D] 모바일용 전체 선택 -->
+				<div class="order-control">
+					<div class="checkbox-basic">
+						<label for="ckAll1"><input type="checkbox" name="ckAll1" id="ckAll1" checked="" class="checkbox" onclick="fnCheckAll(this)">
+							<span class="label-text">전체선택<span class="count">(<span id="iCartCheckCount">7</span>/7)</span></span>
+						</label>
+					</div>
+					<div class="button--remove">
+						<button type="button" onclick="fnChkDelCart();">선택삭제</button>
+					</div>
+				</div>
+				<!-- //모바일용 전체 선택 -->
+
+				<style>
+				.cart__list{border-top:6px solid #000;border-left:0;border-right:0;border-bottom:0;border-radius:0;margin-bottom:0;color:#4c4c4c;font-size:12px}
+				.cart__list+.cart__list{margin-bottom:0;border-top:0}
+				.cart__list .cart_table .in_row{display:table;width:100%;table-layout:fixed}
+				.cart__list .thead_row [class^="in_td_"]{height:27px;padding:12px 0;text-align:center;font-size:0.75rem;font-weight:500;line-height:1.714em;color:#000;background:none;border:0}
+				.cart__list [class^="in_td_"]{display:table-cell;padding:30px 10px;border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4;font-size:0.75rem;font-weight:500;color:#000;line-height:1.714em;vertical-align:middle;text-align:center;box-sizing:border-box}
+				.cart__list [class^="in_td_"]:first-child{border-left:0;padding-left:0;padding-right:0}
+				.cart__list [class^="in_td_"]:last-child{border-right:0}
+				.cart__list .in_td_1{width:4.5%}
+				.cart__list .in_td_2{width:52.7%}
+				.cart__list .in_td_3{width:12.8%}
+				.cart__list .in_td_4{width:15%}
+				.cart__list .in_td_5{width:15%}
+				.cart__list .product{position:relative;padding-left:0;padding-right:60px;text-align:left;border-left:0}
+				.cart__list .product .button--remove{position:absolute;top:30px;right:30px;width:30px;height:30px}
+				.cart__list .product__image{display:inline-block;display:table-cell;padding-right:25px;width:90px;height:90px;vertical-align:top}
+				.cart__list .product__information{max-width:450px;display:inline-block;display:table-cell;vertical-align:top}
+				.cart__list .product__information .brand__name{display:inline;font-size:0.75rem;text-decoration:underline;font-weight:500;text-align:left;color:#000}
+				.cart__list .product__information .brand__name::after{content:'';display:block}
+				.cart__list .product__information .product__name{margin-top:5px;display:inline;font-size:1.125rem;line-height:1.714em;font-weight:500;color:#000}
+				.cart__list .product__information .product__name::after{content:'';display:block}
+				.cart__list .product__information .product__price{margin-top:4px;font-size:0.875rem;color:#000;line-height:1.714em}
+				.cart__list .product__information .product__price--original{color:#a0a0a0;display:inline}
+				.cart__list .product__information .product__price--original::after{content:'';display:block}
+				.cart__list .product__information .product__price--discount{display:inline;color:#ff4800}
+				.cart__list .product__information .product__price--discount::after{content:'';display:block}
+				.cart__list .product__information .product__option{margin-top:15px;font-size:0.75rem}
+				.cart__list .product__information .order-button{margin-top:10px}
+				.cart__list .product__count{text-align:center}
+				.cart__list .product__count .input--quantity{display:table;width:90px;margin:0 auto;border:1px solid #d4d4d4}
+				.cart__list .product__count .input--quantity .quantiry-button{display:table-cell;width:25px;height:25px;line-height:25px;color:#a0a0a0;vertical-align:top}
+				.cart__list .product__count .input--quantity .quantiry-button--minus{border-right:1px solid #d4d4d4}
+				.cart__list .product__count .input--quantity .quantiry-button--plus{border-left:1px solid #d4d4d4}
+				.cart__list .product__count .input--quantity .quantiry-input{display:table-cell;width:38px;height:25px;line-height:25px;font-size:0.875rem;vertical-align:top}
+				.cart__list .product__count .input--quantity .quantiry-input input{-webkit-appearance:none;width:100%;line-height:25px;padding:0;border:0;border-radius:0;box-shadow:none;text-align:center;font-size:0.875rem;color:#000;vertical-align:top}
+				.cart__list .product__count .input--quantity__m{display:none}
+				.cart__list .product__total-price{text-align:center}
+				.cart__list .product__total-price .total-price{display:block;font-size:1.25rem;font-weight:600;color:#000}
+				.cart__list .product__total-price .button--buy{margin-top:30px}
+				.cart__list .product__delivery-fee{text-align:center;vertical-align:middle;font-size:0.875rem}
+				.cart__list .product__delivery-fee .fee-info{margin-top:5px;font-size:0.75rem;line-height:1.5em;color:#303034}
+				.cart__list .cart_brandbx{position:relative}
+				.cart__list .cart_brandbx .product__delivery-fee{display:flex;position:absolute;top:1px;right:1px;bottom:0;z-index:10;width:15%;padding:0 30px;border-left:1px solid #d4d4d4;background:#fff;text-align:center;flex-wrap:wrap;align-content:center;box-sizing:border-box}
+				.cart__list .cart_brandbx .product__delivery-fee p{width:100%;align-self:center}
+				.cart__list .brand_tit{display:none}
+				.cart__list .item-price{display:none}
+				.cart__list__select{overflow:hidden;padding-top:1.6667%;border-top:1px solid #000}
+				.cart__list__select .cart-info{float:right;font-size:0.75rem;color:#5d5d5d}
+				@media screen and (max-width:540px){
+					.cart__list{border-top:0}
+					.cart__list .thead_row{display:none}
+					.cart__list .cart_table .in_row{display:block;position:relative;width:auto;padding:52px 0 25px;border-bottom:1px solid #d4d4d4;box-sizing:border-box}
+					.cart__list [class^="in_td_"]{display:block;width:auto;padding:0;border:0;text-align:left}
+					.cart__list .in_td_1{position:absolute;top:8%;left:0}
+					.cart__list .product{position:static}
+					.cart__list .product .button--remove{top:7%;right:-10px;width:auto;height:auto;padding:1% 10px;border:0;background:none;font-size:14px;font-weight:500;color:#999;line-height:20px;text-indent:0}
+					.cart__list .product .button--remove:hover,.cart__list .product .button--remove:active{background:none}
+					.cart__list .product__information{display:block;max-width:70%}
+					.cart__list .product__information .brand__name{display:none}
+					.cart__list .product__information .product__name{display:block;overflow:hidden;max-width:100%;font-size:15px;white-space:nowrap;text-overflow:ellipsis;word-break:break-all}
+					.cart__list .product__information .product__price{color:#ff4800}
+					.cart__list .product__information .product__option{font-size:14px;color:#999}
+					.cart__list .product__count .input--quantity{display:none;margin:5px 0}
+					.cart__list .product__count .input--quantity__m{display:block;margin-top:6px;font-size:14px;color:#999}
+					.cart__list .product__count .input--quantity__m .inp_quntity{display:inline-block}
+					.cart__list .product__count .input--quantity__m .inp_quntity input{width:40px;height:20px;padding:0;border:1px solid #999;border-radius:0;font-size:0.6875rem;color:#999;line-height:20px;vertical-align:top;text-align:center;-webkit-appearance:none;}
+					.cart__list .product__count .input--quantity__m .inp_quntity .button--order-count{margin-left:3px;width:40px;height:22px;background-color:#999;font-size:0.6875rem;line-height:22px;color:#fff;vertical-align:top}
+					.cart__list .product__total-price{margin-top:15px;line-height:30px}
+					.cart__list .product__total-price .button--buy{position:absolute;bottom:25px;right:0;width:70px;padding:8px 0;border:1px solid #222;background:none;font-size:15px;font-weight:600;color:#000}
+					.cart__list .product__total-price .button--buy:hover,.cart__list .product__total-price .button--buy:active{color:#000}
+					.cart__list .product__image{display:block;position:absolute;top:64px;right:0;width:70px;height:70px;padding:0}
+					.cart__list .product__image img{width:100%;height:100%}
+					.cart__list .cart_brandbx{margin-top:65px}
+					.cart__list .cart_brandbx:first-of-type{margin-top:0}
+					.cart__list .cart_brandbx .product__delivery-fee{display:none}
+					.cart__list .item-price{display:block;padding-top:21px;font-size:14px;color:#222}
+					.cart__list .item-price .icon--info:after{font-size:1rem;font-style:normal;line-height:1.0625rem;vertical-align:top;content:'\24d8'}
+					.cart__list .brand_tit{display:block;padding-bottom:15px;border-bottom:2px solid #000;font-size:17px}
+					.cart__list__select{display:none}
+				}
+				</style>
+				<fieldset class="orderC cart__list">
+					<div class="cart_table">
+						<div class="thead_row">
+							<div class="in_row">
+								<div class="in_td_1">
+									<div class="checkbox-basic">
+										<label for="ckAll1"><input type="checkbox" name="ckAll1" id="ckAll1" class="checkbox" onclick="fnCheckAll(this);"></label>
+									</div>
+								</div>
+								<div class="in_td_2">상품 정보</div>
+								<div class="in_td_3">수량</div>
+								<div class="in_td_4">주문금액</div>
+								<div class="in_td_5">배송비</div>
+							</div>
+						</div>
+						<div class="cart_brandbx">
+							<h3 class="brand_tit">(모바일용) 브랜드명</h3>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=141410" class="product__image">
+										<img src="//image.29cm.co.kr/contents/itemIcon/201705/20170519160523.jpg?cmd=thumb&amp;width=90&amp;height=90" alt="[MEN] 뉴발란스 990 USA (M990GL3_B)">
+									</a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=2177&amp;tabcode=2&amp;sPT=s" class="brand__name">NEW BALANCE</a>
+										<a href="/shop/shop_detail.asp?idx=141410" class="product__name">[MEN] 뉴발란스 990 USA (M990GL3_B)</a>
+										<div class="product__price">
+											<span class="product__price--original">239,000원</span>
+											<span class="product__price--discount">[42%] 139,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]275
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(0);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 번경 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount0'),0)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount0" value="1">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount0'),0)">+</button>
+									</div>
+									<!-- //PC용 수량 번경 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">139,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(0);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="product__delivery-fee"> <!--[D] PC 배송비 안내 -->
+								<p>무료 업체배송</p>
+							</div>
+							<div class="item-price"> <!--[D] 모바일 배송비 안내 -->
+								상품 18,000 + 배송비 2,500 = 20,500
+								<i class="icon--info" onclick="blackPopup.open('업체 배송 상품','<strong>[ partimento ]</strong>  제품 으로만 50,000 원 이상 구매시 무료배송됩니다. (배송비 2,500 원)');"></i>
+							</div>
+						</div>
+						<div class="cart_brandbx">
+							<h3 class="brand_tit">(모바일용) 브랜드명</h3>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=139001" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170508112010.jpg?cmd=thumb&amp;width=90&amp;height=90" alt=""/></a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=1708&amp;tabcode=2&amp;sPT=s" class="brand__name">ANOTHER OFFICE</a>
+										<a href="/shop/shop_detail.asp?idx=139001" class="product__name">Mate baqueshirt (Charcoal/Ecru)</a>
+										<div class="product__price">
+											<span>46,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]00(Girls 55)
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(4);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount4'),4)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount4" value="2">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount4'),4)">+</button>
+									</div>
+									<!-- //PC용 수량 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">92,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(4);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=139001" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170508112010.jpg?cmd=thumb&amp;width=90&amp;height=90" alt=""/></a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=1708&amp;tabcode=2&amp;sPT=s" class="brand__name">ANOTHER OFFICE</a>
+										<a href="/shop/shop_detail.asp?idx=139001" class="product__name">Mate baqueshirt (Charcoal/Ecru)</a>
+										<div class="product__price">
+											<span>46,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]00(Girls 55)
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(4);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount4'),4)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount4" value="2">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount4'),4)">+</button>
+									</div>
+									<!-- //PC용 수량 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">92,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(4);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="product__delivery-fee"> <!--[D] PC 배송비 안내 -->
+								<p>
+									2,500원 업체배송
+								</p>
+								<p class="fee-info">
+									<strong>[ ANOTHER&nbsp;OFFICE ]</strong>  제품 으로만 50,000 원 이상 구매시 무료배송됩니다. (배송비 2,500 원)
+								</p>
+							</div>
+							<div class="item-price"> <!--[D] 모바일 배송비 안내 -->
+								상품 134,300 + 배송비 0 = 134,300
+								<i class="icon--info" onclick="blackPopup.open('업체 배송 상품','<strong>[ cotone ]</strong>  제품 으로만 100,000 원 이상 구매시 무료배송됩니다. (배송비 3,000 원)');"></i>
+							</div>
+						</div>
+						<div class="cart_brandbx">
+							<h3 class="brand_tit">(모바일용) 브랜드명</h3>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=141410" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170519160523.jpg?cmd=thumb&amp;width=90&amp;height=90" alt="[MEN] 뉴발란스 990 USA (M990GL3_B)"></a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=2177&amp;tabcode=2&amp;sPT=s" class="brand__name">NEW BALANCE</a>
+										<a href="/shop/shop_detail.asp?idx=141410" class="product__name">[MEN] 뉴발란스 990 USA (M990GL3_B)</a>
+										<div class="product__price">
+											<span class="product__price--original">239,000원</span>
+											<span class="product__price--discount">[42%] 139,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]275
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(0);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount4'),4)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount4" value="2">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount4'),4)">+</button>
+									</div>
+									<!-- //PC용 수량 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">92,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(4);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=141410" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170519160523.jpg?cmd=thumb&amp;width=90&amp;height=90" alt="[MEN] 뉴발란스 990 USA (M990GL3_B)"></a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=2177&amp;tabcode=2&amp;sPT=s" class="brand__name">NEW BALANCE</a>
+										<a href="/shop/shop_detail.asp?idx=141410" class="product__name">[MEN] 뉴발란스 990 USA (M990GL3_B)</a>
+										<div class="product__price">
+											<span class="product__price--original">239,000원</span>
+											<span class="product__price--discount">[42%] 139,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]275
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(0);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount4'),4)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount4" value="2">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount4'),4)">+</button>
+									</div>
+									<!-- //PC용 수량 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">92,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(4);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="in_row">
+								<div class="in_td_1 a">
+									<span class="ckbx">
+										<!-- [D] jquery include -->
+									</span>
+								</div>
+								<div class="in_td_2 product">
+									<!-- 상품 정보 -->
+									<a href="/shop/shop_detail.asp?idx=141410" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170519160523.jpg?cmd=thumb&amp;width=90&amp;height=90" alt="[MEN] 뉴발란스 990 USA (M990GL3_B)"></a>
+									<div class="product__information">
+										<a href="/brand/brandshop.asp?idx=2177&amp;tabcode=2&amp;sPT=s" class="brand__name">NEW BALANCE</a>
+										<a href="/shop/shop_detail.asp?idx=141410" class="product__name">[MEN] 뉴발란스 990 USA (M990GL3_B)</a>
+										<div class="product__price">
+											<span class="product__price--original">239,000원</span>
+											<span class="product__price--discount">[42%] 139,000원</span>
+										</div>
+										<div class="product__option">
+											<div>
+												옵션 :
+												[사이즈]275
+											</div>
+										</div>
+										<button class="button--remove" type="button" onclick="fnDelCart(0);">삭제</button>
+									</div>
+								</div>
+								<div class="in_td_3 product__count">
+									<!--[D] PC용 수량 -->
+									<div class="input--quantity">
+										<button type="button" class="quantiry-button quantiry-button--minus" onclick="fnEditCartCount('minus', document.getElementById('OrderCount4'),4)">-</button>
+										<div class="quantiry-input">
+											<input type="text" name="OrderCount" id="OrderCount4" value="2">
+										</div>
+										<button type="button" class="quantiry-button quantiry-button--plus" onclick="fnEditCartCount('plus', document.getElementById('OrderCount4'),4)">+</button>
+									</div>
+									<!-- //PC용 수량 -->
+									<!--[D] 모바일용 수량 번경  -->
+									<div class="input--quantity__m">
+										수량 :
+										<div class="inp_quntity"><input type="text" name="OrderCount" value="1" class="input--order-count"><button class="button--order-count" type="button" onclick="fnEditCart(3);">변경</button></div>
+									</div>
+									<!-- //모바일용 수량 번경  -->
+								</div>
+								<div class="in_td_4 product__total-price">
+									<!-- 주문금액 -->
+									<span class="total-price">92,000원</span>
+									<button class="button--buy" type="button" onclick="fnDirectOrder(4);">Buy Now</button>
+								</div>
+								<div class="in_td_5"></div>
+							</div>
+							<div class="product__delivery-fee"> <!--[D] PC 배송비 안내 -->
+								<p>
+									2,500원 업체배송
+								</p>
+								<p class="fee-info">
+									<strong>[ ANOTHER&nbsp;OFFICE ]</strong>  제품 으로만 50,000 원 이상 구매시 무료배송됩니다. (배송비 2,500 원)
+								</p>
+							</div>
+							<div class="item-price"> <!--[D] 모바일 배송비 안내 -->
+								상품 191,250 + 배송비 0 = 191,250
+								<i class="icon--info" onclick="blackPopup.open('업체 배송 상품','<strong>[ hideout ]</strong>  제품 으로만 50,000 원 이상 구매시 무료배송됩니다. (배송비 2,500 원)');"></i>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="cart__list__select">
+					<button class="order-button" type="button" onclick="fnChkDelCart();">선택상품 삭제</button>
+					<button class="order-button" type="button" onclick="fnChkSoldOutDelCart();">품절상품 삭제</button>
+					<p class="cart-info">장바구니는 접속 종료 후 60일 동안 보관됩니다.</p>
+				</div>
+			</div>
+
+			<style>
+			.cart__footer{float:none;width:100%;margin-bottom:80px;border-top:6px solid #000;border-bottom:1px solid #000}
+			.cart__footer .cart_table .in_row{display:table;width:100%;table-layout:fixed}
+			.cart__footer .thead_row [class^="in_td_"]{padding:20px 0;text-align:center;font-size:0.875rem;font-weight:500}
+			.cart__footer [class^="in_td_"]{display:table-cell;position:relative;padding:43px 0 30px;border-top:1px solid #d4d4d4;text-align:center;vertical-align:top;line-height:1em}
+			.cart__footer [class^="in_td_"]:first-child{border-left:0;padding-left:0;padding-right:0}
+			.cart__footer [class^="in_td_"]:last-child{border-right:0}
+			.cart__footer .in_td_1{width:27%}
+			.cart__footer .in_td_2{width:27%}
+			.cart__footer .in_td_3{width:46%}
+			.cart__footer .price--delivery::before{position:absolute;left:0;top:40%;content:'';vertical-align:middle;display:block;width:17px;height:17px;background:url(//image.29cm.co.kr/mall/order/icon-cart-add.png) no-repeat 0 0;background-size:contain}
+			.cart__footer .price--total::before{position:absolute;left:0;top:40%;content:'';vertical-align:middle;display:block;width:23px;height:17px;background:url(//image.29cm.co.kr/mall/order/icon-cart-total.png) no-repeat 0 50%;background-size:contain}
+			.cart__footer .price{display:block;font-size:1.5rem;font-weight:500}
+			.cart__footer .price+span{margin-top:10px;display:block;font-size:0.875rem;font-weight:500}
+			@media screen and (max-width:540px){
+				.cart__footer{display:none}
+			}
+			</style>
+			<!--[D] PC 총 주문 금액 -->
+			<div class="order-wrap2 cart__footer">
+				<div class="cart_table">
+					<div class="in_row thead_row">
+						<div class="in_td_1">총 주문금액</div>
+						<div class="in_td_2">총 배송비</div>
+						<div class="in_td_3">총 결제금액</div>
+					</div>
+					<div class="in_row">
+						<div class="in_td_1">
+							<span id="iCartItemTotal" class="price">650,600원</span>
+							<span id="iCartItemCount">총 7 개</span>
+						</div>
+						<div id="iCartDeliveryPay" class="in_td_2 price--delivery">
+							<span class="price">0원</span>
+						</div>
+						<div class="in_td_3 price--total">
+							<span id="iSubTotalPrice" class="price">650,600원</span>
+							<span id="iCartItemMileage">6,506 point</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //PC 총 주문 금액 -->
+
+			<style>
+			.cart__footer__mo{display:none}
+			@media screen and (max-width:540px){
+				.cart__footer__mo{display:block;width:auto}
+				.cart__footer__mo .order-info{overflow:hidden;margin:50px 0 20px;width:100%}
+				.cart__footer__mo .order-info dt{float:left;width:35%;font-size:14px;color:#999;line-height:40px}
+				.cart__footer__mo .order-info dd{float:left;width:65%;font-size:24px;font-weight:500;line-height:40px;text-align:right}
+				.cart__footer__mo .order-info .price--total{color:#ff4800}
+			}
+			</style>
+			<!--[D] 모바일 총 주문 금액 -->
+			<div class="order-wrap2 cart__footer__mo">
+				<dl class="order-info">
+					<dt>주문 상품 수</dt>
+					<dd>6</dd>
+					<dt>총 상품금액</dt>
+					<dd>343,550</dd>
+					<dt>적립 마일리지</dt>
+					<dd>3,433</dd>
+					<dt>총 배송비</dt>
+					<dd>2,500</dd>
+					<dt>총 결제금액</dt>
+					<dd class="price--total">346,050</dd>
+				</dl>
+			</div>
+			<!-- //모바일 총 주문 금액 -->
+
+			<style>
+				@media screen and (max-width:540px) {
+					.container-order .order-button__wrap{position:fixed;right:0;bottom:0;left:0;z-index:20;margin-top:0}
+					.container-order .order-button__wrap .button--shopping{display:none}
+					.container-order .order-button__wrap .button--checkout{width:100%;margin:0;font-size:19px;color:#ff4800}
+				}
+			</style>
+			<div class="order-button__wrap">
+				<button type="button" onclick="fnGoShopping();" class="button--shopping">CONTINUE SHOPPING</button>
+				<button type="button" onclick="fnCheckOut();" class="button--checkout">CHECK OUT</button>
+			</div>
+		</form>
+		<!-- content : end -->
+	</div>
+</div>
+
+<div class="footer">
+	<!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

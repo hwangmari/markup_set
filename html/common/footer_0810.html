@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>footer_0810_도영</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<style>
+
+/* 모바일 footer */
+.footer_m{display:block;padding:36px 20px;background:#000;font-weight:400}
+.footer_m .sp{display:inline-block;overflow:hidden;background:url(https://img.29cm.co.kr/next29cm/footer_open_sp.png) no-repeat;background-size:140px 90px;vertical-align:top;line-height:100em}
+.footer_tit{display:block;position:relative;padding-bottom:16px;font-weight:500;font-size:16px;color:#9b9b9b}
+.footer_tit:after{display:inline-block;position:absolute;top:3px;width:7px;height:7px;margin-left:10px;transform:rotate(45deg);border-right:1px solid #9b9b9b;border-bottom:1px solid #9b9b9b;vertical-align:sub;content:''}
+.info_corp{display:none;padding:8px 0 12px;font-size:12px;line-height:20px;color:#646464}
+.info_corp dt{float:left;margin-right:10px}
+.info_corp dd{padding-bottom:4px;font-weight:300;color:#9b9b9b}
+.documentation{overflow:hidden;margin-bottom:24px;padding-top:17px;border-top:1px solid #333232}
+.documentation a{display:inline-block;float:left;font-size:12px;color:#9B9B9B}
+.documentation a+a:before{display:inline-block;width:1px;height:12px;margin:0 10px;background:#333232;vertical-align:top;content:''}
+.snsbx{position:relative;letter-spacing:-4px}
+.snsbx .sp{width:40px;height:40px;margin-right:10px}
+.snsbx .facebook{background-position:0 0}
+.snsbx .instagram{background-position:-50px 0}
+.snsbx .blog{background-position:-100px 0}
+.snsbx .app_down{display:inline-block;position:absolute;right:0;bottom:0;width:126px;height:40px;margin-right:0;background-position:0 -50px}
+
+/* [D] 푸터 열림 .footer_ope class 추가 */
+/* .footer_open{display:block} */
+/* .footer_tit:after{top:7px;border-top:1px solid #9b9b9b;border-left:1px solid #9b9b9b} */
+
+@media (max-width:342px) {
+	.documentation a+a:before{margin:0 6px}
+}
+</style>
+</head>
+<body>
+	<!-- 모바일 footer -->
+	<footer class="footer_m">
+		<button class="footer_tit">(주) 에이플러스비 사업자 정보</button>
+	    <dl class="info_corp footer_open">
+			<dt>대표이사</dt>
+	        <dd>이창우</dd>
+			<dt>사업자등록번호</dt>
+	        <dd>101-86-65617</dd>
+			<dt>주소</dt>
+	        <dd>서울특별시 마포구 양화로10길 45 (서교동)</dd>
+			<dt>문의전화</dt>
+			<dd>1644-0560</dd>
+			<dt>이메일</dt>
+	        <dd>costomer@29cm.co.kr</dd>
+			<dt>통신판매업신고</dt>
+	        <dd>2015-서울마포-1415</dd>
+			<dt>개인정보책임자</dt>
+	        <dd>이형준</dd>
+			<dt>호스팅서비스</dt>
+	        <dd>(주) 에이플러스비</dd>
+	    </dl>
+		<div class="documentation">
+			<a href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018664617">사업자정보확인</a>
+			<a href="{{serviceHost}}home/private">개인정보취급방침</a>
+			<a href="{{serviceHost}}home/agreement">이용약관</a>
+			<a href="https://www.29cm.co.kr/mypage/cscenter/faq-cs/faq-list">고객센터</a>
+		</div>
+	    <div class="snsbx">
+	        <a href="//www.facebook.com/29centimeter" target="_blank" class="sp facebook"><span class="blind">facebook</span></a>
+	        <a href="//instagram.com/29centimeter" target="_blank" class="sp instagram"><span class="blind">instagram</span></a>
+	        <a href="//blog.naver.com/29centimeter" target="_blank" class="sp blog"><span class="blind">blog</span></a>
+	        <a href="#" target="_blank" class="sp app_down">29CM APP</a>
+	    </div>
+	</footer>
+</body>
+</html>

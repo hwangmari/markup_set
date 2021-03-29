@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>주문상세내역 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+<style type="text/css">
+.my_review .order_lst{margin-top:40px;border-top:4px solid #000}
+.my_review .goods .col2,.my_review .goods .col3{text-align:center}
+.my_review .goods .col3{width:auto}
+.my_review .goods .btn_black{min-width:76px}
+.my_review .goods .btn_black.pc_view{display:inline-block}
+@media screen and (max-width:540px){
+    .my_review .goods .btn_black.pc_view,.my_review .goods .in_td.pc_view{display:none}
+    .my_review .goods .col2,.my_review .goods .col3{text-align:left}
+    .my_review .goods .col3{position:static}
+    .my_review .goods .info_bx{min-height:140px}
+    .my_review .goods .btn_black{position:absolute;top:120px;right:0;min-width:0;width:76px;padding:0;line-height:34px;text-align:center;box-sizing:border-box}
+}
+
+/* input 파일선택 */
+.inpfilebx input[type="file"]{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0,0,0,0)}
+.inpfilebx label{display:inline-block;width:75px;height:30px;border:1px solid #d4d4d4;border-radius:2px;font-size:12px;color:#5d5d5d;line-height:30px;text-align:center;box-sizing:border-box}
+.inpfilebx .upload_name{display:inline-block;height:30px;padding:0 8px;font-size:12px;color:#5d5d5d;line-height:30px;vertical-align:top;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.inpfilebx .upload_hidden{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0,0,0,0)}
+.file_lst{display:inline-block;overflow-y:auto;width:340px;height:80px;padding:7px 0;border:1px solid #d4d4d4;vertical-align:top;box-sizing:border-box}
+.file_lst li{padding:5px 15px}
+.file_lst button{width:100%;height:24px;padding:0 15px;text-align:left}
+.select_file_area{margin-top:10px}
+.select_file_area .btn_bor{width:53px;height:30px;vertical-align:bottom}
+
+/* tab */
+.tab{overflow:hidden;margin-top:40px;border-bottom:4px solid #000;font-size:0}
+.tab li{display:inline-block;margin:0 -1px -1px 0}
+.tab li a{display:inline-block;padding:0 30px;border:1px solid #d4d4d4;font-size:14px;color:#a0a0a0;line-height:48px}
+.tab .selected a{border-color:#000;background:#000;color:#fff}
+@media screen and (max-width:540px){
+    .tab{margin:0 -20px;border:0}
+    .tab ul{display:table;width:100%;table-layout:fixed}
+    .tab li{display:table-cell}
+    .tab li a{display:block;padding:0;border:0;background:#f1f1f1;font-size:16px;font-weight:700;color:#d4d4d4;line-height:60px;text-align:center}
+    .tab .selected a{background:#fff;color:#000}
+    .tab .m_view{display:inline-block;font-weight:normal}
+}
+
+/* review 영역 */
+.review_info{margin-top:20px;font-size:14px;color:#303033;line-height:24px}
+.review_write_area{display:table;position:relative;margin-top:-1px;padding:30px 0 27px;border:1px solid #d4d4d4}
+.review_write_area .btn_bx{position:absolute;right:60px;bottom:31px}
+.review_write_area .btn_bx button{width:92px;height:40px}
+.review_write{padding:0 60px 0 40px}
+.review_write>li{display:table;width:100%;table-layout:fixed}
+.review_write .in_td{display:table-cell;position:relative;height:auto;padding:8px 0;text-align:left;vertical-align:top}
+.review_write .in_td:first-child{width:100px}
+.review_write .type{font-size:14px;font-weight:700;line-height:36px}
+.review_write .rabx{display:inline-block;margin-right:30px}
+.review_write .rabx:last-child{margin-right:0}
+.review_write .inptxtbx textarea{font-size:14px;line-height:20px;resize:none}
+.review_write .info_lst{margin-top:16px}
+.review_write .info_lst li{position:relative;padding-left:14px;font-size:12px;color:#5d5d5d;line-height:24px}
+.review_write .info_lst li:before{position:absolute;top:9px;left:0;width:4px;height:4px;border-radius:100%;background:#000;content:''}
+.review_write .info_lst .point{color:#ff4800}
+.review_write .info_lst .point:before{background:#ff4800}
+@media screen and (max-width:540px){
+    .review_info{margin-top:28px;font-size:13px;line-height:22px}
+    .review_info ul li{position:relative;padding-left:10px}
+    .review_info ul li:before{position:absolute;top:9px;left:0;width:3px;height:3px;border-radius:999em;background:#d8d8d8;content:''}
+    .review_info .btn_morebx{margin-top:30px;text-align:right}
+    .review_info .btn_under{font-size:13px;color:#000;text-decoration:underline}
+    .review_write_area{display:none}
+}
+</style>
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="my_wrap">
+    <!--[D] PC view -->
+    <div class="article_left">
+        <!--  MYPAGE 01  -->
+        <section class="my_my">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!-- Mobile view :: My 정보 안내 m_view -->
+        <section class="my_grade">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!--  MYPAGE 02  -->
+        <section class="my_shop">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!--  MYPAGE 03  -->
+        <section class="my_call">
+            <!-- [D] jquery include -->
+        </section>
+    </div>
+
+    <div class="article_right">
+
+        <!-- 상품후기 -->
+        <section class="my_review">
+            <h3 class="my_tit nobor pc_view">상품후기</h3>
+            <div class="tab">
+                <ul>
+                    <li class="selected"><a href="#">상품후기 쓰기 <span class="m_view">(23)</span></a></li> <!--[D] 활성화된 li에 .selected 추가 -->
+                    <li><a href="#">작성내역 <span class="m_view">(2)</span></a></li>
+                </ul>
+            </div>
+            <div class="review_info">
+                <p class="pc_view">구매하신 상품에 대한 유용한 정보를 다른 고객과 공유하는 곳으로 솔직담백한 상품후기를 올려주세요.</p>
+                <ul>
+                    <li>포토후기 : 사진과 함께 150자 이상의 글을 쓰시면 1,000 point</li>
+                    <li>일반후기 : 사진없이 150자 이상의 글을 쓰시면 500 point</li>
+                    <li>기타후기 : 1만원 이하의 상품, 사진 유무 상관없이 150자 미만의 글을 쓰신 분께는 기본마일리지 100 point가 적립됩니다.</li>
+                </ul>
+                <p class="pc_view">상품후기를 작성은 배송정보상 [출고완료] 이후부터 작성하실 수 있습니다.</p>
+                <p class="pc_view">취소/반품의 경우 해당상품의 후기 및 적립된 마일리지는 자동삭제 됩니다.</p>
+                <p class="pc_view">3개월 이전 구매상품에 대한 후기는 작성하실 수 없습니다.</p>
+                <p class="pc_view">구매 후 3개월이 지난 상품의 후기는 노출되지 않습니다.</p>
+                <p class="pc_view">처음 등록한 후기를 기준으로 마일리지가 지급됩니다.</p>
+                <p class="pc_view">상품후기 수정을 통해서만 내용 변경이 가능하고 상품후기 삭제시 재작성 및 복구 불가합니다.</p>
+                <div class="btn_morebx m_view">
+                    <a href="#" class="btn_under">후기정책 더보기</a>
+                </div>
+            </div>
+            <div class="order_wrap">
+                <ul class="order_lst">
+                    <li class="thead">
+                        <div class="in_td">상품명</div>
+                        <div class="in_td">구매일</div>
+                        <div class="in_td">상품후기쓰기</div>
+                    </li>
+                    <li>
+                        <div class="goods">
+                            <div class="goods_row">
+                                <div class="in_td">
+                                    <div class="info_bx">
+                                        <span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg?cmd=thumbnail&width=150" alt=""></span>
+                                        <a href="#" class="info">
+                                            <span class="brand">마뉴엘 에 기욤</span>
+                                            <p class="goods_tit">[B7AMA1007M] 최대 두줄 [B7AMA1007M] 최대 두줄</p>
+                                            <ul class="option_lst m_view">
+                                            <li>수량 : 1</li>
+                                            </ul>
+                                            <p class="m_view"><span class="num">270,000</span>원</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="in_td col2 pc_view">
+                                    <p>2017.5.23</p>
+                                </div>
+                                <div class="in_td col3">
+                                    <a href="#" class="btn_black pc_view">상품후기쓰기</a> <!--[D] PC View :: 상품후기작성 버튼. 클릭시 li 다음에 .review_write_area 추가 -->
+                                    <a href="#" class="btn_black m_view">후기작성</a> <!--[D] Mobile View :: 상품후기 작성 버튼. 클릭시 모바일용 상품후기 작성 페이지로 이동 -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="review_write_area">
+                        <form action="#">
+                        <fieldset>
+                            <legend>상품 후기 작성</legend>
+                            <ul class="review_write">
+                                <li>
+                                    <div class="in_td"><strong class="type">만족도</strong></div>
+                                    <div class="in_td">
+                                        <span class="rabx">
+                                            <input type="radio" id="u_star5" name="re_reason">
+                                            <label for="u_star5"><span class="rating stars-5">별점 5 of 5</span></label>
+                                        </span>
+                                        <span class="rabx">
+                                            <input type="radio" id="u_star4" name="re_reason">
+                                            <label for="u_star4"><span class="rating stars-4">별점 4 of 5</span></label>
+                                        </span>
+                                        <span class="rabx">
+                                            <input type="radio" id="u_star3" name="re_reason">
+                                            <label for="u_star3"><span class="rating stars-3">별점 3 of 5</span></label>
+                                        </span>
+                                        <span class="rabx">
+                                            <input type="radio" id="u_star2" name="re_reason">
+                                            <label for="u_star2"><span class="rating stars-2">별점 2 of 5</span></label>
+                                        </span>
+                                        <span class="rabx">
+                                            <input type="radio" id="u_star1" name="re_reason">
+                                            <label for="u_star1"><span class="rating stars-1">별점 1 of 5</span></label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="in_td"><strong class="type">상품평</strong></div>
+                                    <div class="in_td">
+                                        <div class="inptxtbx">
+                                            <textarea rows="5" cols="1" class="field_inp" placeholder="반품사유를 입력해주세요"></textarea>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="in_td"><strong class="type">사진올리기</strong></div>
+                                    <div class="in_td">
+                                        <!--[D] 파일 선택 후 선택된 파일명 .upload_name value 에 선언  -->
+                                        <div class="inpfilebx">
+                                            <label for="u_file">파일선택</label>
+                                            <input type="file" id="u_file" class="upload_hidden">
+                                            <input class="upload_name" value="선택된 파일 없음" disabled="disabled">
+                                        </div>
+                                        <div class="select_file_area">
+                                            <!--[D] 선택된 파일명 .ckbx label안에 추가 선언 -->
+                                            <ul class="file_lst">
+                                            <li>
+                                                <span class="ckbx">
+                                                    <input type="checkbox" id="u_file_name1">
+                                                    <label for="u_file_name1" title="">fileName.jpg</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="ckbx">
+                                                    <input type="checkbox" id="u_file_name2">
+                                                    <label for="u_file_name2" title="">fileName.jpg</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="ckbx">
+                                                    <input type="checkbox" id="u_file_name3">
+                                                    <label for="u_file_name3" title="">fileName.jpg</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="ckbx">
+                                                    <input type="checkbox" id="u_file_name4">
+                                                    <label for="u_file_name4" title="">fileName.jpg</label>
+                                                </span>
+                                            </li>
+                                            </ul>
+                                            <button type="button" class="btn_bor">삭제</button> <!--[D] 클릭 시, 선택된 요소의 부모 li 삭제   -->
+                                        </div>
+                                        <ul class="info_lst">
+                                            <li>회원님께서 직접 촬영한 이미지만 등록하여 주시기 바랍니다</li>
+                                            <li>저작권에 문제가 있거나 불건전한 사진은 통보없이 삭제될 수 있습니다</li>
+                                            <li class="point">파일명은 영문만 가능하며, 파일당 최대 10MB 의 용량 제한이 있습니다</li>
+                                            <li>가로사이즈가 450픽셀을 초과하는 경우 자동으로 450픽셀로 조정됩니다</li>
+                                            <li>첨부파일은 최대 3개까지 등록가능합니다</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>등록 확인</legend>
+                            <div class="btn_bx">
+                                <button type="reset" class="btn_bor">다시쓰기</button>
+                                <button type="submit" class="btn_black">등록하기</button>
+                            </div>
+                        </fieldset>
+                        </form>
+                    </li>
+                    <li>
+                        <div class="goods">
+                            <div class="goods_row">
+                                <div class="in_td">
+                                    <div class="info_bx">
+                                        <span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg?cmd=thumbnail&width=150" alt=""></span>
+                                        <a href="#" class="info">
+                                            <span class="brand">마뉴엘 에 기욤</span>
+                                            <p class="goods_tit">[B7AMA1007M] 최대 두줄 [B7AMA1007M] 최대 두줄</p>
+                                            <ul class="option_lst m_view">
+                                            <li>수량 : 1</li>
+                                            </ul>
+                                            <p class="m_view"><span class="num">270,000</span>원</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="in_td col2 pc_view">
+                                    <p>2017.5.23</p>
+                                </div>
+                                <div class="in_td col3">
+                                    <a href="#" class="btn_black pc_view">상품후기쓰기</a> <!--[D] PC View :: 상품후기작성 버튼. 클릭시 li 다음에 .review_write_area 추가 -->
+                                    <a href="#" class="btn_black m_view">후기작성</a> <!--[D] Mobile View :: 상품후기 작성 버튼. 클릭시 모바일용 상품후기 작성 페이지로 이동 -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

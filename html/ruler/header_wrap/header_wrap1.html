@@ -1,0 +1,339 @@
+<style>
+.container .sp{display:inline-block;overflow:hidden;background:url(https://img.29cm.co.kr/next29cm/sp_29cm.png);background-size:200px 200px;vertical-align:top;line-height:100em}
+.container .header_wrap{position:relative}
+@media screen and (min-width:541px){
+    .container{position:fixed;top:0;left:0;right:0;-webkit-transition: right .5s; transition: right .5s;z-index:100;min-width:1000px;padding-bottom:20px;background:#fff}
+    .container .header{padding-bottom:8px}
+}
+@media screen and (max-width:540px){
+    .container{min-width:320px;padding-bottom:0}
+    .container .header{position:fixed;top:0;left:0;right:0;z-index:120;background:#fff}
+    .container .header_wrap,.header_active .header_wrap{padding:8px 0}
+}
+
+/* brand-logo */
+.brand-logo{width:120px;height:30px;margin:0;padding:29px 50px 0}
+.brand-logo a.sp{background-position:0 -90px;width:120px;height:30px}
+.brand-logo a ruler-svg-bi-wide{display:none}
+.brand-logo a ruler-svg-bi-small{display:none}
+@media screen and (max-width:540px){
+    .brand-logo{position:absolute;top:16px;left:20px;width:72px;height:18px;padding:0}
+    .brand-logo a.sp{width:72px;height:18px;background:none;line-height:18px}
+    .brand-logo a ruler-svg-bi-wide{display:block;width:72px;height:18px}
+    .brand-logo a ruler-svg-bi-small{display:none}
+}
+
+/* search */
+.search-box{position:relative}
+.search-box .btn-search{overflow:hidden;position:absolute}
+@media screen and (min-width:541px){
+    .search-box .btn-search{top:15px;right:40px;width:67px;height:67px;padding:10px}
+    .search-box .btn-search .sp{width:47px;height:47px;background-position:-75px -25px;vertical-align:top}
+    .header_active .search-box .btn-search{top:50px;right:40px;width:45px;height:45px;padding:10px}
+    .header_active .search-box .btn-search .sp{width:25px;height:25px;background-position:-125px 0}
+}
+@media screen and (max-width:540px){
+    .search-box{height:34px;margin-left:110px;margin-right:50px;padding-left:10px;padding-right:40px;border-radius:17px}
+    .search-box .input-text-search{display:block;width:100%;margin-right:40px;height:100%;background-color:transparent;border:none;line-height:30px;font-size:20px}
+    .search-box .btn-search{top:0;right:0;width:36px;height:34px}
+    /* .search-box .btn-search .sp{width:36px;height:34px;background:url(https://img.29cm.co.kr/next29cm/gnb_searcg.png) 50% 50% no-repeat;background-size:25px 24px} */
+    .search-box .btn-search  .sp{width:36px;height:34px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAwCAYAAABT9ym6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0IwNjk2QTA2M0UxMUU4QkZENkIwQTFEOTZERjI2RSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0IwNjk2QjA2M0UxMUU4QkZENkIwQTFEOTZERjI2RSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJEQjRFMkRGMDVFODExRThCRkQ2QjBBMUQ5NkRGMjZFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJEQjRFMkUwMDVFODExRThCRkQ2QjBBMUQ5NkRGMjZFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+CDsteAAAApNJREFUeNrcmb1KA0EQx2+DTfAsE9EiTUAQrIyNqUyRtEJ68wCC5hEOkjfRTsEPsBOs0qZSSyshBsQo2FgcnrNhBofjEm43e3d7GfhnI97tzi/7Mbs7IggCZxlsRX4IIXTfr4IOQTXQJpO0EdMQdAt6SQJi2hkaPbIO6oMeZR2KesR3y1mCuCAP9M0c+wCdgY5AB6AtfM7F7wf4P/nMhL33jXW5aYO0QWPmyBWoQUNTYRg38F2qZ4x1Jw4i8Jf7xYYHoH0DP2Id6wqwbg/bSgSkCLrExnzQaQLztIt1B9hW0TSIYBCfoGaCK2cT2yAYYRLEYxDbKYSBbQbjmQJp47j1E+6JqJ7xse32oiAuW51OnfSty1YzdxEQj61OWdlAdYiFQcos2NUzBKmzoFnWAemzYJe1UdDs64DQ3qlhAUiD7c2UQKr44kRx25Hkrpz2ZtU4IAX8fojlHS6BWZuPvnDf5hqB7GF5b9FZiXypqYBsYPlqEQj5sqkCwk91tthIBYQmO8UP1yIQl8WT2JM9YLteW0yEfIs1tN5Cc8UG2wj5FgtEbTymY0rzNgxSsQikogMyZGcCW6wZ8i3WqpX7LcrSbBoL7O8bLE8sACEfrtXOu0t2sFqao2748qGb8eXDqsnroFaKEC2T10HhIZbWBd0u6McxfEFHG7YLJ50r0xaD+AKVTIJIKzIYP6E5wy+xv7B8UoXRTSuYWJqj0golFpSVYGxM9GjBmEi9yf3QOajj/Kfe1lCUeuvgM1Gpt6glVhlGNxkqo23P0U+G9mJEbCUYySCmH2bT0/xkt0h6Wjr/ANoBPeOwfDfZI2larJ7JA0gsmLyAEMzTLJg8gcyFyRvITJg8gkTC5BWEYhnBHEuGPwEGAE+J2FXj0bSEAAAAAElFTkSuQmCC') 50% 50% no-repeat;background-size:25px 24px}
+}
+
+/* .menu-box */
+.menu-box{position:absolute;right:50px;top:22px;vertical-align:top}
+.menu-box a,.menu-box button{position:relative;display:inline-block;height:30px;margin-left:13px;box-sizing:border-box;text-align:center;vertical-align:top;line-height:30px}
+.menu-box .sp{display:inline-block;overflow:hidden;width:17px;height:17px;margin-top:6px}
+.menu-box .ico_my{background-position:0 0}
+.menu-box .ico_heart{background-position:-25px 1px}
+.menu-box .ico_cart{background-position:-50px 0}
+.menu-box .ico_logout{background-position:-75px 0}
+.menu-box .ico_login{background-position:-100px 0}
+.menu-box .txt{display:inline-block;margin:0 auto;font-size:9px;font-weight:normal;color:#5d5d5d;line-height:30px;vertical-align:top}
+.menu-box > li{display:inline-block;vertical-align:top}
+.menu-box .count{position:absolute;padding:0 3px;background:#ff4800;text-align:center;color:#fff;border-radius:13px;box-sizing:border-box}
+.menu-box ruler-svg-icon-cart{display:block;width:22px;height:28px}
+@media screen and (min-width:541px){
+    .menu-box .count{top:-2px;left:10px;min-width:18px;height:18px;font-size:9px;line-height:18px}
+}
+@media screen and (max-width:540px){
+    .menu-box{top:0;right:0;width:50px;height:50px;padding:10px 20px 0 10px;box-sizing:border-box}
+    .menu-box .count{top:5px;right:7px;min-width:23px;height:23px;font-size:10px;line-height:23px}
+}
+
+/* nav-bar */
+.nav-bar{position:relative;z-index:50}
+.nav-bar ul{padding:0 0 0 32px}
+.nav-bar li{display:inline-block;margin:0 15px 2px;font-size:54px}
+.nav-bar a{position:relative;display:inline-block;color:#000;font-weight:700}
+.nav-bar a:after{position:absolute;left:0;top:53px;width:0;height:6px;background-color:#000;content:''}
+.nav-bar a:hover:after,
+.nav-bar a:active:after,
+.nav-bar .selected a:after,
+.nav-bar .selected a{width:100%}
+@media screen and (max-width:1300px){
+    .nav-bar li{margin:0 0 2px 15px;font-size:46px}
+    .nav-bar a:after{top:45px}
+}
+@media screen and (max-width:540px){
+    .nav-bar .mweb{display:flex;flex-wrap:wrap;height:67px;min-width:inherit;padding:0;background:#fff;border-top:1px solid #e8e8e8}
+    .nav-bar li{flex:1;margin:0;text-align:center;font-size:16px;line-height:67px}
+    .nav-bar a{display:block;padding:0 0 10px;color:#5d5d5d}
+    .nav-bar a:after{display:none;top:-1px;width:100%;height:4px;background:#ff4800}
+    .nav-bar .active a:after{display:block}
+    .nav-bar .ico{display:block;overflow:hidden;width:57px;height:57px;margin:0 auto;background:url(https://img.29cm.co.kr/next29cm/sp_navbar.jpg);background-size:285px 114px}
+    .nav-bar .txt{display:none}
+    .nav-bar li:nth-child(1) .ico{background-position:0 0}
+    .nav-bar li:nth-child(1).active .ico{background-position:0 -57px}
+    .nav-bar li:nth-child(2) .ico{background-position:-57px 0}
+    .nav-bar li:nth-child(2).active .ico{background-position:-57px -57px}
+    .nav-bar li:nth-child(3) .ico{background-position:-171px 0}
+    .nav-bar li:nth-child(3).active .ico{background-position:-171px -57px}
+    .nav-bar li:nth-child(4) .ico{background-position:-228px 0}
+    .nav-bar li:nth-child(4).active .ico{background-position:-228px -57px}
+}
+
+/* nav_snb */
+.nav_snb{margin-top:12px;padding:0 50px}
+.nav_snb_in{display:-webkit-flex;display:flex}
+.nav_snb li{float:left;margin-right:22px}
+.nav_snb a{display:block;padding:6px 0 2px;border-bottom:4px solid transparent;font-size:16px;color:#000;font-weight:600}
+.nav_snb a.active,.nav_snb a:hover{border-bottom-color:#000}
+.nav_snb .snb a{text-transform:uppercase}
+.nav_snb .snb2{position:relative;display:block;padding-left:20px}
+.nav_snb .snb2:after{position:absolute;top:6px;left:0;width:1px;height:22px;background:#a0a0a0;content:''}
+.nav_snb .snb2 a{font-style:italic;text-transform:capitalize;font-weight:300}
+@media screen and (max-width:540px){
+    .nav_snb{display:none;padding:50px 0 20px 20px}
+    /* gnb_banner 영역 플러스 */
+    /deep/ .has_banner .nav_snb{padding-top:100px!important}
+    .nav_snb_in{display:block;height:300px;column-width:50%;column-count:2;line-height:50px;vertical-align:top}
+    .nav_snb li{width:100%;height:46px;margin:0}
+    .nav_snb:after{display:block;clear:both;content:''}
+    .nav_snb a{display:block;height:46px;padding:0;border-bottom:0;color:#000;line-height:46px}
+    .nav_snb a.active,.nav_snb a:hover{border-bottom:0}
+    .nav_snb .snb a{font-size:42px;font-weight:bold;text-transform:lowercase}
+    .nav_snb .snb a:first-letter{text-transform:capitalize}
+    .nav_snb .snb2{padding:0}
+    .nav_snb .snb2 a{font-size:26px;font-style:italic;text-transform:lowercase;font-weight:200;text-decoration:underline}
+    .nav_snb .snb2:after{display:none}
+    .nav_snb_open{display:block}
+}
+
+/* nav_bar_wrap lnb_wrap */
+.nav_bar_wrap{position:relative}
+.lnb_wrap_in{height:220px;margin:0 50px;background:#fff;overflow:hidden}
+.lnb_wrap{opacity:0;overflow:hidden;position:absolute;top:26%;right:-100px;left:0;z-index:0;padding:80px 0 0;background:#fff;border-bottom:1px solid #d4d4d4;pointer-events:none}
+.lnb_wrap ul{display:block;display:-webkit-box;display:-ms-flexbox;display:flex}
+.lnb_wrap li:last-child>ruler-gnb-preview{margin-right:0}
+.lnb_wrap .btnbx{position:absolute;right:50px;bottom:15px;letter-spacing:-4px}
+.lnb_wrap .btnbx a{color:#000}
+.lnb_wrap .btnbx .btn_txtover{margin:10px 22px 0 0;border-bottom:2px solid #000;font-weight:bold;font-size:12px;line-height:20px;letter-spacing:0}
+.lnb_wrap .btnbx .btn_prev,.lnb_wrap .btnbx .btn_next{display:inline-block;width:36px;height:36px;margin-left:-1px;padding:9px 13px;border:1px solid #ccc;text-align:center;vertical-align:bottom;box-sizing:border-box}
+.lnb_wrap .btnbx .btn_prev span,.lnb_wrap .btnbx .btn_next span{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+@media (min-width:541px){
+    .nav_bar_wrap{margin-right:100px;padding-top:10px}
+}
+@media screen and (max-width:540px){
+/* HACK:iOS Safari에서 스크롤 시, fixed 엘리먼트가 멈춰있다가 스크롤을 멈추면 위치를 잡는 이슈가 있어서 `transform:translate3d(0,0,0)` 스타일을 줌 */
+    .nav_bar_wrap{position:fixed;bottom:0;left:0;right:0;z-index:100;-webkit-transform:translate3d(0,0,0)}
+}
+
+/* 스크롤 */
+@media screen and (min-width:541px){
+    .header_active{top:0;padding-bottom:7px;border-bottom:1px solid #d4d4d4}
+    .header_active .header{padding:0}
+    .header_active .brand-logo{float:left;width:56px;height:56px;padding:19px 25px 0 50px}
+    .header_active .brand-logo a{display:block;width:56px;height:56px;background-position:0 -25px}
+    .header_active .brand-logo .mweb{display:none}
+    .header_active .menu-box{top:18px}
+    .header_active .menu-box .txt{display:none}
+    .header_active .nav_bar_wrap{padding-top:0}
+    .header_active .nav-bar{position:absolute;top:11px;left:85px}
+    .header_active .nav-bar li{font-size:32px}
+    .header_active .nav-bar a{font-weight:800}
+    .header_active .nav-bar a:after{top:31px;height:4px}
+    .header_active .nav_snb{margin:55px 0 5px}
+    .header_active .nav_snb a{border-bottom-width:3px;font-size:13px}
+    .header_active .nav_snb .snb{font-weight:500}
+    .header_active .nav_snb .snb2:after{height:18px;background:#d4d4d4}
+    .header_active .lnb_wrap{top:0;padding-top:20px}
+}
+
+.mweb{display:none}
+.pcweb{display:block}
+@media screen and (max-width:540px){
+    .mweb{display:block}
+    .pcweb{display:none}
+}
+</style>
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $( document ).ready( function() {
+        var jbOffset = $( '.container' ).offset();
+    $( window ).scroll( function() {
+        if ( $( document ).scrollTop() > jbOffset.top ) {
+            $( '.container' ).addClass( 'header_active' );
+        }
+        else {
+            $( '.container' ).removeClass( 'header_active' );
+        }
+        });
+    });
+</script>
+<div class="container">
+    <div class="header">
+        <style>
+        .gnb_banner_app{position:relative;padding-right:30px;background:#000}
+        .gnb_banner{display:flex;align-items:center;box-sizing:border-box}
+        .gnb_banner div{display:block;width:100%;color:#fff;box-sizing:border-box}
+        .gnb_banner .point{color:#ff4800}
+        .bt_down{display:inline-block;position:absolute;top:50%;background:#ff4800;color:#fff;letter-spacing:-.6px;text-align:left}
+        .bt_down:after{display:block;clear:both;position:absolute;top:50%;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAYAAACJfM0wAAAAAXNSR0IArs4c6QAAAPpJREFUOBHtkqEOwjAQhldGhkbMkPAGkzgEkCB5FxQ8BJIHmOUFCApDsOjZCRIkAodYxtfRLc3SbKUBxyV/dr39913SnudZRq7C0u51bI2f+v7g6sZ+dhXdakQtYQl6lEa1skd9rNUuQoindrZLgcRqy0yf2I5icEEL0NlAlbXA0GJfAhCiFJWRkoStBEwHqSYj/yP0UIpavAVPYM6lkUcQLQ0L5du3+N48W3ATTP9X8n62xxKcyYlM8vXJLrnGyCQ4UZCpC6zWM1PnRD7eisMG3dEWXZFLDGlaoj5aF1cAfIe+FZLlVyvGYc6kCRogl7jRdGJrjy7N1j0voMkATXH17LcAAAAASUVORK5CYII=') no-repeat 50% 50%;background-size:100% auto;content:""}
+        @media screen and (min-width:541px){
+            .gnb_banner{height:56px}
+            .gnb_banner div{padding:0 100px 0 50px;font-size:14px;font-weight:500;line-height:20px;letter-spacing:-.1px}
+            .bt_down{right:50px;height:30px;margin-top:-15px;padding:0 32px 0 15px;border-radius:15px;font-size:13px;line-height:30px}
+            .bt_down:after{right:12px;width:13px;height:11px;margin-top:-5px}
+        }
+        @media screen and (max-width:540px){
+            .gnb_banner{height:50px}
+            .gnb_banner div{padding:0 100px 0 20px;font-size:12px;font-weight:500;line-height:16px;letter-spacing:-.2px}
+            .bt_down{right:20px;height:26px;margin-top:-13px;padding:0 27px 0 12px;border-radius:14px;font-size:11px;line-height:26px}
+            .bt_down:after{right:10px;width:11px;height:9px;margin-top:-4px}
+        }
+        </style>
+        <div class="gnb_banner_app">
+            <a href="https://post.29cm.co.kr/803" class="gnb_banner">
+                <div>
+                    29CM 첫구매 시 사용 가능한 <em><span class="point">10%</span> 쿠폰을 드려요</em>
+                    <span class="bt_down">쿠폰 받기</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="header_wrap">
+            <style media="screen">
+            @media screen and (max-width:540px){
+                .brand-logo .pcweb{display:none}
+            }
+            </style>
+            <div class="brand-logo">
+                <a href="#" class="sp pcweb">29cm</a>
+                <a href="#" class="mweb">
+                    <svg viewBox="0 0 396.84 99.21" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                        <path d="M-0.027-0.01v30.261h66.15v5.627h-66.15v63.343h327.999V31.587h5.626v67.634h27.445V31.587h5.625v67.634 h30.154V-0.01H-0.027z M165.4,68.955H33.065v-5.618H165.4V68.955z M165.4,34.4h-33.071v-5.626H165.4V34.4z M297.617,52.42h-66.134 v-5.626h66.134V52.42z" style="fill: rgb(0, 0, 0); fill-rule: evenodd; stroke: none;"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="search-box">
+                <button class="btn-search">
+                    <span class="sp">검색</span>
+                </button>
+            </div>
+            <ul class="menu-box pcweb">
+                <li>
+                    <a href="#">
+                        <span class="sp ico_my"></span>
+                        <strong class="txt">MY PAGE</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="sp ico_heart"></span>
+                        <strong class="txt">MY HEART</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="sp ico_cart"></span>
+                        <strong class="txt">SHOPPING BAG</strong>
+                        <!-- 장바구니 카운트  -->
+                        <span class="count">99</span>
+                    </a>
+                </li>
+                <li>
+                    <button>
+                        <span class="sp ico_logout"></span>
+                        <strong class="txt">LOGOUT</strong>
+                    </button>
+                </li>
+            </ul>
+            <a href="#" class="menu-box mweb">
+                <style media="screen">
+                    .menu-box .ruler-svg-icon-cart{display:block;width:22px;height:28px}
+                </style>
+                <span class="ruler-svg-icon-cart">
+                    <svg viewBox="0 0 22 29" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                        <g style="fill: none; fill-rule: evenodd; stroke: rgb(48, 48, 51);">
+                            <path d="M16.5 6.5a5.5 5.5 0 0 0-11 0M.5 6.5h21v22H.5zM11 17.5h10"></path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="count">99</span>
+            </a>
+        </div>
+    </div>
+    <div class="nav_bar_wrap">
+        <nav class="nav-bar">
+            <ul class="pcweb">
+                <li>
+                    <a href="#">Special-Order</a>
+                </li><li>
+                    <a href="#">Issue</a>
+                </li><li>
+                    <a href="#">PT</a>
+                </li><li>
+                    <a href="#">Weleve</a>
+                </li>
+            </ul>
+            <ul class="mweb">
+                <li>
+                    <a href="#">
+                        <span class="ico"></span>
+                        <span class="txt">HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="ico"></span>
+                        <span class="txt">SHOP</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="ico"></span>
+                        <span class="txt">GUIDE</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="ico"></span>
+                        <span class="txt">MY</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 모바일 샵 메인(`/list/shop`)에서 `nav_snb_open` 클래스 활성화시킴 -->
+    <div class="nav_snb">
+        <div class="nav_snb_in">
+            <ul class="snb">
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">ACC</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">YOUTH</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FOOD</a></li>
+                <li><a href="#">TECH+</a></li>
+            </ul>
+            <ul class="snb2">
+                <li><a href="#">Best</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">Lookbook</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

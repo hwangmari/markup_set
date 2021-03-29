@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>주문서 </title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="container-s">
+	<div class="container-order">
+        <!--- content : start -->
+		<div class="container-header">
+			<ol class="order-flow">
+				<li>SHOPPING BAG</li>
+				<li class="active">ORDER</li>
+				<li>ORDER CONFIRMED</li>
+			</ol>
+		</div>
+		<div class="star-info"><i class="icon-star">*</i> 표시는 필수입력 항목</div>
+
+		<style>
+		.checkout__form{float:right;box-sizing:border-box;width:37.5%;padding:0 2.5% 20px;border-radius:0;border:6px solid #000;margin-bottom:0;color:#000;font-size:0.75rem;font-weight:500}
+		.checkout__form .mCSB_container{margin-right:0}
+		.checkout__form .order__list{padding-bottom:15px;border-bottom:1px solid #000}
+		.checkout__form .order__list .order__body{overflow:hidden}
+		.checkout__form .order__list .order__body .product{overflow:hidden;display:table;margin-top:30px;width:100%}
+		.checkout__form .order__list .order__body .product .product__image{box-sizing:border-box;display:table-cell;vertical-align:top;padding-right:4%;width:90px;height:90px}
+		.checkout__form .order__list .order__body .product .product__image img{width:100%}
+		.checkout__form .order__list .order__body .product .product__information{display:table-cell;vertical-align:top;width:65%}
+		.checkout__form .order__list .order__body .product .product__information .brand__name{font-size:0.75rem;text-decoration:underline;font-weight:500;color:#000}
+		.checkout__form .order__list .order__body .product .product__information .brand__name::after{content:'';display:block}
+		.checkout__form .order__list .order__body .product .product__information .brand__name+.product__name{margin-top:10px}
+		.checkout__form .order__list .order__body .product .product__information .product__name{display:inline-block;font-size:1.125rem;line-height:1.222em;font-weight:500;text-decoration:none;color:#000}
+		.checkout__form .order__list .order__body .product .product__information .product__price{margin-top:4px;font-size:0.875rem;color:#000;line-height:1.714em}
+		.checkout__form .order__list .order__body .product .product__information .product__price--original{display:block;color:#a0a0a0}
+		.checkout__form .order__list .order__body .product .product__information .product__price--discount{display:block}
+		.checkout__form .order__list .order__body .product .product__information .product__option{margin-top:15px;font-size:0.75rem;line-height:1.83em;color:#5d5d5d}
+		.checkout__form .order-price{margin-top:20px}
+		.checkout__form .order-price table{border:0}
+		.checkout__form .order-price table tbody tr th,.checkout__form .order-price table tbody tr td{padding:10px 0;border:0;font-size:0.75rem;color:#000}
+		.checkout__form .order-price table tbody tr td{text-align:right;font-size:1rem}
+		.checkout__form .order-price table tbody tr .price--total{font-size:1.5rem}
+		.checkout__form .order-agree{position:relative;margin-top:10px;font-size:0.75rem;color:#5d5d5d}
+		.checkout__form .order-agree input[type=checkbox].checkbox{width:27px;height:27px}
+		.checkout__form .order-agree input[type=checkbox].checkbox+.label-text{color:#5d5d5d;position:absolute;line-height:1.3333em}
+		.checkout__form .button-checkout__wrap{margin-top:30px}
+		.checkout__form .button-checkout__wrap .button--checkout{width:100%}
+
+		</style>
+		<fieldset class="order checkout__form">
+			<form method="post" name="frmCart" onsubmit="return false;">
+				<div class="order__list">
+					<div class="order__header">
+						<h3>주문상품 확인 / 총 1개</h3>
+					</div>
+
+					<div class="order__body">
+						<div class="product">
+							<a href="/shop/shop_detail.asp?idx=139001" class="product__image"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170508112010.jpg?cmd=thumb&amp;width=90&amp;height=90" alt=""/></a>
+							<div class="product__information" style="padding-right:10px;">
+								<a href="/brand/brandshop.asp?idx=1708&amp;tabcode=2&amp;sPT=s" target="_blank" class="brand__name">ANOTHER OFFICE</a>
+								<a href="/shop/shop_detail.asp?idx=139001" target="_blank" class="product__name" style="word-break:break-all;">Mate baqueshirt (Charcoal/Ecru)</a>
+								<div class="product__option">
+									<div>옵션 : [사이즈]00(Girls 55)</div>
+								</div>
+								<div class="product__price">
+									<span class="product__price--original">46,000원 / 2</span>
+									<span class="product__price--discount" id="HTML_itemcouponcostorigin_0" style="display: block;"></span>
+									<span class="product__price--discount" id="HTML_itemcouponcost_0" style="display:none;"></span>
+								</div>
+								<div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 결제금액 -->
+				<div class="order-price">
+					<table>
+						<colgroup>
+							<col style="width:50%">
+							<col style="width:50%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">총 상품금액</th>
+								<td>92,000 원</td>
+							</tr>
+							<tr>
+								<th scope="row">배송비</th>
+								<td>0 원</td>
+							</tr>
+							<tr>
+								<th scope="row">마일리지 사용</th>
+								<td><span id="DISP_SPENDMILEAGE">0</span> 원</td>
+							</tr>
+							<tr>
+								<th scope="row">보너스쿠폰 사용</th>
+								<td><span id="DISP_SAILCOUPON_TOTAL">0</span> 원</td>
+							</tr>
+							<tr>
+								<th scope="row">상품쿠폰 사용액</th>
+								<td><span id="DISP_ITEMCOUPON_TOTAL">0</span> 원</td>
+							</tr>
+							<tr>
+								<th>총 결제금액</th>
+								<td class="price--total"><span id="DISP_SUBTOTALPRICE">92,000</span> 원<span style="display:none;" id="DISP_SUBTOTALPRICE2">92,000</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+ 			    <div class="checkbox-basic order-agree">
+					<label for="orderAgree"><input type="checkbox" name="orderAgree" id="orderAgree" value="1" class="checkbox"><span class="label-text">주문하실 상품 및 결제, 주문정보 확인하였으며, 이에 동의합니다.(필수)</span></label>
+				</div>
+				<!-- checkout -->
+				<div class="button-checkout__wrap">
+					<button class="button--checkout" type="button" id="nextbutton1" name="nextbutton1" onclick="OrderProc('');">CHECK OUT</button>
+					<button class="button--checkout" type="button" id="nextbutton2" name="nextbutton2" disabled="" style="display: none;">CHECK OUT</button>
+				</div>
+			</form>
+		</fieldset>
+
+		<style>
+		.order__info__wrap{width:60%;float:left}
+		.order__info__wrap .order__table table{border-top:0}
+		.order__info__wrap .order__table table tbody tr th,.order__info__wrap .order__table table tbody tr td{border:0;vertical-align:middle;padding:0;padding-top:10px}
+		.order__info__wrap .order__table table tbody tr th label,.order__info__wrap .order__table table tbody tr td label{padding:0}
+		.order__info__wrap .order__table table tbody tr:first-child th,.order__info__wrap .order__table table tbody tr:first-child td{padding-top:0}
+		.order__info__wrap .order-notice{margin-top:10px;font-size:0.75rem;line-height:1.833em;color:#5d5d5d}
+		.order__info__wrap .order__info{border:0;border-top:6px solid #000;margin:0;padding-bottom:45px;border-radius:0}
+		.order__table{margin-top:30px}
+		.input--text{border:1px solid #a6a6a6;box-sizing:border-box;padding:10px;width:100%;max-width:210px}
+		.input--text input{width:100%;height:18px;margin:0;border:0;border-radius:0;box-shadow:none;padding:0;font-size:0.75rem;line-height:1.5em;vertical-align:top}
+		.info--address .checkbox-detail{margin-top:15px}
+		.info--address .checkbox-save{margin-top:5px}
+		.info--address .input--text{margin-top:10px;max-width:480px}
+		.info--address .input--text:first-child{margin-top:0}
+		.input-zipcode .input--search{display:inline-block;width:50%;max-width:210px;text-align:center}
+		.input-zipcode .input--search input{width:40%;text-align:center}
+		.input-zipcode .order-button{height:40px;vertical-align:top}
+		.info--phone{display:table;width:100%;max-width:210px;box-sizing:border-box}
+		.info--phone .input--tel{display:table-cell;border:1px solid #a6a6a6;padding:10px;box-sizing:border-box}
+		.info--phone .input--tel input{width:100%;height:auto;margin:0;border:0;border-radius:0;box-shadow:none;padding:0;font-size:0.875rem;line-height:1.14em;vertical-align:middle;text-align:center}
+
+
+		.order__info__wrap .order__pay{border:0;border-top:6px solid #000;margin:0;padding-bottom:45px;border-radius:0}
+		.order__info__wrap .order__pay .order__body{margin-top:30px}
+
+		@media screen and (max-width:540px){
+			.order__info__wrap{float:none;width:100%}
+			.order__info,.checkout__form{display:none}
+		}
+		</style>
+		<div class="order__info__wrap">
+			<!-- 주문리스트 -->
+			<form name="frmOrder" id="frmOrder_id" method="post">
+				<!-- [D] pc ver-->
+				<fieldset class="order order__info">
+					<!-- 주문고객정보 -->
+					<div class="order__header">
+						<h3>주문자 정보 / 배송정보 확인</h3>
+					</div>
+					<div class="order_info_include">
+						<!-- [D] jquery include -->
+					</div>
+
+					<!-- 배송요청사항 -->
+					<div class="delivery_message_include">
+						<!-- [D] jquery include -->
+					</div>
+				</fieldset>
+				<!-- // [D] pc ver -->
+
+				<fieldset class="order order__discount">
+					<!-- 할인정보 -->
+					<div class="order__header">
+						<h3>쿠폰 / 마일리지 사용</h3>
+					</div>
+
+					<div class="order_discount_include">
+						<!-- [D] jquery include -->
+					</div>
+				</fieldset>
+
+				<fieldset class="order order__pay">
+					<!-- 결제수단 -->
+					<div class="order__header">
+						<h3>결제방법 선택</h3>
+					</div>
+					<div class="order__body">
+						<div class="order_pay_include">
+							<!-- [D] jquery include -->
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!--- content : end -->
+	</div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

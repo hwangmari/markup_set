@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>상품상세 Q&amp;A :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+	<!-- [D] jquery include -->
+</div>
+
+<style type="text/css">
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+	.pc_view{display:none}
+	.m_view{display:block}
+	.detail_cnt_wrap{max-width:auto;padding:0 20px}
+}
+</style>
+
+<div class="detail_wrap">
+	<style>
+	.detail_cnt_wrap{padding:0 200px;max-width:1520px;margin:0 auto}
+	@media screen and (max-width: 1920px){
+		.detail_cnt_wrap{max-width:auto}
+	}
+	@media screen and (max-width: 1600px){
+		.detail_cnt_wrap{max-width:1200px;padding:0 50px}
+	}
+	@media screen and (max-width: 1000px){
+		.detail_cnt_wrap{max-width:900px}
+	}
+	@media screen and (max-width: 540px){
+		.detail_cnt_wrap{max-width:auto;padding:0 20px}
+	}
+	</style>
+	<div class="detail_cnt_wrap">
+		<div class="qa_section qa_write_mode">
+			<style>
+			.qa_section {margin-top:40px;}
+			.qa_section .dsc_btnbx{position:relative;padding-right:200px;}
+			.qa_section .tab_category{position:absolute;right:130px;bottom:10px;}
+			.qa_section .btn_sizehelp{position:absolute;right:0;bottom:10px;width:110px;}
+			.qa_section h2{margin-top:15px;padding-bottom:10px;font-size:22px;line-height: 1.63;}
+			.qa_section .my_tbl_lst{border-top:4px solid #000}
+			@media screen and (max-width: 540px){
+				.qa_section{margin-top:0}
+				.qa_section .dsc_btnbx{position:fixed;right:0;left:0;bottom:0;z-index:10;padding:20px;background:#fff}
+				.qa_section .btn_sizehelp{position:static;width:100%;height:60px;font-size:14px;line-height:60px}
+				.qa_section .my_tbl_lst{border-top:0}
+			}
+
+			/* 리스트 테이블 공통 스타일 */
+			.my_tbl_tit{border-top:4px solid #000;border-bottom:1px solid #000;font-weight: bold}
+			.my_tbl_lst .my_tbl_tit .tit{text-align: center}
+			.my_tbl_lst li+li{border-bottom:1px solid #d4d4d4}
+			.my_tbl_lst .btn_bor{position:absolute;top:50%;right:20px;width:43px;height:34px;margin-top:-17px;border-radius:2px;line-height:34px}
+			.my_tbl_info{display:table;table-layout:fixed;position:relative;width:100%;box-sizing: border-box;color:#303033}
+			.my_tbl_info .infoinner{display:table;table-layout:fixed;width:100%}
+			.my_tbl_info p{display:table-cell;min-height:50px;text-align:center;vertical-align:middle;font-size:14px}
+			@media screen and (max-width:540px){
+				.write_btnbx{margin-top:15px;text-align:left}
+				.write_btnbx .btn_black{width:93px;padding:0;line-height:36px;text-align:center}
+				.my_tbl_tit{display:none}
+				.my_tbl_lst{margin:0 -20px;border-top:1px solid #e4e4e4}
+				.my_tbl_lst>li{position:relative;padding:15px 20px 0;border-bottom:1px solid #e4e4e4}
+				.my_tbl_lst .btn_bor{display:block;position:static;top:auto;bottom:auto;margin-top:10px}
+				.my_tbl_info{display:block}
+				.my_tbl_info p{display:block;min-height:auto;text-align:left;font-size:13px;line-height:22px}
+			}
+			.my_tbl_none{padding:104px 0 98px;border-top:4px solid #000;border-bottom:1px solid #d4d4d4;font-size:16px;font-weight:600;color:#303033;line-height:26px;text-align:center}
+
+			/* QA */
+			.my_tbl_qa .infoinner p{padding:15px 1%;color:#000}
+			.my_tbl_qa .col2{width:12%}
+			.my_tbl_qa .col3{width:80px}
+			.my_tbl_qa .col4{width:50px}
+			.my_tbl_qa .tit{padding:15px 3% 15px 0;text-align:left}
+			.my_tbl_qa .user,.my_tbl_qa .state{font-weight:700}
+			.my_tbl_qa .infoinner .state{font-size:18px}
+			@media screen and (max-width:540px){
+				.my_tbl_qa .col2,.my_tbl_qa .col3,.my_tbl_qa .col4{width:auto}
+				.my_tbl_qa .my_tbl_info{padding:30px 80px 15px 0}
+				.my_tbl_qa .infoinner p{padding:0}
+				.my_tbl_qa .infoinner .type{width:auto;padding:0;font-weight:700;color:#000}
+				.my_tbl_qa .infoinner .date{position:absolute;top:7px;left:0;width:auto;padding:0;color:#d4d4d4}
+				.my_tbl_qa .infoinner .user{position:absolute;top:7px;left:80px;color:#d4d4d4}
+				.my_tbl_qa .infoinner .state{padding:0;font-size:12px;font-weight: normal;color:#a0a0a0}
+				.my_tbl_qa .infoinner .state .m_view{display:inline-block;margin-right:5px}
+				.my_tbl_qa .reply{position:absolute;top:50%;right:0;width:43px;margin-top:-12px;border-radius:2px;background:#375fff;color:#fff;line-height:24px;text-align:center}
+				.my_tbl_qa .blue{color:#375fff}
+			}
+
+			.qa_wrap{position:relative;z-index:1;margin:-1px 0;padding:30px;background:#f8f8f8;text-align:left}
+			.qa_wrap p{display:block;font-size:14px;color:#303033;line-height:24px;text-align:left}
+			.qa_wrap .type{position:absolute;top:0;left:0;padding:0;font-size:40px;font-weight:700;color:#000;line-height:55px}
+			.q_wrap,.a_wrap{position:relative;padding-left:66px}
+			.a_wrap{margin-top:35px}
+			@media screen and (max-width:540px){
+				.qa_wrap{margin:0 -20px;padding:15px 20px;border-top:1px solid #e4e4e4}
+				.qa_wrap .type{display:block;position:static;font-size:20px;line-height:22px}
+				.qa_wrap .sign{margin-top:20px}
+				.qa_wrap p{font-size:13px;color:#000;line-height:22px}
+				.q_wrap,.a_wrap{padding:0}
+				.a_wrap{margin-top:20px}
+			}
+
+			/* Q&A 쓰기 */
+			.qa_write_wrap{display:none;position:relative;padding:40px 90px 28px 60px;border:1px solid #d4d4d4;border-top:4px solid #000;background:#fff;margin-bottom:-4px}
+			.qa_write_wrap .field_section li{display:table;width:100%;table-layout:fixed}
+			.qa_write_wrap .field_section li+li{margin-top:10px}
+			.qa_write_wrap .field_section .title,.qa_write_wrap .field_section .field{display:table-cell;vertical-align:top}
+			.qa_write_wrap .field_section .title{width:80px}
+			.qa_write_wrap .field_section .title label{display:inline-block;font-size:14px;font-weight:600;color:#303033;line-height:40px}
+			.qa_write_wrap .btn_bx{margin-top:10px;text-align:right}
+			.qa_write_wrap .btn_bx .btn_sizehelp{position:static;width:82px}
+			.qa_write_wrap .inpbx,.qa_write_wrap .selbx{display:inline-block;width:160px}
+			.qa_write_wrap .inptxtbx{margin-top:10px}
+			.qa_write_wrap .inptxtbx textarea{resize:none}
+			.qa_write_wrap .ckbx{margin:9px 0 -9px 8px;vertical-align:middle}
+			.qa_write_mode .qa_write_wrap{display:block}
+			@media screen and (max-width:540px){
+				.qa_write_wrap{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;padding:20px;border:0;background: #fff;}
+				.qa_write_wrap .field_section li{padding:0}
+				.qa_write_wrap .field_section li+li{margin-top:10px}
+				.qa_write_wrap .field_section .qna{padding:0}
+				.qa_write_wrap .email .inpbx{border-width:0}
+				.qa_write_wrap .inptxtbx{margin:20px -20px 0 -100px;border-top:1px solid #e4e4e4;background:#f5f5f5}
+				.qa_write_wrap .inptxtbx textarea{min-height:367px;border:0}
+				.qa_write_wrap .btn_bx .btn_sizehelp{width:100%}
+			}
+			</style>
+			<!--[D] 상품문의 쓰기 클릭시, .qa_section에 .qa_write_mode 클래스 추가 및 .btn.btn_sizehelp 버튼 문구 '닫기'로 변경 /
+					닫기 클릭시, .qa_write_mode 클래스 제거 및 .btn.btn_sizehelp 버튼 문구 '상품문의쓰기'로 변경  -->
+			<div class="dsc_btnbx">
+				<h2>상품 Q&amp;A</h2>
+
+				<div class="tab_category">
+					<!-- [D] jquery include -->
+				</div>
+				<a href="#" class="btn btn_sizehelp">상품문의쓰기</a>
+				<!-- <a href="#" class="btn btn_sizehelp">닫기</a> -->
+			</div>
+			<form action="#">
+			<fieldset>
+				<legend>Q&amp;A 쓰기</legend>
+				<div class="qa_write_wrap">
+					<ul class="field_section">
+						<li>
+							<div class="title">
+								<label for="textField_text1">이름</label>
+							</div>
+							<div class="field">
+								<div class="inpbx">
+									<input type="text" id="textField_text2">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<label for="textField_text2">이메일주소</label>
+							</div>
+							<div class="field">
+								<div class="inpbx">
+									<input type="text" id="textField_text2">
+								</div>
+								<span class="ckbx">
+									<!-- [D] jquery include -->
+								 	답변메일받기
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<label for="textField_text3">문의내용</label>
+							</div>
+							<div class="field">
+								<div class="selbx pc_view">
+									<!-- [D] jquery include -->
+								</div>
+								<div class="inptxtbx">
+									 <textarea rows="5" cols="1" class="field_inp" value="문의내용 작성"></textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_bx">
+						<button type="submit" class="btn_sizehelp">등록하기</button>
+					</div>
+				</div>
+			</fieldset>
+			</form>
+			<!--[D] Q&A 있을 경우 -->
+			<ul class="my_tbl_lst my_tbl_qa">
+				<li>
+					<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4 state"><span class="reply m_view">답변</span><span class="pc_view">YES</span></p>
+						</a>
+					</div>
+					<div class="reply_row">
+						<div class="qa_wrap">
+							<div class="q_wrap">
+								<span class="type">Q.</span>
+								<p>재입고문의<br>M사이즈 사고싶은데 재입고 언제되나요?<br>이번달 중으로 잡혀있는 계획은 없나요..? M사이즈 꼭 사고싶어요 ᅲᅲᅲ</p>
+							</div>
+							<div class="a_wrap">
+								<span class="type">A.</span>
+								<p>안녕하세요. 고객님<br>해당 상품은 재입고 계획이 잡혀있지 않습니다.<br>죄송합니다.</p>
+								<p class="sign">Guide to better choice<br>멋지고 착하고 엉뚱한<br>another select shop 29CM</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4 state"><span class="reply m_view">답변</span><span class="pc_view">NO</span></p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4 state"><span class="reply m_view">답변</span><span class="pc_view">YES</span></p>
+						</a>
+					</div>
+				</li>
+			</ul>
+
+			<style type="text/css">
+			.pagnation{margin-top:34px;font-size:0;text-align:center}
+			.pagnation .sp{display:inline-block;width:11px;height:20px;margin:0 32px;background:red;vertical-align:middle}
+			.pagnation .prev{background-position:0 -160px}
+			.pagnation .next{background-position:-33px -160px}
+			.pagnation .num{display:inline-block;position:relative;padding:0 11px;font-size:16px;color:#8a8a8a;line-height:20px;vertical-align:middle;text-align:center}
+			.pagnation .on{font-weight:700;color:#000}
+			.pagnation .on:after{position:absolute;right:11px;left:11px;bottom:0;height:2px;background:#808080;content:''}
+			@media screen and (max-width:540px){
+				.pagnation .num{font-size:22px;line-height:auto}
+			}
+			</style>
+			<div class="pagnation">
+				<a href="#" class="sp prev">이전 페이지</a>
+				<a href="#" class="num on">1<span class="blind">현재 페이지</span></a>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">...</a>
+				<a href="#" class="num">32</a>
+				<a href="#" class="sp next">다음 페이지</a>
+			</div>
+
+			<!--[D] Q&A 없을 경우 -->
+			<p class="my_tbl_none">등록된 Q&amp;A가 없습니다</p>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

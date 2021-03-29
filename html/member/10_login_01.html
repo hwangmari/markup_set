@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>로그인 회원 / 비회원</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+
+<style>
+/* 공통 */
+.login_wrap{max-width:400px;margin:0 auto 50px;font-family:campton;letter-spacing:-0.5px}
+.login_wrap h2{margin-bottom:32px;color:#000;font-size:56px;font-weight:500;text-align:center}
+.login_wrap h3{color:#000;font-size:30px;font-weight:400;text-align:center;line-height:1.3}
+.login_wrap .sns_btn{margin:20px 0}
+.login_wrap .sns_btn .btn{position:relative;width:100%;height:50px;margin-top:10px;padding-left:50px;border:1px solid #e7e7e7;color:#5d5d5d;font-size:14px;line-height:50px;text-align:center;box-sizing:border-box}
+.login_wrap .sns_btn .btn:after{position:absolute;top:0;left:0;width:50px;height:50px;border-right:1px solid #e7e7e7;content:''}
+.login_wrap .sns_btn .btn_facebook:after{background:#3c5a99}
+.login_wrap .sns_btn .btn_kakao:after{background:#ffeb3b}
+.login_wrap .sns_btn .btn_naver:after{background:#4caf50}
+.login_wrap .sns_btn .btn_google:after{background:#dd5246}
+
+/* 10_login_01_회원 & 10_login_02_비회원 */
+.login_wrap .tab_list{width:100%;overflow:hidden}
+.login_wrap .tab_list li{float:left;width:50%;box-sizing:border-box;border-bottom:4px solid #000}
+.login_wrap .tab_list a{display:block;height:46px;border:solid 1px #d4d4d4;border-bottom:0;background:#fff;color:#5d5d5d;font-size:14px;font-weight:800;line-height:46px;text-align:center}
+.login_wrap .tab_list li:first-child a{margin-right:-1px}
+.login_wrap .tab_list a.active{position:relative;background:#000;color:#fff;border-color:#000}
+.login_wrap .tab_cnt{padding-top:10px}
+.login_wrap .tab_cnt .inpbx{margin-top:10px}
+.login_wrap .tab_cnt .txt{display:block;height:40px;padding-top:4px;box-sizing:border-box;color:#303033;font-size:12px}
+.login_wrap .tab_cnt .ckbx{margin-top:5px}
+.login_wrap .tab_cnt + .sns_btn{margin-top:35px}
+.login_wrap .btn.btn_login{ width:100%;height:50px;background:#000;color:#fff;font-size:20px;line-height:50px;font-weight:600}
+
+.login_wrap .linkarea{display:flex;margin-top:20px;text-align:center}
+.login_wrap .linkarea li{flex:1;position:relative;display:inline-block;padding:0 10px 0 12px}
+.login_wrap .linkarea li:before{content:' ';position:absolute;left:0;display:inline-block;width:1px;height:22px;background:#a0a0a0}
+.login_wrap .linkarea li:first-child:before{display:none}
+.login_wrap .linkarea a{font-size:14px;color:#5d5d5d}
+
+@media screen and (max-width: 540px){
+	/* 공통 */
+	.login_wrap{max-width:100%;margin:0;padding:0 40px}
+	.login_wrap h2{margin-bottom:14px;font-size:40px;font-weight:normal}
+	.login_wrap h3{font-size:18px;font-weight:600;margin-bottom:4px;line-height:24px}
+	.login_wrap .sns_btn a.btn{position:relative;padding-left:50px;font-size:13px}
+	.login_wrap .sns_btn a.btn:before{position:absolute;top:50%;transform:translate(0,-50%);content:''}
+	.login_wrap .sns_btn a.btn:after{position:absolute;top:0;left:50px;bottom:0;width:1px;background:rgba(255,255,255,.2);content:''}
+	.login_wrap .sns_btn a.btn_facebook{background:#3c5a99}
+	.login_wrap .sns_btn a.btn_facebook:before{left:20px;width:13px;height:24px;background:#fff}
+	.login_wrap .sns_btn a.btn_kakao{background:#3c5a99}
+	.login_wrap .sns_btn a.btn_kakao:before{left:20px;width:13px;height:24px;background:#fff}
+	.login_wrap .sns_btn a.btn_naver{background:#dd5246}
+	.login_wrap .sns_btn a.btn_naver:before{left:12px;width:28px;height:19px;background:#fff}
+	.login_wrap .sns_btn a.btn_google{background:#dd5246}
+	.login_wrap .sns_btn a.btn_google:before{left:12px;width:28px;height:19px;background:#fff}
+
+	/* 10_login_01_회원 & 10_login_02_비회원 */
+	.login_wrap .tab_list{width:auto;margin:0 -40px}
+	.login_wrap .tab_list li{border-bottom:0}
+	.login_wrap .tab_list a{height:60px;border:0;background:#f1f1f1;font-size:18px;color:#d4d4d4;line-height:60px}
+	.login_wrap .tab_list a.active{background:#fff;color:#000}
+}
+</style>
+
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- 10_login_01_회원-->
+<div class="login_wrap">
+	<h2>LOGIN</h2>
+	<ul class="tab_list">
+		<li><a href="#" class="active">회원</a></li>
+		<li><a href="#">비회원</a></li>
+	</ul>
+	<div class="tab_cnt">
+		 <div class="inpbx">
+			<input type="text" placeholder="아이디 또는 이메일">
+		</div>
+		<div class="inpbx">
+			<input type="text" placeholder="비밀번호">
+		</div>
+		<span class="ckbx">
+			<input type="checkbox" id="keep_mem" />
+			<label for="keep_mem">로그인 상태 유지</label>
+		</span>
+		<span class="txt">아이디 또는 비밀번호가 일치하지 않습니다.</span>
+		<a href="#" class="btn btn_login">LOGIN</a>
+	</div>
+
+	 <ul class="linkarea">
+	 	<li><a href="#">회원가입</a></li>
+	 	<li><a href="#">아이디찾기</a></li>
+	 	<li><a href="#">비밀번호찾기</a></li>
+	 </ul>
+
+ 	 <div class="sns_btn">
+ 	 	<a href="#" class="btn btn_facebook">FACEBOOK으로 로그인</a>
+ 	 	<a href="#" class="btn btn_kakao">KAKAO로 로그인</a>
+ 	 	<a href="#" class="btn btn_naver">NAVER로 로그인</a>
+ 	 	<a href="#" class="btn btn_google">Google+로 로그인</a>
+ 	 </div>
+</div>
+
+<!-- 10_login_02_비회원-->
+<div class="login_wrap">
+	<h2>LOGIN</h2>
+	<ul class="tab_list">
+		<li><a href="#">회원</a></li>
+		<li><a href="#" class="active">비회원</a></li>
+	</ul>
+	<div class="tab_cnt">
+	 	<div class="inpbx">
+			<input type="text" placeholder="주문번호">
+		</div>
+		<div class="inpbx">
+			<input type="text" placeholder="이름">
+		</div>
+		<span class="txt">주문번호가 없습니다. 입력내용을 확인 후 다시 시도해주세요</span>
+		<a href="#" class="btn btn_login">LOGIN</a>
+	</div>
+
+	<ul class="linkarea">
+	   <li><a href="#">회원가입</a></li>
+	   <li><a href="#">아이디찾기</a></li>
+	   <li><a href="#">비밀번호찾기</a></li>
+	</ul>
+
+	<div class="sns_btn">
+ 	   <a href="#" class="btn btn_facebook">FACEBOOK으로 로그인</a>
+ 	   <a href="#" class="btn btn_kakao">KAKAO로 로그인</a>
+ 	   <a href="#" class="btn btn_naver">NAVER로 로그인</a>
+ 	   <a href="#" class="btn btn_google">Google+로 로그인</a>
+ 	</div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

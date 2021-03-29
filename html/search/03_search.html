@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>검색</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<style>
+.search_wrap{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;background:#fff}
+.search_wrap .search_in{max-width:800px;margin:0 auto}
+.search_wrap .search_area{position:relative}
+.search_wrap .inpbx2{position:relative;padding-right:60px;border-bottom:4px solid #000}
+.search_wrap .inpbx2 input{display:block;width:100%;border:0;background:#fff;font-size:36px;line-height:60px;color:#000}
+.search_wrap .inpbx2 input::-webkit-input-placeholder{font-size:36px;color:#000}
+.search_wrap .inpbx2 input::-moz-placeholder{font-size:36px;color:#000}
+.search_wrap .inpbx2 input::-ms-input-placeholder{font-size:36px;color:#000}
+.search_wrap .inpbx2 input::-moz-placeholder{font-size:36px;color:#000}
+.search_wrap .btn_search{position:absolute;right:0;bottom:0;width:60px;height:60px}
+.search_wrap .btn_clr{display:block;width:80px;height:80px;margin:70px auto}
+.search_wrap .btn_del{width:30px;height:30px;font-size:12px;line-height:30px}
+.search_wrap .search_lst{display:-webkit-flex;display:flex;margin-top:30px}
+.search_wrap .search_lst>div{width:40%;padding-right:10%}
+.search_wrap .search_lst h2{font-size:14px;line-height:30px}
+.search_wrap .search_lst ul{margin-top:10px}
+.search_wrap .search_lst ul a{font-size:16px;line-height:2.5;color:#000;display:block;overflow:hidden;white-space:nowrap;word-break:break-all;text-overflow:ellipsis}
+@media screen and (max-width: 540px){
+    .search_wrap{padding:15px 20px}
+    .search_wrap .search_area{margin:0 -20px;padding:0 16px 0 10px}
+    .search_wrap .inpbx2{overflow:hidden;position:relative;margin-right:36px;padding:0 45px 0 15px;border:0;border-radius:999em;background:#e4e4e4}
+    .search_wrap .inpbx2 input{background:#e4e4e4;font-size:20px;line-height:34px}
+    .search_wrap .inpbx2 input::-webkit-input-placeholder{font-size:20px;color:#000}
+    .search_wrap .inpbx2 input::-moz-placeholder{font-size:20px;color:#000}
+    .search_wrap .inpbx2 input::-ms-input-placeholder{font-size:20px;color:#000}
+    .search_wrap .inpbx2 input::-moz-placeholder{font-size:20px;color:#000}
+    .search_wrap .btn_search{width:36px;height:34px}
+    .search_wrap .btn_clr{position:absolute;top:0;right:16px;width:36px;height:34px;margin:0;font-size:14px;color:#000;text-align:right}
+    .search_wrap .search_lst{display:block}
+    .search_wrap .search_lst>div{width:auto}
+    .search_wrap .search_lst>div+div{margin-top:12px;padding-top:14px;border-top:1px solid #d4d4d4}
+    .search_wrap .search_lst ul a{line-height:2.25}
+}
+</style>
+<div class="search_wrap">
+    <div class="search_in">
+        <div class="search_area">
+            <button type="button" class="btn btn_clr pc_view"><i class="svg svg_close_01">닫기</i></button>
+            <div class="inpbx2">
+                <input type="text" id="textField_text" placeholder="Search"/>
+                <button type="button" class="btn btn_search"><i class="svg svg_search_big">검색</i></button>
+            </div>
+            <button type="button" class="btn_clr m_view">취소</button>
+        </div>
+
+        <div class="search_lst">
+            <div class="newest">
+                <h2>최근검색어 <button type="button" class="btn btn_del">삭제</button></h2>
+                <ul>
+                    <li>
+                        <a href="#">검색어검색어검색어검색어검색어검색어검색어검색어검색어검색어검색어검색어검색어</a>
+                    </li>
+                    <li>
+                        <a href="#">검색어</a>
+                    </li>
+                    <li>
+                        <a href="#">검색어</a>
+                    </li>
+                    <li>
+                        <a href="#">검색어</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="recommend">
+                <h2>추천검색어</h2>
+                <ul>
+                    <li>
+                        <a href="#">검색어</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.main_container{min-width:1000px;max-width:1920px;margin:50px auto 0;box-sizing:border-box}
+.main_container .feed_section:before{left:47.24%}
+.main_container .feed_section:after{right:26.38%}
+.main_container .feed_section .seaction_banner{width:41.64%;padding:0 2.8%}
+.main_container .feed_section>ul{padding:0 2.8%}
+.main_container .feed_section>ul.seaction_feed_lft,
+.main_container .feed_section>ul.seaction_feed_rgt{width:26.38%}
+.main_container .feed_coupon .couponbx{margin:0 -13.5%;padding-top:127%}
+@media screen and (max-width: 540px){
+    .main_container{min-width:auto;max-width:100%;padding:0}
+    .main_container .feed_section{display:block;padding:0}
+    .main_container .feed_section:before,
+    .main_container .feed_section:after{display:none}
+    .main_container .feed_section .seaction_banner{width:auto;padding:0}
+    .main_container .feed_section>ul{padding:0}
+    .main_container .feed_section>ul.seaction_feed_lft,
+    .main_container .feed_section>ul.seaction_feed_rgt{width:auto}
+    .main_container .feed_section .feed_coupon .couponbx{margin:0}
+}
+</style>
+<div class="main_container">
+    <div class="feed_section">
+        <!--   모바일과 PC 다르게 진행 필요 모바일 슬라이더 구조-->
+        <div class="seaction_banner">
+            <div class="module_swiper swiper_img">
+    		    <div class="swiper_container">
+    		        <div>
+                        <ul class="gallery-wrap">
+                            <li>
+                                <a href="#" class="banner_area">
+                                    <!-- [D] jquery include -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="banner_area">
+                                    <!-- [D] jquery include -->
+                                </a>
+                            </li>
+                        </ul>
+    		        </div>
+    		    </div>
+    		    <div class="btnbx">
+    		        <a class="btn_prev" href="#none">prev</a>
+    		        <a class="btn_next" href="#none">next</a>
+    		    </div>
+    		    <div class="swiper_page">
+    		        <a href="#none" class="on"><span>1</span></a>
+    		        <a href="#none"><span>2</span></a>
+    		        <a href="#none"><span>3</span></a>
+    		    </div>
+    	    </div>
+	    </div>
+        <ul class="seaction_feed_lft">
+            <li class="feed_rgt">
+                <a href="#" class="feed_area">
+                    <!-- [D] jquery include -->
+                </a>
+                <a href="#" class="btn btn_link">#SPECIAL ORDER</a>
+            </li>
+            <li class="feed_coupon">
+                <a href="#" class="couponbx">
+                    <div>
+                        <span>24%<br>COUPON</span>
+                    </div>
+                </a>
+            </li>
+            <li class="feed_lft">
+                <a href="#" class="feed_area">
+                    <!-- [D] jquery include -->
+                </a>
+                <a href="#" class="btn btn_link">#SPECIAL ORDER</a>
+                <div class="prd_s">
+                    <!-- [D] jquery include -->
+                </div>
+                <div class="prd_s">
+                    <!-- [D] jquery include -->
+                </div>
+            </li>
+        </ul>
+        <ul class="seaction_feed_rgt">
+            <li class="feed_lft">
+                <a href="#" class="feed_area">
+                    <!-- [D] jquery include -->
+                </a>
+                <a href="#" class="btn btn_link">#PT</a>
+                <div class="prd_s">
+                    <!-- [D] jquery include -->
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.btn_main_more{display:block;padding:60px 0;font-size:30px;text-align: center;color: #303033;}
+.btn_main_more .svg{margin-left:10px;}
+</style>
+<a href="#" class="btn btn_main_more">
+  더보기<i class="svg svg_more"></i>
+</a>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

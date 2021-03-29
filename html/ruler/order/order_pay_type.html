@@ -1,0 +1,524 @@
+<style>
+.pay-type .pay_type_tabs{height:40px;line-height:40px}
+.pay-type>li:first-child input:checked+label{border-left:1px solid #d4d4d4}
+.pay-type>li:first-child input+label{border-left:1px solid #d4d4d4}
+.pay-type>li input{display:inline;-webkit-appearance:none;border:0;border-radius:0;margin:0;width:0;height:0}
+.pay-type>li input:checked+label{background-color:#5d5d5d;border:1px solid #d4d4d4;border-left:0;color:#fff}
+.pay-type>li input+label{display:block;box-sizing:border-box;width:100%;border:1px solid #d4d4d4;border-left:0;text-align:center;cursor:pointer}
+
+.pay-type .pay-info{box-sizing:border-box;font-size:0.75rem;font-weight:500;line-height:1.833em;color:#5d5d5d}
+.pay-type .pay-info dl{position:relative;padding-left:163px;min-height:30px;color:#000}
+.pay-type .pay-info dl.info__pay__hdcard{background:url("//image.29cm.co.kr/mall/ci_hdcard.png") 0 5px no-repeat}
+/*.pay-type .pay-info dl.info__pay__kbcard{margin-top:30px;background:url("//image.29cm.co.kr/mall/KB_logo.jpg") 0 5px no-repeat;background-size:136px auto}*/
+.pay-type .pay-info dl dt{display:block;margin-bottom:2px;line-height:1.714em;font-size:0.875rem}
+.pay-type .pay-info dl dd{line-height:1.833em;font-size:0.75rem}
+.pay-type .pay-info .notice{margin-top:30px}
+.pay-type .pay-info .notice--top{margin-bottom:27px}
+.pay-type .pay-info .notice__button{margin-top:30px}
+.pay-type .pay-info--credit{word-break:keep-all}
+.pay-type .pay-info--hyundaicard .hyundaicard__datail{margin-top:40px}
+.pay-type .pay-info--hyundaicard .hyundaicard__datail .label-text{font-size:1rem}
+.pay-type .pay-info--hyundaicard .hyundaicard__datail .info{margin-top:15px}
+.pay-type .pay-info--hyundaicard .hyundaicard__datail .benefit{color:#000}
+.pay-type .pay-info--live{color:#5d5d5d;line-height:1.833em}
+.pay-type .pay-info--live .live__detail li{text-indent:-10px;padding-left:10px}
+.pay-type .pay-info--live .live__detail li::before{content:'- '}
+.pay-type .pay-info--live .live__notice{margin-top:35px;color:#000}
+.pay-type .pay-info--cash{color:#000}
+.pay-type .pay-info--cash .cash-receipt{overflow:hidden;margin-bottom:30px}
+.pay-type .pay-info--cash .cash-receipt__detail{margin:20px 0 30px;padding-left:37px;color:#5d5d5d}
+.pay-type .pay-info--cash .radio-basic label+label{margin-left:25px}
+.pay-type .pay-info--cash .input-basic{margin-top:7px;max-width:210px}
+.pay-type .pay-info--cash .cash-receipt__desc{margin-top:10px;padding-bottom:0;line-height:1.5em}
+.pay-type .pay-info--cash .cash-insure{overflow:hidden;padding-top:30px;margin-bottom:30px;border-top:1px solid #d4d4d4;color:#5d5d5d}
+.pay-type .pay-info--cash .cash-insure__detail{margin:20px 0 0;padding:0 0 0 37px;line-height:1.8333em}
+.pay-type .pay-info--cash .cash-insure__title{margin-top:30px;font-weight:700;color:#000}
+.pay-type .pay-info--cash .cash-insure__field{display:table;width:100%;margin-top:0;color:#000}
+.pay-type .pay-info--cash .cash-insure__field dt{display:table-cell;width:125px;height:40px;vertical-align:middle}
+.pay-type .pay-info--cash .cash-insure__field dd{display:table-cell;height:40px;vertical-align:middle}
+.pay-type .pay-info--cash .cash-insure__field dd label+label{margin-left:10px}
+.pay-type .pay-info--cash .cash-insure__field dd .label-text{color:#000;padding-left:5px}
+.pay-type .pay-info--cash .field__birth span{padding:0 8px}
+.pay-type .pay-info--cash .field__birth .birth--year{display:inline-block;width:130px;padding:9px 15px 8px}
+.pay-type .pay-info--cash .field__birth .select-basic select{box-sizing:border-box;padding:0 10px}
+.pay-type .pay-info--cash .field__birth .birth--month{display:inline-block;width:90px;height:auto;border:0;text-align:right}
+.pay-type .pay-info--cash .field__birth .birth--day{display:inline-block;width:90px}
+.pay-type .pay-info--cash .field__birth select{padding:0;height:40px;line-height:40px;text-align:right}
+.pay-type .pay-info--cash .field__birth select option{-webkit-appearance:none}
+.pay-type .pay-info--cash .cash-insure__list{margin-top:10px;padding-bottom:10px}
+.pay-type .pay-info--phone .phone__detail>li{padding-left:10px;text-indent:-10px;color:#000}
+.pay-type .pay-info--phone .phone__detail>li::before{content:'- '}
+.pay-type .pay-info--phone .phone__detail>li ul{padding-left:10px;padding-top:5px;margin-bottom:35px;color:#5d5d5d}
+.pay-type .pay-info--phone .phone__policy{margin-top:45px}
+.pay-type .pay-info--phone .phone__policy .title{color:#000;font-weight:700}
+.pay-type .pay-info--phone .phone__policy .payTypeInfo-link{color:inherit;text-decoration:none}
+.pay-type .pay-info--phone .phone__policy .payTypeInfo-link:hover{text-decoration:underline}
+.pay-type .pay-info .cash-notify{padding-top:30px;border-top:1px solid #d4d4d4;color:#000;line-height:1.8333em}
+
+.pay-type .pc_view{display:block}
+.pay-type .m_view{display:none}
+/*pc style */
+
+@media screen and (min-width:541px){
+    .pay-type .m_view{display:none}
+    .pay-type{position:relative;min-width:540px;padding-top:70px}
+    .pay-type .pay_type_tabs{position:absolute;top:0;width:15%;}
+    .pay-type>li:nth-child(1) .pay_type_tabs{left:0}
+    .pay-type>li:nth-child(2) .pay_type_tabs{left:15%}
+    .pay-type>li:nth-child(3) .pay_type_tabs{left:30%}
+    .pay-type>li:nth-child(4) .pay_type_tabs{left:45%;width:19%}
+    .pay-type>li:nth-child(5) .pay_type_tabs{left:64%;width:21%}
+    .pay-type>li:nth-child(6) .pay_type_tabs{left:85%}
+    .pay-type>li:nth-child(7) .pay_type_tabs{left:85%}
+    .pay-type .pay_type_tabs+div{display: none}
+    .pay-type .pay_type_tabs:hover+div{display: block}
+    .pay-type .active .pay_type_tabs +div{display: block}
+}
+
+/* m style*/
+@media screen and (max-width:540px){
+    .pay-type{width:100%;margin-bottom:10%}
+    .pay-type > li{display:block;width:100%}
+    .pay-type > li:first-child input:checked+label{border-top:1px solid #666}
+    .pay-type > li:first-child input+label{border-top:1px solid #e6e6e6}
+    .pay-type > li input{position:absolute;-webkit-appearance:none;border:0;border-radius:0;margin:0;width:0;height:0}
+    .pay-type > li input:checked+label{background-color:#666;border:1px solid #666;border-top:0;color:#fff}
+    .pay-type > li input+label{display:block;margin:-1px 0;width:100%;border:1px solid #e6e6e6;border-top:0;font-size:14px;font-weight:500;text-align:center;box-sizing:border-box}
+    .pay-type .pay-info{border:1px solid #e6e6e6;padding:8.62% 5.172%;font-size:14px;color:#999;box-sizing:border-box}
+    .pay-type .pay-info dl{padding:36px 0 0}
+    .pay-type .pay-info dl dt{margin-bottom:11px;font-size:16px}
+    .pay-type .pay-info dl dd{font-size:14px;color:#999}
+    .pay-type .pay-info--credit .notice,
+    .pay-type .pay-info--hyundaicard .info__pay__hdcard,
+    .pay-type .pay-info--hyundaicard .notice__button,
+    .pay-type .pay-info--phone .phone__detail,
+    .pay-type .pay-info--phone .phone__policy,
+    .pay-type .cash-insure__detail .pv_view{display:none}
+    .pay-type .pay_type_tabs{height:auto}
+    .pay-type .pay-info--credit{word-break:keep-all}
+    /*.pay-type .pay-info--credit .title--card{display:inline-block;color:#222;margin-bottom:5%}
+    .pay-type .pay-info--credit .title--card i{display:block;margin:0 -1% 6%}
+    .pay-type .pay-info--credit .title--card i::before{content:" ";display:block;width:100%;height:0;padding-bottom:20.4%}*/
+    /*.pay-type .pay-info--credit .icon--hyundaicard::before{background:url("//image.29cm.co.kr/mall/order/icon-hyundaicard.png") no-repeat 50% 0;background-size:contain}
+    .pay-type .pay-info--credit .icon--kbcard{margin-bottom:0}
+    .pay-type .pay-info--credit .icon--kbcard::before{margin-top:30px;background:url("//image.29cm.co.kr/mall/order/icon-kbcard.jpg") no-repeat 0 0;background-size:86% auto}*/
+    .pay-type .pay-info--hyundaicard .hyundaicard__datail{margin-top:0}
+    .pay-type .pay-info--hyundaicard .hyundaicard__datail+.hyundaicard__datail{margin-top:7.75%}
+    .pay-type .pay-info--hyundaicard .hyundaicard__datail .info{margin-top:2.58%;color:#999}
+    .pay-type .pay-info--hyundaicard .hyundaicard__datail .benefit{color:#1d1d1d}
+    .pay-type .pay-info--cash .draw-limit{padding-bottom:5.77%;font-size:16px;color:#ff4800}
+    .pay-type .pay-info--cash .cash-receipt{margin-bottom:0}
+    .pay-type .pay-info--cash .cash-receipt__detail{margin-left:27px;padding-left:0}
+    .pay-type .pay-info--cash .cash-receipt__desc{margin-top:3.85%;padding-bottom:0;color:#999;line-height:1.458em}
+    .pay-type .pay-info--cash .cash-insure{margin-top:0;padding-top:0;border:0}
+    .pay-type .pay-info--cash .cash-insure__detail{padding:0;margin-left:27px}
+    .pay-type .pay-info--cash .cash-insure__field{display:table;width:100%;margin-top:0;padding-top:0}
+    .pay-type .pay-info--cash .cash-insure__field:first-child{margin-top:2.88%}
+    .pay-type .pay-info--cash .cash-insure__field dt{color:#999}
+    .pay-type .pay-info--cash .cash-insure__field dd{}
+    .pay-type .pay-info--cash .cash-insure__field dd label+label{margin-left:1%}
+    .pay-type .pay-info--cash .cash-insure__field dd .label-text{color:#999;padding-left:0.2em}
+    .pay-type .pay-info--cash .cash-insure__list{color:#999}
+    .pay-type .pay-info--cash .field__birth{border:1px solid #e6e6e6;box-sizing:border-box;text-align:center}
+    .pay-type .pay-info--cash .field__birth .birth--year{width:40px;height:auto;border:0;padding:0;text-align:right}
+    .pay-type .pay-info--cash .field__birth select{-webkit-appearance:none;width:17px;border:0;border-radius:0;box-sizing:border-box;padding:0;height:2.7em;line-height:2.7em;background:transparent url("//image.29cm.co.kr/mall/order/icon-select-basic.png") no-repeat 97.5% 50%;background-size:4% auto;text-align:right}
+    .pay-type .pay-info--cash .field__birth select option{-webkit-appearance:none}
+
+    .pay-type .pc_view{display:none}
+    .pay-type .m_view{display:block}
+}
+</style>
+
+<ul class="pay-type">
+    <li class="active">
+        <div class="pay_type_tabs">
+            <input id="PayTypeCredit" name="PayType" onclick="CheckPayMethod(this);" checked="CHECKED" type="radio" value="10">
+            <label for="PayTypeCredit">신용/체크카드</label>
+        </div>
+        <!-- 신용/체크카드 안내 -->
+        <div id="payTypeInfo1_10" name="payTypeInfo1_10" class="pay-info pay-info--credit">
+            <dl class="info__pay__hdcard">
+                <dt>현대카드 결제 시</dt>
+                <dd>
+                        - 모든 상품 2% 청구할인,  20% M포인트 사용, 3개월 무이자 할부 혜택이 제공됩니다. <br>
+                        - M포인트 사용을 안 할 경우 결제 시 카드 포인트 사용 팝업창에서 사용안함을 선택하시면 됩니다.
+                </dd>
+            </dl>
+
+            <!-- 모바일 제외 -->
+            <div class="notice">
+                <ul>
+                    <li class="notice--top">MAC 환경에서도 신용카드 결제가 가능합니다.</li>
+                    <li>국내 모든 카드 사용이 가능하며 해외에서 발행된 카드는 이용하실수 없습니다. (해외배송은 불가능합니다) </li>
+                    <li>금요일 오후 6시~ 일요일 주문은 결제 완료 후 취소 요청시 고객센터 &gt; 주문취소를 이용하시면 됩니다.</li>
+                </ul>
+                <div class="notice__button" id="payTypeInfo2_10" name="payTypeInfo2_10">
+                    <button type="button" name="" onclick="popGongIn();" class="order-button">공인인증서안내</button>
+                    <button type="button" name="" onclick="popansim();" class="order-button">안심클릭 의무사용</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="pay_type_tabs">
+            <input id="PayTypeHyundai" name="PayType" onclick="CheckPayMethod(this);" type="radio" value="40">
+            <label for="PayTypeHyundai">현대카드</label>
+        </div>
+        <!-- 현대카드 안내 -->
+        <div id="payTypeInfo1_40" name="payTypeInfo1_40" class="pay-info pay-info--hyundaicard">
+
+            <!-- 모바일 제외 -->
+            <dl class="info__pay__hdcard">
+                <dt>현대카드 결제 시</dt>
+                <dd>
+                    - 모든 상품 2% 청구할인,  20% M포인트 사용, 3개월 무이자 할부 혜택이 제공됩니다. <br>
+                    - M포인트 사용을 안 할 경우 결제 시 카드 포인트 사용 팝업창에서 사용안함을 선택하시면 됩니다.
+                </dd>
+            </dl>
+            <div class="hyundaicard__datail">
+                <div class="radio-basic">
+                    <label for="useMpoint">
+                        <input type="radio" name="redvoucher" id="useMpoint" value="N" checked="" class="radio" onclick="checkRedVoucher();">
+                        <span class="label-text">M포인트 사용</span>
+                    </label>
+                </div>
+                <p class="info">M포인트 사용 선택 시, M포인트 적립 및 사용 가능한 카드로만 결제 가능합니다. (M포인트 사용 가능한 카드가 아닐 경우 결제 안됨)<br>현대카드 2% 청구할인 후 구매 금액 대상 M포인트 차감 결제됩니다.<br>M포인트 결제 시 사용한 포인트 차감된 금액으로 청구됩니다.</p>
+            </div>
+            <div class="hyundaicard__datail">
+                <div class="radio-basic">
+                    <label for="useRedVoucher">
+                        <input type="radio" name="redvoucher" id="useRedVoucher" value="Y" class="radio" onclick="checkRedVoucher();">
+                        <span class="label-text">레드 쇼핑 바우처 사용</span>
+                    </label>
+                </div>
+                <p class="info">30만원 이상 the Red Edition2 결제 시 레드 쇼핑 바우처 사용을 선택하여 이용하실 수 있습니다.<br>M포인트 사용과 바우처는 중복 사용 할 수 없습니다.<br>바우처를 이용한 구매는 교환 및 부분 취소가 불가합 니다. (전체 취소 후 재결제)<br>바우처 사용은 즉시할인이 아닌 청구할인으로 결제 적용됩니다.<br>레드바이처 특성상 품절시 부분취소가 되지 않아 결제전 재고 확인 부탁드립니다.</p>
+            </div>
+            <div class="hyundaicard__datail">
+                <p class="benefit">현대카드 Familly카드 (임직원 카드) 결제 시 5% 청구할인 혜택이 제공됩니다.</p>
+            </div>
+
+            <!-- 모바일 제외 -->
+            <div class="notice__button" id="payTypeInfo2_40" name="payTypeInfo2_40">
+                <button type="button" name="" onclick="popGongIn();" class="order-button">공인인증서안내</button>
+                <button type="button" name="" onclick="popansim();" class="order-button">안심클릭 의무사용</button>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="pay_type_tabs">
+            <input id="PayTypePhone" name="PayType" onclick="CheckPayMethod(this);" type="radio" value="60">
+            <label for="PayTypePhone">휴대폰결제</label>
+        </div>
+        <!-- 휴대폰결제 안내 -->
+        <div id="payTypeInfo1_60" name="payTypeInfo1_60" class="pay-info pay-info--phone">
+            <!-- 모바일용  -->
+            <p class="m_view">
+                통신 3사 휴대폰 결제 한도금액이 월 30만원에서 50만원으로 상향조정 되었습니다. 단, 고객님의 통신사에 동의하신 경우에 한도가 조정되니, 이용중인 통신사에 문의해주시기 바랍니다.<br>
+                (휴대폰에서 114)<br>
+                개인에 따라 실제 한도 금액은 차이가 있을 수 있습니다.
+            </p>
+
+            <!-- PC용 -->
+            <ul class="phone__detail">
+                <li>29CM에서 휴대폰으로 결제 가능한 최대 금액은 월 30만원 이며 개인별 한도금액은 통신사 및 개인 설정에 따라 다를 수 있습니다.</li>
+                <li>휴대폰으로 결제하신 금액은 익월 휴대폰 요금에 함께 청구되며 별도의 수수료는 부과되지 않습니다.</li>
+                <li>휴대폰 소액결제로 구매하실 경우 현금영수증이 발급되지 않습니다.</li>
+                <li>다음의 경우에는 휴대폰 결제를 이용하실 수 없습니다.
+                    <ul>
+                        <li>미납/체납 중인 휴대폰 요금이 있을 경우</li>
+                        <li>이동통신사 가입기간(번호이동포함) 6개월 이하인 경우</li>
+                        <li>외국인, 미성년자 요금제, 법인휴대폰, 선불요금제인 경우</li>
+                        <li>LGT 이용자 중 통신사로 [자동결제] 차단 신청하신 경우</li>
+                    </ul>
+                </li>
+                <li>휴대폰 소액결제로 결제하신 상품을 취소할 경우 결제하신 당월 말까지 가능합니다.</li>
+                <li>휴대폰 결제로 구매하신 상품의 취소/반품은 처리완료 시점에 따라 다음과 같이 이루어집니다.
+                    <ul>
+                        <li>결제 당월 취소/반품/품절환불 : 휴대폰 이용요금에 부과예정이던 금액이 취소됩니다.</li>
+                        <li>결제 당월 지난 후 취소/반품/품절환불 : 환불계좌 확인 후 무통장 계좌로 입금됩니다.</li>
+                    </ul>
+                </li>
+                <li>휴대폰결제관련 문의사항은 LG유플러스전자결제 고객센터 1544-7772 또는 29CM 1644-0560으로 연락해주시기 바랍니다.</li>
+            </ul>
+            <div class="phone__policy">
+                <h3 class="title">이통사별 휴대폰 결제 정책</h3>
+                <ul id="payTypeInfo2_60" name="payTypeInfo2_60">
+                    <li>KT : 한달 결제액 기준 최고 30만원까지 가능 <a href="//www.olleh.com" target="_blank" title="새창으로 열림" class="payTypeInfo-link">&gt; 이용내역 조회 : //www.olleh.com</a></li>
+                    <li>SKT : 다음 요금제에 해당되는 고객은 사용불가 (아이니/아이니플러스/TTL ting 요금제, 선불이동 전화고객) <a href="//www.tworld.co.kr" target="_blank" title="새창으로 열림" class="payTypeInfo-link">&gt; 이용내역 조회 : //www.tworld.co.kr</a></li>
+                    <li>LGT : 한달 결제액 기준 최고 30만원까지 가능 <a href="//www.uplus.co.kr" target="_blank" title="새창으로 열림" class="payTypeInfo-link">&gt; 이용내역 조회 : //www.uplus.co.kr</a></li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="pay_type_tabs">
+            <!-- PC만 -->
+            <input id="PayTypeLive" name="PayType" onclick="CheckPayMethod(this);" type="radio" value="20">
+            <label for="PayTypeLive">실시간 계좌이체</label>
+        </div>
+        <!-- 실시간 계좌이체 -->
+        <div id="payTypeInfo1_20" name="payTypeInfo1_20" class="pay-info pay-info--live">
+            <ul class="live__detail">
+                <li>실시간 이체 결제시 화면 아래 '결제하기'버튼을 클릭하시면 실시간 이체 결제 창이 나타납니다.</li>
+                <li>실시간 이체 결제 창을 통해 입력되는 고객님의 정보는 128bit로 안전하게 암호화되어 전송되며 승인 처리 후 정보는 승인 성공/ 실패 여부에 상관없이 자동 으로 폐기되므로, 안전합니다.</li>
+                <li>실시간 이체 결제 신청시 승인 진행에 다소 시간이 소요될 수 있으므로 '중지', '새로고침'을 누르지 마시고 결과 화면이 나타 날때까지 기다려 주십시오. </li>
+                <li>신용카드/ 실시간 이체는 결제 후, 무통장입금은 입금확인 후 배송이 이루어집니다.</li>
+                <li>국내 모든 카드 사용이 가능하며 해외에서 발행된 카드는 이용하실수 없습니다.<br>(해외배송은 불가능합니다.)</li>
+                <li>금요일오후 6시 ~ 일요일 주문은 결제완료 후 취소요청시, [고객센터]-[주문취소]를 이용하시면 됩니다.<br>(상품출고는 토요일에도 정상적으로 이루어집니다.)</li>
+                <li>29CM는 구매안전서비스로 전자보증 서비스에 가입되어있습니다.</li>
+                <li>현금거래에 대해 전자보증 서비스를 받으시려면 [무통장 입금(가상계좌)] 결제방식을 선택하시기 바랍니다.</li>
+            </ul>
+            <ul id="payTypeInfo2_20" name="payTypeInfo2_20" class="live__notice">
+                <li>온라인 실시간 계좌 이체 서비스는 은행계좌만 있으면 누구나 이용하실 수 있는 서비스로, 별도의 신청없이 그 대금을 자신의 거래은행의 계좌로부터 바로 지불하는 서비스입니다.<br>안전한 거래를 위해 결제시 공인인증서가 반드시 필요합니다.</li>
+                <li>은행 이용가능 서비스 시간은 은행사정에 따라 다소 변동될수 있습니다.</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="pay_type_tabs">
+            <input id="PayTypeCash" name="PayType" onclick="CheckPayMethod(this);" type="radio" value="70">
+            <label for="PayTypeCash">무통장입금(가상계좌)</label>
+        </div>
+        <!-- 무통장입금 안내 -->
+        <div id="payTypeInfo1_70" name="payTypeInfo1_70" class="pay-info pay-info--cash">
+            <!-- 모바일용 -->
+            <p class="draw-limit">입금기한 : 2017년 08월 02일</p>
+
+            <!-- 현금영수증 -->
+            <div id="cashReceiptShow" name="cashReceiptShow" class="cash-receipt">
+                <div class="checkbox-basic">
+                    <label for="cashreceiptreq">
+                        <input type="checkbox" name="cashreceiptreq" id="cashreceiptreq" value="Y" class="checkbox" onclick="showCashReceptDetail(this);">
+                        <span class="label-text">현금영수증 발급요청</span>
+                    </label>
+                </div>
+                <div id="cashReceipt_detail" class="cash-receipt__detail">
+                    <div class="radio-basic">
+                        <label>
+                            <input type="radio" name="useopt" value="0" checked="checked" class="radio">
+                            <span class="label-text">소득공제용</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="useopt" value="1" class="radio">
+                            <span class="label-text">지출증빙용</span>
+                        </label>
+                    </div>
+                    <div class="input-basic">
+                        <input type="text" name="cashReceipt_ssn" value="" size="13" maxlength="13" autocomplete="off" placeholder="- 를 뺀 숫자만 입력 하세요">
+                    </div>
+
+                    <!-- PC용 -->
+                    <p class="cash-receipt__desc pc_view">휴대폰번호 / 현금영수증 카드 / 사업자번호 “-” 를 뺀 숫자만 입력하세요.<br>사업자,휴대폰번호가 유효하지 않으면 발급되지 않습니다.</p>
+                    <!-- 모바일용 -->
+                    <div class="cash-receipt__desc m_view">사업자 또는 휴대폰번호가 유효하지 않으면 발급되지 않습니다.</div>
+                </div>
+            </div>
+
+            <!-- 전자보증보험 -->
+            <div id="insureShow" name="insureShow" class="cash-insure">
+                 <div class="checkbox-basic">
+                    <label for="reqInsureChk">
+                        <input type="checkbox" name="reqInsureChk" id="reqInsureChk" value="Y" class="checkbox" onclick="showInsureDetail(this);">
+                        <span class="label-text">전자보증보험 발급요청</span>
+                    </label>
+                </div>
+                <div class="cash-insure__detail">
+                    <!-- PC용 -->
+                    <ul class="pc_view">
+                        <li>- 안전한 쇼핑 거래를 위해 쇼핑몰 보증보험 서비스를 운영중 입니다.</li>
+                        <li>- 현금결제에 대해 당 주문건의 보증기간동안 결제금액 보장</li>
+                        <li>- 쇼핑몰 보증 보험 가입시 최소한의 개인정보가 서울 보증보험사에 제공</li>
+                    </ul>
+                    <div id="insure_detail" style="display:block;">
+                        <!-- PC용 -->
+                        <div class="pc_view">
+                            <h3 class="cash-insure__title">전자보증보험 안내 (100% 매매보호 안전결제)</h3>
+                            <p>"전자상거래 등에서의 소비자보호에 관한 법률" 에 근거한 전자보증서비스는 서울보증보험㈜이 인터넷 쇼핑몰에서의 상품주문(결제) 시점에 소비자에게 보험증서를 발급하여 인터넷 쇼핑몰 사고로 인한 소비자의 금전적 피해를 100% 보상하는 서비스입니다.</p>
+                        </div>
+                        <!-- //PC용 -->
+
+                        <ul class="cash-insure__list">
+                            <li>- 보상대상 : 상품 미배송, 환불거부(환불사유시), 반품거부(반품사유시), 쇼핑몰부도</li>
+                            <li>- 보험기간 : 주문일로부터 37일간(37일 보증)</li>
+                        </ul>
+                        <dl class="cash-insure__field">
+                            <dt><label>주문고객 생년월일</label></dt>
+                            <dd>
+                                <div class="field__birth">
+                                    <div class="input-basic birth--year">
+                                        <input type="text" name="insureSsn1" maxlength="4" autocomplete="off">
+                                    </div>
+                                    <span>년</span>
+                                    <div class="select-basic birth--month">
+                                        <select name="insureSsn2">
+                                            <option value="">선택</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <span>월</span>
+                                    <div class="select-basic birth--day">
+                                        <select name="insureSsn3">
+                                            <option value="">선택</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                            <option value="05">5</option>
+                                            <option value="06">6</option>
+                                            <option value="07">7</option>
+                                            <option value="08">8</option>
+                                            <option value="09">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <span>일</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="cash-insure__field">
+                            <dt>성별</dt>
+                            <dd>
+                                <div class="radio-basic">
+                                    <label><input checked="CHECKED" name="insuregender" type="radio" value="2" class="radio"><span class="label-text">여</span></label>
+                                    <label><input name="insuregender" type="radio" value="1" class="radio"><span class="label-text">남</span></label>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="cash-insure__field">
+                            <dt>개인정보 이용동의</dt>
+                            <dd>
+                                <div class="radio-basic">
+                                    <label><input type="radio" name="agreeInsure" value="Y" checked="CHECKED" class="radio"><span class="label-text">동의</span></label>
+                                    <label><input type="radio" name="agreeInsure" value="N" class="radio"><span class="label-text">동의안함</span></label>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="cash-insure__field">
+                            <dt>EMAIL 수신동의</dt>
+                            <dd>
+                                <div class="radio-basic">
+                                    <label><input checked="CHECKED" name="agreeEmail" type="radio" value="Y" class="radio"><span class="label-text">수신</span></label>
+                                    <label><input name="agreeEmail" type="radio" value="N" class="radio"><span class="label-text">수신안함</span></label>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="cash-insure__field">
+                            <dt>SMS 수신동의</dt>
+                            <dd>
+                                <div class="radio-basic">
+                                    <label><input checked="CHECKED" name="agreeSms" type="radio" value="Y" class="radio"><span class="label-text">수신</span></label>
+                                    <label><input name="agreeSms" type="radio" value="N" class="radio"><span class="label-text">수신안함</span></label>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <!-- PC용  -->
+                        <ul class="cash-insure__list pc_view">
+                            <li>- 전자보증서 발급에는 별도의 수수료가 부과되지 않습니다.</li>
+                            <li>- 전자보증서 발급에 필요한 주문고객 주민등록번호는 증권발급에만 사용되며, 다른 용도로 사용되지 않습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 모바일 -->
+            <ul id="payTypeInfo2_70" name="payTypeInfo2_70" class="cash-notify pc_view">
+                 <li>무통장 입금시 사용되는 가상계좌는 매 주문 시마다 새로운 계좌번호(개인전용)가 부여되며 해당 주문에만 유효합니다.</li>
+                 <li>다른 주문건에 대한 가상계좌로 입금하시거나 잘못된 계좌로 입금하시면 자동 입금 확인이 되지 않으며, 다른 계좌번호로 잘못 입력하신 경우에는 고객센터로 문의 주시기 바랍니다.</li>
+                 <li>계좌번호는 주문완료 페이지에서 확인할수 있으며 sms 문자 안내도 드립니다. </li>
+                 <li>현금거래에 대해 전자보증 서비스를 받으실 수 있습니다. (주문시 전자보증보험 발급요청을 체크)</li>
+            </ul>
+        </div>
+    </li>
+    <li style="display:none">
+        <div class="pay_type_tabs">
+            <!--  카카오페이 모바일만 사용 가능 -->
+            <input name="PayType" id="PayTypeKakao" onclick="CheckPayMethod(this);" type="radio" value="30">
+            <label for="PayTypeKakao">카카오페이</label>
+        </div>
+    </li>
+    <li>
+        <div class="pay_type_tabs">
+            <input id="PayTypeNpay" name="PayType" onclick="if (CheckPayMethod(this) == false) return false;" type="radio" value="110">
+            <label for="PayTypeNpay">네이버페이</label>
+        </div>
+
+        <!-- 네이버페이 -->
+        <div id="payTypeInfo1_110" name="payTypeInfo1_110" class="pay-info pay-info--cash" style="">
+            <div id="cashReceiptShow2" name="cashReceiptShow2" class="cash-receipt">
+				<div class="checkbox-basic">
+					<label for="cashreceiptreq2">
+						<input type="checkbox" name="cashreceiptreq2" id="cashreceiptreq2" value="Y" class="checkbox" onclick="showCashReceptDetail2(this);">
+						<span class="label-text">현금영수증 발급요청</span>
+					</label>
+				</div>
+
+				<div id="cashReceipt_detail2" class="cash-receipt__detail" style="">
+					<div class="radio-basic">
+						<label>
+							<input type="radio" name="useopt2" value="0" checked="checked" class="radio">
+							<span class="label-text">소득공제용</span>
+						</label>
+						<label>
+							<input type="radio" name="useopt2" value="1" class="radio">
+							<span class="label-text">지출증빙용</span>
+						</label>
+					</div>
+					<div class="input-basic">
+						<input type="text" name="cashReceipt_ssn2" value="" size="13" maxlength="13" autocomplete="off" placeholder="- 를 뺀 숫자만 입력 하세요">
+					</div>
+                    <!-- pcdyd -->
+					<p class="cash-receipt__desc pc_view">휴대폰번호 / 현금영수증 카드 / 사업자번호 “-” 를 뺀 숫자만 입력하세요.<br>사업자,휴대폰번호가 유효하지 않으면 발급되지 않습니다.</p>
+                    <!-- 모바일용 -->
+                    <div class="cash-receipt__desc m_view">사업자 또는 휴대폰번호가 유효하지 않으면 발급되지 않습니다.</div>
+				</div>
+
+                <div id="naverPayShow" name="naverPayShow"  class="cash-notify pc_view">
+                    <label>
+                        <span style="font-weight:bold;">네이버페이 안내</span>
+                    </label>
+                    <ul class="phone__detail">
+                        <li>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
+                        <li>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</li>
+                        <li>결제 가능한 신용카드 : 신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티</li>
+                        <li>결제 가능한 은행 : NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국</li>
+                        <li>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+    </li>
+</ul>
+<!-- // 결제 관련 공지 -->

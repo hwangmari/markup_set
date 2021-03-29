@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>브랜드</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<style>
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;background:red;font-size:1px;line-height:9999px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+    .pc_view{display:none}
+    .m_view{display:block}
+}
+</style>
+
+<style>
+.brand_wrap{padding: 0 50px;}
+@media screen and (max-width: 540px){
+    .brand_wrap{padding: 0 20px}
+}
+</style>
+<div class="brand_wrap">
+    <!-- <div class="tab_category2">
+추천피드는 나중에
+    </div> -->
+
+    <style>
+    .brand_logolst{display:flex;flex-wrap: wrap;margin:30px 0 80px -2%}
+    .brand_logolst a{display:block;width:18%;margin:2% 0 0 2%}
+    .brand_logolst a img{width:100%}
+    @media screen and (max-width: 540px){
+        .brand_logolst.pc_view{display:none}
+    }
+    </style>
+    <div class="brand_logolst pc_view">
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+        <a href="#">
+            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        </a>
+    </div>
+
+    <div class="brand_search">
+        <style>
+        .brand_search_area{position: relative;margin-bottom:30px;padding: 0 0 20px;border-bottom:4px solid #000}
+        .brand_search_area .searchbx{position:absolute;top:0;right:0}
+        </style>
+        <div class="brand_search_area pc_view">
+            <div class="tab_category">
+                <!-- [D] jquery include -->
+            </div>
+            <div class="searchbx">
+                <!-- [D] jquery include -->
+            </div>
+        </div>
+
+        <style>
+        .brand_sorting .filter {display: inline-block;min-width:30px;height:45px;margin-left:5px;font-size:34px;color: #d4d4d4;font-weight:100;}
+        .brand_sorting .filters .active{color:#000;font-weight: 500}
+        .brand_sorting .filters .all{min-width:105px;margin-right:30px;text-align:left}
+        .brand_sorting .filters.en .all{letter-spacing:6px}
+        .brand_sorting .filters.en .filter{font-size:40px;}
+        @media screen and (max-width: 540px){
+            .brand_sorting .filter{display:block;height:auto;margin-left:0;font-size:11px;line-height:24px}
+            .brand_sorting .filters{position:fixed;top:229px;right:11px}
+            .brand_sorting .filters .all{display:none}
+            .brand_sorting .filters.en .filter{font-size:11px}
+        }
+        </style>
+        <div class="brand_sorting">
+            <div class="filters">
+                <button type="button" class="all filter" data-filter="kr">가나다.</button>
+                <button type="button" class="filter" data-filter="kr-1">가</button>
+                <button type="button" class="filter" data-filter="kr-2">나</button>
+                <button type="button" class="filter" data-filter="kr-3">다</button>
+                <button type="button" class="filter" data-filter="kr-4">라</button>
+                <button type="button" class="filter active" data-filter="kr-5">마</button>
+                <button type="button" class="filter" data-filter="kr-6">바</button>
+                <button type="button" class="filter" data-filter="kr-7">사</button>
+                <button type="button" class="filter" data-filter="kr-8">아</button>
+                <button type="button" class="filter" data-filter="kr-9">자</button>
+                <button type="button" class="filter" data-filter="kr-10">차</button>
+                <button type="button" class="filter" data-filter="kr-11">카</button>
+                <button type="button" class="filter" data-filter="kr-12">타</button>
+                <button type="button" class="filter" data-filter="kr-13">파</button>
+                <button type="button" class="filter" data-filter="kr-14">하</button>
+            </div>
+
+            <div class="filters en">
+                <button type="button" class="all filter" data-filter="en">ABC.</button>
+                <button type="button" class="filter" data-filter="en-1">A</button>
+                <button type="button" class="filter" data-filter="en-2">B</button>
+                <button type="button" class="filter" data-filter="en-3">C</button>
+                <button type="button" class="filter" data-filter="en-4">D</button>
+                <button type="button" class="filter" data-filter="en-5">E</button>
+                <button type="button" class="filter" data-filter="en-6">F</button>
+                <button type="button" class="filter" data-filter="en-7">G</button>
+                <button type="button" class="filter" data-filter="en-8">H</button>
+                <button type="button" class="filter" data-filter="en-9">I</button>
+                <button type="button" class="filter" data-filter="en-10">J</button>
+                <button type="button" class="filter" data-filter="en-11">K</button>
+                <button type="button" class="filter" data-filter="en-12">L</button>
+                <button type="button" class="filter" data-filter="en-13">M</button>
+                <button type="button" class="filter" data-filter="en-14">N</button>
+                <button type="button" class="filter" data-filter="en-15">O</button>
+                <button type="button" class="filter" data-filter="en-16">P</button>
+                <button type="button" class="filter" data-filter="en-17">Q</button>
+                <button type="button" class="filter" data-filter="en-18">R</button>
+                <button type="button" class="filter" data-filter="en-19">S</button>
+                <button type="button" class="filter" data-filter="en-20">T</button>
+                <button type="button" class="filter" data-filter="en-21">U</button>
+                <button type="button" class="filter" data-filter="en-22">V</button>
+                <button type="button" class="filter" data-filter="en-23">W</button>
+                <button type="button" class="filter" data-filter="en-24">X</button>
+                <button type="button" class="filter" data-filter="en-25">Y</button>
+                <button type="button" class="filter" data-filter="en-26">Z</button>
+                <button type="button" class="filter" data-filter="en-27">ETC</button>
+            </div>
+        </div>
+
+
+        <style>
+        .brand_section{ wrap;margin:30px 0 80px}
+        .brand_section h1{font-size:90px;font-weight: 500}
+        .brand_lst{overflow:hidden;}
+        .brand_lst ul{display:flex;flex-wrap:wrap;margin:-10px 0 0}
+        .brand_lst li{position:relative;width:20%;padding-top:10px}
+        .brand_lst li:after{position:absolute;top:0;bottom:0;left:0;border-left:1px solid #ccc;content:''}
+        .brand_lst a{display:block;margin:5px 0;padding:3px 0 0 30px}
+        .brand_lst li:nth-child(5n+1) a{padding-left:0}
+        .brand_lst li:nth-child(5n+1):after{display:none}
+        .brand_lst a img{width:100%}
+        .brand_lst a .en{font-size:14px;color:#000}
+        .brand_lst a .kr{font-size:12px;color:#5d5d5d}
+        @media screen and (max-width: 540px){
+            .brand_lst ul{display:block}
+            .brand_lst li{width:auto;padding-top:36px}
+            .brand_lst li:first-child{padding-top:20px}
+            .brand_lst li:after{display:none}
+            .brand_lst a{display:inline-block;margin:0;padding:0}
+            .brand_lst a .en{font-size:20px;font-weight:600;line-height:24px}
+            .brand_lst a .kr{font-size:13px;line-height:22px}
+        }
+        </style>
+        <div class="brand_section">
+            <h1>A</h1>
+            <div class="brand_lst">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="en">Brand</div>
+                            <div class="kr">브랜드</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('header_active');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('header_active').addClass('nav-down');
+        }
+    }
+    lastScrollTop = st;
+}
+</script>
+<style>
+.header{position:relative;padding:40px 50px 0}
+.header .logo a{overflow:hidden;display:block;width:100px;height:25px;background:url(../../img/logo.png) no-repeat 0 0/100% auto;line-height:100em;vertical-align:top}
+.footer .email_area{height:240px;background:#303033}
+.footer .email_areain{margin:0 auto;padding-top:50px;color:#fff;text-align:center}
+.footer .section_footer{max-width:1920px;margin:60px auto 0;padding:30px 0;border-top:1px solid #ccc}
+.nav_gnb{display:-webkit-flex;display:flex;position:absolute;top:20px;right:30px}
+.nav_gnb .btn{width:30px;height:30px;margin:10px;background:#a0a0a0}
+.nav_wrap{position:relative;z-index:30;-webkit-transition:padding .5s;transition:padding .5s;padding-bottom:40px;border-bottom:1px solid #d4d4d4}
+.nav_wrap a{color:#000;font-family:"campton"}
+.nav_wrap ul{display:-webkit-flex;display:flex}
+.nav_lnb_wrap{position:relative;margin-top:30px;padding:0 110px 0 50px}
+.nav_lnb_wrap .nav_lnb li{margin-left:30px}
+.nav_lnb_wrap .nav_lnb li:first-child{margin-left:0}
+.nav_lnb_wrap .nav_lnb a{display:block;transition:font-size .5s;font-size:56px;font-weight:bold}
+.nav_lnb_wrap .nav_lnb a:hover{text-decoration:underline}
+.nav_lnb_wrap .btn_search{position:absolute;top:0;right:30px;transition:top .5s;-webkit-transition:right .5s;transition:right .5s}
+.nav_lnb_wrap .btn_search svg{transition:width .5s;transition:height .5s;width:60px;height:60px}
+.nav_lnb:hover+.lnb_wrap,.lnb_wrap:hover{display:block}
+.lnb_wrap{display:-webkit-flex;display:flex;display:none;overflow:hidden;position:absolute;top:100%;right:0;left:0;z-index:40;height:300px;padding:40px 50px 0;background:#fff;border-bottom:1px solid #d4d4d4}
+.lnb_wrap li>a{display:block;margin-left:10px}
+.lnb_wrap li:first-child>a{margin-left:0}
+.lnb_wrap .imgbx{overflow:hidden;position:relative;height:140px;padding-bottom:10px}
+.lnb_wrap .imgbx img{height:140px}
+.lnb_wrap .imgbx .day_remain{bottom:10px;left:0}
+.lnb_wrap .dscbx .date{display:block;margin:0 0 5px;font-size:13px;line-height:18px;letter-spacing:1px;color:#5d5d5d}
+.lnb_wrap .dscbx p{font-size:15px;line-height:20px;color:#000}
+.lnb_wrap .lnb_so h2,.lnb_wrap .lnb_pt h2,.lnb_wrap .lnb_look h2{display:none}
+.lnb_wrap .lnb_look .date{display:none}
+.lnb_wrap .lnb_magazine li>a{position:relative;display:block;width:270px;margin-right:100px}
+.lnb_wrap .lnb_magazine li>a:after{position:absolute;top:0;bottom:0;left:-50px;width:1px;background:#ccc;content:''}
+.lnb_wrap .lnb_magazine li:first-child>a:after{display:none}
+.lnb_wrap .lnb_magazine h2{height:90px;font-size:20px;line-height:1.4}
+.lnb_wrap .lnb_magazine .imgbx{position:absolute;top:0;right:0;width:70px;height:70px;padding-bottom:0}
+.lnb_wrap .lnb_magazine .imgbx img{height:70px}
+.lnb_wrap .lnb_magazine p{font-size:13px;line-height:1.7;color:#000}
+.lnb_wrap .lnb_magazine .date,.lnb_wrap .lnb_magazine .day_remain{display:none}
+.lnb_wrap .btnbx{position:absolute;right:50px;bottom:24px;letter-spacing:-4px}
+.lnb_wrap .btnbx .btn_txtover{margin:10px 22px 0 0;border-bottom:2px solid #000;font-weight:bold;font-size:12px;line-height:20px;letter-spacing:0}
+.lnb_wrap .btnbx .btn_prev,.lnb_wrap .btnbx .btn_next{width:48px;height:48px;margin-left:-1px;border:1px solid #ccc}
+.nav_snb{display:-webkit-flex;display:flex;margin-top:12px;padding:0 50px}
+.nav_snb li{margin-right:26px}
+.nav_snb a{display:block;padding:6px 0;border-bottom:4px solid transparent;transition: font-size .5s;font-size:18px;font-weight:600}
+.nav_snb a.active,.nav_snb a:hover{border-bottom-color:#000}
+.nav_snb ul+ul{position:relative;padding-left:20px}
+.nav_snb ul+ul:after{position:absolute;top:6px;left:0;width:1px;height:24px;background:#a0a0a0;content:''}
+.nav_snb ul+ul a{font-weight:300;font-style:italic}
+@media screen and (max-width: 1160px){
+  .nav_lnb_wrap .nav_lnb a{font-size:48px}
+
+}
+@media screen and (max-width: 540px){
+  .nav_snb{display:block}
+  .nav_gnb{display:block}
+  .nav_wrap ul{display:block}
+}
+
+.header_active{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid #ccc;background:#fff}
+.header_active .header{padding:0}
+.header_active .logo{position:absolute;top:30px;left:50px}
+.header_active .nav_gnb{position:absolute;top:30px;right:50px}
+.header_active .nav_gnb .btn{width:20px;height:20px}
+.header_active .nav_wrap{padding-left:120px}
+.header_active .lnb_wrap{left:-120px}
+.header_active .nav_lnb_wrap .nav_lnb a{font-size:26px}
+.header_active .nav_lnb_wrap .btn_search{top:6px;right:220px}
+.header_active .nav_lnb_wrap .btn_search svg{width:30px;height:30px}
+.header_active .nav_snb a{font-size:15px}
+
+</style>
+<!-- <header class="header_wrap"> -->
+    <div class="header">
+        <h1 class="logo">
+            <a href="#">29cm</a>
+        </h1>
+        <ul class="nav_gnb">
+            <li><a href="#" class="btn"></a></li>
+            <li><a href="#" class="btn"></a></li>
+            <li><a href="#" class="btn"></a></li>
+            <li><a href="#" class="btn"></a></li>
+        </ul>
+    </div>
+
+    <div class="nav_wrap">
+        <div class="nav_lnb_wrap">
+            <ul class="nav_lnb">
+                <li><a href="#">Special-Order</a></li>
+                <li><a href="#">Look</a></li>
+                <li><a href="#">PT</a></li>
+                <li><a href="#">Magazine</a></li>
+            </ul>
+
+            <!-- [D] -->
+            <div class="lnb_wrap">
+                <!--
+                lnb_so
+                lnb_look
+                lnb_pt
+                lnb_magazine
+                -->
+                <ul class="lnb_so">
+                    <li>
+                        <a href="#">
+                            <div class="imgbx">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+                                <div class="day_remain active">D-day 00:00:13</div>
+                            </div>
+                            <div class="dscbx">
+                                <span class="date">2017.4.5. ~ 4. 20</span>
+                                <h2>타이틀 이런저런 타이틀</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lnb_look" style="display:none">
+                    <li>
+                        <a href="#">
+                            <div class="imgbx">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+                            </div>
+                            <div class="dscbx">
+                                <h2>타이틀 이런저런 타이틀</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lnb_pt" style="display:none">
+                    <li>
+                        <a href="#">
+                            <div class="imgbx">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+                                <div class="day_remain active">D-day 00:00:13</div>
+                            </div>
+                            <div class="dscbx">
+                                <span class="date">2017.4.5. ~ 4. 20</span>
+                                <h2>타이틀 이런저런 타이틀</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="lnb_magazine" style="display:none">
+                    <li>
+                        <a href="#">
+                            <div class="imgbx">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+                            </div>
+                            <div class="dscbx">
+                                <h2>타이틀 이런저런 타이틀</h2>
+                                <p>봄, 여름의 색과 모양을 양말에 가져왔습니다. <br>햇빛 좋은 날</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btnbx">
+                    <a href="#" class="btn btn_txtover">SPECIAL-ORDER 전체보기</a>
+                    <a href="#" class="btn btn_prev">이전</a>
+                    <a href="#" class="btn btn_next">다음</a>
+                </div>
+            </div>
+
+            <!-- 검색 -->
+            <a href="#" class="btn_search">
+                <svg xmlns="//www.w3.org/2000/svg" fill="#000000" height="60" viewBox="0 0 24 24" width="60">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="nav_snb">
+            <ul>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">MAN</a></li>
+                <li><a href="#">ACC</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FOOD</a></li>
+                <li><a href="#">LIFE</a></li>
+                <li><a href="#">DAILY</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Best</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">Brand</a></li>
+            </ul>
+        </div>
+    </div>
+<!-- </header> -->
+
+<div class="container">
+    <div class="header">
+        <div class="brand-logo">
+            <svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" version="1.1" id="BI29cm" x="0px" y="0px" viewBox="0 0 396.84 99.21" enable-background="new 0 0 396.84 99.21" xml:space="preserve">
+                <g><path d="M-0.027-0.01v30.261h66.15v5.627h-66.15v63.343h327.999V31.587h5.626v67.634h27.445V31.587h5.625v67.634 h30.154V-0.01H-0.027z M165.4,68.955H33.065v-5.618H165.4V68.955z M165.4,34.4h-33.071v-5.626H165.4V34.4z M297.617,52.42h-66.134 v-5.626h66.134V52.42z"></path></g>
+            </svg>
+        </div>
+        <div class="search-box">
+            <input *ngIf="isMobile" type="text" class="input-text-search" />
+            <button class="btn-search"></button>
+        </div>
+        <ul class="menu-box">
+            <li *ngIf="!isMobile"><a href="#"><img src="/assets/img/gnb/gnb-my-icon.png" /></a></li>
+            <li *ngIf="!isMobile"><a href="#"><img src="/assets/img/gnb/gnb-heart-icon.png" /></a></li>
+            <li><a href="#"><img src="/assets/img/gnb/{{isMobile ? 'm/' : ''}}gnb-cart-icon.png" /></a></li>
+            <li *ngIf="!isMobile"><a href="#"><img src="/assets/img/gnb/gnb-login-icon.png" /></a></li>
+        </ul>
+    </div>
+    <nav [ngSwitch]="isMobile" class="nav-bar">
+        <ul *ngSwitchDefault>
+            <li><a href="#">Special-Order</a></li>
+            <li><a href="#">Look</a></li>
+            <li><a href="#">PT</a></li>
+            <li><a href="#">Magazine</a></li>
+        </ul>
+        <ul *ngSwitchCase="true">
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">MAGAZINE</a></li>
+            <li><a href="#">MY</a></li>
+        </ul>
+    </nav>
+
+    <div class="nav_snb">
+        <ul class="snb">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Acc</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Life</a></li>
+            <li><a href="#">Daily</a></li>
+        </ul>
+        <ul class="snb2">
+            <li><a href="#">Best</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Brand</a></li>
+        </ul>
+    </div>
+</div>

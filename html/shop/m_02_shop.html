@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>SHOP :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+</head>
+<body>
+<div class="header_wrap">
+	<!-- [D] jquery include -->
+</div>
+
+<style>
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;background:red;font-size:1px;line-height:9999px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+    .pc_view{display:none}
+    .m_view{display:block}
+}
+</style>
+
+<style>
+.btn_more_bx{padding:30px 0;background:#fff;text-align:center}
+.btn_more_bx .btn_more_arr{display:inline-block;padding:0 20px;font-size:12px;color:#303033}
+.btn_more_bx .btn_more_arr:before{display:block;width:6px;height:20px;margin:0 auto 15px;background:url(../img/ico_arrow.png) no-repeat;background-size:100% 100%;content:''}
+.shop_wrap{padding-bottom:85px;background:#e4e4e4}
+.shop_wrap .shop_section{position:relative;margin-bottom:10px;padding:34px 20px 39px;background:#fff}
+.shop_wrap .shop_cm{padding-top:0}
+.shop_wrap .shop_cm .btn_more_content{top:0}
+.shop_wrap .shop_tit{position:relative;z-index:5;font-size:18px;color:#000;line-height:24px}
+.shop_wrap .shop_tit.bor_bott:after{position:absolute;bottom:-42px;left:-11px;width:40px;height:4px;background:#000;content:''}
+.shop_wrap .shop_tit .eng{display:inline-block;font-size:20px;vertical-align:top}
+.shop_wrap .slide_wrap{overflow-x:auto;position:relative;margin:20px -20px 0 0}
+.shop_wrap .slide_lst .img_wrap{width:330px;background:#d8d8d8}
+.shop_wrap .slide_lst img{width:100%;height:100%}
+.shop_wrap .slide_lst{padding:0 20px 0 0}
+.shop_wrap .slide_lst li{float:left;margin-left:10px}
+.shop_wrap .slide_lst li:first-child{margin-left:0}
+.shop_wrap .slide_lst li a{display:block;position:relative;color:#000}
+.shop_wrap .shop_cnt .discount{display:block;margin:6px 0 -16px;font-size:30px;font-weight:normal;line-height:55px;letter-spacing:-1px}
+.shop_wrap .shop_cnt .discount .num{display:inline-block;font-size:50px}
+.shop_wrap .shop_cnt .brand{margin-top:10px;font-size:15px;font-weight:normal}
+.shop_wrap .shop_cnt .date{margin-top:5px;font-size:13px;color:#5d5d5d}
+.shop_wrap .shop_cnt .price{margin-top:3px;font-size:11px}
+.shop_wrap .btn_more_content{position:absolute;top:34px;right:10px;padding:9px 15px;font-size:0}
+.shop_wrap .btn_more_content .sp{width:24px;height:7px;background:url(../img/ico_arrow_right.png) no-repeat;background-size:100% 100%;vertical-align:top}
+.shop_wrap .shop_our{padding-bottom:12px}
+.shop_wrap .arr_lst{margin-top:10px}
+.shop_wrap .arr_lst li+li{border-top:1px solid #e4e4e4}
+.shop_wrap .arr_lst a{display:block;position:relative;font-size:16px;color:#000;line-height:60px}
+.shop_wrap .arr_lst a:after{position:absolute;top:50%;right:0;width:24px;height:7px;margin-top:-4px;background:url(../img/ico_arrow_right.png) no-repeat;background-size:100% 100%;content:''}
+.shop_wrap .shop_recently .img_wrap{overflow:hidden;width:90px;height:90px;border-radius:999em}
+.shop_wrap .shop_recomm .slide_lst li{width:160px}
+.shop_wrap .shop_recomm .img_wrap{width:160px;height:160px;box-shadow:10px 10px 20px 0 rgba(0,0,0,.2)}
+.shop_wrap .shop_recomm .shop_cnt .brand{margin-top:19px;font-size:11px;line-height:16px}
+.shop_wrap .shop_pt .shop_cnt{position:absolute;top:50%;left:27px;transform:translate(0,-50%)}
+.shop_wrap .shop_pt .shop_cnt .brand{font-size:52px;color:#fff;line-height:54px}
+.shop_wrap .shop_pt .shop_cnt .date{font-size:15px;color:#fff;line-height:18px}
+</style>
+<div class="shop_wrap">
+	<div class="btn_more_bx">
+		<a href="#" class="btn_more_arr">more shop</a>
+	</div>
+	<section class="shop_section shop_cm">
+		<h2 class="shop_tit bor_bott"><span class="eng">CM</span></h2>
+		<div class="slide_wrap">
+			<!--[D] slide, .slide_wrap>.slide_lst width = li width값 + li여백(10)의 합 -->
+			<ul class="slide_lst" style="width:1215px">
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="btn_more_content"><span class="sp">More</span></a>
+	</section>
+	<section class="shop_section shop_special">
+		<h2 class="shop_tit bor_bott"><span class="eng">Special Order</span></h2>
+		<div class="slide_wrap">
+			<!--[D] slide, .slide_wrap>.slide_lst width = li width값 + li여백(10)의 합 -->
+			<ul class="slide_lst" style="width:1215px">
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<strong class="discount"><span class="num">10</span>%</strong>
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<strong class="discount"><span class="num">10</span>%</strong>
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<strong class="discount"><span class="num">10</span>%</strong>
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="btn_more_content"><span class="sp">More</span></a>
+	</section>
+	<section class="shop_section shop_pt">
+		<h2 class="shop_tit bor_bott"><span class="eng">PT</span></h2>
+		<div class="slide_wrap">
+			<!--[D] slide, .slide_wrap>.slide_lst width = li width값 + li여백(10)의 합 -->
+			<ul class="slide_lst" style="width:1215px">
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">NIKE<br>Air Max</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">NIKE<br>Air Max</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">NIKE<br>Air Max</h3>
+							<p class="date">2017.4.5 ~ 4.20</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="btn_more_content"><span class="sp">More</span></a>
+	</section>
+	<section class="shop_section shop_our">
+		<h2 class="shop_tit"><span class="eng">Our Brand</span></h2>
+		<ul class="arr_lst">
+			<li><a href="#">인기브랜드</a></li>
+			<li><a href="#">가나다순</a></li>
+		</ul>
+	</section>
+	<section class="shop_section shop_recently">
+		<h2 class="shop_tit">최근 본 상품</h2>
+		<div class="slide_wrap">
+			<!--[D] slide, .slide_wrap>.slide_lst width = li width값 + li여백(10)의 합 -->
+			<ul class="slide_lst" style="width:1215px">
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="shop_section shop_recomm">
+		<h2 class="shop_tit">추천 상품</h2>
+		<div class="slide_wrap">
+			<!--[D] slide, .slide_wrap>.slide_lst width = li width값 + li여백(10)의 합 -->
+			<ul class="slide_lst" style="width:1215px">
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="price">172,500won</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="price">172,500won</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img_wrap"><img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""></div>
+						<div class="shop_cnt">
+							<h3 class="brand">Stereo Vinyls x Hello Kitty 헬로키티</h3>
+							<p class="price">172,500won</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+<div class="footer">
+	<!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

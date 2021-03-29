@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>서버교체</title>
+<style>
+
+*{margin:0;padding:0;font-family:"Campton","AppleSDGothicNeo"}
+@font-face{
+    font-family:"campton";
+    src:local("Campton W00 Book"), local("Campton-W00-Book"), url("https://image.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+.loading_area{position:relative;overflow:hidden;height:1px}
+.loading_area div{position:absolute;top:0;height:1px;background:#ff4800;
+    animation-timing-function: linear;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes loading {
+    0%   {width:0}
+    50% {left:0;width:100%}
+    100%{left:100%;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="loading_area">
+    <div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>주문서 상품 리스트 케이스 </title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+
+<style media="screen">
+/* 상품 */
+.infobx{display:block;position:relative}
+.info{display:inline-block;font-size:14px;color:#303033}
+.imgbx{overflow:hidden;position:absolute;top:0}
+.imgbx .imgin{display:flex;align-items:center;justify-content:center;position:absolute;top:0;right:0;bottom:0;left:0;height:100%!important}
+.imgbx img{width:100%}
+.brand_name,.pc_brand_name{display:block;font-size:12px;font-weight:600}
+.goods_tit{display:block;padding:4px 0 7px;font-size:16px;line-height:22px;font-weight:600;word-wrap:break-word}
+.goods_option{padding:1px 0;font-size:0}
+.goods_option li{font-size:12px;color:#686868;line-height:20px;word-wrap:break-word}
+.goods_price{font-size:13px;line-height:22px}
+.goods_price span{display:block}
+.goods_price .coupon_item{color:#ff4800}
+.goods_price .coupon_item+.coupon_item{margin-top:2px}
+@media screen and (min-width:541px){
+    .product{position:relative;margin:20px 0 0}
+    .brand_name{opacity:0}
+    .pc_brand_name{position:absolute;top:2px;left:190px;color:#000;text-decoration:underline}
+    .infobx{min-height:170px;padding:0 15px 0 190px}
+    .imgbx{left:0;width:170px;height:170px}
+}
+@media screen and (max-width:540px){
+    .product{padding:13px 0 17px;border-top:1px solid #d4d4d4}
+    .pc_brand_name{display:none}
+    .infobx{min-height:76px;padding:0 95px 0 0}
+    .imgbx{right:0;width:76px;height:76px;padding:0}
+    .info{max-width:100%}
+}
+
+.case_test_wrap{max-width:500px;margin:50px auto;padding:0 20px}
+.case_test_wrap li:nth-child(1) .goods_option,
+.case_test_wrap li:nth-child(1) .coupon_item{display:none}
+.case_test_wrap li:nth-child(2) .coupon_item{display:none}
+.case_test_wrap li:nth-child(3) .goods_option,
+.case_test_wrap li:nth-child(3) .goods_price span{display:none}
+.case_test_wrap li:nth-child(3) .goods_price span:nth-child(2){display:block}
+.case_test_wrap li:nth-child(4) .goods_price span{display:none}
+.case_test_wrap li:nth-child(4) .goods_price span:nth-child(2){display:block}
+.case_test_wrap li:nth-child(5) .goods_price span{display:none}
+.case_test_wrap li:nth-child(5) .goods_price span:nth-child(2),
+.case_test_wrap li:nth-child(5) .goods_price span:nth-child(3){display:block}
+.case_test_wrap li:nth-child(6) .goods_price span{display:none}
+.case_test_wrap li:nth-child(6) .goods_price span:nth-child(2),
+.case_test_wrap li:nth-child(6) .goods_price span:nth-child(4){display:block}
+</style>
+</head>
+<body>
+<ul class="case_test_wrap">
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="product">
+            <!-- 개선 -->
+            <a href="#" class="infobx">
+                <div class="imgbx">
+                    <div class="imgin">
+                        <img src="http://img.29cm.co.kr/contents/itemIcon/201711/20171127102453.jpg?width=150" alt=""/>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="brand_name">스트라이다</p>
+                    <p class="goods_tit">스트라이다 5.1 QR PLUS 접이식 미니벨로</p>
+                    <ul class="goods_option">
+                        <li>
+                            <span>옵션 : [색상] 매트블랙 (MATT BLACK)</span>
+                        </li>
+                    </ul>
+                    <p class="goods_price">
+                        <span>141,000원 / 수량 1개</span>
+                        <span class="coupon_item">[12%] 141,000원 / 수량 1개</span>
+                        <span class="coupon_item">
+                            쿠폰가 : 65,470원
+                        </span>
+                        <span class="coupon_item">
+                            쿠폰적용불가상품
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="pc_brand_name">
+                스트라이다
+            </a>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>

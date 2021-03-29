@@ -1,0 +1,106 @@
+<style>
+.tbl_react{display:table;table-layout:fixed;width:100%}
+.tbl_react .row{display:table-row;}
+.tbl_react .celth{display:table-cell;width:18%}
+.tbl_react .celtd{display:table-cell;width:82%}
+.tbl_react .cel{display:table-cell;}
+@media screen and (max-width:540px){
+    .tbl_react .celth{display:block;width:100%;padding:20px 0 10px}
+    .tbl_react .celtd{display:block;width:100%}
+}
+
+.order__table .coupon--empty{line-height:40px}
+
+.order__discount{border:0;border-top:6px solid #000;margin:0;padding-bottom:45px;border-radius:0}
+.order__discount .order__table{margin-top:30px}
+.order__discount .select-basic{max-width:470px}
+.order__discount .coupon--empty{padding-left:15px}
+.order__discount .mileage-area .input-basic{display:inline-block;max-width:180px;vertical-align:middle}
+.order__discount .mileage-area .input-basic input{text-align:right}
+.order__discount .mileage-area .order-button{height:40px;vertical-align:middle}
+.order__discount .mileage-area .mileage{padding-left:15px;font-size:0.75rem;font-weight:500;color:#000;vertical-align:middle}
+.order__discount .mileage-area .mileage em{font-size:0.875rem}
+
+@media screen and (max-width:540px){
+    .order__discount .coupon-area{margin-top:0}
+    .order__discount .coupon-area+.coupon-area{margin-top:34px}
+    .order__discount .coupon-area .radio-basic{margin-bottom:17px}
+    .order__discount .coupon-area select{width:100%;height:38px;padding:0 17px;border:1px solid #999;border-radius:0;background:url(http://image.29cm.co.kr/mall/order/icon-select-basic.png) no-repeat 97.5% 50%;background-size:4% auto;font-size:14px;color:#999;line-height:38px;box-sizing:border-box;-webkit-appearance:none}
+    .order__discount .coupon-area select:disabled{padding:0;border:0;background:none}
+    .order__discount .coupon-area .coupon--disabled{color:#999;line-height:38px}
+    .order__discount .mileage-area{position:relative;margin:34px 0}
+    .order__discount .mileage-area .checkbox-basic{position:absolute;top:0;right:0}
+    .order__discount .mileage-area label{font-size:14px;font-weight:500}
+    .order__discount .mileage-area label .point{color:#ff4800}
+    .order__discount .mileage-area .input-basic{display:block;max-width:none;margin-top:14px;padding:10px 22px 10px 16px;border:0}
+    .order__discount .mileage-area .input-basic .unit-point{position:absolute;top:0;right:0;bottom:0;width:22px;font-size:15px;color:#999;line-height:38px}
+
+}
+</style>
+
+<div class="order__table">
+    <div class="tbl_react">
+        <div class="row">
+            <div class="celth">
+                <div class="radio-basic">
+                    <label for="itemcouponOrsailcoupon">
+                        <input type="radio" name="itemcouponOrsailcoupon" id="itemcouponOrsailcoupon" value="S" checked="" onclick="defaultCouponSet(this);" class="radio">
+                        <span class="label-text">보너스 쿠폰</span>
+                    </label>
+                </div>
+            </div>
+            <div class="celtd">
+                <div class="select-basic">
+                    <select name="sailcoupon" onchange="RecalcuSubTotal(this);">
+                        <option value="">보너스 쿠폰 선택 (7개)</option>
+                        <option style="color:#000000" value="28035975" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035974" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035973" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035972" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035971" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035970" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                        <option style="color:#000000" value="28035969" id="1|8|20" ctype="1" cvalue="20" cmin="0" cbeasong="False">STAFF 20% 할인쿠폰 (20% 할인)  [2017-06-01] </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="celth">
+                <div class="radio-basic">
+                    <label for="itemcouponOrcoupon">
+                        <input type="radio" name="itemcouponOrsailcoupon" id="itemcouponOrsailcoupon" value="I" disabled="" onclick="defaultCouponSet(this);" class="radio">
+                        <span class="label-text">상품 쿠폰</span>
+                    </label>
+                </div>
+            </div>
+            <div class="celtd">
+
+                <p class="coupon--empty">적용 가능한 쿠폰이 없습니다.</p>
+
+                <input type="hidden" name="availitemcouponlist" value="">
+                <input name="checkitemcouponlist" type="hidden" value="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="celth">
+                <label for="spendmileage">마일리지</label>
+            </div>
+            <div class="celtd">
+                <!-- 마일리지 -->
+                <div class="mileage-area">
+                    <div class="input-basic input-basic--">
+                        <input name="spendmileage" class="checkbox" type="number" min="0" value="" onkeyup="RecalcuSubTotal(this);" onchange="RecalcuSubTotal(this);">
+                    </div>
+                    <input type="hidden" id="nowmileage" value="2121">
+                    <button type="button" name="" class="order-button" onclick="document.getElementsByName('spendmileage')[0].value='2121';RecalcuSubTotal(document.getElementsByName('spendmileage')[0]);">모두 사용</button>
+                    <span class="mileage" id="leftmileage">마일리지 [<em>2,121p</em>보유] </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="order-notice">
+        <li>- 상품쿠폰과 보너스쿠폰은 중복사용이 불가능합니다.</li>
+        <li>- 일부 상품(할인쿠폰제외상품)에는 보너스쿠폰이 적용되지 않습니다.</li>
+        <li>- 무료배송 쿠폰은 29CM배송상품 10,000원 이상 구매 시에만 사용하실 수 있습니다.</li>
+    </ul>
+</div>

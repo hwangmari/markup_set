@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>UI test</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<style>
+.renewal_evt_wrap{text-align:center;color:#000}
+.renewal_evt_wrap .dsc{margin-top:50px;font-size:21px;color:#ff4800}
+.renewal_evt_wrap .dsc2{margin-top:10px;font-size:17px}
+.renewal_evt_list{max-width:1000px;border-top:4px solid #000;display:table;table-layout:fixed;width:100%;font-size:13px}
+.renewal_evt_list .imgbx{overflow:hidden;width:65px;padding-top:65px;margin-right:10px}
+.renewal_evt_list .imgin{position:absolute;top:0;left:0;bottom:0;right:0;display:flex;align-items:center;justify-content:center}
+.renewal_evt_list .imgin img{width:100%}
+.renewal_evt_list .cell{box-sizing:border-box;vertical-align:middle}
+.renewal_evt_list li+li .cell_01{text-align:left}
+@media screen and (min-width:541px){
+    .renewal_evt_wrap{padding:180px 0}
+    .renewal_evt_wrap h1{font-size:40px}
+    .renewal_evt_wrap .dsc{margin-top:50px;font-size:21px;color:#ff4800}
+    .renewal_evt_wrap .dsc2{margin-top:10px;font-size:17px}
+    .renewal_evt_list{margin:70px auto 0}
+    .renewal_evt_list .title{border-bottom:1px solid #d9d9d9;line-height:40px;text-align:center}
+    .renewal_evt_list .cell{display:table-cell}
+    .renewal_evt_list li+li{line-height:65px}
+    .renewal_evt_list li+li span{display:none}
+    .renewal_evt_list .imgbx{float:left;position:relative;}
+    .renewal_evt_list .cell{min-height:85px;}
+    .renewal_evt_list .cell_01{position:relative;width:700px;padding:5px 20px}
+    .renewal_evt_list .cell_01 p{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .renewal_evt_list .cell_02{width:150px;border-left:1px solid #d9d9d9}
+    .renewal_evt_list .cell_03{width:150px;border-left:1px solid #d9d9d9}
+}
+@media screen and (max-width:540px){
+    .renewal_evt_wrap{padding:70px 0}
+    .renewal_evt_wrap h1{font-size:25px}
+    .renewal_evt_wrap .dsc{margin-top:20px;font-size:18px;color:#ff4800}
+    .renewal_evt_wrap .dsc2{margin-top:5px;font-size:14px}
+    .renewal_evt_list{margin:20px auto 0}
+    .renewal_evt_list .title{display:none}
+    .renewal_evt_list li{position:relative;padding:20px 20px 20px 105px;border-bottom:1px solid #d9d9d9;text-align:left}
+    .renewal_evt_list .cell span{display:inline-block}
+    .renewal_evt_list .imgbx{position:absolute;top:20px;left:20px}
+    .renewal_evt_list .cell_02{margin-top:5px}
+    .renewal_evt_list .cell_03{margin-top:5px}
+}
+
+</style>
+</head>
+<body>
+
+    <div class="renewal_evt_wrap">
+        <h1>아래의 쇼핑 리스트로 참여하셨습니다</h1>
+        <p class="dsc">총 결제 금액</p>
+        <p class="dsc2">상품 총액 19,981,000원 + 배송비 19,900원 =<strong>20,000,900원</strong></p>
+        <ul class="renewal_evt_list">
+            <li class="title">
+                <div class="cell cell_01">
+                    상품 정보
+                </div>
+                <div class="cell cell_02">
+                    <span>상품금액</span>
+                </div>
+                <div class="cell cell_03">
+                    <span>배송비</span>
+                </div>
+            </li>
+            <li>
+                <div class="cell cell_01">
+                    <div class="imgbx">
+                        <div class="imgin">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_720170605155907.jpg" alt=""/>
+                        </div>
+                    </div>
+
+                    <p><strong>[브랜드명]</strong> 상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명상품명</p>
+                </div>
+                <div class="cell cell_02">
+                    <span>상품금액 :</span> 19,900원
+                </div>
+                <div class="cell cell_03">
+                    <span>배송비 :</span> 2,500월
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+<style>
+.renewal_evt_dialog{color:#303033}
+.renewal_evt_dialog .header{padding:10px 0;background:#ffd800;font-size:44px}
+.renewal_evt_dialog .dsc p{margin-top:10px;font-size:21px;line-height:25px}
+.renewal_evt_dialog1{}
+.renewal_evt_dialog2{}
+</style>
+    <div class="renewal_evt_dialog">
+        <div class="renewal_evt_dialog1">
+            <div class="header">
+                참여 완료
+            </div>
+            <div class="dsc">
+                <p>제출하신 쇼핑 리스트는<br>
+                <strong>
+                회원님의 이메일 주소로 함께 보내드렸으며,<br>
+                15% 할인 쿠폰도 자동 발급되었습니다.<br>
+                </strong>
+
+                사용은 이벤트 페이지 하단을 참고해주세요.<br>
+                </p>
+                <p>
+                마지막으로, 친구들에게도 공유해보세요.<br>
+                당신의 당첨 확률을 올릴 수 있습니다.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="renewal_evt_dialog2">
+            <div class="header">
+                업데이트 완료
+            </div>
+            <div class="dsc">
+                <p>
+                변경하신 리스트로 참여되었습니다.<br>
+                이메일도 다시 드렸어요.
+                </p>
+                <p>
+                <strong>공유는 놓치지 말아요.</strong><br>
+                당첨 확률을 올릴 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

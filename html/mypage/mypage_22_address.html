@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>배송지 관리 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+<style type="text/css">
+.tb_lst>li{display:table;width:100%;table-layout:fixed}
+.tb_lst p,.tb_lst ul{font-size:14px;color:#303033;line-height:24px}
+.tb_lst strong{font-weight:700}
+.tb_lst .in_td{display:table-cell;height:50px;padding:6px 0;vertical-align:top;box-sizing:border-box}
+.tb_lst .in_td:first-child{width:90px}
+.tb_lst .type{font-size:12px;font-weight:700;color:#303033;line-height:40px}
+
+.my_address{position:relative}
+.my_address .btn_bx{position:absolute;top:30px;right:30px}
+.my_address .btn_bx .btn_bor{width:53px}
+.my_address .btn_black{position:absolute;top:-8px;right:0}
+.addr_lst{margin-top:40px}
+.addr_lst li{position:relative;margin-bottom:20px;padding:28px 30px 35px;border:1px solid #d4d4d4}
+.addr_lst .tit{font-size:30px}
+.addr_lst .tit .point{display:inline-block;padding:0 12px;border:1px solid #d4d4d4;font-size:12px;color:#303033;line-height:36px;vertical-align:top;box-sizing:border-box}
+.addr_detail{margin-top:20px;font-size:16px;line-height:26px;color:#303033}
+
+.ly_wrap{display:none;position:fixed;top:0;right:0;left:0;bottom:0;z-index:200;background:rgba(0,0,0,.3)}
+.ly_wrap .ly_inner{position:absolute;top:50%;left:50%;width:540px;height:640px;padding:60px 40px 40px;background:#fff;box-shadow:20px 20px 40px 0 rgba(0,0,0,.5);transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);box-sizing:border-box}
+.ly_wrap .btn_close{position:absolute;top:0;right:0;width:60px;height:60px}
+.ly_wrap .btn_close .sp{display:inline-block;overflow:hidden;background:red;width:40px;height:40px;font-size:1px;line-height:9999px;white-space:nowrap}
+.ly_wrap .my_tit{margin-bottom:19px}
+.ly_wrap .inpbx{width:200px}
+.ly_wrap .inpbx+.inpbx{margin-top:12px}
+.ly_wrap .addr .inpbx{width:auto}
+.ly_wrap .addr .btn_bor{width:100px;margin-bottom:12px;line-height:40px}
+.ly_wrap .hp .inpbx{display:inline-block}
+.ly_wrap .tip{display:inline-block;margin-left:7px;font-size:12px;color:#5d5d5d;line-height:40px}
+.ly_wrap .ckbx{margin-top:24px;padding-top:8px;border-top:1px solid #d4d4d4}
+.ly_wrap .btn_bx{margin-top:10px;text-align:center}
+.ly_wrap .btn_bx .btn_bor,.ly_wrap .btn_bx .btn_black{width:100px;height:40px;margin:0 2px;border-radius:2px;line-height:40px;vertical-align:top}
+
+@media screen and (max-width:540px){
+.my_address .btn_black{position:static;width:100%;height:60px;margin-top:42px}
+.my_address .btn_bx{position:static;margin-top:20px}
+.addr_lst{margin:0 -20px}
+.addr_lst li{margin:0;padding:22px 20px 20px;border-width:0 0 1px}
+.addr_lst .tit{font-size:26px;line-height:36px}
+.addr_lst .tit .point{padding:0;border:0;font-size:15px;font-weight:normal;color:#375fff;line-height:28px;vertical-align:bottom}
+.addr_detail{margin-top:7px;font-size:15px;line-height:25px}
+
+.ly_wrap .ly_inner{overflow-y:auto;top:40px;right:20px;left:20px;bottom:40px;width:auto;height:auto;padding:20px;transform:none}
+.ly_wrap .my_tit{margin-bottom:10px}
+.ly_wrap .inpbx{width:auto}
+.ly_wrap .ckbx{margin-top:6px}
+.ly_wrap .tip{line-height:30px}
+
+}
+</style>
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="my_wrap">
+	<!--[D] PC view -->
+	<div class="article_left">
+		<!--  MYPAGE 01  -->
+		<section class="my_my">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!-- Mobile view :: My 정보 안내 m_view -->
+		<section class="my_grade">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 02  -->
+		<section class="my_shop">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 03  -->
+		<section class="my_call">
+			<!-- [D] jquery include -->
+		</section>
+	</div>
+
+	<div class="article_right">
+		<!-- 배송지관리 -->
+		<section class="my_address">
+			<h3 class="pc_view my_tit">배송지관리</h3>
+			<ul class="addr_lst">
+				<li>
+					<h4 class="tit"><span class="blind">배송지명</span>강나영 <span class="point">기본배송지</span></h4>
+					<dl class="addr_detail">
+						<dt class="blind">수령인</dt>
+						<dd>강나영</dd>
+						<dt class="blind">연락처</dt>
+						<dd>010-1234-5678 / 031-123-5678</dd>
+						<dt class="blind">주소</dt>
+						<dd>[도로명주소] 04343 서울특별시 마포구 양화로 10길 45 2층</dd>
+					</dl>
+					<div class="btn_bx">
+						<button type="button" class="btn_bor">수정</button>
+						<button type="button" class="btn_bor">삭제</button>
+					</div>
+				</li>
+				<li>
+					<h4 class="tit"><span class="blind">배송지명</span>회사</h4>
+					<dl class="addr_detail">
+						<dt class="blind">수령인</dt>
+						<dd>강나영</dd>
+						<dt class="blind">연락처</dt>
+						<dd>010-1234-5678 / 031-123-5678</dd>
+						<dt class="blind">주소</dt>
+						<dd>[도로명주소] 04343 서울특별시 마포구 양화로 10길 45 2층</dd>
+					</dl>
+					<div class="btn_bx">
+						<button type="button" class="btn_bor">수정</button>
+						<button type="button" class="btn_bor">삭제</button>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="btn_black">배송지 추가</button>
+		</section>
+	</div>
+</div>
+
+<!-- Layer_  -->
+<div class="ly_wrap" style="display:block">
+	<div class="ly_inner">
+		<h4 class="my_tit">배송지 추가</h4>
+		<form action="#">
+		<fieldset>
+			<legend>신규 배송지 추가</legend>
+			<ul class="tb_lst">
+				<li>
+					<div class="in_td"><label for="u_naming" class="type">배송지명</label></div>
+					<div class="in_td">
+						<div class="inpbx">
+							<input type="text" id="u_naming">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="in_td"><label for="u_name" class="type">수령인</label></div>
+					<div class="in_td">
+						<div class="inpbx">
+							<input type="text" id="u_name">
+						</div>
+					</div>
+				</li>
+				<li class="addr">
+					<div class="in_td"><label for="u_addr" class="type">주소</label></div>
+					<div class="in_td">
+						<button type="button" class="btn_bor">우편번호</button>
+						<div class="inpbx">
+							<input type="text" id="u_addr">
+						</div>
+						<div class="inpbx">
+							<input type="text" title="상세주소 입력">
+						</div>
+					</div>
+				</li>
+				<li class="hp">
+					<div class="in_td"><label for="u_hp" class="type">휴대폰</label></div>
+					<div class="in_td">
+						<div class="inpbx">
+							<input type="text" id="u_hp">
+						</div>
+						<p class="tip">숫자만 입력해 주세요</p>
+					</div>
+				</li>
+				<li class="hp">
+					<div class="in_td"><label for="u_hp2" class="type">추가연락처</label></div>
+					<div class="in_td">
+						<div class="inpbx">
+							<input type="text" id="u_hp2">
+						</div>
+						<p class="tip">숫자만 입력해 주세요</p>
+					</div>
+				</li>
+			</ul>
+			<span class="ckbx">
+				<input type="checkbox" id="u_basic">
+				<label for="u_basic" title="">기본배송지로 설정</label>
+			</span>
+		</fieldset>
+		<fieldset>
+			<legend>신규 배송지 작성 완료</legend>
+			<div class="btn_bx">
+				<button type="reset" class="btn_bor">취소</button>
+				<button type="submit" class="btn_black">추가</button>
+			</div>
+		</fieldset>
+		</form>
+		<button type="button" class="btn_close"><span class="sp">닫기</span></button>
+	</div>
+</div>
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

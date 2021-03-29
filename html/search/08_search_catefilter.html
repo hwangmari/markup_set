@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>검색 카테고리 필터 PCver</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<style>
+.nav_category{width:200px}
+.nav_category button{display:block;position:relative;width:100%;text-align:left}
+.nav_category .active{color:#345eff}
+.nav_category .active:after{position:absolute;top:50%;right:0;width:10px;height:10px;background:url(../img/open-g.png) no-repeat;content:''}
+.small_category .active:after{background:none}
+.big_category>li>button{font-size:20px;line-height:36px}
+.big_category span{margin-left:5px;font-size:12px;color:#a0a0a0}
+.mid_category{margin:7px 0}
+.mid_category button{font-size:16px;line-height:2.25}
+.small_category{margin:5px 0}
+.small_category button{padding-left:10px;font-size:12px;color:#a0a0a0;line-height:2.57}
+</style>
+</head>
+<body style="padding:30px">
+<div class="nav_category">
+    <ul class="big_category">
+        <li><button type="button">ALL<span>(5345)</span></button></li>
+        <li><button type="button">WOMEN<span>(2567)</span></button></li>
+        <li><button type="button">MEN<span>(1246)</span></button></li>
+        <li>
+            <button class="active" type="button">YOUTH<span>(517)</span></button>
+            <ul class="mid_category">
+                <li>
+                    <button class="active" type="button">Bags</button>
+                    <ul class="small_category">
+                        <li><button type="button">컨버스백</button></li>
+                        <li><button type="button">레더백</button></li>
+                        <li><button type="button">숄더백</button></li>
+                        <li><button type="button">토트백</button></li>
+                        <li><button class="active" type="button">크로스백</button></li>
+                        <li><button type="button">백백</button></li>
+                        <li><button type="button">클러치</button></li>
+                        <li><button type="button">지갑,카드케이스</button></li>
+                        <li><button type="button">파우치</button></li>
+                    </ul>
+                </li>
+                <li><button type="button">Hat, Cap</button></li>
+                <li><button type="button">Accessories</button></li>
+            </ul>
+        </li>
+        <li><button type="button">LIFE<span>(107)</span></button></li>
+    </ul>
+</div>
+</body>
+</html>

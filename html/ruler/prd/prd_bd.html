@@ -1,0 +1,41 @@
+<style>
+.prd_bd{position:relative;margin-top:20px;padding-top:50%;border:1px solid #ccc}
+.prd_bd>a{display:block;position:absolute;top:0;right:0;bottom:0;left:0;color:#000}
+.prd_bd .imgbx{overflow:hidden;position:absolute;top:6%;left:3%;bottom:6%;width:44%}
+.prd_bd .imgbx img{width:100%}
+.prd_bd a:after{position:absolute;top:6%;left:41%;bottom:6%;width:1px;margin-left:10%;background:#ccc;content:''}
+.prd_bd .info{margin:6% 0 6% 55%;height:100px;font-size:20px;line-height:1.5;font-family:"campton";color:#000}
+.prd_bd .info .brand{color:#ccc}.prd_bd .info .name{color:#000}
+.prd_bd .info .price2{position:absolute;bottom:6%}
+.prd_bd .info .price2 span{color:#ff4800}
+.prd_bd .info .price2 em{color:#d4d4d4}
+@media screen and (max-width: 540px){
+.prd_bd{padding:20px}
+.prd_bd a,.prd_bd .price2{position:static;top:auto;left:auto;right:auto;bottom:auto}
+.prd_bd a:after{display:none}
+.prd_bd .imgbx{position:static;top:auto;left:auto;right:auto;bottom:auto;width:100%}
+.prd_bd .imgbx:after{display:none}
+.prd_bd .info{height:auto;margin:20px 0 0;padding-top:20px;border-top:1px solid #ccc}
+.prd_bd .price2{margin-top:10px}
+}
+</style>
+
+<!-- <div class="prd_bd"> -->
+    <a href="#">
+        <div class="imgbx">
+            <img src="https://img.29cm.co.kr/next-edition/2018/08/31/7ebc7462f80d4eb494fb4bafe1ebd260_20180831113903.jpg" alt=""/>
+        </div>
+        <div class="info">
+            <div class="brand">
+                [아워그레이]
+            </div>
+            <div class="name">
+                Cloud, Matte Black Col.
+            </div>
+            <div class="price2">
+                <span>[10%]</span>
+                <span>207,000won</span>
+            </div>
+        </div>
+    </a>
+<!-- </div> -->

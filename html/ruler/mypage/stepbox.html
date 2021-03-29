@@ -1,0 +1,32 @@
+<style>
+.stepbox{position:relative;width:100%;padding-top:22px}
+.stepbox .num li{position:relative;display:inline-block;padding:0 10px;font-size:14px;color:#303033}
+.stepbox .num li:before{content:' ';position:absolute;top:50%;left:0;width:1px;height:16px;margin-top:-8px;background:#d4d4d4;font-size:12px;text-align: center}
+.stepbox .num li:first-child{padding-left:0}
+.stepbox .num li:first-child:before{display:none}
+.stepbox .num em{font-size:16px;font-weight:700;color:#303033}
+.stepbox .num .btn_arr{font-weight:700}
+.stepbox .btnbox{position:absolute;top:18px;right:0;text-align:right}
+.stepbox .btnbox a{display:inline-block;border-radius: 2px;border:solid 1px #d4d4d4;font-size:12px;color: #5d5d5d}
+.stepbox .btnbox span{display:block;margin-top:12px;color: #5d5d5d;font-size:12px}
+@media screen and (max-width:540px){
+    .stepbox{padding:15px 0 13px}
+    .stepbox .num{position:relative}
+    .stepbox .num li{font-size:16px;font-weight:700;line-height:24px}
+    .stepbox .num .row_btn{position:absolute;top:0;right:0}
+    .stepbox .num .row_btn:before{display:none}
+    .stepbox .num .btn_arr{font-size:13px;color:#5d5d5d;vertical-align:top}
+    .stepbox .num span{display:block;font-size:12px;font-weight:normal;color:#a0a0a0}
+}
+</style>
+<!-- <div class="stepbox"> -->
+    <!-- PC View :: 주문상세내역 간단 정보 안내 -->
+    <ul class="pc_view num">
+        <li>주문일자 <em>2017.05.22</em></li>
+        <li>주문번호 <em>9847563822</em></li>
+    </ul>
+    <!-- Mobile View :: 주문상세내역 간단 정보 안내 -->
+    <ul class="m_view num">
+        <li>20170522-123456 <span>주문번호</span></li>
+    </ul>
+<!-- </div> -->

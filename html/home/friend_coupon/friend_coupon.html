@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>29CM :: 모일수록쿠폰</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style>
+/* common */
+.event_wrap .sp{display:inline-block;overflow:hidden;line-height:100em;vertical-align:top}
+@media screen and (min-width:541px){
+    .event_wrap .sp{background:url(https://img.29cm.co.kr/next29cm/event/fridend/pc_sp.png) no-repeat}
+}
+@media screen and (max-width:540px){
+    .event_wrap .sp{background:url(https://img.29cm.co.kr/next29cm/event/fridend/m_sp.png);background-size:300px 450px}
+}
+
+@media screen and (min-width:541px){
+    .event_wrap>div,.coupon_use_info{min-width:900px;padding:0 50px}
+}
+/* event_main */
+.event_main{position:relative;background:#1d3294;color:#fff;text-align:center}
+.event_main h2{padding:118px 0 30px;font-weight:normal;font-size:72px;line-height:88px;letter-spacing:-.8px;word-break:keep-all}
+.event_main .desc{font-weight:200;font-size:24px;line-height:40px;letter-spacing:-.2px}
+.event_main .pc_view{display:block;height:552px;background:url(https://img.29cm.co.kr/next29cm/event/fridend/cometogether.png) no-repeat 50% 110px;background-size:contain}
+.event_main .black{height:76px;background:#000;color:#fff;font-weight:300;font-size:24px;line-height:76px;letter-spacing:-.4px}
+.desc_title{max-width:890px;height:110px;border:2px solid #000;margin:160px auto 0;font-weight:bold;font-size:48px;letter-spacing:-1.7px;line-height:120px;text-align:center;box-shadow:15px 15px #000}
+@media screen and (max-width:540px){
+    .event_main h2{padding:30px 0 20px;font-size:42px;line-height:55px;letter-spacing:-.6px}
+    .event_main .desc{padding:0 50px 0 51px;font-size:16px;line-height:27px;letter-spacing:-.1px}
+    .event_main .mb_bg{display:block;position:relative;height:253px;background:url(https://img.29cm.co.kr/next29cm/event/fridend/cometogether.png) no-repeat 50% 50px;background-size:contain}
+    .event_main .mb_bg:after{display:block;clear:both;position:absolute;bottom:-15px;left:50%;margin-left:-15px;width:30px;height:30px;background:url(https://img.29cm.co.kr/next29cm/event/fridend/img_m_sprite.png);background-position:-521px 0;background-size:300px 450px;z-index:10;content:''}
+    .event_main .pc_view{display:none}
+}
+
+/* 쿠폰 발급 안내 영역 */
+.coupon_info .sp{display:block;width:120px;height:54px;margin:135px auto 0}
+.coupon_info .bg1{margin-top:135px;background-position:0 0px}
+.coupon_info .bg2{margin-top:180px;background-position:0 -61px}
+.coupon_info .bg3{margin-top:150px;background-position:0 -121px}
+.coupon_info strong{display:block;padding:30px 0;font-weight:500;font-size:38px;line-height:42px;letter-spacing:-1.4px;text-align:center;word-break:keep-all}
+.coupon_info .txt{display:block;font-size:24px;line-height:40px;letter-spacing:-.2px;text-align:center;word-break:keep-all}
+.coupon_info .txt2{padding-bottom:220px}
+@media screen and (max-width:540px){
+    .coupon_info_wrap{padding:18px 0 40px}
+    .coupon_info{padding:40px 0}
+    .coupon_info .sp{width:65px;height:34px}
+    .coupon_info .bg1{margin:10px auto 0;background-position:0 0px}
+    .coupon_info .bg2{margin-top:0;background-position:0 -40px}
+    .coupon_info .bg3{margin-top:-25px;background-position:0 -80px}
+    .coupon_info strong{padding:20px 43px 15px 46px;font-weight:550;font-size:24px;line-height:36px;letter-spacing:-.8px}
+    .coupon_info .txt{padding:0 52px 0 58px;font-size:16px;line-height:26px;letter-spacing:-.6px}
+    .coupon_info .txt2{padding:0 78px 0 80px}
+}
+
+/* 아이디 입력 & 쿠폰 발급 영역 */
+.friend_wrap{background:#1d3294}
+.user_submit{overflow:hidden;position:relative;max-width:470px;margin:0 auto;padding:250px 32px 40px 30px}
+.submit1{padding-top:350px}
+.submit3,.submit4{padding-top:225px}
+.id_txt{padding-bottom:15px;font-size:24px;line-height:27px;letter-spacing:-.2px;color:#fff}
+.btn{display:block;position:relative;vertical-align:top;box-sizing:border-box}
+.inpbx{position:relative;margin:0 auto;padding-right:70px;z-index:1}
+.inptext{display:block;width:100%;height:105px;padding-left:19px;font-size:24px;line-height:30px;letter-spacing:-.2px;box-sizing:border-box}
+.btn_com{position:absolute;top:0;right:0;width:100px;height:105px;border:0;background:#939cc9;font-size:20px;color:#dcdcdc}
+@media screen and (max-width:540px){
+    .user_submit{padding:180px 32px 40px 30px}
+    .submit2{padding-top:150px}
+    .submit3,.submit4{padding-top:140px}
+    .id_txt{padding-bottom:8px;font-size:17px;line-height:1.06;letter-spacing:-.1px}
+    .inpbx{position:relative;margin:0 auto;padding-right:70px}
+    .inptext{height:70px;font-size:16px;line-height:20px;letter-spacing:-.1px}
+    .btn_com{width:70px;height:70px;font-size:16px}
+}
+
+/* 내 아이디 입력 활성화 */
+.btn_com{background:#939cc9;color:#dcdcdc}
+.btn_com.on{background:#000;color:#fff}
+.active{border:2px solid #000}
+
+/* [D] 캐릭터 활성화
+(웹)
+.submit2:after{background-position:-200px -280px}
+.submit3:after{background-position:-450px -280px}
+.submit4:after{background-position:100% -280px}
+
+(모바일)
+.submit2:after{background-position:-114px -178px}
+.submit3:after{background-position:-274px -184px}
+.submit4:after{background-position:100% -184px}
+*/
+
+
+/* 캐릭터 */
+.user_submit:after{display:block;clear:both;width:200px;height:220px;position:absolute;left:50%;background:url(https://img.29cm.co.kr/next29cm/event/fridend/pc_friend.png) no-repeat;content:''}
+.submit1:after{top:195px;width:148px;height:210px;margin-left:-74px;background-position:0 0}
+.submit2:after{top:74px;width:190px;height:222px;margin-left:-80px;background-position:-200px 0}
+.submit3:after{top:55px;width:214px;height:212px;margin-left:-75px;background-position:-450px 0}
+.submit4:after{top:70px;width:210px;height:215px;margin-left:-70px;background-position:100% 0}
+@media screen and (max-width:540px){
+    .user_submit:after{background:url(https://img.29cm.co.kr/next29cm/event/fridend/m_friends.png) no-repeat;background-size:600px 325px}
+    .submit1:after{top:68px;width:98px;height:141px;margin-left:-50px;background-position:0 0}
+    .submit2:after{top:37px;width:135px;height:143px;margin-left:-60px;background-position:-114px 0}
+    .submit3:after{top:37px;width:142px;height:143px;margin-left:-55px;background-position:-274px 0}
+    .submit4:after{top:37px;width:144px;height:143px;margin-left:-55px;background-position:100% 0}
+}
+
+/* 아이디 입력 비활성화 */
+.friend_wrap .off .inptext{border:0;background:#a3a9ce}
+.friend_wrap .off .btn{background:#939cc9;color:#dcdcdc}
+.friend_wrap .off .id_txt{color:#a3a9ce}
+.friend_wrap .inpbx span{display:none}
+.friend_wrap .off .inpbx span{display:block;position:absolute;top:27px;left:26px;min-width:248px;font-size:24px;color:#293361}
+
+/* 쿠폰 다운 확인 */
+.coupon_down{padding:45px 0 200px 0;color:#fff;text-align:center}
+.coupon_down .down_q{padding:120px 0 50px;font-size:38px;line-height:56px;letter-spacing:-1.4px}
+.coupon_down .coupon_bg{position:relative;width:495px;height:248px;margin:0 auto 50px;background-position:0 -252px}
+.coupon_down .coupon_bg span{display:inline-block;position:absolute;left:50%;top:0;margin-left:-90px;font-weight:500;font-size:142px;line-height:204px;color:#375fff}
+.coupon_down .coupon_bg i{font-size:81px;font-style:normal}
+.coupon_down .coupon_bg button{position:absolute;bottom:32px;left:100px;height:47px;font-size:24px;line-height:1.85;color:#375fff;letter-spacing:.4px}
+.coupon_bg button .ico_down{width:28px;height:24px;margin-top:8px;background-position:-200px 0;vertical-align:unset}
+.coupon_down em{display:block;position:relative;margin-top:110px;font-weight:100;font-size:24px;line-height:40px;letter-spacing:-.2px}
+.coupon_down em:before{display:block;clear:both;position:absolute;top:-60px;left:50%;margin-left:-23px;width:48px;height:46px;background:url(https://img.29cm.co.kr/next29cm/event/fridend/pc_sp.png);background-position:0 -193px;content:''}
+@media screen and (max-width:540px){
+    .friend_wrap .off .inpbx span{top:18px;left:18px;min-width:165px;font-size:16px}
+    .coupon_down{padding:42px 0 72px 0}
+    .coupon_down .down_q{padding:0 63px 40px 64px;font-size:24px;line-height:36px}
+    .coupon_down .coupon_bg{width:275px;height:138px;margin:0 auto;background-position:0 -312px}
+    .coupon_down .coupon_bg span{margin-left:-50px;font-weight:500;font-size:79px;line-height:113.3px}
+    .coupon_down .coupon_bg i{font-size:45px}
+    .coupon_down .coupon_bg button{position:absolute;bottom:20px;left:56px;height:26px;font-size:14px;letter-spacing:-.1px}
+    .coupon_bg button .ico_down{width:13px;height:11px;background-position:-275px 0}
+    .coupon_down em{font-size:16px;line-height:26px;letter-spacing:-.4px}
+    .coupon_down em:before{top:-50px;margin-left:-15px;width:30px;height:30px;background:url(https://img.29cm.co.kr/next29cm/event/fridend/m_sp.png);background-position:-220px -41px;background-size:300px 450px}
+}
+
+/* 쿠폰 사용 기간 + 쿠폰 설명 */
+.coupon_desc{text-align:center}
+.title2{margin-top:140px}
+.title3{margin-top:0px}
+.coupon_desc .coupon_date{padding:120px 0 30px;font-size:38px;line-height:42px;color:#303033}
+.coupon_desc .coupon_date .mb_inon{display:none}
+.coupon_desc .coupon_date .pc_inon{display:inline-block}
+.coupon_desc .coupon_date b{font-weight:normal}
+.coupon_desc .coupon_dsc{font-size:24px;line-height:40px;letter-spacing:-.2px}
+.app_down{position:relative;margin-top:70px}
+.app_down:after{display:none}
+.app_down p{padding:90px 0 35px;font-weight:500;font-size:38px;line-height:42px;letter-spacing:-1.4px;color:#000}
+.app_down .sp{margin-bottom:74px;width:91px;height:100px}
+.app_down .ico_googleplay{background-position:-314px 6px}
+.app_down .ico_app_store{margin-left:65px;background-position:-412px 6px}
+.share p{padding:120px 0 54px;font-size:24px;line-height:40px;letter-spacing:-.2px;color:#000}
+.share .sp{width:92px;height:92px;margin-bottom:90px}
+.share .ico_facebook{background-position:-309px -101px}
+.share .ico_kakaotalk{margin-left:65px;background-position:-409px -101px}
+.coupon_use_info{background:#f2f2f2}
+.coupon_use_info dl{padding:135px 100px 217px 20%;text-align:left}
+.coupon_use_info dt{padding-bottom:30px;font-weight:600;font-size:28px;line-height:40px;letter-spacing:-.1px}
+.coupon_use_info dd{position:relative;padding:0 0 20px 20px;font-size:18px;line-height:42px;letter-spacing:-.1px;color:#000}
+.coupon_use_info dd:after{position:absolute;top:16px;left:5px;width:4px;height:4px;border-radius:50%;background:#5b5b5b;content:''}
+.coupon_use_info .blit_no{margin-bottom:60px;margin-left:-10px}
+.coupon_use_info .blit_no:after{display:none}
+.m_view{display:none}
+.pc_view{display:block}
+@media screen and (max-width:540px){
+    .desc_title{max-width:315px;height:65px;border:2px solid #000;margin:70px auto 0;font-weight:bold;font-size:26px;letter-spacing:-.7px;line-height:74px;text-align:center;box-shadow:7px 7px #000}
+    .title2{margin-top:20px}
+    .title3{margin-top:0px}
+    .coupon_desc .coupon_date{padding:47px 0 30px;font-size:24px;line-height:36px}
+    .coupon_desc .coupon_date b{font-weight:bold}
+    .coupon_desc .coupon_date .mb_inon{display:inline-block}
+    .coupon_desc .coupon_date .pc_inon{display:none}
+    .coupon_desc .coupon_dsc{font-size:16px;line-height:26px;letter-spacing:-.6px}
+    .app_down:after{display:block;clear:both;position:absolute;left:50%;top:-10px;margin-left:-148px;width:296px;height:1px;background:#979797;content:''}
+    .app_down p{padding:50px 96px 25px 97px;font-weight:600;font-size:24px;line-height:36px;letter-spacing:-.8px;color:#303033}
+    .app_down .sp{margin-bottom:74px;width:55px;height:60px}
+    .app_down .ico_googleplay{background-position:-75px 0}
+    .app_down .ico_app_store{margin-left:35px;background-position:-148px 0}
+    .share p{padding:55px 47px 44px;font-size:16px;line-height:26px;letter-spacing:-.8px}
+    .share .sp{width:62px;height:66px;margin-bottom:90px;line-height:100em;vertical-align:top}
+    .share .ico_facebook{background-position:-79px -77px}
+    .share .ico_kakaotalk{margin-left:30px;background-position:-149px -77px}
+    .coupon_use_info{background:#fff}
+    .coupon_use_info dl{max-width:315px;margin:0 auto;padding:60px 34px 99px 30px}
+    .coupon_use_info dt{padding-bottom:20px;font-weight:500px;font-size:20px;line-height:24px;letter-spacing:-.6px}
+    .coupon_use_info dd{position:relative;padding:0 0 20px 20px;font-size:15px;line-height:26px;letter-spacing:-.5px;color:#4a4a4a}
+    .coupon_use_info dd:after{top:8px}
+    .coupon_use_info .blit_no{margin-bottom:30px}
+    .m_view{display:block}
+    .pc_view{display:none}
+}
+</style>
+</head>
+<body>
+<div class="event_wrap">
+    <div class="event_main">
+        <h2>모일수록<br/>더 할인받는<br/>12% 쿠폰</h2>
+        <p class="desc">친구와 함께 할인 받으세요.<br class="m_view"/> 함께한 친구가 많아질수록<br/>최대 12%까지 할인되는 쿠폰을 선물합니다.</p>
+        <span class="m_view mb_bg"></span>
+        <span class="pc_view"></span>
+        <p class="m_view black">발급은 간단해요</p>
+    </div>
+
+    <!-- 쿠폰 발급 안내 -->
+    <div class="coupon_info_wrap">
+        <p class="pc_view desc_title">발급은 간단해요</p>
+        <p class="coupon_info">
+            <span class="sp bg1">STEP.1</span>
+            <strong>나와 친구들의 29CM 아이디를 입력하세요.</strong>
+            <span class="txt">정확한 아이디 확인을 위해 각 아이디 입력 시 우측<br class="pc_view"/> <b>‘확인'</b> 버튼을 꼭 눌러주세요.</span>
+        </p>
+        <p class="coupon_info">
+            <span class="sp bg2">STEP.2</span>
+            <strong>친구가 모일수록 커지는 할인율을 확인하세요.</strong>
+        </p>
+        <p class="coupon_info">
+            <span class="sp bg3">STEP.3</span>
+            <strong>모든 아이디 입력을 완료 했다면<br class="pc_view"/> 바로 쿠폰 발급이 가능합니다.</strong>
+            <span class="txt txt2">쿠폰은 입력된 회원 아이디 전부에게 동시에 지급됩니다.</span>
+        </p>
+    </div>
+
+    <!-- 아이디 입력 & 쿠폰 발급 -->
+    <div class="friend_wrap">
+        <div class="user_submit submit1">
+            <p class="id_txt">내 아이디</p>
+            <div class="inpbx active">
+                <input type="text" id="userid" title="내 아이디" placeholder="본인 아이디를 입력하세요" class="inptext"/>
+                <input type="submit" id="submit" title="확인" value="확인" class="btn btn_com"/>
+            </div>
+        </div>
+        <!-- [D] 아이디 확인 후 user_submit 에 off class 제거 입력 폼 활성화 처리 -->
+        <div class="user_submit submit2 off">
+            <p class="id_txt">친구아이디</p>
+            <div class="inpbx">
+                <span>친구 아이디를 입력하면<br/>6% 할인 쿠폰이 지급되요.</span>
+                <input type="text" id="userid" title=" 아이디" class="inptext"/>
+                <input type="submit" id="submit" title="확인" value="확인" class="btn btn_com"/>
+            </div>
+        </div>
+        <div class="user_submit submit3 off">
+            <p class="id_txt">친구아이디</p>
+            <div class="inpbx">
+                <span>친구 아이디를 입력하면<br/>9% 할인 쿠폰이 지급되요.</span>
+                <input type="text" id="userid" title=" 아이디" class="inptext"/>
+                <input type="submit" id="submit" title="확인" value="확인" class="btn btn_com"/>
+            </div>
+        </div>
+        <div class="user_submit submit4 off">
+            <p class="id_txt">친구아이디</p>
+            <div class="inpbx">
+                <span>친구 아이디를 입력하면<br/>12% 할인 쿠폰이 지급되요.</span>
+                <input type="text" id="userid" title=" 아이디" class="inptext"/>
+                <input type="submit" id="submit" title="확인" value="확인" class="btn btn_com"/>
+            </div>
+        </div>
+        <div class="coupon_down">
+            <p class="down_q">본인 포함 <span>4</span>명에게<br class="m_view"/> 지급되는 쿠폰입니다.<br/>이대로 발급받으시겠어요?</p>
+            <p class="coupon_bg sp"><span>0<i>%</i></span><button type="button">앱 전용 할인쿠폰 받기 <b class="ico_down sp"></b></button></p>
+            <em>앱 전용 할인쿠폰이란?<br/>29CM 앱에서 결제 시 사용 가능한 할인 쿠폰입니다.</em>
+        </div>
+    </div>
+
+    <!-- 쿠폰 안내 -->
+    <div class="coupon_desc">
+        <p class="desc_title">쿠폰 사용 기간</p>
+        <p class="coupon_date"><b>2018.5.31</b> <span class="mb_inon">목요일</span><span class="pc_inon">(목)</span><br class="m_view"/> <b>23:59</b> 까지</p>
+        <p class="coupon_dsc">29CM 앱에서 결제 시 언제든 사용 가능합니다.<br/>페이지 하단 자세한 사용 방법을 확인하세요.</p>
+        <div class="app_down">
+            <p>아직 29CM 앱이<br class="m_view"/>없으신가요?</p>
+            <a href="#none" title="googleplay" class="sp ico_googleplay">구글플레이 아이콘</a>
+            <a href="#none" title="app_store" class="sp ico_app_store">앱스토어 아이콘</a>
+        </div>
+        <p class="desc_title title2">친구들에게 알려주세요</p>
+
+        <div class="share">
+            <p>함께 할인받고 싶은 친구들에게<br/>이 소식을 알리고 더 높은 할인 혜택을 받으세요.</p>
+            <a href="#none" title="facebook" class="sp ico_facebook">페이스북 아이콘</a>
+            <a href="#none" title="kakaotalk" class="sp ico_kakaotalk">카카오톡 아이콘</a>
+        </div>
+        <p class="desc_title title3 m_view">쿠폰 사용 방법</p>
+    </div>
+
+    <!-- 쿠폰 발급 안내 -->
+    <div class="coupon_use_info">
+        <dl>
+            <dt>쿠폰 발급 및 사용 기간</dt>
+            <dd class="blit_no">2018.5.21 월요일 ~ 5.31 목요일</dd>
+            <dt>쿠폰 사용 방법</dt>
+            <dd>본 쿠폰은 위 쿠폰 발급받기 버튼을 통해 1회 지급됩니다. 이는 친구를 통해 발급 받은 경우도 포함되며<br class="pc_view"/> 그 경우 추가적인 쿠폰 발급은 진행되지 않습니다.</dd>
+            <dd>발급된 쿠폰은 29CM PC웹의 경우 ‘MY PAGE &gt; 사용가능쿠폰 &gt; 보너스 쿠폰’ 에서, 29CM 모바일 웹과 앱의 경우<br class="pc_view"/> ‘MY &gt; 사용가능쿠폰 &gt; 보너스 쿠폰’에서 확인이 가능합니다.</dd>
+            <dd>쿠폰 사용은 앱 결제 시 ‘쿠폰&#47;마일리지 사용 &gt; 보너스 쿠폰’ 에서 선택 가능합니다. 29CM 회원에 한해 1매만 사용 가능하며,<br class="pc_view"/> 일부 상품에는 쿠폰 사용에 제한이 있을 수 있습니다.</dd>
+            <dd>일부 품목은 브랜드 재고 사정에 따라 품절&#47;환불 될 수 있으며 이에 따른 쿠폰 발급은 진행되지 않습니다.</dd>
+            <dd>그 외 궁금한 점은 1:1 상담 게시판을 이용해 주시면 친절히 답변해 드립니다. <br class="pc_view"/>‘MY PAGE &gt; Q&A &gt; 나의 1:1 상담’에서 이용하실 수 있습니다.</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

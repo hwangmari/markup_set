@@ -1,0 +1,125 @@
+<style>
+
+.my_payment{margin-top:40px;font-size:13px}
+
+.my_info_lst p{display:inline-block;font-size:13px;font-weight:normal;text-align:right;vertical-align:top}
+.my_info_lst p em{font-size:16px;font-weight:700}
+.my_info_lst .tbl{display:table;width:100%;table-layout:fixed}
+.my_info_lst strong,.my_info_lst p{display:table-cell;box-sizing:border-box}
+.my_info_lst .total_price strong{font-size:18px;font-weight:700;vertical-align: top}
+.my_info_lst .total_price .price{color:#ff4800}
+.my_info_lst .total_price .price em{font-size:28px;color:#ff4800}
+.my_info_lst .total_price .price span{display:block;font-size:12px;color:#5d5d5d;line-height:22px}
+.my_info_lst .primer strong{font-weight:700}
+.my_info_lst .primer .price em{font-size:20px;font-weight:700}
+@media screen and (max-width:540px){
+    .my_info_lst h3{display:none;}
+    .my_info_lst .row,.total_price{display:inline-block;width:100%;border-top:1px solid #d4d4d4}
+    .my_info_lst strong,.my_info_lst p{height:50px;padding:13px 0 9px}
+    .my_info_lst strong{width:118px;border:0;font-size:13px;font-weight:normal;color:#303033}
+    .my_info_lst .tbl{line-height:26px;}
+    .my_info_lst .order_bank p{text-align:left}
+}
+
+@media screen and (max-width:1200px){
+.my_info_lst .total_price strong{width:82px;font-size:14px}
+}
+@media screen and (min-width:541px){
+    .my_info_lst{position: relative;border-bottom:1px solid #d4d4d4}
+    .my_info_lst:after{display:block;clear:both;content:''}
+    .my_info_lst:before{position:absolute;top:0;bottom:0;left:64%;width:1px;background:#d4d4d4;content:''}
+    .my_info_lst h3{display:block;padding:20px 0 8px 9%;font-size:15px;font-weight:600}
+    .order_bank{float:left;width:64%;padding-top:214px}
+    .order_bank strong,.order_bank .tbl,.order_bank p{display:inline-block;width:auto;height:auto;padding:0;vertical-align: top;font-weight: normal;font-size:14px}
+
+    .order_bank .title{position:absolute;top:0;left:4.5%;padding:20px 0 15px;}
+    .order_bank .order_bank_in{position:relative;padding:20px 10px 15px 24%}
+    .my_info_lst section{position:absolute;top:0;height:164px;border-bottom:1px solid #d4d4d4;text-align: left}
+    .my_info_lst section p{padding:8px 0 6px;text-align: left;font-size:14px;font-weight: normal}
+    .my_info_lst section strong{width:47%;padding:8px 0 6px 9%;font-size:14px;font-weight: normal}
+    .my_info_lst section em{font-weight: normal}
+
+    .my_info_lst .primer strong{width:45%;padding:8px 0 6px 6%;font-size:14px;font-weight: normal}
+    .my_info_lst .celbx{float:left;width:36%;padding-top:15px;font-size: 14px}
+    .my_info_lst .celbx .mileage{display:table;table-layout: fixed;position:absolute;top:165px;left:0;width:64%;height:50px;border-bottom:1px solid #d4d4d4;line-height:50px;font-size:14px;}
+    .my_info_lst .celbx .mileage strong{width:24%;padding-left:4.5%;font-size:14px;font-weight: normal}
+    .my_info_lst .celbx .mileage p{font-size:14px;text-align:left}
+    .my_info_lst .celbx .cel_price:after{position:absolute;top:0;bottom:0;left:100%;width:1px;background:#d4d4d4;content:''}
+    .my_info_lst .celbx .cel_price{left:0;width:32%;}
+    .my_info_lst .celbx .cel_discount{left:32%;width:32%;}
+    .my_info_lst .total_price{position:absolute;bottom:0;right:0;width:36%}
+    .my_info_lst .total_price strong{padding-left:9%;}
+}
+</style>
+<!-- <section class="my_payment"> -->
+    <h3 class="my_tit">결제정보</h3>
+    <div class="payment_art">
+        <div class="my_info_lst">
+            <div class="row order_bank">
+                <div class="order_bank_in">
+                    <div class="tbl">
+                        <strong class="title">결제방법</strong>
+                        <p>신용카드 국민 (1223445-455****-****) 일시불</p>
+                    </div>
+                    <div class="tbl">
+                        <strong>결제일시</strong>
+                        <p>2017.5.22  21:34:05</p>
+                    </div>
+                    <div class="tbl">
+                        <strong>승인번호</strong>
+                        <p>099038573</p>
+                    </div>
+                </div>
+            </div>
+            <div class="celbx">
+                <div class="row">
+                    <section class="cel_price">
+                        <h3>상품금액</h3>
+                        <div class="tbl">
+                            <strong>상품합계</strong>
+                            <p class="price"><em>2,000,900</em>원</p>
+                        </div>
+                        <div class="tbl">
+                            <strong>배송비합계</strong>
+                            <p class="price"><em>0</em>원</p>
+                        </div>
+                    </section>
+                    <div class="tbl primer">
+                        <strong>총 상품가격</strong>
+                        <p class="price"><em>124,920</em>원</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <section class="cel_discount">
+                        <h3>할인금액</h3>
+                        <div class="tbl">
+                            <strong>보너스쿠폰</strong>
+                            <p class="price"><em>(-) 24,984</em>원</p>
+                        </div>
+                        <div class="tbl">
+                            <strong>마일리지사용</strong>
+                            <p class="price"><em>(-) 4,381</em>원</p>
+                        </div>
+                        <div class="tbl">
+                            <strong>예치금</strong>
+                            <p class="price"><em>(-) 4,381</em>원</p>
+                        </div>
+                    </section>
+                    <div class="tbl primer">
+                        <strong>할인금액</strong>
+                        <p class="price"><em>(-) 29,365</em>원</p>
+                    </div>
+                </div>
+                <div class="tbl total_price">
+                    <strong>총 결제금액</strong>
+                    <p class="price"><em>2,000,900</em>원 </p>
+                </div>
+                <div class="mileage">
+                    <strong class="pc_view">마일리지 적립</strong>
+                    <p class="price"><span class="mile">1,249 마일리지 적립</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- </section> -->

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>주문상세내역 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+<style media="screen">
+
+/* 디자인 확인용 룰러에 적용 완료 */
+.selbx{display:inline-block;position:relative;width:100%;height:40px;padding:9px 0 0 14px;border:1px solid #d4d4d4;vertical-align:top;box-sizing:border-box}
+.selbx select{display:block;width:100%;margin:-4px 0 0;padding:0;border:0 none;background:#fff;font-size:14px;line-height:30px;color:#4a4a4a;color:#000;vertical-align:top;-webkit-appearance:none;outline:none;box-sizing:border-box}
+.selbx:after{position:absolute;top:16px;right:10px;width:13px;height:6px;background:url(../../svg/open-g.svg) no-repeat;background-size:100% 100%;pointer-events:none;content:''}
+.inpbx{position:relative;height:40px;padding:9px 0 0 14px;border:1px solid #d4d4d4;background:#fff;vertical-align:top;box-sizing:border-box}
+.inpbx input{display:block;width:100%;font-size:15px;color:#1a1a1a;vertical-align:top;border:0;background:transparent;outline:none}
+.btn_bg{height:40px;background:#303033;font-size:12px;line-height:40px;color:#fff}
+
+.return_payment{border-top:4px solid #000}
+
+/* .return_payment{min-width:680px} */
+.return_payment{border-bottom:1px solid #d4d4d4;color:#303033}
+@media screen and (min-width:541px){
+    .return_payment{display:flex}
+    .return_payment ul{position:relative;width:32%;padding:5px 0 13px;border-right:1px solid #d4d4d4;box-sizing:border-box}
+    .return_payment ul:before{display:block;position:absolute;top:18px;left:100%;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:#5d5d5d;text-align:center;content:''}
+    .return_payment ul:after{display:block;position:absolute;left:100%;width:10px;margin-left:-5px;content:''}
+    .payment_order:after{top:29px;height:2px;background:#fff}
+    .payment_deduct:after{top:27px;height:2px;border:2px solid #fff;border-width:2px 0}
+
+    .return_payment li{min-height:36px;padding:8px 30px;line-height:20px;box-sizing:border-box;vertical-align:top}
+    .return_payment li:after,.pay_total:after{display:block;clear:both;content:''}
+    .return_payment li .lft{float:left;width:80px;font-size:14px}
+    .return_payment li .rgt{overflow:hidden;text-align:right;font-size:13px}
+    .return_payment li .num em{font-size:16px;vertical-align:top}
+
+    .return_payment .pay_total{min-height:52px;margin-bottom:10px;border-bottom:1px dashed #d4d4d4;padding:6px 30px;line-height:40px;font-weight:bold;box-sizing:border-box;vertical-align:top}
+    .return_payment .pay_total .lft{float:left;font-size:17px}
+    .return_payment .pay_total .rgt{float:right;overflow:visible;min-width:200px;min-height:42px;text-align:right}
+    .return_payment .pay_total .num em{font-size:26px;vertical-align:top}
+
+    .payment_total .pay_total .lft{width:117px}
+    .payment_total .pay_total .rgt{font-size:23px}
+    .payment_total .pay_total .num{color:#ff4800;font-weight:500;font-size:18px}
+    .payment_total .pay_total .num em{font-size:32px}
+
+    .payment_total{position:relative;width:36%;padding:5px 0 13px}
+    .payment_total .total_info{position:absolute;right:15px;bottom:20px;left:15px}
+
+}
+@media screen and (min-width:541px) and (max-width:1200px){
+    .return_payment li{padding:8px 18px}
+    .return_payment .pay_total{padding:6px 18px}
+    .return_payment .pay_total .num em{font-size:22px}
+    .payment_total .pay_total .num em{font-size:30px}
+
+}
+@media screen and (max-width:540px){
+    .pay_total+.pay_total{display:none}
+    .return_payment ul{padding:8px 0 7px;border-bottom:1px solid #d4d4d4}
+    .return_payment li{height:40px;box-sizing:border-box}
+    .return_payment li:after,.pay_total:after{display:block;clear:both;content:''}
+    .return_payment .lft{float:left;width:100px;font-size:14px;line-height:40px;vertical-align:top}
+    .return_payment .rgt{overflow:hidden;text-align:right;font-size:14px;line-height:40px;vertical-align:top}
+    .return_payment .num em{font-size:16px;vertical-align:top}
+
+    .return_payment .pay_total{font-weight:bold;box-sizing:border-box;vertical-align:top}
+    .return_payment .pay_total .num em{font-size:20px;vertical-align:top}
+
+    .payment_total{padding:15px 0 50px}
+    .payment_total .pay_total .rgt{font-size:18px}
+    .payment_total .pay_total .num{color:#ff4800;font-weight:500;font-size:18px}
+    .payment_total .pay_total .num em{font-size:32px}
+
+}
+</style>
+</head>
+<body style="padding:50px 20px">
+
+<div class="return_payment">
+    <ul class="payment_order">
+        <li class="pay_total">
+            <div class="lft">원결제금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000,000</em>원</span>
+            </div>
+        </li>
+        <li class="pay_total">
+            <div class="lft">원결제금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">상품금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">배송비</div>
+            <div class="rgt">
+                <span class="num"><em>2,000</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">쿠폰할인</div>
+            <div class="rgt">
+                <span class="num"><em>20,000,000</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">마일리지사용</div>
+            <div class="rgt">
+                <span class="num"><em>20</em>원</span>
+            </div>
+        </li>
+    </ul>
+    <ul class="payment_deduct">
+        <li class="pay_total">
+            <div class="lft">차감금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000</em>원</span>
+            </div>
+        </li>
+        <li class="pay_total">
+            <div class="lft">차감금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000,000</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">추가배송비</div>
+            <div class="rgt">
+                <span class="num"><em>20</em>원</span>
+            </div>
+        </li>
+        <li>
+            <div class="lft">반품배송비</div>
+            <div class="rgt">
+                <span class="num"><em>20,000,000</em>원</span>
+            </div>
+        </li>
+    </ul>
+    <div class="payment_total">
+        <div class="pay_total">
+            <div class="lft">환불예정금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000</em>원</span>
+            </div>
+        </div>
+        <div class="pay_total">
+            <div class="lft">환불예정금액</div>
+            <div class="rgt">
+                <span class="num"><em>20,000,000</em>원</span>
+            </div>
+        </div>
+        <div class="total_info">
+            <div class="lft">환불방법</div>
+            <div class="rgt">
+                원결제내역 취소 (무통장입금 계좌 환불)
+            </div>
+        </div>
+    </div>
+</div>
+
+<style media="screen">
+.goods_tip{margin:12px 0 0 30px;font-size:13px;line-height:24px;color:#5d5d5d}
+@media screen and (min-width:541px) and (max-width:1200px){
+    .goods_tip{margin-left:18px;}
+}
+@media screen and (max-width:540px){
+    .goods_tip{line-height:22px}
+    .goods_tip li{position:relative;padding-left:10px}
+    .goods_tip li:after{position:absolute;top:10px;left:0;width:3px;height:3px;border-radius:50%;background:#5d5d5d;content:''}
+}
+</style>
+<ul class="goods_tip">
+    <li>반품상품 수거완료 이후 환불금액이 확정됩니다.</li>
+    <li>한 주문에서 여러 건의 취소/반품이 진행될 경우 처리 순으로 환불이 진행되므로 접수 시 환불예정금액과 실제 환불금액은 달라질 수 있습니다.</li>
+</ul>
+
+<!-- 환불계좌 입력  -->
+<div class="">
+
+</div>
+
+<!-- 반품수거 신청 안내  -->
+<style media="screen">
+.info_delivery{padding-bottom:30px;border-bottom:1px solid #d4d4d4}
+.info_delivery .info_inp{margin:18px 0 22px;font-size:14px;line-height:24px;color:#303033;word-break:keep-all}
+.info_delivery ul{padding:5px 0 5px;border-top:1px solid #d4d4d4}
+.info_delivery li{font-size:15px;line-height:25px}
+.info_delivery li:after{display:block;clear:both;content:''}
+.info_delivery .lft{float:left;width:105px;min-height:26px;padding:12px 0;font-size:14px;line-height:26px}
+.info_delivery .rgt{overflow:hidden;min-height:26px;padding:12px 0;font-size:15px;line-height:26px}
+@media screen and (max-width:540px){
+    .info_delivery .rgt{font-weight:bold}
+}
+</style>
+<div class="info_delivery">
+    <p class="info_inp">현재 29CM에서는 반품수거 서비스를 제공하고 있지 않습니다.<br class="pc_view"> 아래 정보를 확인하신 후 택배사로 반품수거를 신청해 주세요</p>
+    <ul>
+        <li>
+            <div class="lft">
+                반품 택배사
+            </div>
+            <div class="rgt">
+                CJ 대한통운
+            </div>
+        </li>
+        <li>
+            <div class="lft">
+                수거신청 방법
+            </div>
+            <div class="rgt">
+                전화접수 <span>1644-1234</span> 또는 인터넷접수
+            </div>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div class="lft">
+                브랜드명
+            </div>
+            <div class="rgt">
+                호웨어 (BRAND NAME)
+            </div>
+        </li>
+        <li>
+            <div class="lft">
+                연락처
+            </div>
+            <div class="rgt">
+                010-1234-1234
+            </div>
+        </li>
+        <li>
+            <div class="lft">
+                반품 주소지
+            </div>
+            <div class="rgt">
+                (03334) 서울특별시 마포구 양화로 10길 45 에이플러스비 2층 인포데스크
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- 송장번호 확인 -->
+<style>
+.info_delivery {}
+.info_delivery .info_inp{margin:18px 0 22px;font-size:14px;line-height:24px;color:#303033}
+.info_delivery .inp_area{display:flex;margin-top:18px}
+.info_delivery .inp_area .selbx{width:32%}
+.info_delivery .inp_area .inpbx{width:50%;margin:0 5px}
+.info_delivery .inp_area .btn_black{min-width:50px;width:18%;padding:0;text-align:center}
+</style>
+<div class="info_delivery">
+    <p class="info_inp">반품택배를 발송 하셨나요?<br class="m_view"> 보내신 송장번호를 입력해주세요</p>
+    <div class="inp_area">
+        <span class="selbx"></span>
+        <div class="inpbx"></div>
+        <a href="#" class="btn_black">확인</a>
+    </div>
+</div>
+</body>
+</html>

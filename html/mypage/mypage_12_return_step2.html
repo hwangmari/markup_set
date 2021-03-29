@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>주문상세내역 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+</head>
+<body>
+<div class="header_wrap">
+<!-- [D] jquery include -->
+</div>
+
+<div class="my_wrap">
+    <!--[D] PC view -->
+    <div class="article_left">
+        <!--  MYPAGE 01  -->
+        <section class="my_my">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!-- Mobile view :: My 정보 안내 m_view -->
+        <section class="my_grade">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!--  MYPAGE 02  -->
+        <section class="my_shop">
+            <!-- [D] jquery include -->
+        </section>
+
+        <!--  MYPAGE 03  -->
+        <section class="my_call">
+            <!-- [D] jquery include -->
+        </section>
+    </div>
+
+    <div class="article_right">
+        <!-- 반품접수 -->
+        <section class="my_return2">
+            <h3 class="my_tit nobor pc_view">반품접수</h3>
+            <div class="my_step2">
+                <!-- [D] jquery include -->
+            </div>
+
+            <style>
+            .my_return2 .order_lst{margin-top:40px;border-top:4px solid #000}
+            .my_return2 .order_lst+.order_lst{margin-top:60px;border-top-width:1px}
+            .my_return2 .order_lst .thead .in_td:first-child,.my_return2 .goods .in_td:first-child{width:50%}
+            .my_return2 .order_lst li{border-bottom:0}
+            .my_return2 .order_lst .thead{border-bottom:1px solid #303033}
+            .my_return2 .col3,.my_return2 .col5{width:12%}
+            .my_return2 .col4{width:8%}
+            .my_return2 .goods{border-bottom:1px solid #d4d4d4}
+            .my_return2 .goods .info{max-width:96%}
+            .my_return2 .goods .price{margin-top:0;font-size:16px}
+            .my_return2 .goods .amount{font-weight:normal;font-size:16px}
+            .my_return2 .goods .amount .inpbx{display:inline-block;width:40px;padding:10px 0 0 0;vertical-align:middle}
+            .my_return2 .total_price{margin-top:24px;font-size:16px;font-weight:700;text-align:right}
+            .my_return2 .total_price strong{color:#ff4800}
+            @media screen and (max-width:540px){
+                .my_return2 .order_lst{margin-top:-1px;border-top:0}
+                .my_return2 .order_lst+.order_lst{margin-top:0;border-top-width:0}
+                .my_return2 .goods{border-bottom:0}
+                .my_return2 .goods .in_td{overflow:visible;position:static;width:auto;margin-top:0;text-align:left}
+                .my_return2 .goods .in_td:first-child{width:auto}
+                .my_return2 .goods .info_bx{min-height:0;margin-left:0}
+                .my_return2 .option_num .m_view{display:inline-block}
+                .my_return2 .goods .deliveryinfo{font-size:14px;line-height:1.25}
+                .my_return2 .goods .price{font-size:13px;color:#5d5d5d}
+                .my_return2 .goods .option_num{font-size:12px}
+                .my_return2 .goods .amount{margin-top:8px}
+                .my_return2 .goods .amount .inpbx{height:30px;padding-top:6px}
+                .my_return2 .goods .amount .inpbx input{font-size:13px}
+                .my_return2 .total_price{margin-top:0;padding-top:11px;border-top:1px solid #d4d4d4;font-size:13px;line-height:24px;text-align:right}
+                .my_return2 .total_price strong{font-size:20px}
+            }
+            </style>
+            <!-- :: 반품 상품 정보 -->
+            <div class="return_step2">
+                <ul class="order_lst">
+                    <li class="thead">
+                        <div class="in_td">상품정보</div>
+                        <div class="in_td col2">상품코드/배송정보</div>
+                        <div class="in_td col3">판매가</div>
+                        <div class="in_td col4">수량</div>
+                        <div class="in_td col5">소계금액</div>
+                    </li>
+                    <li>
+                        <div class="goods">
+                            <div class="goods_row">
+                                <div class="in_td">
+                                    <div class="info_bx">
+                                        <span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg?cmd=thumbnail&width=150" alt=""></span>
+                                        <div class="info">
+                                            <p class="goods_tit">[B7AMA1007M] 최대 두줄 [B7AMA1007M] 최대 두줄</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="in_td col2">
+                                    <p class="deliveryinfo">1287474545<br>업체 조건 배송</p>
+                                </div>
+                                <div class="in_td col3">
+                                    <p class="price"><span class="num">124,000</span>원</p>
+                                </div>
+                                <div class="in_td col4">
+                                    <div class="amount">
+                                        <div class="inpbx">
+                                            <input type="text" value="1" title="반품 수량 입력">
+                                        </div>
+                                        / 1
+                                    </div>
+                                </div>
+                                <div class="in_td col5">
+                                    <p class="total"><span class="num">270,000</span>원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_total">
+                            <div class="total_price">상품주문금액 41,000원  +  배송비 0원  =  <strong>41,000원</strong></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <style>
+        .my_return_detail{margin-top:30px}
+        .info_tblst>li{display:table;width:100%;border-bottom:1px solid #d4d4d4;table-layout:fixed}
+        .info_tblst .in_td{display:table-cell;height:60px;padding:10px 0 10px 20px;vertical-align:middle;box-sizing:border-box}
+        .info_tblst .in_td:first-child{width:150px;padding-left:0;border-right:1px solid #d4d4d4}
+        .info_tblst .type{font-size:12px;font-weight:700}
+        .info_tblst .rabx{display:inline-block;margin-left:30px;vertical-align:middle}
+        .info_tblst .rabx:first-child{margin-left:0}
+        .info_tblst .rabx label{color:#303033}
+        .info_tblst .tip{display:inline-block;margin-left:42px;font-size:12px;color:#5d5d5d;vertical-align:middle}
+        .info_tblst .txt{font-size:16px;font-weight:700}
+        .info_tblst .refund_price{font-size:12px;font-weight:normal}
+        .info_tblst .refund_price strong{font-size:16px;font-weight:700}
+        .info_tblst .refund_detail{margin-top:3px;font-size:12px;line-height:24px}
+        .info_tblst .refund_detail span{display:inline-block;min-width:130px;margin-right:4px}
+        .info_tblst .refund_detail em{font-size:14px;color:#ff4800}
+        .info_tblst .refund_detail em span{min-width:0;font-size:12px}
+        .info_tblst .inptxtbx textarea{font-size:12px;resize:none}
+        .info_tblst .m_view{display:none}
+
+        @media screen and (max-width:540px){
+        .info_tblst .m_view{display:table}
+        .info_tblst .in_td{height:50px;padding:10px 0}
+        .info_tblst .in_td:first-child{width:94px;border-right:0}
+        .info_tblst .type{font-size:13px}
+        .info_tblst .rabx{margin:0 14px 0 0}
+        .info_tblst .rabx label{padding-left:25px}
+        .info_tblst .tip{display:none}
+        .info_tblst .txt{font-size:13px;font-weight:normal;line-height:22px}
+        .info_tblst .refund_price{font-size:13px}
+        .info_tblst .refund_price strong{font-size:13px;color:#ff4800}
+        .info_tblst .refund_detail{margin-top:15px;line-height:22px}
+        .info_tblst .refund_detail span{min-width:0}
+        .info_tblst .refund_detail em{color:#303033}
+        .info_tblst .selbx{width:120px;margin-top:14px}
+        .info_tblst .selbx select{font-size:13px}
+        .info_tblst .selbx .sp{display:inline-block;margin-top:15px;background:red}
+        .info_tblst .inpbx{margin-top:10px;padding-top:12px}
+        .info_tblst .inpbx input{font-size:13px}
+        }
+        </style>
+        <section class="my_return_detail">
+            <h3 class="my_tit">반품상세정보</h3>
+            <ul class="info_tblst">
+                <li>
+                    <div class="in_td"><strong class="type">반품사유</strong></div>
+                    <div class="in_td">
+                        <span class="rabx">
+                            <input type="radio" id="re_reason1" name="re_reason">
+                            <label for="re_reason1">고객변심</label>
+                        </span>
+                        <span class="rabx">
+                            <input type="radio" id="re_reason2" name="re_reason">
+                            <label for="re_reason2">상품불량</label>
+                        </span>
+                        <span class="rabx">
+                            <input type="radio" id="re_reason3" name="re_reason">
+                            <label for="re_reason3">오배송</label>
+                        </span>
+                        <p class="tip pc_view">제주, 도서 지역의 반품은 추가비용이 발생될 수 있습니다</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">환불방법</strong></div>
+                    <div class="in_td">
+                        <span class="rabx">
+                            <input type="radio" id="re_refund1" name="re_refund">
+                            <label for="re_refund1">고객변심</label>
+                        </span>
+                    </div>
+                </li>
+                <li class="refund m_view">
+                    <div class="in_td"><strong class="type">환불방법</strong></div>
+                    <div class="in_td">
+                        <p class="txt">무통장입금</p>
+                        <span class="selbx">
+                            <select>
+                            <option>은행명</option>
+                            <option>신한</option>
+                            <option>KB</option>
+                            <option>농협</option>
+                            </select>
+                            <span class="icon"><span class="sp"></span></span>
+                        </span>
+                        <div class="inpbx">
+                            <input type="text" placeholder="입금계좌번호">
+                        </div>
+                        <div class="inpbx">
+                            <input type="text" placeholder="예금주명">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">반품배송비</strong></div>
+                    <div class="in_td">
+                        <span class="rabx">
+                            <input type="radio" id="re_deliver1" name="re_deliver">
+                            <label for="re_deliver1">선불지급하여 발송</label>
+                        </span>
+                        <span class="rabx">
+                            <input type="radio" id="re_deliver2" name="re_deliver">
+                            <label for="re_deliver2">환불금액에서 차감</label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">환불예정금액</strong></div>
+                    <div class="in_td">
+                        <p class="refund_price"><strong>36,000</strong>원</p>
+                        <ul class="refund_detail">
+                            <li><span>반품배송비 (왕복) 차감 :</span><em>-5,000<span>원</span></em></li>
+                            <li><span>실제환불금액 : </span><em>36,000<span>원</span></em></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">반품사유 및 <br class="m_view">기타요청사항</strong></div>
+                    <div class="in_td">
+                        <div class="inptxtbx">
+                            <textarea rows="5" cols="1" class="field_inp" placeholder="반품사유를 입력해주세요"></textarea>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">배송정보</strong></div>
+                    <div class="in_td"><p class="txt">387459827369872546987 (CJ 대한통운 / 1588-1235)</p></div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">회사명</strong></div>
+                    <div class="in_td"><p class="txt">(주) 오아이스튜디오 (oi studio co)</p></div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">연락처</strong></div>
+                    <div class="in_td"><p class="txt">070-4959-4574</p></div>
+                </li>
+                <li>
+                    <div class="in_td"><strong class="type">반품 주소지</strong></div>
+                    <div class="in_td"><p class="txt">[124-234] 서울특별시 금천구 가산디지털 1로 160</p></div>
+                </li>
+            </ul>
+        </section>
+
+        <style>
+        .btn_wrap{margin-top:22px;text-align:right}
+        .btn_wrap .btn_black{position:relative;text-align:left}
+        .btn_wrap .btn_black:after{position:absolute;top:50%;right:15px;width:4px;height:9px;margin-top:-4px;background:red;content:''}
+        </style>
+        <div class="btn_wrap">
+            <a href="#" class="btn_black">다음</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

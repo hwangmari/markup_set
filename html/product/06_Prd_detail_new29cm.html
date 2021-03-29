@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>상품상세</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap" id="top">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="detail_wrap">
+    <div class="detail_categroy">
+        <!-- [D] jquery include -->
+    </div>
+
+    <style>
+    .detail_full_wrap .issue_banner{margin-bottom:40px}
+    </style>
+    <div class="detail_full_wrap">
+        <div class="issue_banner" style="background-image:url(//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg);color:#fff">
+			<!-- [D] jquery include -->
+		</div>
+    </div>
+    <style>
+    .detail_cnt_wrap{max-width:1520px;margin:0 auto;padding:0 200px}
+    .detail_header{position:absolute;top:0;left:0}
+    @media screen and (max-width: 1920px){
+        .detail_cnt_wrap{max-width:auto}
+        }
+    @media screen and (max-width: 1600px){
+        .detail_cnt_wrap{max-width:1200px;padding:0 50px}
+        }
+    @media screen and (max-width: 1300px){
+        .detail_cnt_wrap{max-width:1200px;padding:0 50px}
+        }
+    @media screen and (max-width: 1000px){
+        .detail_cnt_wrap{max-width:900px}
+        }
+    @media screen and (max-width: 540px){
+        .detail_cnt_wrap{max-width:auto;padding:0}
+        .detail_header{position:relative;top:auto;left:auto;}
+        }
+    </style>
+
+
+        <style>
+        .position_topend{position:fixed;top:50%;right:0;z-index:100;text-align: center;}
+        .position_topend a{display:block;width:30px;height:30px;padding:10px;margin-bottom:2px;background: #000;color:#fff;font-size:11px;font-weight:100}
+        @media screen and (max-width: 1920px){
+            .position_topend{left:auto;right:200px}
+            }
+        @media screen and (max-width: 1600px){
+            .position_topend{right:0}
+            }
+
+        </style>
+        <div class="position_topend">
+            <a href="#top">TOP</a>
+            <a href="#end">END</a>
+        </div>
+
+    <div class="detail_cnt_wrap">
+        <!-- [D] 상품상세 -->
+        <style>
+        .detail_item{position:relative;padding:100px 0 60px;display:flex}
+        .detail_item:after{display:table;clear:both;content:''}
+        .detail_item .item_img_view{width:50%;}
+        .detail_item .item_detail_view{width:45%;padding-left:5%}
+        @media screen and (max-width: 540px){
+            .detail_item{display:block;padding:0;}
+            .detail_item .item_img_view{width:auto;}
+            .detail_item .item_detail_view{width:auto;padding-left:0}
+        }
+
+
+        .detail_item .detail_img_area{position:relative;}
+        .detail_item .detail_img_area .imgbx{overflow:hidden;position:relative;top:0;left:0;width:100%;padding-top:100%}
+        .detail_item .detail_img_area .imgbxin{position:absolute;top:0;right:0;bottom:0;left:0}
+        .detail_item .detail_img_area .imgbxin img{width:100%}
+        .detail_item .detail_other_area{margin-top:30px;}
+        .detail_item .detail_other_area h2{margin-bottom:20px;padding-bottom:10px;font-size:22px;border-bottom:4px solid #000}
+        .detail_item .detail_other_area .other_lst{display:-webkit-flex;display:flex;margin-left:-1%}
+        .detail_item .detail_other_area .imgbx{display:inline-block;width:19%;margin-left:1%}
+        .detail_item .detail_other_area .imgbx img{width:100%}
+
+
+        /* 상품 아이콘 */
+        .prd_icon{position:absolute;top:100%;left:0;margin-top:-25px}
+        .prd_icon span {display:inline-block;float:left;border-radius:0;border:0;padding:0;width:25px;height:25px;line-height:25px;font-size:0;font-weight:500;color:#fff;text-align:center;vertical-align:top;text-transform: uppercase; }
+        .prd_icon span:first-letter {font-size:12px;}
+        .prd_icon span:first-of-type {margin-left:0;}
+        .prd_icon .coupon{background:#a0a0a0}
+        .prd_icon .new{background:#000}
+        .prd_icon .sale,.prd_icon .sail{background:#ff4800}
+        .prd_icon .soldout{padding:0 8px;width:auto;font-size:12px;background:#d4d4d4}
+        .prd_icon:after{display:block;clear:both;content:''}
+        @media screen and (max-width:540px){
+            .prd_icon{margin:-13px 0 0 10px !important}
+        }
+        </style>
+        <div class="detail_item">
+            <div class="item_img_view">
+                <!-- 상품 대표 이미지  -->
+                <style>
+                .detail_img_area .imgbx{position:absolute;top:0;right:0;bottom:0;left:0}
+                .detail_img_area .imgbx img{width:100%}
+                </style>
+                <div class="detail_img_area">
+                    <div class="imgbx">
+                        <div class="imgbxin">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="prd_icon">
+                        <span class="sale">sale</span>
+                        <span class="coupon">coupon</span>
+                        <span class="sail">sail</span>
+                        <span class="new">new</span>
+                        <span class="soldout">soldout</span>
+                    </div>
+                </div>
+
+                <!--  상품 연관상품 추천 -->
+                <div class="detail_other_area">
+                    <h2>연관 상품</h2>
+                    <div class="other_lst">
+                        <a href="#" class="imgbx">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </a>
+                        <a href="#" class="imgbx">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </a>
+                        <a href="#" class="imgbx">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </a>
+                        <a href="#" class="imgbx">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </a>
+                        <a href="#" class="imgbx">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_120170605163413.jpg" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_detail_view">
+                <style>
+
+
+                .detail_order_area .prd_info .heart_area .heart i{width:40px;height:25px;background-image:url(../../svg/heart-big-b.svg)}
+                .detail_order_area .prd_info .heart_area .active i{background-image:url(../../svg/heart-big-r.svg)}
+                .detail_order_area .prd_info .heart_area .count{font-size:12px;line-height:2}
+                .detail_order_area .ratingbx{margin:30px 0}
+                .detail_order_area .ratingbx .btn_bd_txt{margin:2px 0 0 10px}
+                .detail_order_area .prd_price{font-size:20px;line-height:1.5;font-family:"campton"}
+                .detail_order_area .prd_price>div{margin-top:5px}
+                .detail_order_area .prd_price>div strong{font-size:1.1em;line-height:1.5}
+                .detail_order_area .prd_price .sale span{font-weight:500}
+                .detail_order_area .prd_price .sale .o{color:#a0a0a0;text-decoration:line-through}
+                .detail_order_area .prd_price .sale .s{color:#ff4800;font-weight:normal}
+                .detail_order_area .prd_price .sale .coupon{font-size:.8em;line-height:1.5}
+                .detail_order_area .prd_price p{margin:30px 0;font-size:14px;line-height:1.5}
+
+                @media screen and (min-width:541px){
+                    .detail_order_area .prd_info{position:relative;border-top:4px solid #000;padding:40px 90px 0 0}
+                    .detail_order_area .prd_info .info{font-size:24px;line-height:1.3em;font-weight:600}
+                    .detail_order_area .prd_info .heart_area{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;flex-wrap:nowrap;position:absolute;top:0;right:0;bottom:0;width:90px;border-left:1px solid #a0a0a0}
+
+                    .detail_order_area .prd_price .sale .coupon:before{display:inline-block;margin:0 3px;content:'/'}
+                }
+                @media screen and (max-width:540px){
+                    .detail_order_area .prd_info{padding:0 90px 0 0}
+                    .detail_order_area .prd_info .info{font-size:14px}
+                    .detail_order_area .prd_info .heart_area{position:fixed;bottom:10px;left:90px;z-index:120;width:50px;height:50px;border:1px solid #fff}
+                    .detail_order_area .prd_info .count{display:none}
+                    .detail_order_area .prd_price .sale .s{font-size:26px;}
+                    .detail_order_area .prd_price .sale .coupon{display:block}
+                }
+
+                </style>
+                <!-- 상품 상세 정보  -->
+                <div class="detail_order_area">
+                    <div class="prd_info">
+                        <div class="info">
+                            <div class="brand">
+                                [29CM 단독]
+                            </div>
+                            <div class="name">
+                                [B7AMA1007M] Wide Lapel Navy
+                                <br>
+                                Trench
+                            </div>
+                        </div>
+                        <div class="heart_area">
+                            <button type="button" class="heart active">
+                                <i class="svg">하트</i>
+                                <span class="count">3</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ratingbx">
+                        <span class="rating">
+                            <!-- [D] jquery include -->
+                        </span>
+                        <a href="#" class="btn btn_bd_txt">24개 리뷰 보기 </a>
+                    </div>
+
+                    <div class="prd_price">
+                        <div class="sale">
+                            <div class="o">
+                                <span class="num">49,000</span>원
+                            </div>
+                            <div class="s">
+                                <span><span>[10%]</span>44,100</span> 원<em class="coupon">쿠폰적용시 30,000원</em>
+                                <a href="#" class="btn btn_link">5% 쿠폰다운</a>
+                            </div>
+                        </div>
+                        <p>현대카드 청구가 [2%] 29,800원</p>
+                    </div>
+                </div>
+
+                <style>
+                .detail_option_area .option_bx,.detail_option_area .option_bx2{margin-top:10px}
+                .detail_option_area .option_bx>div{-webkit-flex:1;flex:1}
+                .detail_option_area .option_bx2{position:relative;padding-right:134px}
+                .detail_option_area .option_bx2 .btn_sizehelp{position:absolute;top:0;right:0;width:130px}
+                .detail_option_area .option_resultbx{padding:20px 0 10px}
+                .detail_option_area .option_resultbx>ul{border-bottom:4px solid #000}
+                .detail_option_area .option_resultbx>ul:after{display:table;clear:both;content:''}
+                .detail_option_area .option_resultbx>ul>li{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:flex-start;justify-content:flex-start;flex-wrap:wrap;padding:12px 0 12px 15px;line-height:28px}
+                .detail_option_area .option_resultbx>ul>li+li{border-top:1px solid #ccc}
+                .detail_option_area .option_resultbx .option_result{-webkit-flex:1;flex:1}
+                .detail_option_area .option_resultbx .option_result span{display:inline-block;font-family:"campton";font-size:16px;font-weight:600}
+                .detail_option_area .option_resultbx .option_result span+span:before{display:inline-block;width:1px;height:16px;margin:6px 10px 0;background:#ccc;vertical-align:top;content:''}
+                .detail_option_area .option_resultbx .option_price{width:140px;text-align:right;font-family:"campton";font-size:16px;font-weight:600}
+                .detail_option_area .option_resultbx .option_price .btn_del{overflow:hidden;width:26px;height:26px;margin:1px 0 0;}
+                .detail_option_area .option_resultbx .result_total{margin-top:20px;text-align:right;line-height:32px}
+                .detail_option_area .option_resultbx .result_total span{vertical-align:top}
+                .detail_option_area .option_resultbx .result_total .txt{font-size:14px}
+                .detail_option_area .option_resultbx .result_total .num{font-size:22px;color:#ff4800}
+                .detail_option_area .option_resultbx .result_total .num span{display:inline-block;margin:-2px 2px 0 10px;font-size:28px;font-weight:600;font-family:"campton"}
+                .detail_option_area .option_btnbx{display:-webkit-flex;display:flex;margin-top:30px}
+                .detail_option_area .option_btnbx a{-webkit-flex:1;flex:1}
+                .dstail_buy{display:none}
+                @media screen and (max-width: 540px){
+                    .dstail_buy{display:block;position: fixed;bottom: 0;left: 0;right: 0;z-index: 100;padding:10px;background: #000;color:#ff4800}
+                    .dstail_buy .flt{float:left}
+                    .dstail_buy .btn_buy{float:right}
+                    .dstail_buy .btn{height:50px;line-height:50px;padding:0 20px;}
+                    .detail_option_area {display:none;position: fixed;bottom: 0;left: 0;right: 0;z-index: 100;background: #fff;padding: 20px;border-top:1px solid #000;}
+                }
+                </style>
+                <!--  상품 옵션 선택 -->
+                <div class="detail_option_area">
+                    <div class="dstail_buy">
+                        <div class="flt">
+                            <a href="#" class="btn btn_shaw">공유</a>
+                            <a href="#" class="btn btn_heart">하트</a>
+                        </div>
+                        <a href="#" class="btn btn_buy">BUY NOW</a>
+                    </div>
+                    <div class="option_bx">
+                        <span class="numcoutbx">
+                            <!-- [D] jquery include -->
+                        </span>
+                    </div>
+                    <div class="option_bx">
+                        <div class="dropbx">
+                            <!-- [D] jquery include -->
+                        </div>
+                    </div>
+                    <div class="option_bx2">
+                        <div class="selbx">
+                            <!-- [D] jquery include -->
+                        </div>
+                        <a href="#" class="btn btn_sizehelp">SIZE HELP</a>
+                    </div>
+
+                    <div class="option_resultbx">
+                        <ul>
+                            <li>
+                                <div class="option_result">
+                                  <span>블랙</span>
+                                  <span>270</span>
+                                  <span>L</span>
+                                </div>
+                                <div class="option_num">
+                                    <span class="numcoutbx">
+                                        <!-- [D] jquery include -->
+                                    </span>
+                                </div>
+                                <div class="option_price">
+                                    30,000원
+                                    <button type="button" class="btn btn_del"><i class="svg svg_del_x_02">삭제</i></button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="result_total">
+                            <span class="txt">총 상품 금액</span>
+                            <span class="num"><span>60,000</span>원</span>
+                        </div>
+                    </div>
+                    <div class="option_btnbx">
+                        <a href="#" class="btn btn_shopbag">SHOPPING BAG</a>
+                        <a href="#" class="btn btn_buynow">BUY NOW</a>
+                    </div>
+                </div>
+
+                <div class="detail_header">
+                    <!-- [D] jquery include -->
+                </div>
+
+                <!--  상품 안내 -->
+                <style>
+                .detail_info_area{margin-top:50px}
+                .detail_info_area .dsc{font-size:14px;text-align:left;padding-bottom:10px}
+                .detail_info_area .dsc2{font-size:12px;text-align:left;padding-top:10px}
+                .content_cnt{width:1000px;margin:0 auto;padding:70px 0 200px}
+                .accodionbx{position:relative;border-bottom:1px solid #d4d4d4}
+                .accodionbx:first-child>li{border-top:1px solid #d4d4d4}
+                .accodionbx .lnk_text{position:relative;width:100%;padding:15px 20px 14px 0;font-size:16px;color:#000;text-align:left;font-weight:bold}
+                .accodionbx .lnk_text:hover .sp_accodion,.accodionbx .lnk_text.active .sp_accodion{background-position:-275px -250px}
+                .accodionbx .lnk_text:hover+.accodion_content,.accodionbx .lnk_text.active+.accodion_content{height:auto}
+                .accodionbx .lnk_text:after{position:absolute;top:50%;right:6px;width:12px;height:6px;margin-top:-3px;background-image:url(../svg/open-g.svg);content:''}
+                .accodionbx .lnk_text.active:after{background-image:url(../svg/open-g.svg)}
+                .accodionbx .accodion_content{overflow:hidden;height:0}
+                .accodionbx .accodion_content>div{margin-top:-5px;padding:0 0 10px;font-size:14px;line-height:1.8}
+                .accodionbx .btnbx{margin-top:10px}
+                .accodionbx .btnbx .btn_sizehelp{width:110px}
+                </style>
+                <div class="detail_info_area">
+                    <div class="accodionbx">
+                        <button type="button" class="btn lnk_text active">
+                            <span>예약주문</span>
+                        </button>
+                        <div class="accodion_content">
+                            <div>
+                            2017.04.01 ~2017 .05.12 이내 순차출고
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accodionbx">
+                        <button type="button" class="btn lnk_text active">
+                            <span>브랜드알림</span>
+                        </button>
+                        <div class="accodion_content">
+                            <div>
+                              브랜드 주문 폭주로 (영업일 기준) 7일 이내 순차출고 예정이며 재고 소진으로 품절/환불로 안내드릴 수 있는 점 정말 죄송합니다. 품절일 경우, 순차적으로 연락드리겠습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accodionbx">
+                        <button type="button" class="btn lnk_text active">
+                            <span>SIZE GUIDE</span>
+                        </button>
+                        <div class="accodion_content">
+                            <div>
+                              착용 모델 사이즈 : 177CM / 27 inch <br>
+                              착용 사이즈 : 55<br>
+                              디테일 핏 : 여유로움
+                              <div class="btnbx">
+                                <a href="#" class="btn btn_sizehelp">SIZE HELP</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accodionbx">
+                        <button type="button" class="btn lnk_text active">
+                            <span>성분표</span>
+                        </button>
+                        <div class="accodion_content">
+                            <div class="labeling_section">
+                                <div class="tabbx">
+                                    <!-- [D] jquery include -->
+                                </div>
+                                <p class="dsc">1회 제공량 00 (00g)  /  총 00회 제공량 (00g)<p>
+                                <div class="labeling_dsc">
+                                    <div class="tbl_section">
+                                            <!-- [D] jquery include -->
+                                    </div>
+                                    <div class="tbl_section">
+                                            <!-- [D] jquery include -->
+                                    </div>
+                                </div>
+                                <p class="dsc2">1회 제공량 00 (00g)  /  총 00회 제공량 (00g)<p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accodionbx">
+                        <button type="button" class="btn lnk_text active">
+                            <span>사이즈정보</span>
+                        </button>
+                        <div class="accodion_content">
+                            <div>
+                                착용 모델 사이즈 : 177CM / 27 inch <br>
+                                착용 사이즈 : 55<br>
+                                디테일 핏 : 여유로움
+                                <div class="tbl_section2">
+                                    <!-- [D] jquery include -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="detail_full_wrap">
+        <div class="evt_banner">
+            <p>29CM 앱 첫구매<br>10% 할인쿠폰</p>
+        </div>
+    </div>
+
+
+    <div class="detail_cnt_wrap">
+        <!-- 이벤트 배너 -->
+        <style>
+        .event_banner{display:block;overflow:hidden;position:relative;width:100%;margin:80px 0;padding-top:167px}
+        .event_banner .imgin{position:absolute;top:0;left:50%;bottom:0;transform:translate(-50%,0);-ms-transform:translate(-50%,0)}
+        .event_banner .imgin img{height:100%}
+        </style>
+        <div>
+            <a href="#" class="event_banner">
+                <div class="imgin">
+                    <img src="//img.29cm.co.kr/next-contents/2017/08/14/80962c88ae0e48c9a2674bbf5445ed2b_20170814135204.jpg?width=1520" />
+                </div>
+            </a>
+        </div>
+
+        <style>
+        .product_dsc{color: #000}
+        .product_dsc h2{margin-top:15px;font-size:22px;line-height: 1.63;}
+        .product_dsc p{padding:14px 100px 30px 0;font-size:16px;line-height: 1.63;word-wrap: break-word;}
+        .product_dsc .imgbx_cntlft{padding:0 150px;}
+        @media screen and (max-width: 540px){
+            .product_dsc p{padding:0}
+            .product_dsc .imgbx_cntlft{padding:0 ;}
+        }
+        .product_dsc .imgbx_cntlft img{width:100%;}
+        .product_dsc .imgbx_sec2 {padding:30px 0 65px;}
+        .product_dsc .imgbx_sec2 .module_tile{margin-left:-10px;}
+        .product_dsc .imgbx_sec2 .tilebx{padding:10px 0 0 10px;box-sizing: border-box;}
+        </style>
+        <div class="product_dsc">
+            <h2>상품설명 타이틀</h2>
+            <p>라이트 카멜컬러와 베이지 컬러가 섞여있는 패턴에 소프트한 질감의 두께감있는 린넨소재로 제작된 투버튼 자켓 파리 입니다. 봄부터 초여름까지 입을수 있도록, 안감을 하프 라이닝으로 제작하여 바디는 100% 린넨, 소매는 활동성이 좋은 폴리 100%원단으로구성된 웰메이드 자켓입니다.</p>
+            <div class="imgbx_cntlft">
+    			<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+                <h2>상품설명 타이틀</h2>
+                <p>라이트 카멜컬러와 베이지 컬러가 섞여있는 패턴에 소프트한 질감의 두께감있는 린넨소재로 제작된 투버튼 자켓 파리 입니다. 봄부터 초여름까지 입을수 있도록, 안감을 하프 라이닝으로 제작하여 바디는 100% 린넨, 소매는 활동성이 좋은 폴리 100%원단으로구성된 웰메이드 자켓입니다.</p>
+    		</div>
+            <!--  동영상  -->
+    		<div class="module_play">
+    			<!-- [D] jquery include -->
+    		</div>
+            <h2>상품설명 타이틀</h2>
+            <p>라이트 카멜컬러와 베이지 컬러가 섞여있는 패턴에 소프트한 질감의 두께감있는 린넨소재로 제작된 투버튼 자켓 파리 입니다. 봄부터 초여름까지 입을수 있도록, 안감을 하프 라이닝으로 제작하여 바디는 100% 린넨, 소매는 활동성이 좋은 폴리 100%원단으로구성된 웰메이드 자켓입니다.</p>
+
+            <h2>상품설명 타이틀</h2>
+            <div class="imgbx_sec2">
+                <div class="module_tile">
+        			<div class="tilebx">
+        				<div class="module_imgbx">
+        					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        				</div>
+                        <p>RED</p>
+        			</div>
+        			<div class="tilebx">
+        				<div class="module_imgbx">
+        					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+        				</div>
+                        <p>RED</p>
+        			</div>
+        		</div>
+            </div>
+        </div>
+
+
+        <!-- 상품정보 보기 -->
+        <style>
+        .item_info{padding-top:17px}
+        .item_info .item_tit{font-size:22px;line-height:30px;font-weight:600;color:#000}
+        .item_info .item_tbl{margin-top:14px;border:1px solid #d4d4d4;border-width:0 1px 1px 0;border-top:4px solid #000;font-size:14px;color:#000;text-align:left}
+        .item_info .item_tbl th{border:1px solid #d4d4d4;border-width:1px 0 0 1px;font-weight:600}
+        .item_info .item_tbl td{border:1px solid #d4d4d4;border-width:1px 0 0 1px;word-wrap:break-word}
+        .item_info .item_tbl .inbx{padding:18px 20px}
+        .item_info .item_tbl .cell1{width:240px}
+        @media screen and (max-width:540px){
+            .item_info{overflow:auto;padding:7px 0 10px 20px}
+            .item_info .tblin{display:table;padding-right:20px}
+            .item_info .item_tbl{margin:13px 0 0;border-top:0;font-size:12px}
+            .item_info .item_tbl th{background:#ececec}
+            .item_info .item_tbl .inbx{padding:10px}
+            .item_info .item_tbl .cell1{width:30%}
+        }
+        </style>
+        <div class="item_info">
+            <div class="tblin">
+                <h2 class="item_tit">상품정보 보기</h2>
+                <table class="item_tbl">
+                    <caption><span>상품정보 보기</span></caption>
+                    <colgroup>
+                        <col class="cell1">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                식품위생법에 따른 표시사항
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                해당없음
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                식품의 유형
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                아이스밀크
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                생산자 및 소재지, 수입품의 경우 수입자를 함께 표기
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                (주)흥국에프엔비
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- //상품정보 보기 -->
+
+        <!-- 브랜드 홈으로 이동  -->
+        <div class="detail_brand_info">
+            <!-- [D] jquery include -->
+        </div>
+        <!-- //브랜드 홈으로 이동  -->
+
+
+        <!-- 동일 브랜드 다른 상품 -->
+
+        <!-- //동일 브랜드 다른 상품 -->
+
+
+        <!-- 상품후기 -->
+        <div class="detail_review_section">
+            <!-- [D] jquery include -->
+        </div>
+        <!-- //상품후기 -->
+
+        <!-- 상품 Q&A -->
+
+        <!-- //상품 Q&A -->
+
+        <!-- 배송정보 + 교환, 환불, A/S 안내 -->
+        <div class="detail_guide_wrap">
+            <!-- [D] jquery include -->
+        </div>
+        <!-- //배송정보 + 교환, 환불, A/S 안내 -->
+
+        <!-- 관련 이벤트 -->
+        <div class="detail_item_evt">
+            <!-- [D] jquery include -->
+        </div>
+        <!-- //관련 이벤트 -->
+
+        <!-- 추천 상품 -->
+        <div class="detail_item_recommend">
+            <!-- [D] jquery include -->
+        </div>
+        <!-- //추천 상품 -->
+    </div>
+</div>
+
+<div class="footer" id="end">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

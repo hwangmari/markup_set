@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Magazine</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<style>
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;background:red;font-size:1px;line-height:9999px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+    .pc_view{display:none}
+    .m_view{display:block}
+    .detail_cnt_wrap{max-width:auto;padding:0 20px}
+}
+
+.imgbx{overflow:hidden;position:relative;width:100%}
+.imgin{position:absolute;top:0;left:0;bottom:0;right:0;display:flex;align-items:center;justify-content:center}
+.imgin img{height:100%}
+</style>
+
+<style>
+.magazine_wrap{min-width:900px;max-width:1820px;margin:0 auto;padding:44px 50px 100px}
+.magazine_wrap .magazine_section{display:flex}
+.magazine_wrap .magazine_section+.magazine_section{margin-top:78px}
+.magazine_wrap .flt_area{position:relative;width:64.7%}
+.magazine_wrap .rgt_area{width:29.3%;padding-left:6%}
+
+@media screen and (max-width: 540px){
+    .imgin img{width:100%;height:auto}
+    .magazine_wrap{min-width:0;max-width:100%;padding:0 20px 20px}
+    .magazine_wrap .magazine_section{display:block}
+    .magazine_wrap .magazine_section+.magazine_section{margin-top:58px}
+    .magazine_wrap .flt_area{width:auto}
+    .magazine_wrap .rgt_area{width:auto;margin-top:56px;padding-left:0}
+    .magazine_wrap .bor_between .flt_area:after{display:none}
+    .magazine_wrap .post_box .pc_view{display:none}
+}
+
+/* 공통 */
+.magazine_wrap .post_tit{margin-bottom:10px;font-size:26px;font-weight:600;color:#000;line-height:30px}
+.magazine_wrap .post_tit.bor_top{display:inline-block;min-width:200px;margin-left:-15px;padding:20px 25px 0 15px;border-top:4px solid #000}
+.magazine_wrap .post_tit.bor_bott{margin-bottom:30px;padding-bottom:10px;border-bottom:4px solid #000}
+.magazine_wrap .bor_between .flt_area:after{position:absolute;top:40px;bottom:0;right:-4%;width:1px;background:#d4d4d4;content:''}
+.magazine_wrap .imgbx{margin-bottom:14px;padding-top:57.6%}
+.magazine_wrap .post_box{display:block;position:relative}
+.magazine_wrap .post_box .tit{font-size:22px;color:#000;line-height:30px;word-break:break-all}
+.magazine_wrap .post_box .txt{margin:10px 0 14px;padding-right:3%;font-size:14px;color:#303033;line-height:24px;word-break:break-all}
+.magazine_wrap .post_box .flag{display:inline-block;margin-right:3px;padding:0 9px;border:1px solid #d4d4d4;border-radius:2px;font-size:11px;font-weight:normal;color:#000;line-height:23px}
+.magazine_wrap .post_box .upload_time{display:inline-block;margin-left:5px;font-size:11px;color:#000;line-height:25px}
+@media screen and (max-width: 540px){
+    .magazine_wrap .post_tit{font-size:20px;line-height:24px}
+    .magazine_wrap .post_tit.bor_top{display:block;margin-left:0;padding:0 0 9px;border-top:0;border-bottom:2px solid #000}
+    .magazine_wrap .post_tit.bor_bott{margin-bottom:0;padding-bottom:0;border-bottom:0}
+    .magazine_wrap .post_tit.pc_view{display:none}
+    .magazine_wrap .post_box .tit{font-size:26px;line-height:34px}
+    .magazine_wrap .post_box .txt{font-size:15px;line-height:25px}
+
+}
+</style>
+
+<div class="magazine_wrap">
+    <div class="magazine_section bor_between">
+        <div class="flt_area">
+            <style>
+            .magazine_wrap .post_big .post_box{padding-bottom:24px;text-align:center}
+            .magazine_wrap .post_big .post_box .tit{font-size:48px;line-height:64px}
+            .magazine_wrap .post_big .post_box .txt{margin:20px 0;padding:0 10%}
+            .magazine_wrap .post_big .post_box .imgbx{margin-bottom:40px;padding-top:56.7%}
+            @media screen and (max-width: 540px){
+                .magazine_wrap .post_big{margin:0 -20px}
+                .magazine_wrap .post_big .post_box{padding-bottom:0;text-align:left}
+                .magazine_wrap .post_big .post_box .tit{position:absolute;bottom:114px;left:20px;color:#fff;line-height:58px}
+                .magazine_wrap .post_big .post_box .imgbx{margin-bottom:0;padding-top:112%}
+                .magazine_wrap .post_big .post_box .imgbx img{width:auto;height:100%}
+                .magazine_wrap .post_big .post_box .flag{position:absolute;bottom:65px;left:20px;border-color:#fff;color:#fff}
+            }
+            </style>
+            <div class="post_big">
+                <h2 class="post_tit bor_top pc_view"><span class="blind">Recent Post</span></h2>
+                <a href="#" class="post_box">
+                    <div class="imgbx">
+                        <div class="imgin">
+                            <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <h3 class="tit">존버거의 <br class="m_view">스케치북</h3>
+                    <p class="txt pc_view">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 <br>계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                    <strong class="flag">#Exhibition</strong>
+                    <span class="upload_time pc_view">2017.4.19</span>
+                </a>
+            </div>
+        </div>
+        <div class="rgt_area">
+            <h2 class="post_tit bor_top">Popular Post</h2>
+
+            <style>
+            .post_small .post_box{padding-right:140px}
+            .post_small .post_box .imgbx{position:absolute;top:20px;right:0;width:100px;padding-top:100px;}
+            .post_small .post_box .imgin img{width:auto;height:100%}
+            .post_small li{padding:20px 0;border-top:1px solid #d4d4d4}
+            .post_small li:first-child{border-top:0}
+            @media screen and (max-width: 540px){
+                .post_small .post_box{padding-right:120px}
+            }
+            </style>
+            <ul class="post_small">
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <span class="upload_time">2017.4.19</span>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.” “우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <span class="upload_time">2017.4.19</span>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <span class="upload_time">2017.4.19</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="magazine_section">
+        <div class="flt_area">
+            <h2 class="post_tit bor_bott">Latest Post</h2>
+            <style>
+            .post_half{display:flex;margin:0 -15px;flex-wrap:wrap}
+            .post_half li{width:50%;padding:20px 15px;box-sizing:border-box}
+            @media screen and (max-width: 540px){
+                .post_half{display:block;margin:0 -20px}
+                .post_half li{float:none;width:auto;padding:20px 0}
+                .post_half .imgbx{margin:0 0 14px}
+                .magazine_wrap .post_half .tit{margin: 0 15px}
+                .magazine_wrap .post_half .txt{margin:10px 15px 14px}
+                .post_half .flag{margin-left:15px}
+                .post_half .upload_time{margin-left:15px}
+            }
+
+            </style>
+            <ul class="post_half">
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북 존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.” 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <span class="upload_time">2017.4.19</span>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#" >
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="dsc">
+                            <h3 class="tit">존버거의 스케치북</h3>
+                            <p class="txt">“우리 같은 드로잉을 하는 사람들은</p>
+                            <strong class="flag">#Exhibition</strong>
+                            <span class="upload_time">2017.4.19</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="dsc">
+                            <h3 class="tit">title</h3>
+                            <p class="txt">“text</p>
+                            <strong class="flag">#Exhibition</strong>
+                            <span class="upload_time">2017.4.19</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title title</h3>
+                        <p class="txt">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <span class="upload_time">2017.4.19</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="rgt_area pc_view">
+            <h2 class="blind">Advertisement</h2>
+            <style>
+            .ad_lst{margin-top:40px}
+            .ad_lst .imgbx{padding-top:100%}
+            .ad_lst .imgin img{width:auto;height:100%}
+            </style>
+            <ul class="ad_lst">
+                <li>
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+    .magazine_history{margin:80px 0}
+    .magazine_history .date{margin-top:20px;font-size:22px;font-weight:600}
+    .magazine_history .date .pc_view{display:inline-block}
+    .magazine_view{position:relative}
+    .magazine_view:after{position:absolute;right:0;bottom:0;left:0;height:23px;background:#fff;content:''}
+    .magazine_lst{overflow:hidden;display:flex;flex-wrap:wrap;margin:6px -28px 0}
+    .magazine_lst li{position:relative;width:20%;margin:24px 0;padding:0 28px;box-sizing:border-box}
+    .magazine_lst li:before{position:absolute;top:0;left:0;height:250%;border-left:1px solid #ccc;content:''}
+    .magazine_lst li:nth-child(5n+1) a{padding-left:0}
+    .magazine_lst li:nth-child(5n+1):before,.magazine_lst li:nth-child(5n+1):after{display:none}
+    .magazine_lst li:nth-child(n+5):after{position:absolute;bottom:100%;left:0;height:47px;border-left:1px solid #fff;content:''}
+
+    @media screen and (min-width: 541px){
+        .magazine_lst li{padding-bottom:82px}
+        .magazine_lst .post_box .upload_time{position:absolute;bottom:0;left:28px;font-size:60px;font-weight:600;line-height:82px}
+    }
+    @media screen and (max-width: 540px){
+        .magazine_history .date{margin:40px 0 10px;padding-bottom:16px;border-bottom:2px solid #000;font-size:40px;font-weight:600;line-height:32px}
+        .magazine_history .date .hipen{display:block}
+        .magazine_view:after{display:none}
+        .magazine_history{margin:30px 0}
+        .magazine_lst{display:block;margin:0}
+        .magazine_lst li{width:auto;margin:0;padding:20px 0;border-top:1px solid #d4d4d4}
+        .magazine_lst li:before,.magazine_lst li:after{display:none}
+        .magazine_lst li:first-child{border-top:0}
+        .magazine_lst .post_box{padding-right:120px}
+        .magazine_lst .post_box .imgbx{position:absolute;top:20px;right:0;width:100px;height:100px;padding-top:0}
+        .magazine_lst .post_box .imgbx img{width:auto;height:100%}
+        .magazine_lst .post_box .upload_time{display:inline-block;margin-left:5px;font-size:11px;font-weight:normal;color:#000;line-height:25px}
+        .magazine_lst .post_box .upload_time .m_view{display:inline-block}
+    }
+
+    </style>
+    <div class="magazine_history">
+        <div class="magazine_view">
+            <p class="date"><span class="pc_view">2017.</span>04.17 (MON) <span class="hipen">-</span> 04.23 (SUN)</p>
+            <ul class="magazine_lst">
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북 존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, </p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">testtesttesttesttesttesttesttesttesttesttest</h3>
+                        <p class="txt">“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북 존버거의 스케치북</h3>
+                        <p class="txt">“우리 같은 드로잉을 하는 사람들은, 관찰된 무언가를 다른 이에게 보여 주기 위해서가 아니라, 보이지 않는 무언가가 계산할 수 없는 목적지에 이를 때까지 그것과 동행하기 위해 그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">testtesttesttesttesttesttesttesttesttesttest</h3>
+                        <p class="txt">“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest“testtesttesttesttesttesttesttesttesttesttest</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북</h3>
+                        <p class="txt">스케치북</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+                <li class="post_box">
+                    <a href="#">
+                        <div class="imgbx">
+                            <div class="imgin">
+                                <img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <h3 class="tit">존버거의 스케치북 존버거의 스케치북</h3>
+                        <p class="txt">그림을 그린다.”그림을 그린다.”그림을 그린다.”그림을 그린다.”</p>
+                        <strong class="flag">#Exhibition</strong>
+                        <p class="upload_time"><span class="m_view">2017.4.</span>19</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

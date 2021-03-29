@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>주문상세내역 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css"><style type="text/css">
+
+.tb_lst>li{display:table;position:relative;width:100%;border-bottom:1px solid #d4d4d4;table-layout:fixed}
+.tb_lst p,.tb_lst .inpbx input,.tb_lst .inptxtbx textarea{font-size:16px;font-weight:700;color:#303033;line-height:20px}
+.tb_lst .inpbx input::-webkit-input-placeholder{font-weight:normal}
+.tb_lst .inpbx input::-moz-placeholder{font-weight:normal}
+.tb_lst .inpbx input:-ms-input-placeholder{font-weight:normal}
+.tb_lst .inpbx input:-moz-placeholder{font-weight:normal}
+.tb_lst strong{font-weight:700}
+.tb_lst .in_td{display:table-cell;height:60px;padding:10px 0 10px 20px;vertical-align:middle;box-sizing:border-box}
+.tb_lst .in_td:first-child{width:140px;padding:0;border-right:1px solid #d4d4d4;vertical-align:top}
+.tb_lst .type{display:inline-block;font-size:12px;font-weight:700;color:#303033;line-height:60px}
+.tb_lst .rabx{display:inline-block;margin-right:30px}
+.tb_lst .inpbx{width:340px}
+.tb_lst .inptxtbx{padding-right:12px}
+.tb_lst .inptxtbx textarea{font-weight:normal;resize:none}
+
+.inpfilebx input[type="file"]{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0,0,0,0)}
+.inpfilebx label{display:inline-block;width:75px;height:30px;border:1px solid #d4d4d4;border-radius:2px;font-size:12px;color:#5d5d5d;line-height:30px;vertical-align:top;text-align:center;box-sizing:border-box}
+.inpfilebx .upload_name{display:inline-block;height:30px;padding:0 8px;font-size:12px;color:#5d5d5d;line-height:30px;vertical-align:top;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+.select_file_area{margin-top:10px}
+.select_file_area .btn_bor{width:53px;height:30px;vertical-align:bottom}
+.file_lst{display:inline-block;overflow-y:auto;width:340px;height:80px;padding:7px 0;border:1px solid #d4d4d4;vertical-align:top;box-sizing:border-box}
+.file_lst li{padding:0 15px}
+.file_lst button{width:100%;height:24px;padding:0 15px;text-align:left}
+.add_img .info_lst{margin-top:16px}
+.add_img .info_lst li{position:relative;padding-left:14px;font-size:12px;color:#5d5d5d;line-height:24px}
+.add_img .info_lst li:before{position:absolute;top:9px;left:0;width:4px;height:4px;border-radius:100%;background:#000;content:''}
+.add_img .info_lst .point{color:#ff4800}
+.add_img .info_lst .point:before{background:#ff4800}
+.my_inq .btn_bx{margin-top:10px;text-align:center}
+@media screen and (max-width:540px){
+.tb_lst{margin:0 -20px}
+.tb_lst>li{display:list-item;width:auto;padding:16px 20px}
+.tb_lst .in_td{display:block;height:auto;padding:0}
+.tb_lst .in_td:first-child{width:auto;border:0}
+.tb_lst .in_td:after{display:block;clear:both;content:''}
+.tb_lst .type{font-size:15px;line-height:25px}
+.tb_lst .rabx{float:left;width:33%;margin:10px 0 0}
+.tb_lst .rabx label{line-height:22px}
+.tb_lst .rabx label:before{top:1px}
+.tb_lst .inpbx{width:auto}
+.tb_lst .inpbx input,.tb_lst .inptxtbx textarea{font-size:12px;font-weight:normal;color:#000}
+.tb_lst .inptxtbx{padding:0}
+.tb_lst .user{margin-top:14px}
+.tb_lst .user,.tb_lst .user_id,.tb_lst .user_email{display:table;width:100%;padding:0 20px;border:0;box-sizing:border-box}
+.tb_lst .user .in_td,.tb_lst .user_id .in_td,.tb_lst .user_email .in_td{display:table-cell;height:50px;vertical-align:middle}
+.tb_lst .user .in_td:first-child,.tb_lst .user_id .in_td:first-child,.tb_lst .user_email .in_td:first-child{width:55px}
+.tb_lst .user .inpbx,.tb_lst .user_id .inpbx,.tb_lst .user_email .inpbx{width:75%}
+.tb_lst .tit_row,.tb_lst .cnt_row{padding:6px 20px;border-bottom:0}
+.tb_lst .tit_row .type,.tb_lst .cnt_row .type{display:none}
+.tb_lst .add_img{border:0}
+
+.inpfilebx{position:relative;margin-top:8px;padding:6px 48px 6px 84px;border:1px solid #e4e4e4}
+.inpfilebx label{position:absolute;top:6px;left:8px;width:66px;border:0;background:#375fff;color:#fff}
+.inpfilebx .upload_name{width:100%;padding:0;color:#a0a0a0}
+.inpfilebx .btn_delete{position:absolute;top:0;right:0;width:42px;height:42px}
+.inpfilebx .btn_delete .sp{display:inline-block;overflow:hidden;width:18px;height:18px;background:red;font-size:1px;text-indent:9999px;white-space:nowrap;vertical-align:top}
+
+.file_lst{width:auto}
+.add_img .info_lst li{padding-left:10px;font-size:13px;color:#a0a0a0;line-height:22px}
+.add_img .info_lst li:before{width:3px;height:3px;background:#a0a0a0}
+.my_inq .btn_bx button{width:100%;height:60px;padding:0;font-size:18px}
+
+}
+</style>
+</head>
+<body>
+<div class="my_wrap">
+	<!--[D] PC view -->
+	<div class="article_left">
+		<!--  MYPAGE 01  -->
+		<section class="my_my">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!-- Mobile view :: My 정보 안내 m_view -->
+		<section class="my_grade">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 02  -->
+		<section class="my_shop">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 03  -->
+		<section class="my_call">
+			<!-- [D] jquery include -->
+		</section>
+	</div>
+
+	<div class="article_right">
+
+		<!-- 1:1 문의내역 -->
+		<section class="my_inq">
+			<h3 class="pc_view my_tit">1:1 문의내역</h3>
+			<form action="#">
+			<fieldset>
+				<legend>1:1 문의 작성</legend>
+				<ul class="tb_lst">
+					<li>
+						<div class="in_td"><strong class="type">구매관련문의</strong></div>
+						<div class="in_td">
+							<span class="rabx">
+								<input type="radio" id="putchase1" name="inq_purchase">
+								<label for="putchase1">배송문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase2" name="inq_purchase">
+								<label for="putchase2">주문문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase3" name="inq_purchase">
+								<label for="putchase3">취소문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase4" name="inq_purchase">
+								<label for="putchase4">반품문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase5" name="inq_purchase">
+								<label for="putchase5">교환문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase6" name="inq_purchase">
+								<label for="putchase6">환불문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase7" name="inq_purchase">
+								<label for="putchase7">사은품문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="putchase8" name="inq_purchase">
+								<label for="putchase8">입금문의</label>
+							</span>
+						</div>
+					</li>
+					<li>
+						<div class="in_td"><strong class="type">일반상담문의</strong></div>
+						<div class="in_td">
+							<span class="rabx">
+								<input type="radio" id="counsel1" name="inq_counsel">
+								<label for="counsel1">회원정보문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="counsel2" name="inq_counsel">
+								<label for="counsel2">회원제도문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="counsel3" name="inq_counsel">
+								<label for="counsel3">결제방법문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="counsel4" name="inq_counsel">
+								<label for="counsel4">상품문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="counsel5" name="inq_counsel">
+								<label for="counsel5">당첨문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="counsel6" name="inq_counsel">
+								<label for="counsel6">쿠폰 / 마일리지문의</label>
+							</span>
+						</div>
+					</li>
+					<li>
+						<div class="in_td"><strong class="type">일반상담문의</strong></div>
+						<div class="in_td">
+							<span class="rabx">
+								<input type="radio" id="other1" name="inq_other">
+								<label for="other1">시스템문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="other2" name="inq_other">
+								<label for="other2">기타문의</label>
+							</span>
+							<span class="rabx">
+								<input type="radio" id="other3" name="inq_other">
+								<label for="other3">증빙서류문의</label>
+							</span>
+						</div>
+					</li>
+					<li class="user">
+						<div class="in_td"><label for="u_name" class="type">성명</label></div>
+						<div class="in_td">
+							<div class="inpbx">
+								<input type="text" id="u_name" value="강나영">
+							</div>
+						</div>
+					</li>
+					<li class="user_id">
+						<div class="in_td"><strong class="type">아이디</strong></div>
+						<div class="in_td">
+							<p class="txt">kkangna0 [staff]</p>
+						</div>
+					</li>
+					<li class="user_email">
+						<div class="in_td"><label for="u_email" class="type">이메일</label></div>
+						<div class="in_td">
+							<div class="inpbx">
+								<input type="text" id="u_email" value="kkang_na@naver.com">
+							</div>
+						</div>
+					</li>
+					<li class="tit_row">
+						<div class="in_td"><label for="u_title" class="type">제목</label></div>
+						<div class="in_td">
+							<div class="inpbx">
+								<input type="text" id="u_title" placeholder="제목을 입력하세요.">
+							</div>
+						</div>
+					</li>
+					<li class="cnt_row">
+						<div class="in_td"><label for="u_content" class="type">내용</label></div>
+						<div class="in_td">
+							<div class="inptxtbx">
+								<textarea id="u_content" rows="5" cols="1" class="field_inp" placeholder="내용을 입력하세요."></textarea>
+							</div>
+						</div>
+					</li>
+					<li class="add_img">
+						<div class="in_td"><strong class="type">사진첨부</strong></div>
+						<div class="in_td">
+							<!--[D] 파일 선택 후 선택된 파일명 .upload_name value 에 선언  -->
+							<div class="inpfilebx">
+								<label for="u_file">파일선택</label>
+								<input type="file" id="u_file" class="upload_hidden">
+								<input class="upload_name" value="선택된 파일 없음" disabled="disabled">
+								<button type="button" class="m_view btn_delete"><span class="sp">삭제</span></button>
+							</div>
+							<!-- Mobile View :: 첨부파일 추가 -->
+							<div class="m_view inpfilebx">
+								<label for="u_file2">파일선택</label>
+								<input type="file" id="u_file2" class="upload_hidden">
+								<input class="upload_name" value="선택된 파일 없음" disabled="disabled">
+								<button type="button" class="m_view btn_delete"><span class="sp">삭제</span></button>
+							</div>
+
+							<!-- PC View :: 첨부파일 리스트 -->
+							<div class="pc_view select_file_area">
+								<!--[D] 선택된 파일명 .ckbx label안에 추가 선언 -->
+								<ul class="file_lst">
+								<li>
+									<span class="ckbx">
+										<input type="checkbox" id="u_file_name1">
+										<label for="u_file_name1" title="">fileName.jpg</label>
+									</span>
+								</li>
+								<li>
+									<span class="ckbx">
+										<input type="checkbox" id="u_file_name2">
+										<label for="u_file_name2" title="">fileName.jpg</label>
+									</span>
+								</li>
+								</ul>
+								<button type="button" class="btn_bor">삭제</button> <!--[D] 클릭 시, 선택된 요소의 부모 li 삭제   -->
+							</div>
+							<ul class="info_lst">
+								<li>상품 불량 및 오배송의 경우, 해당 제품 사진을 등록 부탁드립니다.</li>
+								<li>파일명은 영문만 가능하며, 파일당 최대 500kb의 용량 제한이 있습니다.</li>
+								<li>가로사이즈가 450pixel을 초과하는 경우 자동으로 450픽셀로 조정됩니다.</li>
+								<li>첨부파일은 최대 2개까지 등록가능합니다.</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="btn_bx">
+					<button type="submit" class="btn_black">등록하기</button>
+				</div>
+			</fieldset>
+			</form>
+		</section>
+	</div>
+</div>
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

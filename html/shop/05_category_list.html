@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>카테고리 리스트</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+  <!-- [D] jquery include -->
+</div>
+
+<div class="tab_category2">
+    <!-- [D] jquery include -->
+</div>
+
+<style>
+.category_warp{display:-webkit-flex;display:flex;max-width:1820px;margin:0 auto;padding:0 50px}
+.category_option{width:200px;padding-right:80px}
+
+.category_lst{-webkit-flex:1;flex:1}
+
+@media (max-width:540px) {
+    .category_warp{display:block;padding:0}
+    .category_option{width:auto;padding:0}
+    .category_lst{-webkit-flex:none;flex:none}
+}
+</style>
+<div class="category_warp">
+    <div class="category_option">
+        <div class="category_option_inner">
+            <!-- <div class="nav_category">
+                [D] jquery include
+            </div>-->
+
+            <div class="filter_wrap">
+                <!-- [D] jquery include -->
+            </div>
+        </div>
+    </div>
+
+    <div class="category_lst">
+        <style>
+        .category_tab{border:0}
+        .category_tab:after{display:block;clear:both;content:''}
+        .category_tab .tab_category{-webkit-flex:1;flex:1;border:1px solid #d4d4d4}
+        .category_tab .search_btnbx{width:128px;margin-left:-1px;border:1px solid #d4d4d4;}
+        .category_tab .search_btnbx .resultbx{height:46px;padding-top:14px;border:0}
+        .category_tab .search_btnbx .resultbx:after{top:21px}
+        .category_tab .view_btnbx .btn{width:46px;height:46px;border-left:1px solid #d4d4d4}
+        @media (min-width:1201px){
+            .category_tab{display:-webkit-flex;display:flex}
+        }
+        @media (max-width:1200px){
+            .category_tab{display:block}
+            .category_tab .search_btnbx{float:right;margin-top:-1px}
+
+        }
+        @media (max-width:540px){
+            .category_tab{display:none}
+        }
+        </style>
+        <div class="category_tab">
+            <div class="tab_category">
+                <!-- [D] jquery include -->
+            </div>
+    		<div class="search_btnbx">
+                <div class="dropbx">
+                    <!-- [D] jquery include -->
+                </div>
+    		</div>
+            <style>
+            .view_btnbx{letter-spacing:-4px}
+            .view_btnbx .active{}
+            .svg{overflow:hidden;display:inline-block;line-height:1000em;vertical-align:middle;background-repeat:no-repeat;background-size:100% 100%}
+            .svg_list_01{width:14px;height:14px;background-image:url(../svg/list-icon-01-b.svg)}
+            .svg_list_02{width:20px;height:12px;background-image:url(../svg/list-icon-02-b.svg)}
+            .view_btnbx .svg{opacity:.1}
+            .view_btnbx .active .svg{opacity:1}
+            </style>
+            <!--
+            <div class="view_btnbx">
+                <button type="button" class="btn active"><i class="svg svg_list_01">사각프래임으로 보기</i></button>
+                <button type="button" class="btn "><i class="svg svg_list_02">리스트형태로 보기</i></button>
+            </div>
+            -->
+        </div>
+
+        <style>
+        .prd_section{display:flex;flex-wrap:wrap;margin-top:30px}
+        .prd_section>li{padding-bottom:40px}
+
+        @media (min-width:1401px){
+            .prd_section{margin-left:-3%}
+            .prd_section>li{width:22%;margin-left:3%}
+        }
+        @media (max-width:1400px){
+            .prd_section{margin-left:-3.33%}
+            .prd_section>li{width:30%;margin-left:3.33%}
+        }
+        @media (max-width:540px){
+            .prd_section{margin-left:0}
+            .prd_section>li{width:50%;margin-left:0}
+        }
+        </style>
+
+        <style>
+        /* test */
+        .prd_b2{position:relative}
+        .prd_b2>a{display:block;position:relative;color:#000}
+        .prd_b2 .imgbx{overflow:hidden;position:relative}
+        .prd_b2 .imgbx img{position:absolute;top:0;left:0;right:0;width:100%}
+        .prd_b2 .info{margin-top:20px;font-size:13px;line-height:1.5;color:#000}
+        .prd_b2 .info .brand{margin-bottom:4px;font-weight:bold;text-decoration:underline}
+        .prd_b2 .price{margin-top:11px;font-size:12px;line-height:16px;vertical-align:top}
+        .prd_b2 .price .num{font-size:14px;line-height:18px}
+        .prd_b2 .price .sellprice{color:#303033}
+        .prd_b2 .price .discount .sell{display:block;margin-bottom:2px;color:#a0a0a0}
+        .prd_b2 .price .discount strong{color:#ff4800;font-weight:500}
+        .prd_b2 .heart_area{margin-top:12px;text-align:left}
+        .prd_b2 .heart_area .heart{margin-right:12px}
+        .prd_b2 .prd_brand_go{position:absolute;top:20px;left:0;right:0;font-size:13px;line-height:1.5;color:transparent}
+        @media screen and (max-width: 540px){
+            .prd_b2 .prd_brand_go{display:none}
+        }
+        </style>
+        <!-- 20170726 모바일 텍스트 영역 -->
+        <style type="text/css">
+        .between_prd{position:relative}
+        .between_prd .imgbx{overflow:hidden;position:relative}
+        .between_prd .imgbx img{position:absolute;top:0;left:0;right:0;width:100%}
+        .between_prd .prd_txt{position:absolute;right:20px;bottom:20px;left:20px;padding:20px;background:#fff;font-size:22px;color:#000;line-height:30px}
+        .prd_section .between_cols2{width:60%}
+        @media (min-width:1401px){
+            .prd_section .between_cols2{width:47%}
+        }
+        @media screen and (max-width: 540px){
+            .prd_section .between_cols1,.prd_section .between_cols2{width:100%}
+            .prd_section .between_cols1 .imgbx,.prd_section .between_cols2 .imgbx{padding-top:60% !important}
+            .between_prd .prd_txt{padding:0;background:none;font-size:20px;color:#fff;line-height:26px}
+        }
+        </style>
+        <!-- // 20170726 모바일 텍스트 영역 -->
+        <!--  상품 리스트  -->
+        <ul class="prd_section">
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=250" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 250
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=260" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 260
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=270" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 270
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=280" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 280
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=290" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 290
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=300" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 300
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=600" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 600
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="https://img.29cm.co.kr/contents/itemDetail/201711/cut4_320171120172546.jpg?width=600" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                이미지 사이즈 600
+                            </div>
+                            <div class="name">
+                                Cloud, Matte Black Col.<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능
+                            </div>
+                            <div class="price">
+                                <!-- [D] 판매가  -->
+                                <div class="sellprice">
+                                    <strong><span class="num">207,000</span>원</strong>
+                                </div>
+
+                                <!-- [D] 할인가
+                                <div class="discount">
+                                    <span class="sell"><span class="num">300,000</span>원</span>
+                                    <strong><span class="num">10% 207,000</span>원</strong>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                    <!-- [D]  브랜드 샾으로 이동 피씨만 대응 필요 이미지 비율의 맞춰 margin-top:120% 값변경 필수 -->
+                    <a href="#ccc" target="_blank" title="아워그레이" class="prd_brand_go" style="margin-top:120%">브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능</a>
+
+                    <div class="heart_area">
+                        <button type="button" class="heart">
+                            <i class="svg">하트</i>
+                            <span class="count">3</span>
+                        </button>
+
+                        <button type="button" class="review">
+                            <i class="svg">리뷰</i>
+                            <span class="count">35</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="between_cols1">
+                <!--[D] 20170726 모바일 텍스트 영역 1단 // 부모 li에 .between_cols1 추가 -->
+                <div class="between_prd">
+                    <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 padding-top:% 로 넣어줘야 함 -->
+                    <div class="imgbx" style="padding-top:120%">
+                        <img src="https://img.29cm.co.kr/contents/itemDesign/201705/deg_120170518183902.jpg?width=400" alt=""/>
+                    </div>
+                    <p class="prd_txt">400 / </p>
+                </div>
+                <!-- // 20170726 모바일 텍스트 영역 -->
+            </li>
+            <li class="between_cols1">
+                <!--[D] 20170726 모바일 텍스트 영역 1단 // 부모 li에 .between_cols1 추가 -->
+                <div class="between_prd">
+                    <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 padding-top:% 로 넣어줘야 함 -->
+                    <div class="imgbx" style="padding-top:120%">
+                        <img src="https://img.29cm.co.kr/contents/itemDesign/201705/deg_120170518183902.jpg?width=500" alt=""/>
+                    </div>
+                    <p class="prd_txt">500 / </p>
+                </div>
+                <!-- // 20170726 모바일 텍스트 영역 -->
+            </li>
+            <li class="between_cols1">
+                <!--[D] 20170726 모바일 텍스트 영역 1단 // 부모 li에 .between_cols1 추가 -->
+                <div class="between_prd">
+                    <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 padding-top:% 로 넣어줘야 함 -->
+                    <div class="imgbx" style="padding-top:120%">
+                        <img src="https://img.29cm.co.kr/contents/itemDesign/201705/deg_120170518183902.jpg?width=600" alt=""/>
+                    </div>
+                    <p class="prd_txt">600 / </p>
+                </div>
+                <!-- // 20170726 모바일 텍스트 영역 -->
+            </li>
+            <li class="between_cols2">
+                <!--[D] 20170726 모바일 텍스트 영역 2단 // 부모 li에 .between_cols2추가  -->
+                <div class="between_prd">
+                    <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 padding-top:% 로 넣어줘야 함 -->
+                    <div class="imgbx" style="padding-top:60%">
+                        <img src="//image.29cm.co.kr/contents/site/201704/20170412115247.jpg" alt=""/>
+                    </div>
+                    <p class="prd_txt">봄에 입기 좋은 셔츠<br>50%</p>
+                </div>
+                <!-- // 20170726 모바일 텍스트 영역 -->
+            </li>
+            <li>
+                <div class="prd_b">
+                    <!-- [D] jquery include -->
+                </div>
+            </li>
+            <li>
+                <div class="prd_b">
+                    <!-- [D] jquery include -->
+                </div>
+            </li>
+            <li>
+                <div class="prd_b">
+                    <!-- [D] jquery include -->
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_720170605155907.jpg" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능
+                            </div>
+                            <div class="name">
+                                Cloud, Matte Black Col.<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능
+                            </div>
+                            <div class="price">
+                                <!-- [D] 판매가  -->
+                                <div class="sellprice">
+                                    <strong><span class="num">207,000</span>원</strong>
+                                </div>
+
+                                <!-- [D] 할인가
+                                <div class="discount">
+                                    <span class="sell"><span class="num">300,000</span>원</span>
+                                    <strong><span class="num">10% 207,000</span>원</strong>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                    <!-- [D]  브랜드 샾으로 이동 피씨만 대응 필요 이미지 비율의 맞춰 margin-top:120% 값변경 필수 -->
+                    <a href="#ccc" target="_blank" title="아워그레이" class="prd_brand_go" style="margin-top:120%">브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능</a>
+
+                    <div class="heart_area">
+                        <button type="button" class="heart">
+                            <i class="svg">하트</i>
+                            <span class="count">3</span>
+                        </button>
+
+                        <button type="button" class="review">
+                            <i class="svg">리뷰</i>
+                            <span class="count">35</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prd_b2">
+                    <a href="#red">
+                        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+                        <div class="imgbx" style="padding-top:120%">
+                            <img src="//image.29cm.co.kr/contents/itemDetail/201706/cut4_720170605155907.jpg" alt=""/>
+                        </div>
+                        <div class="info">
+                            <div class="brand">
+                                브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능
+                            </div>
+                            <div class="name">
+                                Cloud, Matte Black Col.
+                            </div>
+                            <div class="price">
+                                <!-- [D] 판매가  -->
+                                <div class="sellprice">
+                                    <strong><span class="num">207,000</span>원</strong>
+                                </div>
+                                <!-- [D] 할인가
+                                <div class="discount">
+                                    <span class="sell"><span class="num">300,000</span>원</span>
+                                    <strong><span class="num">10% 207,000</span>원</strong>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </a>
+                    <!-- [D]  브랜드 샾으로 이동 피씨만 대응 필요 이미지 비율의 맞춰 margin-top:120% 값변경 필수 -->
+                    <a href="#ccc" target="_blank" title="아워그레이" class="prd_brand_go" style="margin-top:120%">브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능<br>두줄로 가도 대응 가능</a>
+
+                    <div class="heart_area">
+                        <button type="button" class="heart">
+                            <i class="svg">하트</i>
+                            <span class="count">3</span>
+                        </button>
+
+                        <button type="button" class="review">
+                            <i class="svg">리뷰</i>
+                            <span class="count">35</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+      <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+
+</body>
+</html>

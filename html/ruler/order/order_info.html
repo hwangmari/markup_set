@@ -1,0 +1,402 @@
+<!-- 주문고객정보 -->
+<div class="order__table">
+    <table>
+        <colgroup>
+            <col style="width:15%">
+            <col style="width:75%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row"><label for="OrderName"><span class="icon-star">*</span> 보내는 사람</label></th>
+                <td>
+                    <div class="input--text">
+                        <input id="OrderName" name="OrderName" type="text" maxlength="50" value="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="o-htel1"><span class="icon-star">*</span> 연락처</label></th>
+                <td>
+                    <div class="info--phone">
+                        <div class="input--tel">
+                            <input id="o-htel1" class="mid" name="OrderHpNo1" type="text" maxlength="3" value="010" title="핸드폰 첫자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="o-htel2" class="mid" name="OrderHpNo2" type="text" maxlength="4" value="" title="핸드폰 중간자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="o-htel3" class="mid" name="OrderHpNo3" type="text" maxlength="4" value="" title="핸드폰 끝자리">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="OrderEmail"><span class="icon-star">*</span> 이메일</label></th>
+                <td>
+                    <div class="input--text">
+                        <input name="OrderEmail" id="OrderEmail" type="text" maxlength="50" value="">
+                    </div>
+                    <ul class="order-notice">
+                        <li>SNS 및 이메일로 주문 진행상황을 안내해드립니다</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+.receiver__tab{margin-top:40px;width:100%;min-height:44px;border-bottom:1px solid #000}
+.receiver__tab>ul{overflow:hidden}
+.receiver__tab li{position:relative;float:left;width:126px;height:45px;text-align:center;font-size:0.75rem}
+.receiver__tab li label{display:block;cursor:pointer}
+.receiver__tab li input{position:absolute;top:0;left:0;-webkit-appearance:none;border:0;border-radius:0;margin:0;width:0;height:0}
+.receiver__tab li input+span{position:absolute;top:0;left:0;box-sizing:border-box;display:inline-block;width:100%;height:44px;line-height:44px;border:1px solid #d4d4d4;border-bottom:0;color:#a0a0a0;background-color:#fff}
+.receiver__tab li input:checked+span{margin-top:-1px;top:1px;height:45px;line-height:45px;color:#000;border:1px solid #000;border-bottom:1px solid #fff}
+.receiver__tab li+li input+span{border-left:0}
+
+
+.order-memo {
+    padding: 20px 0;
+}
+.order-memo .radio-basic label {
+    display: block;
+}
+.order-memo .radio-basic label+label {
+    margin-top: 10px;
+}
+.order-memo .input-basic {
+    margin-top: 10px;
+}
+</style>
+
+<!-- 배송지정보 -->
+<div class="receiver__tab">
+    <ul>
+        <li>
+            <label>
+                <input type="radio" id="rdDlvOpt" checked="CHECKED" name="rdDlvOpt" onclick="$('input[name=rdDlvOpt]:checkbox').attr('checked', false);if(this.checked==true){selectAddr('','','(','','','','','','010','','');}">
+                <span>기본배송지</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input id="rdDlvOpt" name="rdDlvOpt" onclick="copyDefaultinfo(this);" type="radio" value="N">
+                <span>새로운배송지</span>
+            </label>
+        </li>
+    </ul>
+    <div id="postAddress" style="display:none;border:1px solid;width:90%;height:100%;margin:5px -30px;position:relative;-webkit-overflow-scrolling:touch;">
+        <iframe id="postAddressframe" src="" style="width:100%;height:100%;"></iframe>
+    </div>
+</div>
+
+<div class="order__table">
+    <table>
+        <colgroup>
+            <col style="width:15%">
+            <col style="width:75%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>이전 배송지</th>
+                <td><button type="button" name="" class="order-button button--delivery" onclick="copyDefaultinfo(this);">배송 목록에서 선택</button></td>
+            </tr>
+            <tr>
+                <th><label for="ReceiveName"><i class="icon-star">*</i> 받는 사람</label></th>
+                <td>
+                    <div class="input--text">
+                        <input id="ReceiveName" name="ReceiveName" type="text" maxlength="16" value="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="r-htel1"><i class="icon-star">*</i> 연락처</label></th>
+                <td>
+                    <div class="info--phone">
+                        <div class="input--tel">
+                            <input id="r-htel1" class="mid" name="ReceiveHpNo1" type="text" maxlength="4" value="010" title="핸드폰 첫자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="r-htel2" class="mid" name="ReceiveHpNo2" type="text" maxlength="4" value="" title="핸드폰 중간자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="r-htel3" class="mid" name="ReceiveHpNo3" type="text" maxlength="4" value="" title="핸드폰 끝자리">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="r-htel-add1">추가번호 (선택)</label></th>
+                <td>
+                    <div class="info--phone">
+                        <div class="input--tel">
+                            <input id="r-htel-add1" class="mid" name="ReceiveTelNo1" type="text" maxlength="4" value="" title="연락처 첫자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="r-htel-add2" class="mid" name="ReceiveTelNo2" type="text" maxlength="4" value="" title="연락처 중간자리">
+                        </div> –
+                        <div class="input--tel">
+                            <input id="r-htel-add3" class="mid" name="ReceiveTelNo3" type="text" maxlength="4" value="" title="연락 끝자리">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="f-Z1"><i class="icon-star">*</i> 배송주소</label></th>
+                <td>
+                    <div class="info--address">
+                        <div class="input-zipcode">
+                            <div class="input--text input--search">
+                                <input id="f-Z1" name="ReceiveZip1" type="text" value="" readonly=""> – <input id="f-Z2" name="ReceiveZip2" type="text" value="" readonly="">
+                            </div>
+                            <button type="button" name="" class="order-button" onclick="sample3_execDaumPostcode();">주소 찾기</button>
+                        </div>
+                        
+                        <style>
+                        fieldset{padding:0;border:0}
+                        .blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+                        .pc_view{display:block}
+                        .post_wrap{max-width:480px;min-height:420px;margin-top:10px;padding:0 20px 40px;border:1px solid #a0a0a0;box-sizing:border-box}
+                        .post_wrap .srch_area{position:relative;padding:10px 60px 10px 0;border-bottom:2px solid #000;}
+                        .post_wrap .srch_area .inpbx{height:40px;border:0;background:rgba(255,0,0,.3)}
+                        .post_wrap .srch_area .btn_search{position:absolute;top:0;right:0;width:26px;height:60px;text-align:right}
+                        .post_wrap .srch_area .btn_search .sp{display:inline-block;width:16px;height:17px;background:red;font-size:1px;line-height:9999px;vertical-align:middle;white-space:nowrap}
+                        .post_wrap .srch_area .btn_reset{position:absolute;top:0;right:30px;width:26px;height:60px}
+                        .post_wrap .srch_area .btn_reset .sp{display:inline-block;width:16px;height:16px;background:red;font-size:1px;line-height:9999px;vertical-align:middle;white-space:nowrap}
+                        .post_wrap .txt{margin-top:22px;font-size:14px;color:#303033;line-height:24px}
+                        .post_wrap .txt strong,.post_wrap .txt .point{display:block}
+                        .post_wrap .point{font-weight:normal;color:#ff4800}
+                        .post_wrap .srch_info{line-height:24px}
+                        .post_wrap .srch_info dt{margin-top:20px;font-size:14px;color:#303033}
+                        .post_wrap .srch_info dd{font-size:12px;color:#ff4800}
+                        .post_wrap .addr_lst li{border-top:1px solid #d4d4d4}
+                        .post_wrap .addr_lst li:first-child{border-top:0}
+                        .post_wrap .addr_lst a{display:block;font-size:12px;color:#303033;line-height:52px}
+                        .post_wrap .addr_lst a:hover{background:#f9f9f9}
+                        .post_wrap .addr_num{font-size:16px}
+                        .post_wrap .addr_num strong{font-weight:500;color:#303033}
+                        .post_wrap .addr_num em{font-weight:500;color:#a0a0a0}
+                        .post_wrap .addr_total li{position:relative;margin-top:10px;padding:20px 18px;border:1px solid #d4d4d4}
+                        .post_wrap .addr_total .addr{margin-top:5px;font-size:14px;line-height:24px}
+                        .post_wrap .addr_total .addr button{line-height:24px;text-align:left}
+                        .post_wrap .addr_total .addr button:hover{text-decoration:underline}
+                        .post_wrap .addr_total dt{float:left;min-width:49px;color:#375fff}
+                        .post_wrap .addr_total dd{overflow:hidden}
+                        @media screen and (max-width:540px){
+                            .pc_view{display:none}
+                            .post_wrap{min-height:300px}
+                        }
+                        </style>
+                        <!--[D] 주소찾기 버튼 눌렀을 경우, 검색 할 주소 미입력 상태 -->
+                        <div class="post_wrap">
+                            <h4 class="blind">우편번호 검색</h4>
+                            <div class="srch_area">
+                                <div class="inpbx">
+                                    INPUT jquery include
+                                    <!-- [D] jquery include -->
+                                </div>
+                                <button type="button" class="btn_search"><span class="sp">검색</span></button>
+                            </div>
+                            <div class="view_area">
+                                <p class="txt">아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.</p>
+                                <dl class="srch_info">
+                                    <dt>도로명 + 건물번호</dt>
+                                    <dd>예) 판교역로 235,  제주 첨단로 242</dd>
+                                    <dt>지역명(동/리) + 번지</dt>
+                                    <dd>예) 삼평동 681, 제주 영평동 2181</dd>
+                                    <dt>지역명(동/리) + 건물명(아파트명)</dt>
+                                    <dd>예) 분당 주공, 연수동 주공3차</dd>
+                                    <dt>사서함명 + 번호</dt>
+                                    <dd>예) 분당우체국사서함 1~100</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //주소찾기 버튼 눌렀을 경우, 검색 할 주소 미입력 상태 -->
+                        
+                        <!--[D] 주소 입력 시 -->
+                        <div class="post_wrap">
+                            <h4 class="blind">우편번호 검색</h4>
+                            <div class="srch_area">
+                                <div class="inpbx">
+                                    INPUT jquery include
+                                    <!-- [D] jquery include -->
+                                </div>
+                                <button type="button" class="btn_reset"><span class="sp">검색 단어 지우기</span></button>
+                                <button type="button" class="btn_search"><span class="sp">검색</span></button>
+                            </div>
+                            <div class="view_area">
+                                <ul class="addr_lst">
+                                    <li><a href="#">서울특별시 은평구 <strong class="point">구산동</strong></a></li>
+                                    <li><a href="#">인천광역시 부평구 <strong class="point">구산동</strong></a></li>
+                                    <li><a href="#">경기도 고양시 일산서구 <strong class="point">구산동</strong></a></li>
+                                    <li><a href="#">경상북도 청송군 <strong class="point">구산동</strong>로</a></li>
+                                    <li><a href="#">경상남도 김해시 <strong class="point">구산동</strong></a></li>
+                                    <li><a href="#">제주특별자치도 제주시 <strong class="point">구산동</strong>길</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //주소 입력 시 -->
+
+                        <!--[D] 검색결과 많을 경우 -->
+                        <div class="post_wrap">
+                            <h4 class="blind">우편번호 검색 결과</h4>
+                            <div class="srch_area">
+                                <div class="inpbx">
+                                    INPUT jquery include
+                                    <!-- [D] jquery include -->
+                                </div>
+                                <button type="button" class="btn_reset"><span class="sp">검색 단어 지우기</span></button>
+                                <button type="button" class="btn_search"><span class="sp">검색</span></button>
+                            </div>
+                            <div class="view_area">
+                                <p class="txt">
+                                    <strong>검색결과가 많습니다.</strong>
+                                    검색어에 아래와 같은 조합을 이용하시면 더욱 정확한 결과가 검색됩니다.   
+                                    <span class="point">‘도로명+건물번호’,   ‘지역명+지번’,   ‘지역명+건물명(아파트명)’, <br class="pc_view">‘사서함명+번호’</span>
+                                </p>
+                                <ul class="addr_total">
+                                    <li>
+                                        <p class="addr_num">
+                                            <span class="blind">새 우편번호</span> <strong>03428</strong>
+                                            <span class="blind">구 우편번호</span> <em>(122-820)</em>
+                                        </p>
+                                        <dl class="addr">
+                                            <dt>도로명</dt>
+                                            <dd><button type="button">서울 은평구 갈현로 109</button></dd>
+                                            <dt>지번</dt>
+                                            <dd><button type="button">서울 은평구 구산동 26-24</button></dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">
+                                            <span class="blind">새 우편번호</span> <strong>03428</strong>
+                                            <span class="blind">구 우편번호</span> <em>(122-820)</em>
+                                        </p>
+                                        <dl class="addr">
+                                            <dt>도로명</dt>
+                                            <dd><button type="button">서울 은평구 갈현로 109</button></dd>
+                                            <dt>지번</dt>
+                                            <dd><button type="button">서울 은평구 구산동 26-24</button></dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <p class="addr_num">
+                                            <span class="blind">새 우편번호</span> <strong>03428</strong>
+                                            <span class="blind">구 우편번호</span> <em>(122-820)</em>
+                                        </p>
+                                        <dl class="addr">
+                                            <dt>도로명</dt>
+                                            <dd><button type="button">서울 은평구 갈현로 109</button></dd>
+                                            <dt>지번</dt>
+                                            <dd><button type="button">서울 은평구 구산동 26-24</button></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //검색결과 많을 경우 -->
+                        
+                        <!--[D] 검색결과 없을 경우 -->
+                        <div class="post_wrap">
+                            <h4 class="blind">우편번호 검색</h4>
+                            <div class="srch_area">
+                                <div class="inpbx">
+                                    INPUT jquery include
+                                    <!-- [D] jquery include -->
+                                </div>
+                                <button type="button" class="btn_reset"><span class="sp">검색 단어 지우기</span></button>
+                                <button type="button" class="btn_search"><span class="sp">검색</span></button>
+                            </div>
+                            <div class="view_area">
+                                <p class="txt">검색결과가 없습니다. 검색어에 잘못된 철자가 없는지, <br>정확한 주소인지 다시 한번 확인해 주세요.</p>
+                            </div>
+                        </div>
+                        <!-- //검색결과 없을 경우 -->
+
+                          <!--  다음 우편번호 넣기 2015.04.14 -->
+                          <div id="wrap" style="display:none;border:1px solid;width:75%;height:300px;margin:5px 0;position:relative;-webkit-overflow-scrolling:touch;">
+                              <img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
+                          </div>
+                          <!--  다음 우편번호 넣기 2015.04.14 -->
+
+                        <div class="input--text">
+                            <input id="ReceiveAddr1" name="ReceiveAddr1" type="text" maxlength="100" title="주소 입력" value="">
+                        </div>
+                        <div class="input--text">
+                            <input id="ReceiveAddr2" name="ReceiveAddr2" type="text" maxlength="100" title="상세주소 입력" placeholder="상세주소 입력" value="">
+                        </div>
+                        <div class="checkbox-basic checkbox-detail">
+                            <label for="checkdetailaddress">
+                                <input type="checkbox" name="checkdetailaddress" id="checkdetailaddress" value="1" class="checkbox">
+                                <span class="label-text">상세주소 입력하지 않음</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-basic checkbox-save">
+                            <label for="saveaddress">
+                                <input type="checkbox" id="saveaddress" name="saveaddress" value="1" class="checkbox">
+                                <span class="label-text" id="saveAddressText">기본배송지로 설정 ( 회원정보 주소가 수정됩니다.)</span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="f-Z1">배송요청사항 선택</label></th>
+                <td>
+
+                    <div class="order-memo">
+
+                        <div class="radio-basic">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="deliveryMsg"
+                                    id=""
+                                    value=""
+                                    class="radio"
+                                    onclick="$('#EtcAsk').val('부재 시 경비실에 맡겨 주세요.');">
+                                <span class="label-text">부재 시 경비실에 맡겨 주세요.</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="deliveryMsg"
+                                    id=""
+                                    value=""
+                                    class="radio"
+                                    onclick="$('#EtcAsk').val('부재 시 전화 또는 문자 주세요.');">
+                                <span class="label-text">부재 시 전화 또는 문자 주세요.</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="deliveryMsg"
+                                    id=""
+                                    value=""
+                                    class="radio"
+                                    onclick="$('#EtcAsk').val('택배함에 넣어 주세요.');">
+                                <span class="label-text">택배함에 넣어 주세요.</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="deliveryMsg"
+                                    id=""
+                                    value=""
+                                    class="radio"
+                                    onclick="$('#EtcAsk').val('');"
+                                    checked="checked">
+                                <span class="label-text">직접 입력</span>
+                            </label>
+                            <div class="input-basic">
+                                <input id="EtcAsk" name="EtcAsk" type="text" maxlength="100">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

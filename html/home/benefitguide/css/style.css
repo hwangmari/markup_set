@@ -1,0 +1,371 @@
+/* clear */
+.benefit_lst li:after,
+.brand_name:after,
+.brand_go_btn:after,
+.member_wrap .member_wrapin:after,
+.dsc_area_v2:after,
+.footer_wrap:after,
+.member_section .dsc_area_v2:after,
+.line_area ul:after{clear:both;display:block;content:''}
+
+/* header */
+.benefit_head_wrap{position:fixed;top:0;left:0;right:0;z-index:10;height:150px}
+.benefit_head{height:100px;background:#000;color:#fff}
+.benefit_head h1{padding:30px 0;text-align:center;font-size:35px;font-weight:normal}
+.benefit_nav{background:#000;height:50px;line-height:50px}
+.benefit_nav .m_active{display:none}
+.benefit_nav a{display:block;width:100%;color:#b9b9b9}
+.benefit_nav ul{margin:0 auto;width:1000px;}
+.benefit_nav li{float:left;width:11.1%;text-align:center}
+/* nav bar 활성화 효과 */
+.benefit_nav .active{background:#f9f9f9}
+.benefit_nav .active a{color:#000}
+@media screen and (min-width:541px){
+    .benefit_head_wrap{min-width:1000px}
+}
+@media screen and (max-width:540px){
+    .benefit_head_wrap{height:auto}
+    .benefit_head{height:60px}
+    .benefit_head h1{padding:10px 0 10px 10px;text-align:left;font-size:15px}
+    .benefit_head span{display:block}
+    .benefit_nav{background:#fff;height:auto;line-height:55px}
+    .benefit_nav .m_active{display:block;position:relative;color:#000;font-weight:bold}
+    .benefit_nav a{width:95%;padding-left:5%}
+    .benefit_nav ul{display:none;margin:0;width:100%;}
+    .benefit_nav:hover ul{display:block}
+    .benefit_nav li{float:none;text-align:left;width:100%;}
+    .benefit_nav .m_active{border-bottom:1px solid #f4f4f4;}
+    .benefit_nav li:last-child{border-bottom:1px solid #f4f4f4;padding-bottom:20px}
+    /* nav bar 활성화 효과 */
+    .benefit_nav .active{display:none}
+    .m_active:after{position:absolute;top:50%;right:10px;width:10px;height:10px;background:url(img/open-g.png) no-repeat;content:''}
+}
+
+/* layout  */
+.benefit_section{max-width:1060px;margin:0 auto;box-sizing:border-box}
+.benefit_section img{max-width:100%;vertical-align:top}
+.tit_area{padding-top:30px;border-top:4px solid #000}
+.tit_area_line{padding-top:33px;border-top:1px solid #ccc}
+.tit_area_line .tit_area,.tit_area_line .dsc_area{border:none}
+.dsc_area> p{padding-bottom:50px;font-size:14px;line-height:24px;color:#303033}
+@media screen and (min-width:541px){
+    .benefit_wrap{padding-top:250px;background:#f9f9f9}
+    .benefit_lst{padding-bottom:100px}
+    .benefit_lst li{padding-bottom:104px}
+    .benefit_section{min-width:1060px;padding:0 30px}
+    .tit_area{float:left;width:300px;margin-right:50px;font-size:36px}
+    .tit_area h2{font-size:36px;line-height:43px}
+    .dsc_area{overflow:hidden;padding-top:33px;border-top:1px solid #ccc}
+    .benefit_section .top_dsc{padding-bottom:80px}
+    .dsc_area .payco_dc_dsc{padding:40px 0 30px 0}
+}
+@media screen and (max-width:540px){
+    .benefit_wrap{padding-top:146px;background:#fff}
+    .benefit_lst{padding-bottom:40px}
+    .benefit_lst li{padding-bottom:70px}
+    .benefit_section{padding:0 20px}
+    .tit_area h2{padding-bottom:30px;font-size:38px;line-height:45px}
+    .dsc_area p{padding-bottom:30px}
+    .benefit_section .top_dsc{padding-bottom:0}
+     .guide_section .tit_area_line,.guide_section .frst_area,.member .tit_area{padding-top:0}
+     .frst_buy .coupon_container .coupon_wrap{margin-bottom:0}
+}
+
+/* btn */
+.btn{display:block;position:relative;vertical-align:top;box-sizing:border-box}
+.btn:after{position:absolute;top:50%;border-width:1px 0 0 1px;border-style:solid;transform:rotate(135deg);content:''}
+.btn_dkgray{width:280px;height:60px;padding-left:20px;background:#333;font-size:14px;color:#fff;;line-height:60px;}
+.btn_dkgray:after{right:20px;width:10px;height:10px;margin-top:-5px;border-color:#fff}
+.btn_gray{width:280px;height:60px;padding-left:20px;background:#5b5b5b;font-size:14px;color:#fff;;line-height:60px}
+.btn_gray:after{right:20px;width:10px;height:10px;margin-top:-5px;border-color:#fff}
+.btn_wh{width:195px;height:40px;padding-left:12px;border:1px solid #e9e9e9;color:#a0a0a0;font-size:12px;line-height:40px}
+.btn_wh:after{right:12px;width:6px;height:6px;margin-top:-3px;border-color:#adabab}
+.brand_go_btn .btn{display:inline-block;height:50px;font-size:14px;color:#fff;;line-height:50px;text-align:center}
+.brand_go_btn .btn:after{display:none}
+.btn_gray2{background:#5b5b5b}
+.btn_og{background:#fa5818}
+@media screen and (min-width:541px){
+    .coupon_wrap .btn_wh{position:absolute;bottom:0}
+    .brand_go_btn .btn{width:130px;margin-left:6px}
+}
+@media screen and (max-width:540px){
+    .coupon_wrap .btn_wh{position:relative}
+    .brand_go_btn{overflow:hidden;margin-left:-1%}
+    .brand_go_btn .btn{float:left;width:49%;margin-left:1%}
+    .guide_section .btn_dkgray:first-child{margin-bottom:10px}
+}
+
+/* belit */
+.belit_li li{position:relative;padding:0 0 10px 20px;color:#666}
+.belit_li li:after{position:absolute;top:5px;left:5px;width:4px;height:4px;border-radius:50%;background:#5b5b5b;content:''}
+.belit_li .point{color:#ff4700}
+.belit_li .point:after{background:#ff4700}
+.coupon_wrap .belit_li{padding:20px 0 10px 0}
+.coupon_wrap .belit_li li{padding:0 0 0 20px;font-size:14px;line-height:24px}
+.coupon_wrap .belit_li li:after{top:10px}
+.frst_buy .belit_li{padding-bottom:30px}
+.dsc_wt_belit h2{padding:40px 0 30px;font-size:14px;color:#5b5b5b}
+.dsc_wt_belit li{margin-right:30px;font-size:12px;white-space:pre-wrap}
+@media screen and (min-width:541px){
+    .dsc_wt_belit{max-width:1000px;max-width:1000px;margin-bottom:220px;padding:0 0 40px 30px;background:#fff}
+}
+@media screen and (max-width:540px){
+    .dsc_wt_belit{margin-bottom:80px;line-height:22px}
+    .dsc_wt_belit .belit_li li:after{top:10px}
+}
+
+/* common text */
+.top_dsc{color:#303033;font-size:17px;line-height:28px}
+.next_btn_v2{position:absolute;top:14px;right:10px}
+.dsc_area .img{overflow:hidden;background-repeat:no-repeat;text-indent:101%;white-space:nowrap}
+.dsc_area_v2 li{min-width:220px;padding-bottom:0;font-size:14px;line-height:25px;color:#9b9b9b}
+.dsc_area_v2 li span{color:#000}
+.payco_dc_dsc{clear:both;padding:40px 0 30px 0}
+
+/* table code */
+.tb_layout{table-layout:fixed;width:100%;margin-bottom:47px}
+.tb_layout caption{padding:50px 0 60px 0;font-weight:bold;font-size:30px;color:#000;text-align:left}
+.tb_layout th{padding:20px 4px;border-top:1px solid #c7c7c7;background:#e0e0e0;font-weight:normal;color:#444;vertical-align:middle}
+.tb_layout td{padding:17px 0;border-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;text-align:center;vertical-align:middle}
+.tb_layout .date{border-left:0;font-weight:bold;color:rgba(68,68,68,0.5)}
+.tb_layout th,.tb_layout td{font-size:70%}
+@media screen and (min-width:541px){
+    .tb_layout span{color:#444}
+    .tb_layout td span{display:inline}
+    .tb_layout p{line-height:25px}
+    .tb_layout col:first-child{width:15%}
+    .tb_layout col:last-child{width:30%}
+}
+@media screen and (max-width:540px){
+    .tb_layout td{font-size:12px;line-height:18px}
+    /*.tb_layout th{font-size:}*/
+    .tb_layout col{width:20%}
+    .tb_layout_v2 .tb_col1{width:12.5%}
+    .tb_layout_v2 .tb_col2,.tb_layout_v2 .tb_col3,.tb_layout_v2 .tb_col4{width:15%}
+    .tb_layout_v2 .tb_col5{width:17%}
+    .tb_layout_v2 .tb_col6{width:21.79%}
+    .tb_layout td span{display:none}
+}
+
+/* coupon code */
+.coupon_container{position:relative}
+.coupon_container:after{clear:both;display:block;content:''}
+.coupon_inner{display:flex;position:relative;height:142px;padding:20px;background-repeat:no-repeat;white-space:nowrap;align-items:center;box-sizing:border-box}
+.coupon_inner .benefit_list p{font-size:28px;line-height:31px}
+.coupon_inner1,.coupon_inner2{background:#ff4700}
+.coupon_inner3,.coupon_inner4,.coupon_inner6{background:#303033}
+.coupon_inner1,.coupon_inner4{position:relative;overflow:hidden}
+.coupon_inner1 .coupon_tx_warp:after,.coupon_inner4 .coupon_tx_warp:after{position:absolute;top:50%;right:-20px;width:40px;height:40px;margin-top:-20px;border-radius:50%;content:''}
+.coupon_inner1 .coupon_tx_warp:before,.coupon_inner2 .coupon_tx_warp:before{position:absolute;top:20px;bottom:20px;width:1px;content:''}
+.coupon_tx_warp p{padding:0;font-size:14px;color:#fff}
+.coupon_tx_warp .small_text{font-size:12px;color:#fff;font-weight:100}
+.coupon_tx_warp .dc_num{padding-top:5px;font-size:70px}
+.coupon_tx_warp .per_num{font-size:40px;color:#fff}
+.coupon_tx_warp .dc_eg{padding-top:25px;font-size:48px}
+.coupon_tx_warp .per_eg{font-size:30px;color:#fff}
+.coupon_tx_warp .smaill_title{font-size:10px;color:rgba(255,255,255,0.2);padding-bottom:20px}
+.coupon_tx_warp .dc_num_og{font-size:36px;color:#ff4800;line-height:20px}
+.coupon_tx_warp .won_num_og{font-size:12px;color:#ff4800}
+.coupon_tx_warp .small_text_og{font-size:14px;color:#fff}
+.coupon_inner3 span{display:block;overflow:hidden;margin:0 auto;background:url(https://img.29cm.co.kr/next29cm/benefit/mb_static_brand.png)no-repeat;background-size:256px 156px;text-indent:101%;white-space:nowrap}
+.coupon_inner6 span{display:block;overflow:hidden;margin:0 auto;text-indent:101%;white-space:nowrap}
+.logo_hdcard{width:162px;height:34px}
+.logo_payco{width:108px;height:24px}
+.logo_npay{width:112px;height:38px}
+.logo_free{width:112px;height:24px}
+.logo_special{width:96px;height:54px}
+.coupon_inner3 .logo_hdcard{background-position:0 -53px}
+.coupon_inner3 .logo_payco{background-position:4px 0}
+.coupon_inner3 .logo_npay{background-position:0 -118px}
+.coupon_inner3 .logo_free{background-position:-146px 0}
+.coupon_inner6 img{width:120px;margin:0 auto}
+@media screen and (min-width:541px){
+    .coupon_wrap:nth-child(2n-1){padding-right:50px}
+    .coupon_container{margin-bottom:40px;padding-bottom:40px}
+    .frst_buy .coupon_container{margin-bottom:0;padding-bottom:0}
+    .guide .benefit_lst>li{padding-bottom:20px}
+    .coupon_wrap{float:left}
+    .coupon_wrap>p:first-child{padding-bottom:20px}
+    .coupon_inner{min-width:300px}
+    .coupon_inner1 .coupon_tx_warp:after,.coupon_inner4 .coupon_tx_warp:after{background:#f9f9f9}
+    .guide_section .coupon_inner1 .coupon_tx_warp:before,.guide_section .coupon_inner2 .coupon_tx_warp:before{background:#ff6226}
+    .guide .coupon_container:nth-child(n+2){overflow:hidden;min-width:650px;padding-top:40px;border-top:1px solid transparent;border-image:url(../img/dash.png) 1 repeat}
+    .coupon_wrap .belit_li{width:300px}
+    .coupon_inner1 .coupon_tx_warp:before,.coupon_inner2 .coupon_tx_warp:before,.coupon_inner4 .coupon_tx_warp:before{right:60px}
+}
+@media screen and (max-width:540px){
+    .coupon_inner1 .coupon_tx_warp:after,.coupon_inner4 .coupon_tx_warp:after{background:#fff}
+    .coupon_inner1 .coupon_tx_warp:before,.coupon_inner2 .coupon_tx_warp:before{background:#ff6226}
+    .coupon_inner4 .coupon_tx_warp:before{background:#fff}
+    .coupon_container{margin-bottom:50px}
+    .coupon_container .coupon_wrap{margin-bottom:50px}
+    .coupon_container:nth-child(2n){padding-top:50px}
+    .coupon_container:last-child{margin-bottom:0}
+    .coupon_inner{width:100%}
+    .coupon_inner1 .coupon_tx_warp:before,.coupon_inner2 .coupon_tx_warp:before,.coupon_inner4 .coupon_tx_warp:before{right:50px}
+    .coupon_wrap{padding-top:40px}
+    .payco_section .coupon_container,.payco_section .coupon_wrap{padding-top:0;margin-bottom:30px}
+    .payco_section .coupon_wrap>p{padding-bottom:10px}
+    .coupon_wrap:nth-child(2n-1){padding:0}
+}
+
+/* 01 guide_section */
+@media screen and (min-width:541px){
+}
+@media screen and (max-width:540px){
+}
+
+/* 02 brand_section */
+.brand_section .benefit_lst li{padding-bottom:50px}
+.brand_section .dsc_area{padding-top:20px;border-top:1px solid #ccc}
+.brand_section .brand_ko{color:#303033}
+.brand_section .brand_en{color:#5b5b5b}
+.brand_section .last_li{font-size:14px;color:#5b5b5b}
+.brand_section .guide_lst{position:relative}
+.brand_section .point{color:#ff4700}
+@media screen and (min-width:541px){
+    .brand_section .top_dsc{padding-bottom:70px}
+    .brand_section .brand_ko{font-size:24px}
+    .brand_section .brand_en{font-size:16px}
+    .brand_section .btn_og{margin-left: 5px}
+    .brand_section .last_li{padding-top:15px}
+    .brand_section .guide_lst{display:flex;align-items:center;min-height:120px}
+    .brand_section .brand_name{padding:0 300px 0 164px}
+    .brand_section .brand_icon_wrap{position:absolute;top:0;left:0}
+    .brand_section .brand_go_btn{position:absolute;top:25px;right:0}
+}
+@media screen and (max-width:540px){
+    .brand_section .benefit_lst li,.brand_section .top_dsc{padding-bottom:50px}
+    .brand_section .top_dsc{font-size:15px}
+    .brand_section .dsc_area p{padding-bottom:15px}
+    .brand_section .guide_lst{padding-bottom:70px}
+    .brand_section .brand_icon_wrap{position:absolute;top:0;left:0}
+    .brand_section .brand_name{display:table-cell;vertical-align:middle;height:120px;padding:0 0 0 140px}
+    .brand_go_btn{position:absolute;left:0;right:0;bottom:0;}
+    .brand_section .brand_ko{font-size:20px}
+    .brand_section .brand_en{font-size:50%}
+}
+
+/* 03 member_section */
+.member_wrapin li{float:left;position:relative;width:20%;color:#fff}
+.member_wrapin li>div{text-align:center}
+.member_wrapin li p{position:absolute;font-size:11px;bottom:25px;line-height:15px;padding: 0 30px}
+.member_section .top_bg_1{background:#949496}
+.member_section .top_bg_2{background:#808082}
+.member_section .top_bg_3{background:#58585b}
+.member_section .top_bg_4{background:#444446}
+.member_section .top_bg_5{background:#303033}
+@media screen and (min-width:541px){
+    .member_section .tit_area_en{font-size:40px;font-weight:bold}
+    .member_wrap{padding-bottom:90px}
+    .member_wrapin li strong{font-size:16px}
+    .member_wrapin li>div{padding-top:25px}
+    .member_section .top_bg_1{height:120px;margin-top:60px}
+    .member_section .top_bg_2{height:135px;margin-top:45px}
+    .member_section .top_bg_3{height:150px;margin-top:30px}
+    .member_section .top_bg_4{height:165px;margin-top:15px}
+    .member_section .top_bg_5{height:180px}
+    .member_section .tit_area_en,.member_section .dsc_area_v2 li{float:left}
+    .member_section .arrow_next{position:absolute;top:50%;left:-10px;width:20px;height:20px;margin-top:-10px}
+}
+@media screen and (max-width:540px){
+    .member_section .benefit_lst>li{padding-bottom:35px}
+    .member_wrapin li p{display:none}
+    .member_section .top_dsc{padding-bottom:50px}
+    .member_wrap{padding-bottom:35px}
+    .member_wrapin li>div{padding-top:9px}
+    .member_wrapin li strong{font-size:12px}
+    .member_section .top_bg_1{height:60px;margin-top:40px}
+    .member_section .top_bg_2{height:70px;margin-top:30px}
+    .member_section .top_bg_3{height:80px;margin-top:20px}
+    .member_section .top_bg_4{height:90px;margin-top:10px}
+    .member_section .top_bg_5{height:100px}
+    .member_section .tit_area{float:left;width:50%}
+    .member_section .tit_area_en{font-size:26px}
+    .member_section .dsc_area_v2{overflow:hidden;width:50%;padding-top:30px;border-top:4px solid #000}
+    .member_section .dsc_area_v2 li span{font-weight:bold;font-size:14px}
+    .member_section .dsc_area_v2 li,.member .dsc_area_v2 li .title_zout{font-size:12px}
+    .member_section .dsc_area_v2 li:nth-child(2n){padding-bottom:20px}
+}
+
+/* 04 mileage_section */
+.mileage_section .dsc_area>p{padding-bottom:50px;line-height:24px}
+.mileage_section .dsc_in_wrap ul:after{clear:both;display:block;content:''}
+.mileage_section .point{color:#ff4700}
+.line_area li p{color:#333}
+.line_area li span{color:#a0a0a0}
+@media screen and (min-width:541px){
+    .line_area{line-height:1}
+    .line_area:after{display:block;clear:both;content:''}
+    .line_area li{float:left;width:50%;min-height:100px;padding-bottom:0;font-size:26px}
+    .line_area li p{padding-bottom:0;font-size:26px}
+    .line_area li span{padding-top:10px;font-size:13px}
+    .line_area li:nth-child(n+3){padding-top:20px;border-top:1px solid #e7e7e7}
+}
+@media screen and (max-width:540px){
+    .line_area:after{position:absolute;width:20px;height:20px;background:#fff;top:40%;left:47.5%;content:''}
+    .line_area{position:relative;padding-bottom:30px}
+    .line_area ul{width:100%}
+    .line_area li{overflow:hidden;float:left;width:50%;max-height:100px;padding-bottom:30px;font-size:22px;;box-sizing:border-box}
+    .line_area li p{font-size:22px}
+    .line_area li:nth-child(even) p{padding:0 0 0 20px}
+    .line_area li span{font-size:14px}
+    .line_area li:nth-child(n+3){padding-top:10px;border-top:1px solid #e7e7e7}
+    .line_area li:nth-child(2n-1){border-right:1px solid #e7e7e7}
+}
+
+/* 05 hdcard_section */
+.hdcard_section .point{color:#ff4700}
+@media screen and (min-width:541px){
+}
+@media screen and (max-width:540px){
+}
+
+/* 06 payco_section */
+.payco_section .point{color:#ff4700}
+@media screen and (min-width:541px){
+}
+@media screen and (max-width:540px){
+    .payco_section .mini_title{padding-bottom:45px}
+    .payco_section .only_tx{padding-bottom:10px}
+
+    .payco_dc_dsc{padding-top:30px}
+}
+
+/* 07 npay_section */
+.npay_section .point{color:#ff4700}
+@media screen and (min-width:541px){
+}
+@media screen and (max-width:540px){
+}
+
+
+
+
+
+/* .footer */
+.footer_wrap{background:#000;color:rgba(255,255,255,0.6);}
+.footer_wrap a{font-weight:100;color:rgba(255,255,255,0.6)}
+.footer_warpin .logo_area{padding-right:20%;line-height:25px}
+.footer_warpin .logo_footer{padding-bottom:15px}
+.footer_warpin .footer_lf h4{font-weight:800}
+.footer_lf>h4,.footer_lf li{padding-bottom:20px}
+@media screen and (min-width:541px){
+    .footer_wrap{min-width:1060px;padding:50px 30px 80px;box-sizing:border-box}
+    .footer_warpin{max-width:1000px;margin:0 auto}
+    .footer_wrap .footer_lf{float:left;width:20%}
+}
+@media screen and (max-width:540px){
+    .footer_wrap{padding:50px 20px}
+    .footer_wrap .footer_lf{padding:0 0 50px}
+}
+
+/* 예외처리 가장 하단에 위치 */
+@media screen and (min-width:541px){
+    .mb_on,.m_view{display:none}
+    .pc_on,.pc_view,.mb_none,.mb_off{display:block}
+}
+@media screen and (max-width:540px){
+    .mb_on,.m_view{display:block}
+    .pc_on,.pc_view,.mb_none,.mb_off{display:none}
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>상품상세 GS 및 29cm 상품 상세 </title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap" id="top">
+    <!-- [D] jquery include -->
+</div>
+<div class="prdDesc">
+<div class="descriptionContents">
+<div class="htmlArea">
+
+<div class="prd_29cm_info_wrap">
+
+    <style>
+    @font-face{
+        font-family: "campton";
+        font-weight: 100;
+        src: local("Campton W00 Thin"), local("Campton-W00-Thin"), url("//img.29cm.co.kr/fonts/campton/b6517a55-91d1-4fd5-accc-bbc44c2a1268.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 200;
+        src: local("Campton W00 ExtraLight"), local("Campton-W00-ExtraLight"), url("//img.29cm.co.kr/fonts/campton/37009395-1130-4922-9b9a-c93c29f9b42a.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 300;
+        src: local("Campton W00 Light"), local("Campton-W00-Light"), url("//img.29cm.co.kr/fonts/campton/21126dbb-43aa-4675-a8ab-dce7f5e374ce.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 400;
+        src: local("Campton W00 Book"), local("Campton-W00-Book"), url("//img.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 500;
+        src: local("Campton W00 Medium"), local("Campton-W00-Medium"), url("//img.29cm.co.kr/fonts/campton/ca3a70c8-d6a1-46d3-997c-4a26498eefa9.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 600;
+        src: local("Campton W00 SemiBold"), local("Campton-W00-SemiBold"), url("//img.29cm.co.kr/fonts/campton/5ee11613-bc94-479b-bf86-5b2b6a68f55d.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 700;
+        src: local("Campton W00 Bold"), local("Campton-W00-Bold"), url("//img.29cm.co.kr/fonts/campton/d01b7dbc-e431-40e4-a193-e4050a6b945d.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 800;
+        src: local("Campton W00 ExtraBold"), local("Campton-W00-ExtraBold"), url("//img.29cm.co.kr/fonts/campton/3c965a6b-54fa-4259-9907-2c3fdd955bc4.woff") format("woff");
+    }
+    @font-face{
+        font-family: "campton";
+        font-weight: 900;
+        src: local("Campton W00 Black"), local("Campton-W00-Black"), url("//img.29cm.co.kr/fonts/campton/5ca5ef66-4367-4c90-8612-ef45818a599f.woff") format("woff");
+    }
+
+    body, input, select, textarea, button, a {
+    	-webkit-text-size-adjust:none;
+    	font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic, "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
+    }
+    .prd_29cm_info_wrap *{margin:0;padding:0}
+    .prd_29cm_info_wrap{max-width:900px;margin:0 auto;padding:35px 0 0}
+    .prd_29cm_info_wrap table{border:0;border-collapse:collapse;border-spacing:0;width:100%;table-layout:fixed}
+    .prd_29cm_info_wrap caption span{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0)}
+    .prd_29cm_info_wrap h2{font-size:22px;line-height:30px;font-weight:600;color:#000}
+    .prd_29cm_info_wrap .dsc{font-size:16px;line-height:26px;color:#000}
+    .prd_29cm_info_wrap .dsc dt{color:#ff4800}
+    .prd_29cm_info_wrap .dsc2{margin-top:9px;font-size:14px;line-height:24px;color:#000}
+    .prd_29cm_info_wrap .prd_info{padding:0 0 30px}
+    .prd_29cm_info_wrap .prd_info .dsc{margin-top:8px}
+    .prd_29cm_info_wrap .prd_info_size{padding:13px 0 53px}
+    .prd_29cm_info_wrap .prd_info_size strong{display:block}
+    .prd_29cm_info_wrap .prd_info_size:after{display:block;clear:both;content:''}
+    .prd_29cm_info_wrap .prd_info_size .dsc2{float:left;margin-right:53px}
+    .prd_29cm_info_wrap .prd_info_img{padding:0}
+    .prd_29cm_info_wrap .prd_info_img img{width:100%;max-width:100%}
+    .prd_29cm_info_wrap .prd_info_img h2{padding:17px 0 33px}
+    .prd_29cm_info_wrap .prd_info_img .dsc{padding:15px 0 33px}
+    .prd_29cm_info_wrap .prd_info_img h2+.dsc{margin-top:-40px}
+    .prd_info_size:after{display:block;clear:both;content:''}
+    @media screen and (max-width:540px){
+        .prd_29cm_info_wrap h2,
+        .prd_29cm_info_wrap .dsc,
+        .prd_29cm_info_wrap .dsc2{padding:0 20px}
+        .prd_29cm_info_wrap .prd_info_img h2{padding:17px 20px 33px}
+        .prd_29cm_info_wrap .prd_info_img .dsc{padding:15px 20px 33px}
+        .prd_29cm_info_wrap .prd_info_img h2+.dsc{margin-top:-40px}
+    }
+
+    .tbl .item_tbl{margin:14px 0 25px;border:1px solid #d4d4d4;border-width:0 1px 1px 0;border-top:4px solid #000;font-size:14px;color:#000;text-align:center}
+    .tbl .item_tbl th{border:1px solid #d4d4d4;border-width:1px 0 0 1px;font-weight:600}
+    .tbl .item_tbl td{border:1px solid #d4d4d4;border-width:1px 0 0 1px}
+    .tbl .item_tbl .inbx{padding:18px 0}
+    .item_info .item_tbl{margin-top:14px;border:1px solid #d4d4d4;border-width:0 1px 1px 0;border-top:4px solid #000;font-size:14px;color:#000;text-align:left}
+    .item_info .item_tbl th{border:1px solid #d4d4d4;border-width:1px 0 0 1px;font-weight:600}
+    .item_info .item_tbl td{border:1px solid #d4d4d4;border-width:1px 0 0 1px}
+    .item_info .item_tbl .inbx{padding:18px 20px}
+    .item_info .item_tbl .cell1{width:240px}
+    .pc_view{display:table}
+    .m_view{display:none}
+    @media screen and (max-width:540px){
+        .tbl {overflow:auto;padding:0 0 10px 20px}
+        .tbl .tblin{display:table;padding-right:20px}
+        .tbl .item_tbl{margin:13px 0 25px;border-top:0;font-size:12px;text-align:left}
+        .tbl .item_tbl th{background:#ececec}
+        .tbl .item_tbl .inbx{padding:10px}
+        .m_view{display:table}
+        .pc_view{display:none}
+        .item_info {overflow:auto;padding:0 0 10px 20px}
+        .item_info .tblin{display:table;padding-right:20px}
+        .item_info .item_tbl{margin:13px 0 0;border-top:0;font-size:12px}
+        .item_info .item_tbl th{background:#ececec}
+        .item_info .item_tbl .inbx{padding:10px}
+        .item_info .item_tbl .cell1{width:30%}
+    }
+    </style>
+    <div class="prd_info">
+        <h2>주문 유의사항 a</h2>
+        <dl class="dsc">
+            <dt>[보관 주의사항]</dt>
+            <dd>- 복슬강아지의 수제간식은 무 방부제 , 무 첨가제 , 무 착색제 등 유해한 식품첨가물을 전혀 사용하지 않은 천연간식으로 실온에서 보관하실 경우 변질의 우려가 있기 때문에 반드시 냉장, 냉동 보관하여주세요.</dd>
+            <dd>- 천연 간식이다 보니 유통기한이 다소 짧습니다.</dd>
+            <dd>- 개봉 후 빠른 시일 내로 급여바랍니다.</dd>
+        </dl>
+        <br>
+        <dl class="dsc">
+            <dt>[배송안내]</dt>
+            <dd>- 수제간식 특성상 주문 후 출고까지 3~5일 정도 소요됩니다.</dd>
+            <dd>- 매주 화요일, 금요일 주 2회 출고됩니다.</dd>
+            <dd>- 화요일 출고 (수요일 오후 11시 이후 ~ 일요일 오후 6시 주문 건 까지)</dd>
+            <dd>- 금요일 출고 (일요일 오후 6시 이후 ~ 수요일 오후 11시 주문 건 까지)</dd>
+        </dl>
+    </div>
+    <div class="prd_info">
+        <h2>상품 설명 a</h2>
+        <p class="dsc">
+            *밀가루를 전혀 넣지않고 반려견의 건강을 생각하여 쌀가루를 넣어 만들었습니다.<br>
+            <br>
+            국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후, 채소를 곱게 다져 스틱 모양으로 만들었어요.<br>
+            단백질 아미노산이 풍부하여 기력회복, 피부미용에 좋습니다.<br>
+            황태와 야채를 먹지 않는 아가들에게도 기호성이 좋은 간식으로 맛과 영양을 모두 사로잡은 영양간식입니다.<br>
+            <br>
+            : 기력회복, 시력향상, 변비예방
+        </p>
+    </div>
+
+    <div class="prd_info_img">
+        <img src="https://img.29cm.co.kr/next-edition/2018/02/08/16f28695948948bfaaf0f987d20c5a49_20180208105900.png" alt=""/>
+        <h2>타이틀 a</h2>
+    </div>
+    <div class="prd_info_img">
+        <img src="https://img.29cm.co.kr/next-edition/2018/02/08/16f28695948948bfaaf0f987d20c5a49_20180208105900.png" alt=""/>
+    </div>
+    <div class="prd_info_img">
+        <img src="https://img.29cm.co.kr/next-edition/2018/02/08/16f28695948948bfaaf0f987d20c5a49_20180208105900.png" alt=""/>
+        <p class="dsc">
+            황태 (국내산), 고구마 (국내산), 단호박 (국내산),브로콜리 (국내산), 당근 (국내산) a
+        </p>
+    </div>
+    <div class="prd_info_img">
+        <img src="https://img.29cm.co.kr/next-edition/2018/02/08/16f28695948948bfaaf0f987d20c5a49_20180208105900.png" alt=""/>
+        <h2>타이틀 a</h2>
+        <p class="dsc">
+            텍스트 텍스트 여러줄 테스트 행간
+            국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후, 채소를 곱게 다져 스틱 모양으로 만들었어요.
+            단백질 아미노산이 풍부하여 기력회복, 피부미용에 좋습니다. 황태와 야채를 먹지 않는 아가들에게도 기호성이 좋은 간식으로 맛과 영양을 모두 사로잡은 영양간식입니다.
+        </p>
+    </div>
+    <div class="prd_info_img">
+        <img src="https://img.29cm.co.kr/next-edition/2018/02/08/16f28695948948bfaaf0f987d20c5a49_20180208105900.png" alt=""/>
+        <h2>타이틀 두줄 테스트<br>국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후</h2>
+        <p class="dsc">
+            텍스트 텍스트 여러줄 테스트 행간
+            국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후, 채소를 곱게 다져 스틱 모양으로 만들었어요.
+            단백질 아미노산이 풍부하여 기력회복, 피부미용에 좋습니다. 황태와 야채를 먹지 않는 아가들에게도 기호성이 좋은 간식으로 맛과 영양을 모두 사로잡은 영양간식입니다.
+        </p>
+    </div>
+
+    <div class="prd_info_img">
+        <style>
+        .vidiobx{position:relative;overflow:hidden;margin:0 auto;width:100%;padding-top:56.6%}
+        .vidiobx >div{position:absolute;top:0;right:0;left:0;bottom: 0;background:#000}
+        .vidiobx >div iframe{width:100%;height:100%;border:0}
+        </style>
+        <!-- 유튜브 또는 비메오 URL이 있을 경우 -->
+        <div class="vidiobx" style='height'>
+            <div>
+                <iframe src="http://player.vimeo.com/video/254277047?=1&amp;loop=1?autoplay=0&amp;title=0"></iframe>
+            </div>
+        </div>
+
+        <h2>타이틀 두줄 테스트<br>국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후</h2>
+        <p class="dsc">
+            텍스트 텍스트 여러줄 테스트 행간
+            국내산 황태를 24시간 동안 물에 불려 염분을 제거 한후, 채소를 곱게 다져 스틱 모양으로 만들었어요.
+            단백질 아미노산이 풍부하여 기력회복, 피부미용에 좋습니다. 황태와 야채를 먹지 않는 아가들에게도 기호성이 좋은 간식으로 맛과 영양을 모두 사로잡은 영양간식입니다.
+        </p>
+    </div>
+
+    <div class="prd_info_size">
+        <h2>모델사이즈 &amp; 핏</h2>
+        <p class="dsc2">
+            <strong>여자</strong>
+            170cm / 49kg<br>
+            착용사이즈 : 25<br>
+            핏 타입 : 루즈
+        </p>
+        <p class="dsc2">
+            <strong>남자</strong>
+            180cm / 79kg<br>
+            착용사이즈 : 30<br>
+            핏 타입 : 루즈
+        </p>
+    </div>
+    <div class="prd_info">
+        <h2>사이즈 정보</h2>
+        <p class="dsc2">
+            상세 사이즈의 치수는 측정 방법과 위치에 따라 오차가 발생할 수 있습니다.<br>
+            구매 시 상세 사이즈를 확인 바랍니다.
+        </p>
+
+        <style>
+        .tbl table{border:0;border-collapse:collapse;border-spacing:0;width:100%;table-layout:fixed}
+        .tbl .item_tbl{margin:14px 0 25px;border:1px solid #d4d4d4;border-width:0 1px 1px 0;border-top:4px solid #000;font-size:14px;color:#000;text-align:center}
+        .tbl .item_tbl th{border:1px solid #d4d4d4;border-width:1px 0 0 1px;font-weight:600}
+        .tbl .item_tbl td{border:1px solid #d4d4d4;border-width:1px 0 0 1px}
+        .tbl .item_tbl .inbx{padding:18px 0}
+        .pc_view{display:table}
+        .m_view{display:none}
+        @media screen and (max-width:540px){
+            .tbl {overflow:auto;padding:0 0 10px 20px}
+            .tbl .tblin{display:table;padding-right:20px}
+            .tbl .item_tbl{margin:13px 0 25px;border-top:0;font-size:12px;text-align:left}
+            .tbl .item_tbl th{background:#ececec}
+            .tbl .item_tbl .inbx{padding:10px}
+            .m_view{display:table}
+            .pc_view{display:none}
+        }
+        </style>
+        <div class="tbl">
+            <div class="tblin">
+                <table class="item_tbl pc_view">
+                    <caption><span>성분표</span></caption>
+                    <colgroup>
+                        <col style="width:80px">
+                        <col style="width:80px">
+                        <col style="width:80px">
+                        <col style="width:80px">
+                        <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">
+                            <div class="inbx">
+                               size(cm)
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               총길이
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               어깨너비
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               가슴너비
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               소매길이
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="inbx">
+                                55
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                109
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                65
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                119
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                52
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="item_tbl m_view">
+                    <caption><span>성분표</span></caption>
+                    <colgroup>
+                        <col style="width:80px">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">
+                            <div class="inbx">
+                               size(cm)
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               55
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               66
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               77
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="inbx">
+                               88
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                               총길이
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                109
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                109
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                109
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                109
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col">
+                            <div class="inbx">
+                               어깨너비
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                65
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                65
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                65
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                65
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                               가슴너비
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                119
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                119
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                119
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                119
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                               소매길이
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                52
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                52
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                52
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inbx">
+                                52
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="prd_info">
+        <h2>상품정보 보기</h2>
+        <style>
+        .item_info .item_tbl{margin-top:14px;border:1px solid #d4d4d4;border-width:0 1px 1px 0;border-top:4px solid #000;font-size:14px;color:#000;text-align:left}
+        .item_info .item_tbl th{border:1px solid #d4d4d4;border-width:1px 0 0 1px;font-weight:600}
+        .item_info .item_tbl td{border:1px solid #d4d4d4;border-width:1px 0 0 1px}
+        .item_info .item_tbl .inbx{padding:18px 20px}
+        .item_info .item_tbl .cell1{width:240px}
+        @media screen and (max-width:540px){
+            .item_info {overflow:auto;padding:0 0 10px 20px}
+            .item_info .tblin{display:table;padding-right:20px}
+            .item_info .item_tbl{margin:13px 0 0;border-top:0;font-size:12px}
+            .item_info .item_tbl th{background:#ececec}
+            .item_info .item_tbl .inbx{padding:10px}
+            .item_info .item_tbl .cell1{width:30%}
+        }
+        </style>
+        <div class="item_info">
+            <div class="tblin">
+                <table class="item_tbl">
+                    <caption><span>성분표</span></caption>
+                    <colgroup>
+                        <col class="cell1">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                제조자(수입여부)
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                N/앤디앤뎁
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                제조국
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                한국
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                세탁방법 및 취급시 주의사항
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                반드시 단독세탁, 케어라벨 확인
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                제조연월
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                201701
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                품질보증기준
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                수령 후 7일 이내 교환 환불 가능, A/S 불가
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="inbx">
+                                A/S 책임자/전화번호
+                            </div>
+                        </th>
+                        <td>
+                            <div class="inbx">
+                                29CM 고객행복센터 1644-0560
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="footer" id="end">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

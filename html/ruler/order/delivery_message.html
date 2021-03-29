@@ -1,0 +1,64 @@
+<style>
+
+.order-memo {
+    padding: 20px 0;
+}
+.order-memo .radio-basic label {
+    display: block;
+}
+.order-memo .radio-basic label+label {
+    margin-top: 10px;
+}
+.order-memo .input-basic {
+    margin-top: 10px;
+}
+</style>
+<div class="order-memo">
+
+    <div class="radio-basic">
+        <label>
+            <input
+                type="radio"
+                name="deliveryMsg"
+                id=""
+                value=""
+                class="radio"
+                onclick="$('#EtcAsk').val('부재 시 경비실에 맡겨 주세요.');">
+            <span class="label-text">부재 시 경비실에 맡겨 주세요.</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="deliveryMsg"
+                id=""
+                value=""
+                class="radio"
+                onclick="$('#EtcAsk').val('부재 시 전화 또는 문자 주세요.');">
+            <span class="label-text">부재 시 전화 또는 문자 주세요.</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="deliveryMsg"
+                id=""
+                value=""
+                class="radio"
+                onclick="$('#EtcAsk').val('택배함에 넣어 주세요.');">
+            <span class="label-text">택배함에 넣어 주세요.</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="deliveryMsg"
+                id=""
+                value=""
+                class="radio"
+                onclick="$('#EtcAsk').val('');"
+                checked="checked">
+            <span class="label-text">직접 입력</span>
+        </label>
+        <div class="input-basic">
+            <input id="EtcAsk" name="EtcAsk" type="text" maxlength="100">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>benefit guide nav</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style>
+.benefit_head_wrap{position:fixed;top:0;left:0;right:0;z-index:10;height:220px;background-color:#000}
+.benefit_head{position:relative;width:1000px;height:170px;margin:0 auto;color:#fff}
+.benefit_head h1{position:absolute;left:0;top:20px;}
+.benefit_head .fb_position{position:absolute;right:0;top:20px}
+.benefit_head p{padding:100px 0 30px;text-align:center;font-size:35px}
+.benefit_nav{background-color:#000;height:50px;line-height:50px}
+.benefit_nav .m_active{display:none}
+.benefit_nav a{display:block;width:100%;color:#b9b9b9}
+.benefit_nav ul{margin:0 auto;width:1000px}
+.benefit_nav li{float:left;width:11.1%;text-align:center}
+/* nav bar 활성화 효과 */
+.benefit_nav .active{background-color:#fff}
+.benefit_nav .active a{color:#000;font-weight:bold}
+
+@media screen and (min-width:541px){
+}
+@media screen and (max-width:540px){
+    .benefit_head_wrap{height:auto;background-color:#fff;}
+    .benefit_head{width:auto;height:100px;background-color:#000;}
+    .benefit_head p{padding:65px 0 20px 20px;text-align:left;font-size:14px}
+    .benefit_head h1{position:absolute;left:20px;top:20px;}
+    .benefit_head .fb_position{position:absolute;right:20px;top:20px}
+    .benefit_nav{background-color:transparent;height:auto;line-height:55px}
+    .benefit_nav .m_active{display:block;position:relative;color:#000;font-weight:bold}
+    .benefit_nav a{padding-left:5%;box-sizing:border-box;}
+    .benefit_nav ul{display:none;margin:0;width:100%;}
+    .benefit_nav:hover ul{display:block}
+    .benefit_nav li{float:none;text-align:left;width:100%;}
+    .benefit_nav .m_active{border-bottom:1px solid #f4f4f4;}
+    .benefit_nav li:last-child{border-bottom:1px solid #f4f4f4;padding-bottom:20px}
+    /* nav bar 활성화 효과 */
+    .benefit_nav .active{display:none}
+    .m_active:after{position:absolute;top:50%;right:20px;width:10px;height:10px;border-color:#a4a4a4;border-width:0 0 1px 1px;border-style:solid;transform:rotate(135deg);content:''}
+}
+</style>
+</head>
+<body>
+<div class="benefit_head_wrap">
+    <div class="benefit_head">
+        <h1><a href="#none" title="29cm 페이지로 이동"><img src="img/header_logo.png" title="29cm로고" alt="29cm혜택페이지로고"/></a></h1>
+        <p>BENEFIT GUIDE</p>
+        <a href="#none" title="29cm Facebook으로 이동" class="fb_position"><img src="img/header_facebook.png" title="Facebook아이콘" alt="Facebook아이콘"/></a>
+    </div>
+    <div class="benefit_nav">
+        <a href="#none" title="GUIDE" class="m_active">GUIDE</a>
+        <ul>
+            <li class="active"><a href="#none" title="GUIDE">GUIDE</a></li>
+            <li><a href="#none" title="브랜드 쿠폰">브랜드 쿠폰</a></li>
+            <li><a href="#none" title="멤버십">멤버십</a></li>
+            <li><a href="#none" title="마일리지">마일리지</a></li>
+            <li><a href="#none" title="현대카드">현대카드</a></li>
+            <li><a href="#none" title="페이코">페이코</a></li>
+            <li><a href="#none" title="N페이">N페이</a></li>
+            <li><a href="#none" title="무이자">무이자</a></li>
+            <li><a href="#none" title="이달의 혜택">이달의 혜택</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

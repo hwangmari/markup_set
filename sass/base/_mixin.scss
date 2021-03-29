@@ -77,6 +77,12 @@ version history: 1.0 - Make css for template app
   text-overflow: ellipsis;
 }
 
+div{display: flex}
+div >div{flex:none}
+li ~ li{}
+li + li{}
+
+
 @mixin blind () {
   overflow: hidden;
   position: absolute;
@@ -112,7 +118,6 @@ version history: 1.0 - Make css for template app
     color: $color;
   }
 }
-
 
 
 @mixin mix-position ( $position, $top, $lft, $rgt, $btm)  {

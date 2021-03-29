@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>쿠폰 발급 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- Layer -->
+<style type="text/css">
+/* 레이어 */
+.ly_wrap{display:none;position:fixed;top:0;right:0;left:0;bottom:0;z-index:200;background:rgba(0,0,0,.3)}
+.ly_wrap .ly_inner{position:absolute;top:50%;left:50%;width:540px;padding:60px 40px 40px;background:#fff;box-shadow:20px 20px 40px 0 rgba(0,0,0,.5);transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);box-sizing:border-box}
+.ly_wrap .btn_close{position:absolute;top:0;right:0;width:60px;height:60px}
+.ly_wrap .btn_close .sp{display:inline-block;overflow:hidden;background:red;width:40px;height:40px;font-size:1px;line-height:9999px;white-space:nowrap}
+.ly_wrap .my_tit{margin-bottom:19px}
+.ly_wrap .btn_bx{margin-top:10px;text-align:center}
+.ly_wrap .btn_bx .btn_bor,.ly_wrap .btn_bx .btn_black{width:100px;height:40px;margin:0 2px;border-radius:2px;line-height:40px;vertical-align:top}
+.ly_coupon .coupon_inner5{background:url(./img/pop_03.png) no-repeat;background-size:100%}
+@media screen and (max-width:540px){
+    .ly_wrap .ly_inner{overflow-y:auto;top:40px;right:20px;left:20px;bottom:40px;width:auto;height:auto;padding:20px;transform:none}
+    .ly_wrap .my_tit{margin-bottom:10px}
+}
+    
+.ly_coupon .ly_inner{padding:70px 40px 40px}
+.ly_coupon .tit{font-weight:600;font-size:30px;text-align:center}
+.ly_coupon .coupon_inner5{position:relative;display:block;width:300px;height:150px;margin:33px auto 0}
+.ly_coupon .coupon_tx_warp{text-align:center}
+.ly_coupon .coupon_inner .cp_rote{position:absolute;transform:rotate(-90deg);top:45%;right:-2%;font-size:9px;color:#ffa895}
+.ly_coupon .cp_info{overflow:hidden;margin-top:39px;font-size:14px;line-height:26px}
+.ly_coupon .cp_info .cp_semi:after{clear:both;display:block;content:''}
+.ly_coupon .cp_info dt{float:left;min-width:112px;font-weight:600}
+.ly_coupon .cp_info dd{overflow:hidden}
+.ly_coupon .cp_info h5{padding:25px 0 20px 0;font-size:18px;color:#303033}
+.ly_coupon .cp_notice .belit_li li{padding:0 0 0 20px}
+.ly_coupon .cp_notice .belit_li li:after{top:10px}
+.ly_coupon .cp_semi{padding-bottom:20px;border-bottom:1px solid #ebebeb;font-size:14px}
+.ly_coupon .cp_semi .point{color:#ff4800}
+@media screen and (max-width:540px){
+	.ly_coupon{background:rgba(0,0,0,.85)}
+	.ly_coupon .ly_inner{top:0;right:0;left:0;bottom:0;background:none;color:#fff}
+	.ly_coupon .tit{font-size:26px}
+	.ly_coupon .coupon_inner5{width:270px;height:133px;background-position:bottom}
+	.ly_coupon .cp_info{margin-top:30px;font-size:13px;line-height:20px}
+	.ly_coupon .cp_info dt{float:none;min-width:0;margin-top:7px;font-weight:normal;opacity:.5}
+	.ly_coupon .cp_info .cp_semi dt{margin-top:0;padding-right:10px;font-weight:normal;opacity:1}
+    .ly_coupon .cp_semi{border:none}
+    .ly_coupon .cp_semi dt{float:none;color:#a0a0a0;font-size:12px}
+    .ly_coupon .cp_semi dd{margin-bottom:20px}
+    .ly_coupon .cp_notice .belit_li li{padding:0}
+    .ly_coupon .cp_notice .belit_li li:after{display:none}
+}
+</style>
+<div class="ly_wrap ly_coupon" style="display:block">
+	<div class="ly_inner">
+		<h4 class="tit">쿠폰이 발급되었습니다</h4>
+		<div class="abc">
+		<div class="coupon_inner coupon_inner5">
+			<div class="coupon_tx_warp">
+				<p class="dc_num">15<span class="per_num">%</span>
+				<p class="cp_rote">29CM COUPON</p>
+			</div>
+		</div>
+		</div>
+		<div class="cp_info">
+            <div class="cp_semi">
+                <dt>쿠폰명</dt>
+                <dd>발급일로부터 3일</dd>
+                <dt>쿠폰번호</dt>
+                <dd>1486</dd>
+                <dt>쿠폰 설명</dt>
+                <dd>코르카 15%할인 쿠폰 (적용상품 4개)</dd>
+                <dt>쿠폰 유효기간</dt>
+                <dd>2018-03-01 ~ 2018-03-30</dd>
+		    </div>
+            <div class="cp_notice">
+            <h5 class="mb_off">유의사항</h5>
+                <ul class="belit_li">
+                    <li>발행된 쿠폰은 MY PAGE에서 확인하실 수 있습니다.</li>
+                    <li>각 쿠폰은 한번씩만 받을 수 있습니다.</li>
+                    <li>해당 브랜드 상품 중 일부 상품에는 쿠폰 적용이 불가할 수 있습니다.</li>
+                </ul>		
+	        </div>
+		</div>
+		<button type="button" class="btn_close"><span class="sp">닫기</span></button>
+	</div>
+</div>
+</body>
+</html>

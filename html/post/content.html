@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>컨텐츠 모듈 리스트 </title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<header class="header_wrap">
+    <!-- [D] jquery include -->
+</header>
+
+<style>
+#content_mweb_ver{position:relative;right:0;width:30px;height:30px;margin-left:30px;
+-webkit-appearance:none;border:1px solid #3864fc;}
+#content_mweb_ver + label {padding-left:10px;line-height:30px;font-size:20px;vertical-align: top}
+#content_mweb_ver[type=checkbox]:checked{background:#3864fc}
+#content_mweb_ver[type=checkbox]:checked:after{position:absolute;top:50%;left:50%;width:10px;height:10px;
+margin:-5px 0 0 -5px;background:#fff;content:''}
+.content_module_wrap{ width:100%;-webkit-transition: width 2s; transition: width 2s;}
+#content_mweb_ver[type=checkbox]:checked + label + .content_module_wrap{width:540px;margin:0 auto;border:1px solid #000}
+#content_mweb_ver[type=checkbox]:checked + label + .content_module_wrap .content_cnt{width:100%}
+
+/*.content_module_wrap{width:540px;margin:0 auto;border:1px solid #000}*/
+</style>
+<!--  모바일 버전 확인용 -->
+<input type="checkbox" id="content_mweb_ver" value="" name="">
+<label for="content_mweb_ver" title="">모바일 버전으로 보기 // 540px</label>
+
+<!-- 컨텐츠 모듈  -->
+<div class="content_module_wrap">
+	<!-- 빅배너 -->
+	<div class="module_bigbanner">
+		<div class="issue_banner" style="background-image:url(//image.29cm.co.kr/contents/itemDesign/201706/deg_2320170607161206.jpg);color:#fff">
+			<!-- [D] jquery include -->
+		</div>
+
+	    <div class="heart_area">
+	      <button type="button" class="heart" data-h-item-seq="134189">
+	        <svg version="1.1" class="svg__icon__heart" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40.869 36.042" enable-background="new 0 0 40.869 36.042" xml:space="preserve">
+	          <path fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M20.435,10.967c0-5.228,4.238-9.467,9.467-9.467 s9.468,4.239,9.468,9.467c0,4.035-3.457,7.477-3.457,7.477L20.435,33.92L4.958,18.444c0,0-3.458-3.442-3.458-7.477 C1.5,5.739,5.739,1.5,10.968,1.5S20.435,5.739,20.435,10.967z"></path>
+	        </svg>
+	        <span class="count">3</span>
+	      </button>
+	      <a href="#" class="btn btn_facebook">f</a>
+	    </div>
+	</div>
+
+	<!-- 1000px 가운데 정렬 -->
+	<div class="content_cnt">
+		<!--  구분선  -->
+		<div class="module_line">
+			<!-- [D] jquery include -->
+		</div>
+
+		<style>
+		.module_imgbx{position:relative;max-width:1000px;margin:0 auto}
+		.module_imgbx img{display:block;margin:0 auto;max-width:100%}
+		.module_imgbx .btn_edit{position:absolute;top:10%;left:10%;width:300px;height:300px;background:rgba(255,0,0,0.3);color:#fff;font-size:30px}
+		.module_imgbx .img_dsc{position:absolute;top:0;right:0;bottom:0;left:0;display:-webkit-flex;display:flex;padding:70px;color:#fff}
+		.module_imgbx .img_dsc .inbx{-webkit-flex:1;flex:1}
+		.module_imgbx .img_dsc h1{font-size:34px;line-height:1.5;font-weight:500}
+		.module_imgbx .img_dsc p{margin-top:30px;font-size:16px;line-height:1.6}
+		.module_imgbx .img_dsc .btn{margin-top:40px}
+		.module_imgbx .img_dsc.toplft{-webkit-align-items:flex-start;align-items:flex-start;-webkit-justify-content:flex-start;justify-content:flex-start;flex-wrap:wrap}
+		.module_imgbx .img_dsc.cnt,.module_imgbx .img_dsc.evt_end,.module_imgbx .img_dsc.brand_go{-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;flex-wrap:nowrap;text-align:center}
+		.module_imgbx .img_dsc.btmrgt{-webkit-align-items:flex-end;align-items:flex-end;-webkit-justify-content:flex-end;justify-content:flex-end;flex-wrap:nowrap;text-align:right}
+		.module_imgbx .img_dsc.evt_end{background:rgba(0,0,0,0.7)}
+		.module_imgbx .img_dsc.evt_end p{margin-top:0}
+		.module_imgbx .img_dsc.brand_go p{margin-top:0;font-size:20px;line-height:1.5}
+		.module_imgbx .heart_area{margin-top:30px}
+		.module_imgbx .heart_area .heart .svg__icon__heart{width:30px;max-height:30px;color:#fff}
+		.module_imgbx .heart_area .heart .svg__icon__heart path{stroke:#fff}
+		.module_imgbx .heart_area .heart .count{font-size:15px;line-height:1.2;color:#fff}
+		.reddot{position:absolute}
+		.reddot .btn_dot{width:30px;height:30px;border-radius:50%;background:#ff4800}
+		.reddot .reddot_prd{display:none;position:relative;z-index:20;top:-40px;left:40px;width:180px;min-height:200px;padding:15px;background:#fff}
+		.reddot:hover{z-index:10}.reddot:hover .reddot_prd{display:block}
+		.reddot:hover .reddot_prd .prd_brand_go,.reddot:hover .reddot_prd .heart_area{display:none}
+		@media screen and (max-width: 540px){
+			.module_imgbx .img_dsc{padding:30px}
+			.module_imgbx .img_dsc.brand_go{text-align:left}
+			.module_imgbx .img_dsc.brand_go p{margin-top:0;font-size:20px;line-height:1.5}
+			.module_imgbx .img_dsc .heart_area{position:absolute;top:50%;right:25px;margin-top:-25px}
+		}
+		</style>
+		<!--  이미지 편집 이미지 위에 이미지  -->
+		<div class="module_imgbx">
+			<img src="../img/@thum2.png" alt=""/>
+			<button type="button" class="btn btn_edit">이미지 편집</button>
+		</div>
+
+		<!--  이미지 편집 이미지 위에 텍스트  -->
+		<div class="module_imgbx">
+			<a href="#eee">
+				<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+				<!--  이미지 텍스트 위치 class 추가
+				toplft 상단 왼쪽 정렬
+				cnt 가운데 정렬
+				btmrgt 하단 오른쪽 정렬
+				-->
+				<div class="img_dsc toplft">
+					<div class="inbx">
+						<h1>벌써 트럭 앞에서 새우 요리를 기다리는 기분이에요</h1>
+						<p>
+							저는 여행이나 출장을 떠날 때 가장 먼저 그 지역의 음식에 대한 조사를 합니다.<br>
+						로컬 푸드만큼 저를 들뜨게 하는 것도 없는 것 같거든요.<br>
+						그래서인지 빅웨이브의 하와이 티셔츠 12종 중에서는 단연 쉬림프 트럭이 눈에 띕니다.<br>
+						햇살이 부서져 내리는 해변가 앞에 서있는 푸드 트럭에서 새우 요리를 먹을 생각을 하니 기분이 절로 좋아지네요!
+						</p>
+						<!-- <a href="#" class="btn btn_home">BRAND HOME</a> -->
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<!-- 이미지 슬라이더 -->
+		<div class="module_swiper swiper_img">
+		    <div class="swiper_container">
+		        <div>
+			        <ul class="gallery-wrap">
+				        <li>
+							<a href="#" class="module_imgbx">
+								<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+							</a>
+				        </li>
+			        </ul>
+		        </div>
+		    </div>
+		    <div class="btnbx">
+		        <a class="btn_prev" href="#none">prev</a>
+		        <a class="btn_next" href="#none">next</a>
+		    </div>
+		    <div class="swiper_page">
+		        <a href="#none" class="on"><span>1</span></a>
+		        <a href="#none"><span>2</span></a>
+		        <a href="#none"><span>3</span></a>
+		    </div>
+	    </div>
+
+		<!--  동영상  -->
+		<div class="module_play">
+			<!-- [D] jquery include -->
+		</div>
+
+		<!-- 상품 슬라이더 -->
+		<div class="module_swiper swiper_prd">
+		    <div class="swiper_container">
+			    <div>
+			        <ul class="gallery-wrap">
+			            <li>
+							<div class="prd_area">
+								<div class="prd_s">
+						        	<!-- [D] jquery include -->
+						      	</div>
+								<div class="prd_s">
+						        	<!-- [D] jquery include -->
+					         	</div>
+								<div class="prd_s">
+						        	<!-- [D] jquery include -->
+						        </div>
+							</div>
+		          		</li>
+		        	</ul>
+		        </div>
+	    	</div>
+		    <div class="btnbx">
+		        <a class="btn_prev" href="#none">prev</a>
+		        <a class="btn_next" href="#none">next</a>
+		    </div>
+		    <div class="swiper_page">
+		        <a href="#none" class="on"><span>1</span></a>
+		        <a href="#none"><span>2</span></a>
+		        <a href="#none"><span>3</span></a>
+		    </div>
+		</div>
+
+		<!-- 이미지 타일타입 -->
+		<div class="module_tile">
+			<div class="tilebx">
+				<div class="module_imgbx">
+					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+				</div>
+				<div class="prd_s">
+			        <!-- [D] jquery include -->
+			    </div>
+			</div>
+			<div class="tilebx">
+				<div class="module_imgbx">
+					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+				</div>
+				<div class="prd_s">
+		        	<!-- [D] jquery include -->
+		        </div>
+			</div>
+			<div class="tilebx">
+				<div class="module_imgbx">
+					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+				</div>
+				<div class="prd_s">
+	        		<!-- [D] jquery include -->
+	      		</div>
+			</div>
+			<div class="tilebx">
+				<div class="module_imgbx">
+					<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+				</div>
+				<div class="prd_s">
+	        	<!-- [D] jquery include -->
+	      		</div>
+			</div>
+		</div>
+
+		<!-- 이벤트  -->
+		<div class="module_imgbx">
+			<img src="../img/evt.png" alt=""/>
+			<div class="img_dsc evt_end">
+				<div class="inbx">
+					<h1>이벤트가 종료되었습니다.</h1>
+					<p>참여해 주셔서 감사합니다.</p>
+				</div>
+			</div>
+		</div>
+
+		<!--  링크 직접 입력  -->
+		<a href="#" class="module_link">
+			<!-- [D] jquery include -->
+		</a>
+
+
+		<!-- 브랜드 홈으로 이동  -->
+		<div class="module_imgbx">
+			<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_2720170607144305.jpg" alt=""/>
+			<div class="img_dsc brand_go">
+				<div class="inbx">
+					<h1>BIGWAVE COLLECTIVE</h1>
+					<p>빅웨이브 컬렉티브 </p>
+					<style>
+					.module_imgbx .heart_area{margin-top:30px}
+					.module_imgbx .heart_area .heart .svg__icon__heart{width:30px;max-height:30px;color:#fff}
+					.module_imgbx .heart_area .heart .svg__icon__heart path{stroke:#fff}
+					.module_imgbx .heart_area .heart .count{font-size:15px;line-height:1.2;color:#fff}
+
+					</style>
+					<div class="heart_area">
+					  <button type="button" class="heart" data-h-item-seq="134189">
+					    <svg version="1.1" class="svg__icon__heart" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40.869 36.042" enable-background="new 0 0 40.869 36.042" xml:space="preserve">
+					      <path fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M20.435,10.967c0-5.228,4.238-9.467,9.467-9.467 s9.468,4.239,9.468,9.467c0,4.035-3.457,7.477-3.457,7.477L20.435,33.92L4.958,18.444c0,0-3.458-3.442-3.458-7.477 C1.5,5.739,5.739,1.5,10.968,1.5S20.435,5.739,20.435,10.967z"></path>
+					    </svg>
+					    <span class="count">3</span>
+					  </button>
+					</div>
+					<a href="#" class="btn btn_home">BRAND HOME</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 이미지 빨간점  -->
+		<div class="module_imgbx">
+			<img src="//image.29cm.co.kr/contents/itemDesign/201706/deg_720170605185229.jpg" alt=""/>
+			<div class="reddot" style="top:26%;left:26%">
+				<a href="#" class="btn btn_dot"></a>
+				<div class="reddot_prd">
+					<div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+				</div>
+			</div>
+			<div class="reddot" style="top:50%;left:50%">
+				<a href="#" class="btn btn_dot"></a>
+				<div class="reddot_prd">
+					<div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  텍스트 위치 class 추가
+		lft 상단 왼쪽 정렬
+		cnt 가운데 정렬
+		rgt 하단 오른쪽 정렬
+		dsc2 2단 텍스트 정렬
+		dsc3 3단 텍스트 정렬
+		-->
+		<div class="module_dscbx">
+			<!-- [D] jquery include -->
+		</div>
+
+		<div class="module_prd_wrap">
+			<div class="module_tab">
+				<!-- [D] jquery include -->
+			</div>
+			<ul class="prd_section">
+			    <li>
+			        <div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+		    	</li>
+		    	<li>
+		      		<div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+		    	</li>
+		    	<li>
+		      		<div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+		    	</li>
+		    	<li>
+		      		<div class="prd_b">
+						<!-- [D] jquery include -->
+					</div>
+	    		</li>
+		  	</ul>
+
+			<div class="module_tab_wrap">
+				<!-- [D] jquery include -->
+			</div>
+			<ul class="prd_section2">
+			    <li>
+			        <div class="prd_bd">
+						<!-- [D] jquery include -->
+					</div>
+			    </li>
+			    <li>
+					<div class="prd_bd">
+   					 	<!-- [D] jquery include -->
+   				 	</div>
+			    </li>
+			    <li>
+					<div class="prd_bd">
+   					 	<!-- [D] jquery include -->
+   				 	</div>
+			    </li>
+			    <li>
+					<div class="prd_bd">
+   					 	<!-- [D] jquery include -->
+   				 	</div>
+			    </li>
+		  	</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

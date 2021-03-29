@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>공통UI모음</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<style>
+.lux_a{overflow:auto;position:fixed;left:0;right:0;bottom:0;z-index:10;height:180px;border-top:1px solid #ccc;background:#fff}
+.lux_a a{display:block;padding:5px;font-size:24px;color:#000;text-decoration:none}
+.lux_a .new:before{display:inline-block;margin-right:5px;padding:2px 4px 1px;border-radius:20px;font-size:11px;background:red;color:#fff;content:'new'}
+.lux_a .draft:before{display:inline-block;margin-right:5px;padding:2px 4px 1px;border-radius:20px;font-size:11px;background:grey;color:#fff;content:'draft'}
+.lux_a li{float:left;}
+.draft:before{display:inline-block;margin-right:5px;padding:2px 4px 1px;border-radius:20px;font-size:11px;background:grey;color:#fff;content:'draft'}
+.lux_lst{padding:10px;border-bottom:1px solid #ccc;font-size:14px}
+.lux_lst > dt{margin-top:15px}
+.lux_lst > dd{width:40%;margin:0 auto;padding:5px;}
+.lux_lst .bx{display:inline-block;width:120px;padding:5px 0;font-size:12px;line-height:22px}
+</style>
+</head>
+<body style="padding:0 0 180px 10px">
+<ul class="lux_a">
+    <li><a href="#svg">svg</a></li>
+    <li><a href="#btn">btn</a></li>
+    <li><a href="#ckbx">checkbox</a></li>
+    <li><a href="#rabx">radio</a></li>
+    <li><a href="#selbx">select</a></li>
+    <li><a href="#dropbx">dropbx</a></li>
+    <li><a href="#inpbx">input</a></li>
+    <li><a href="#inptxtbx">textarea</a></li>
+    <li><a href="#colorpicker">colorpicker</a></li>
+    <li><a href="#rating">rating</a></li>
+    <li><a href="#numcoutbx">numcoutbx</a></li>
+    <li><a href="#main_banner">main_banner</a></li>
+    <li><a href="#feed_area">feed_area</a></li>
+    <li><a href="#prd_s">prd_s</a></li>
+    <li><a href="#prd_b">prd_b</a></li>
+    <li><a href="#heart_area">heart_area</a></li>
+    <li><a href="#dday">dday</a></li>
+    <li><a href="#accordion">accordion</a></li>
+</ul>
+
+<dl class="lux_lst">
+    <dt>인라인 스타일은 콤포넌트 예시용</dt>
+    <dd>마크업 페이지 확인용으로 인라인 스타일은 적용에서 제외해주세요.<br/> 서비스에서 사용할 경우 class 추가하여 css 파일에 작성해주세요.</dd>
+</dl>
+
+<dl id="svg" class="lux_lst">
+    <dt>svg</dt>
+    <dd>
+        <style>
+        .svg{overflow:hidden;display:inline-block;line-height:1000em;vertical-align:middle;background-repeat:no-repeat;background-size:100% 100%;}
+        </style>
+    </dd>
+    <dd>
+        <style>
+        .svg_combined_black{width:43px;height:8px;background-image:url(../svg/combined-shape-black.svg)}
+        .svg_combined_grey{width:33px;height:8px;background-image:url(../svg/combined-shape-grey.svg)}
+        .svg_combined_white{width:43px;height:8px;background-image:url(../svg/combined-shape-white.svg)}
+        </style>
+        <i class="svg svg_combined_black"></i>
+        <span style="display:inline-block;background:#494949">
+            <i class="svg svg_combined_grey"></i>
+            <i class="svg svg_combined_white"></i>
+        </span>
+    </dd>
+    <dd>
+        <style>
+        .svg_close_01{width:82px;height:82px;background-image:url(../svg/close-bt-01.svg)}
+        .svg_close_02{width:40px;height:40px;background-image:url(../svg/close-bt-02.svg)}
+        .svg_close_03{width:20px;height:20px;background-image:url(../svg/close-bt-03.svg)}
+        </style>
+        <i class="svg svg_close_01">닫기</i>
+        <i class="svg svg_close_02">닫기</i>
+        <i class="svg svg_close_03">닫기</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_del_x_01{width:8px;height:8px;background-image:url(../svg/del-x-01.svg)}
+        .svg_del_x_02{width:16px;height:16px;background-image:url(../svg/del-x-02.svg)}
+        </style>
+        <i class="svg svg_del_x_01">삭제</i>
+        <i class="svg svg_del_x_02">삭제</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_prve_b_01{width:40px;height:80px;background-image:url(../svg/prve-b-01.svg)}
+        .svg_next_b_01{width:40px;height:80px;background-image:url(../svg/next-b-01.svg)}
+        .svg_prve_w_01{width:40px;height:80px;background-image:url(../svg/prve-w-01.svg)}
+        .svg_next_w_01{width:40px;height:80px;background-image:url(../svg/next-w-01.svg)}
+        </style>
+        <i class="svg svg_prve_b_01">이전</i>
+        <i class="svg svg_next_b_01">다음</i>
+        <span style="display:inline-block;background:#494949">
+            <i class="svg svg_prve_w_01">이전</i>
+            <i class="svg svg_next_w_01">다음</i>
+        </span>
+    </dd>
+    <dd>
+        <style>
+        .svg_play{width:150px;height:150px;background-image:url(../svg/play-bt.svg)}
+        </style>
+        <span style="display:inline-block;background:#494949">
+            <i class="svg svg_play">영상플레이</i>
+        </span>
+    </dd>
+    <dd>
+        <style>
+        .svg_facebook{width:40px;height:40px;background-image:url(../svg/facebook.svg)}
+        </style>
+        <i class="svg svg_facebook">페이스북</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_search_big{width:40px;height:42px;background-image:url(../svg/search-big.svg)}
+        .svg_search_small{width:16px;height:17px;background-image:url(../svg/search-small.svg)}
+        </style>
+        <i class="svg svg_search_big">검색</i>
+        <i class="svg svg_search_small">검색</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_heart_big_b{width:26px;height:22px;background-image:url(../svg/heart-big-b.svg)}
+        .svg_heart_big_r{width:26px;height:22px;background-image:url(../svg/heart-big-r.svg)}
+        .svg_heart_big_w{width:26px;height:22px;background-image:url(../svg/heart-big-w.svg)}
+        .svg_heart_small_b{width:16px;height:14px;background-image:url(../svg/heart-small-b.svg)}
+        .svg_heart_small_r{width:16px;height:14px;background-image:url(../svg/heart-small-r.svg)}
+        .svg_review{width:13px;height:14px;background-image:url(../svg/review.svg)}
+        </style>
+        <i class="svg svg_heart_big_b">하트</i>
+        <i class="svg svg_heart_big_r">하트</i>
+        <span style="display:inline-block;background:#494949">
+            <i class="svg svg_heart_big_w">하트</i>
+        </span>
+        <i class="svg svg_heart_small_b">하트</i>
+        <i class="svg svg_heart_small_r">하트</i>
+        <i class="svg svg_review">리뷰</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_login{width:18px;height:18px;background-image:url(../svg/login-icon.svg)}
+        .svg_my{width:16px;height:19px;background-image:url(../svg/my-icon.svg)}
+        .svg_cart{width:16px;height:19px;background-image:url(../svg/cart-icon.svg)}
+        .svg_heart{width:18px;height:16px;background-image:url(../svg/heart-icon.svg)}
+        .svg_navi_open{width:20px;height:20px;background-image:url(../svg/navi-open.svg)}
+        .svg_open_b{width:10px;height:5px;background-image:url(../svg/open-b.svg)}
+        .svg_open_g{width:10px;;height:5px;background-image:url(../svg/open-g.svg)}
+        .svg_price{width:30px;height:20px;background-image:url(../svg/price.svg)}
+        .svg_photo{width:15px;height:15px;background-image:url(../svg/photo.svg)}
+        .svg_list_01{width:14px;height:14px;background-image:url(../svg/list-icon-01-b.svg)}
+        .svg_list_02{width:20px;height:12px;background-image:url(../svg/list-icon-02-b.svg)}
+        </style>
+        <i class="svg svg_login">로그인</i>
+        <i class="svg svg_my">마이페이지</i>
+        <i class="svg svg_cart">장바구니</i>
+        <i class="svg svg_heart">하트모음</i>
+        <i class="svg svg_navi_open">네비게이션오픈</i>
+        <i class="svg svg_open_b">오픈</i>
+        <i class="svg svg_open_g">오픈</i>
+        <i class="svg svg_price">가격</i>
+        <i class="svg svg_photo">사진</i>
+        <i class="svg svg_list_01">리스트형</i>
+        <i class="svg svg_list_02">리스트형</i>
+    </dd>
+    <dd>
+        <style>
+        .svg_top{width:8px;height:10px;background-image:url(../svg/top-icon.svg)}
+        .svg_end{width:8px;height:10px;background-image:url(../svg/end-icon.svg)}
+        .svg_buyck{width:26px;height:19px;background-image:url(../svg/buyck.svg)}
+        .svg_cartck{width:26px;height:31px;background-image:url(../svg/cartck.svg)}
+        .svg_more{width:28px;height:16px;background-image:url(../svg/more.svg)}
+        </style>
+        <span style="display:inline-block;background:#000">
+            <i class="svg svg_top">상단으로 이동</i>
+            <i class="svg svg_end">하단으로 이동</i>
+            <i class="svg svg_buyck">구매</i>
+            <i class="svg svg_cartck">장바구니</i>
+            <i class="svg svg_more">더보기</i>
+        </span>
+    </dd>
+</dl>
+
+<style>
+.btn{display:inline-block;position:relative;text-align:center;vertical-align:top;box-sizing:border-box;outline:none;cursor:pointer}
+.btn_link{padding:6px 9px 4px;border:1px solid #d4d4d4;border-radius:2px;background:#fff;font-size:11px;line-height:15px;color:#000}
+.btn_more{padding:10px 15px 8px;border:1px solid #5d5d5d;border-radius:2px;background:#fff;font-size:12px;line-height:15px;color:#000}
+
+.btn_home{position:relative;padding:20px 90px 18px 18px;border:1px solid #fff;border-radius:2px;font-size:15px;line-height:18px;color:#fff}
+.btn_home:after{position:absolute;top:50%;right:16px;width:43px;height:8px;margin-top:-4px;background:transparent url(../svg/combined-shape-white.svg) no-repeat;content:''}
+
+.btn_bd_txt{background:#fff;border-bottom:1px solid #a0a0a0;font-size:13px;line-height:15px;color:#a0a0a0}
+
+.btn_sizehelp{width:100%;height:40px;background:#303033;font-size:13px;line-height:40px;color:#fff}
+
+.btn_shopbag,.btn_buynow{width:100%;height:60px;font-size:18px;line-height:60px;font-weight:600;color:#fff}
+.btn_shopbag{background:#303033}
+.btn_buynow{background:#ff4800;box-shadow:10px 10px 20px 0 rgba(0,0,0,0.3)}
+</style>
+<dl id="btn" class="lux_lst">
+    <dt>버튼 스타일 </dt>
+    <dd>
+        <a href="#" class="btn btn_link">#SPECIAL ORDER</a>
+    </dd>
+    <dd style="background:#000">
+        <a href="#" class="btn btn_home">BRAND HOME</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_more">SHOPPING BAG</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_bd_txt">텍스트 언더라인</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_sizehelp">SIZE HELP</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_shopbag">SHOPPING BAG</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_shopbag"><i class="svg svg_cartck">장바구니</i></a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_buynow">BUY NOW</a>
+    </dd>
+    <dd>
+        <a href="#" class="btn btn_buynow"><i class="svg svg_buyck">구매</i></a>
+    </dd>
+</dl>
+
+<dl id="ckbx" class="lux_lst">
+    <dt>checkbox</dt>
+    <dd>
+        <span class="ckbx">
+            <!-- [D] jquery include -->
+        </span>
+    </dd>
+</dl>
+
+<dl id="rabx" class="lux_lst">
+    <dt>radio</dt>
+    <dd>
+        <span class="rabx">
+            <!-- [D] jquery include -->
+        </span>
+    </dd>
+</dl>
+
+<dl id="selbx" class="lux_lst">
+    <dt>select</dt>
+    <dd>
+        <div class="selbx">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="dropbx" class="lux_lst">
+    <dt>dropbx</dt>
+    <dd>
+        <div class="dropbx">
+            <!-- [D] jquery include -->
+        </div>
+   </dd>
+</dl>
+
+<dl id="inpbx" class="lux_lst">
+    <dt>input</dt>
+    <dd>
+        <div class="inpbx">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="inptxtbx" class="lux_lst">
+    <dt>textarea</dt>
+    <dd>
+        <div class="inptxtbx">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="colorpicker" class="lux_lst">
+    <dt>colorpicker</dt>
+    <dd>
+        <div class="colorpicker">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="rating" class="lux_lst">
+    <dt>rating</dt>
+    <dd>
+        <div class="rating">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="numcoutbx" class="lux_lst">
+    <dt>numcoutbx</dt>
+    <dd>
+        <span class="numcoutbx">
+            <!-- [D] jquery include -->
+        </span>
+    </dd>
+</dl>
+
+<dl id="main_banner" class="lux_lst">
+    <dt>main banner </dt>
+    <dd>
+        <a href="#" class="banner_area">
+            <!-- [D] jquery include -->
+        </a>
+    </dd>
+</dl>
+
+<dl id="feed_area" class="lux_lst">
+    <dt>feed_area</dt>
+    <dd>
+        <a href="#" class="feed_area">
+            <!-- [D] jquery include -->
+        </a>
+    </dd>
+</dl>
+
+<dl id="prd_s" class="lux_lst">
+    <dt>prd_s</dt>
+    <dd>
+        <div class="prd_s">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="prd_b" class="lux_lst">
+    <dt>prd_b</dt>
+    <dd>
+        <div class="prd_b">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="prd_bd" class="lux_lst">
+    <dt>prd_bd</dt>
+    <dd>
+        <div class="prd_bd">
+            <!-- [D] jquery include -->
+        </div>
+    </dd>
+</dl>
+
+<dl id="heart_area" class="lux_lst">
+    <dt>heart_area</dt>
+    <dd>
+        <div class="heart_area">
+            <style>
+            .heart_area{overflow:hidden;text-align:center}
+            .heart_area .heart{display:inline-block;margin:0 auto;padding:10px;vertical-align:top;outline:none}
+            .heart_area .count{display:block;margin-top:10px;font-size:11px;color:#5d5d5d}
+            .heart_area .active .count{color:#ff4800}
+            .heart i{width:16px;height:14px;background-image:url(../../svg/heart-small-b.svg)}
+            .heart.active i{background-image:url(../../svg/heart-small-r.svg)}
+            .review i{width:13px;height:14px;background-image:url(../svg/review.svg)}
+            .review.active i{background-image:url(../../svg/review-r.svg)}
+            </style>
+            <button type="button" class="heart">
+                <i class="svg">하트</i>
+                <span class="count">3</span>
+            </button>
+
+            <button type="button" class="review">
+                <i class="svg">하트</i>
+                <span class="count">3</span>
+            </button>
+        </div>
+    </dd>
+</dl>
+
+<dl id="dday" class="lux_lst">
+    <dt>dday</dt>
+    <dd>
+        <div class="dday_area">
+            <!-- [D] jquery include -->
+        </div>
+        <div class="dday_area">
+            <div class="dday">
+                <div class="bar" style="width: 100%; height: 2px;">
+                    <div style="background-color: rgb(000, 000, 000); width: 10%; height: 100%; transition: height 0.4s; "></div>
+                </div>
+                <div class="day_remain active" style="right:0">D-day 00:00:13</div>
+                <div class="dday_date">2017.05.12 ~ 06.29</div>
+            </div>
+        </div>
+    </dd>
+</dl>
+
+<dl id="accodion" class="lux_lst">
+    <dt>accodion</dt>
+    <dd>
+        <div class="accodionbx">
+            <!-- 1depth -->
+            <button type="button" class="btn lnk_text active">
+            <span>아코디언 리스트 1depth list형 </span>
+            <span class="sp_lux sp_accodion"></span>
+            </button>
+
+            <div class="accodion_content">
+                <div>
+                아코디언 텍스트 쭉쭉
+                </div>
+            </div>
+        </div>
+    </dd>
+</dl>
+
+<dl id="" class="lux_lst">
+    <dt></dt>
+    <dd>
+
+    </dd>
+</dl>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../js/jquery.include.js"></script>
+</body>
+</html>

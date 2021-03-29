@@ -1,0 +1,60 @@
+<style>
+.brand_info_area{position:relative;margin:60px auto 0}
+.brand_info_area:before{position:absolute;top:0;right:0;bottom:0;left:0;z-index:10;background:rgba(0,0,0,.6);content:''}
+.brand_info_area .imgbx{overflow:hidden;position:relative;width:100%;background-repeat:no-repeat;background-size:cover;background-position:50% 50%}
+.brand_info_area .img_dsc{display:-webkit-flex;display:flex;align-items:center;justify-content:center;position:relative;z-index:20;color:#fff;word-break:break-all}
+.brand_info_area .img_dsc .inbx{-webkit-flex:1;flex:1}
+.brand_info_area .img_dsc h1{font-weight:600}
+/*/deep/ */.brand_info_area .btn_home ruler-svg-icon-combinedshape path{fill:#fff!important}
+/*/deep/ */.brand_info_area ruler-heart{display:block;margin-top:44px}
+/*/deep/ */.brand_info_area ruler-heart path{stroke:#fff!important}
+/*/deep/ */.brand_info_area ruler-svg-icon-heart path{stroke-width:.7!important}
+/*/deep/ */.brand_info_area .active ruler-svg-icon-heart path{stroke:#ff4800!important}
+/*/deep/ */.brand_info_area ruler-heart .count{display:block;margin:5px auto 0!important;font-size:12px;color:#fff!important}
+/*/deep/ */.brand_info_area ruler-heart .active .count{color:#ff4800!important}
+@media screen and (min-width: 541px){
+    .brand_info_area .img_dsc{min-height:400px;padding:50px;text-align:center}
+    .brand_info_area .img_dsc h1{font-size:29px;line-height:1.5}
+    .brand_info_area .img_dsc p{font-size:19px;line-height:1.5}
+    .brand_info_area .btn_home{margin-top:25px!important}
+    .brand_info_area .btn_home ruler-svg-icon-combinedshape{display:inline-block;position:absolute;top:20px;right:20px;width:43px;height:7px}
+    /*/deep/ */.brand_info_area ruler-svg-icon-heart{display:block;width:36px;height:30px}
+}
+@media screen and (max-width: 540px){
+    .brand_info_area .img_dsc{min-height:160px;padding:20px 70px 30px 20px}
+    .brand_info_area .img_dsc h1{font-size:24px;line-height:1.1}
+    .brand_info_area .img_dsc p{margin-top:8px;font-size:16px;line-height:22px;font-weight:300}
+    .brand_info_area .img_dsc ruler-heart{position:absolute;top:50%;right:25px;margin-top:-25px}
+    .brand_info_area .btn_home{margin-top:20px;padding:14px 62px 12px 15px;font-size:12px}
+    .brand_info_area .btn_home ruler-svg-icon-combinedshape{display:inline-block;position:absolute;top:14px;right:15px;width:33px;height:7px}
+    /*/deep/ */.brand_info_area ruler-svg-icon-heart{display:block;width:24px;height:24px}
+}
+</style>
+
+<div class="brand_info_area">
+	<div class="imgbx" style="background-image: url(https://img.29cm.co.kr/contents/brand/201507/20150723111054.jpg);">
+		<div class="img_dsc">
+			<div class="inbx">
+				<h1>converse</h1>
+				<p>컨버스</p>
+				<ruler-heart _nghost-c38="" data-action="set">
+                    <div _ngcontent-c38="" class="heartbx">
+                        <button _ngcontent-c38="" class="heart" type="button">
+                            <ruler-svg-icon-heart _ngcontent-c38=""><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" style="height: 100%;">
+                                <path d="M9 6.088C9 3.831 10.791 2 13 2s4 1.83 4 4.088c0 1.743-1.46 3.23-1.46 3.23L9 16 2.46 9.318S1 7.83 1 6.088C1 3.831 2.791 2 5 2s4 1.83 4 4.088z" style="fill: none; fill-rule: evenodd;"></path>
+                            </svg>
+                            </ruler-svg-icon-heart>
+                            <span _ngcontent-c38="" class="count">2862</span>
+                        </button>
+                    </div>
+                </ruler-heart>
+    			<a class="btn btn_home" href="/shop/brand/1154">BRAND HOME
+                    <ruler-svg-icon-combinedshape stroke="#fff"><svg viewBox="0 0 33 7" xmlns="http://www.w3.org/2000/svg" style="width: 42px; height: 6px;">
+                        <path d="M28 4H0V3h28V0l5 3.5L28 7V4z" style="fill: rgb(48, 48, 51); fill-rule: evenodd;"></path>
+                    </svg>
+                    </ruler-svg-icon-combinedshape>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>오픈이후 긴급점검 대비용</title>
+<style>
+
+*{margin:0;padding:0;font-family:"Campton","AppleSDGothicNeo"}
+@font-face{
+    font-family:"campton";
+    src:local("Campton W00 Book"), local("Campton-W00-Book"), url("https://image.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+.opening_wrap{position:absolute;top:0;right:0;bottom:0;left:0}
+.logo{width:100px}
+.icon{position:absolute}
+.icon img{width:100%}
+@media screen and (min-width:541px){
+    .opening_wrap{display:flex;align-items:center;justify-content:center;background:#fff;color:#000}
+    .opening_ct{position:relative;width:785px;height:360px;box-sizing:border-box}
+    .icon{top:17px;right:11px;width:178px}
+    .dsc{margin-top:39px}
+    .dsc h1{font-size:48px;line-height:52px;font-weight:normal}
+    .dsc p{margin-top:15px;font-size:15px;line-height:26px;font-weight:300}
+    .cscenter{margin-top:59px}
+    .cscenter h2{font-size:14px;font-weight:300}
+    .cscenter p{font-size:23px;font-weight:600}
+    .m_view{display:none}
+}
+@media screen and (max-width:540px){
+    .opening_wrap{background:#fff;color:#000}
+    .opening_ct{padding:339px 30px 30px}
+    .icon{top:38px;right:49px;width:160px}
+    .dsc h1{font-size:24px;line-height:30px;font-weight:500}
+    .dsc p{margin-top:15px;font-size:16px;line-height:26px;font-weight:500}
+    .cscenter{margin-top:16px}
+    .cscenter h2{display:none}
+    .cscenter p{font-size:24px;font-weight:500}
+    .logo{position:absolute;bottom:30px;left:30px}
+}
+</style>
+</head>
+<body>
+<div class="opening_wrap">
+    <div class="opening_ct">
+        <div class="icon">
+            <img src="https://img.29cm.co.kr/next29cm/open_after_icon.png" alt=""/>
+        </div>
+        <img src="https://img.29cm.co.kr/next29cm/logo_29cm.png" alt="29cm" class="logo"/>
+        <div class="dsc">
+            <h1>안녕하세요<br>29CM입니다.</h1>
+            <p>
+                더 나은 서비스를 위해 시스템 점검 중입니다.<br>
+                이용에 불편을 드려 대단히 죄송합니다.<br>
+                사이트 이용과 관련된 문의는 고객센터로<br class="m_view"> 연락 바랍니다.
+            </p>
+        </div>
+        <div class="cscenter">
+            <h2>고객센터</h2>
+            <p>1644-0560</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>쿠폰 발급 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- Layer -->
+<style type="text/css">
+/* 레이어 */
+.ly_wrap{display:none;position:fixed;top:0;right:0;left:0;bottom:0;z-index:200;background:rgba(0,0,0,.3)}
+.ly_wrap .ly_inner{position:absolute;top:50%;left:50%;width:540px;height:640px;padding:60px 40px 40px;background:#fff;box-shadow:20px 20px 40px 0 rgba(0,0,0,.5);transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);box-sizing:border-box}
+.ly_wrap .btn_close{position:absolute;top:5px;right:5px;width:60px;height:60px}
+.ly_wrap .btn_close .sp{display:inline-block;overflow:hidden;width:15px;height:15px;transform:rotate(45deg);font-size:1px;line-height:9999px;white-space:nowrap;border:1px solid #080808}
+.ly_wrap .btn_close .sp1{border-left:none;border-bottom:none}
+.ly_wrap .btn_close .sp2{margin-left:5px;border-right:none;border-top:none}
+.ly_wrap .my_tit{margin-bottom:19px}
+.ly_wrap .btn_bx{margin-top:10px;text-align:center}
+.ly_wrap .btn_bx .btn_bor,.ly_wrap .btn_bx .btn_black{width:100px;height:40px;margin:0 2px;border-radius:2px;line-height:40px;vertical-align:top}
+
+.ly_inner .btn_area{margin:25px auto 0;width:270px;height:50px;}
+.ly_inner .btn_area button{width:130px;height:50px}
+.ly_inner .btn_area .btn_ok{margin-right:10px;border:1px solid #dbdbdb;color:#5d5d5d}
+.ly_inner .btn_area .btn_couponbox{background-color:#333;color:#fff}
+
+@media screen and (max-width:540px){
+    .ly_wrap .ly_inner{overflow-y:auto;top:40px;right:20px;left:20px;bottom:40px;width:auto;height:auto;padding:20px;transform:none}
+    .ly_wrap .my_tit{margin-bottom:10px}
+
+    .ly_wrap .btn_close{left:5px;}
+    .ly_wrap .btn_close .sp{border-color:#a0a0a0}
+}
+
+.ly_coupon .ly_inner{padding:70px 40px 40px}
+.ly_coupon .tit{font-size:30px;font-weight:400;text-align:center}
+.ly_coupon .coupon_inner{display:block;width:300px;margin:33px auto 0}
+.ly_coupon .cp_info{overflow:hidden;margin-top:39px;font-size:14px;line-height:30px}
+.ly_coupon .cp_info dt{float:left;min-width:112px;font-weight:600;color:#ff6a42}
+.ly_coupon .cp_info dd{overflow:hidden}
+.ly_coupon .cp_use{margin-top:13px;padding-top:20px;border-top:2px solid #ebebeb}
+.ly_coupon .cp_use .pc_view{margin-bottom:10px;font-size:20px;font-weight:600;color:#111;line-height:30px}
+.ly_coupon .cp_use li{list-style-type:disc;list-style-position:inside;font-size:12px;color:#303033;line-height:24px}
+.ly_coupon .cp_use li:first-child{list-style-type:none;padding-bottom:10px}
+.ly_wrap .ly_inner{position:absolute;top:50%;left:50%;width:540px;height:395px;padding:80px 40px 40px;background:#fff;box-shadow:20px 20px 40px 0 rgba(0,0,0,.5);transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);box-sizing:border-box}
+.ly_wrap .btn_close{position:absolute;top:0;right:0;width:60px;height:60px}
+.ly_wrap .btn_close .sp{display:inline-block;overflow:hidden;background:red;width:40px;height:40px;font-size:1px;line-height:9999px;white-space:nowrap}
+.ly_wrap .my_tit{margin-bottom:19px}
+.ly_wrap .btn_bx{margin-top:10px;text-align:center}
+.ly_wrap .btn_bx .btn_bor,.ly_wrap .btn_bx .btn_black{width:100px;height:40px;margin:0 2px;border-radius:2px;line-height:40px;vertical-align:top}
+.ly_coupon .coupon_inner5{background:url(./img/pop_01.png) no-repeat;background-size:100%}
+@media screen and (max-width:540px){
+    .ly_wrap .ly_inner{overflow-y:auto;top:40px;right:20px;left:20px;bottom:40px;width:auto;height:auto;padding:20px;transform:none}
+    .ly_wrap .my_tit{margin-bottom:10px}
+}
+
+.ly_coupon .ly_inner{padding:70px 40px 40px}
+.ly_coupon .tit{font-weight:600;font-size:30px;text-align:center}
+.ly_coupon .cp_info>p{margin-top:40px;font-size:20px;text-align:center}
+.ly_coupon .cp_info .small_tit{padding-bottom:20px;font-size:14px;color:#5d5d5d}
+.btn_pop_wrap{width:270px;margin:0 auto;text-align:center}
+.btn_pop_wrap .btn_pop_wh{display:inline-block;width:130px;padding:18px 0;border:1px solid #dbdbdb;color:#5b5b5b;text-align:center;box-sizing:border-box}
+@media screen and (max-width:540px){
+	.ly_coupon{background:rgba(0,0,0,.85)}
+	.ly_coupon .ly_inner{top:0;right:0;left:0;bottom:0;background:none;color:#fff}
+	.ly_coupon .tit{font-size:26px}
+	.ly_coupon .coupon_inner{width:256px;height:126px}
+	.ly_coupon .cp_info{margin-top:30px;font-size:13px;line-height:20px}
+	.ly_coupon .cp_info dt{min-width:0;margin-top:7px;font-weight:normal;opacity:.5;}
+    .ly_coupon .cp_info dd{margin-top:7px;padding-left:10px;}
+	.ly_coupon .cp_use{margin-top:20px;padding-top:0;border-top:0}
+	.ly_coupon .cp_use .pc_view{margin-bottom:0;font-size:0;line-height:1}
+	.ly_coupon .cp_use li{color:#9a9a9a}
+
+    .ly_inner .btn_area .btn_ok{border:none;background-color:#333;color:#fff}
+    .ly_inner .btn_area .btn_couponbox{background-color:#fff;color:#333}
+	.ly_coupon .cp_info{margin-top:30px;font-size:16px;line-height:26px}
+	.ly_coupon .cp_info .small_tit{font-size:12px;color:#a0a0a0}
+    .btn_pop_wrap .btn_pop_wh{width:100%;border:none;background-color:#fff;font-weight:bold;color:#303033}
+}
+</style>
+<div class="ly_wrap ly_coupon" style="display:block">
+	<div class="ly_inner">
+		<h4 class="tit">ONLY 29CM APP</h4>
+		<div class="coupon_inner coupon_inner1">
+			<p>이 쿠폰은 29CM 앱에서만 다운로드 가능합니다. 지금 29CM 앱을 받아보세요.</p>
+            <p>아래의 확인 버튼을 클릭하면 앱 마켓으로 이동합니다.</p>
+		</div>
+		<button type="button" class="btn_close"><span class="sp sp1">닫기</span><span class="sp sp2">닫기</span></button>
+        <button type="button" class="btn_ok">확인</button>
+		<div class="cp_info">
+            <p>
+                이 쿠폰은 29CM 앱에서만<br>
+                다운로드 가능합니다.<br>
+                지금 29CM 앱을 받아보세요.<br>
+            </p>
+            <p class="small_tit">
+                아래의 확인 버튼을 클릭하면 앱 마켓으로 이동합니다.
+            </p>
+		</div>
+		<div class="btn_pop_wrap">
+            <a href="" class="btn_pop_wh">확인</a>
+		</div>
+		<button type="button" class="btn_close"><span class="sp">닫기</span></button>
+	</div>
+</div>
+</body>
+</html>

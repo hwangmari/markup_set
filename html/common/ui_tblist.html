@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>mypage 모바일 반응형 테이블 리스트 모음 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+<style>
+.ui_info{padding:20px 10px 10px;font-size:15px;}
+.ui_info span{color:#2196f3}
+</style>
+</head>
+<body style="padding:30px;">
+	<p class="ui_info">
+		my_tbl_lst 기본 스타일
+		my_tbl_<span>테이블네이밍</span> 으로 스타일 변경
+	</p>
+	<h2 class="ui_info">mypage_qna.html / <span>my_tbl_qa</span><h2>
+	<ul class="my_tbl_lst my_tbl_qa">
+		<li class="my_tbl_tit">
+			<div class="my_tbl_info">
+				<p class="type">상품정보</p>
+				<p class="tit">문의내용</p>
+				<p class="date">작성일</p>
+				<p class="state">답변유무</p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">상품정보</span>[스페셜오더/예약주문] L CLASSIC HIDDEN SHIRT_BE</p>
+					<p class="tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">작성일</span>2017.04.06</p>
+					<p class="state blue"><span class="m_view">답변유무 : </span>YES</p>
+					<span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg" alt=""></span>
+				</a>
+				<button type="button" class="btn_bor">삭제</button>
+			</div>
+			<div class="reply_row">
+				<div class="qa_wrap">
+					<div class="q_wrap">
+						<span class="type">Q.</span>
+						<p>재입고문의<br>M사이즈 사고싶은데 재입고 언제되나요?<br>이번달 중으로 잡혀있는 계획은 없나요..? M사이즈 꼭 사고싶어요 ᅲᅲᅲ</p>
+					</div>
+					<div class="a_wrap">
+						<span class="type">A.</span>
+						<p>안녕하세요. 고객님<br>해당 상품은 재입고 계획이 잡혀있지 않습니다.<br>죄송합니다.</p>
+						<p class="sign">Guide to better choice<br>멋지고 착하고 엉뚱한<br>another select shop 29CM</p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">상품정보</span>[스페셜오더/예약주문] L CLASSIC HIDDEN SHIRT_BE</p>
+					<p class="tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">작성일</span>2017.04.06</p>
+					<p class="state blue"><span class="m_view">답변유무 : </span>YES</p>
+					<span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg" alt=""></span>
+				</a>
+				<button type="button" class="btn_bor">삭제</button>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">상품정보</span>[스페셜오더/예약주문] L CLASSIC HIDDEN SHIRT_BE</p>
+					<p class="tit"><span class="blind">문의내용</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">작성일</span>2017.04.06</p>
+					<p class="state blue"><span class="m_view">답변유무 : </span>YES</p>
+					<span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg" alt=""></span>
+				</a>
+				<button type="button" class="btn_bor">삭제</button>
+			</div>
+		</li>
+	</ul>
+
+	<h2 class="ui_info">mypage_notice.html / <span>my_tbl_notice</span> <h2>
+	<ul class="my_tbl_lst my_tbl_notice">
+		<li class="my_tbl_tit">
+			<div class="my_tbl_info">
+				<p class="type">구분</p>
+				<p class="tit">제목</p>
+				<p class="date">등록일</p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">구분</span>1987</p>
+					<p class="tit"><span class="blind">제목</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">등록일</span>2017.04.06</p>
+				</a>
+			</div>
+			<div class="reply_row">
+				<div class="notice_wrap">
+					<p>
+					Goody Hearty Wacky 29CM<br>
+					<br>
+					재활용 실버를 사용하고, 천연석을 융합합니다.<br>
+					이익의 일부를 자연환경 보호에 기부한다는 것으로 자연에 환원하는 의미를 지닌 브랜드 입니다.<br>
+					<br>
+					실버 및 천연 소재가 본래 가지고 있는 아름다움을 최대한 살렸으며<br>
+					심플하고 군더더기 없는 디자인을 목표로 합니다.<br>
+					<br>
+					또한 외관만 아름다운 것이 아니라 착용함에 따라 발생하는 유기적인 미도 추구합니다.<br>
+					그 중에서도 HeavyOZ 라인은 몰리브의 하드 라인으로<br>
+					헤비한 볼륨감과 스파르타 실버디자인, 수제 가죽을 사용하여 제작합니다.<br>
+					평생 착용할 수 있을 정도로 강인한 내구성을 지니며 보편적인 디자인을 제안합니다<br>
+					<br><br>
+					</p>
+
+					<a href="#">MOLLIVE 브랜드 보기</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">구분</span>1987</p>
+					<p class="tit"><span class="blind">제목</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">등록일</span>2017.04.06</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info"><!--[D] .my_tbl_info 클릭시, 해당 태그 다음의 .reply_row 노출 -->
+				<a href="#" class="infoinner">
+					<p class="type"><span class="blind">구분</span>1987</p>
+					<p class="tit"><span class="blind">제목</span>착용모델 사이즈 정보가 궁금합니다. 키랑 평소사이즈가 어떻게 되는지, 착용사이즈는 어떤걸 입은건가요?</p>
+					<p class="date"><span class="blind">등록일</span>2017.04.06</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+
+	<h2 class="ui_info">mypage_grade.html <span>my_tbl_grade</span><h2>
+	<ul class="my_tbl_lst my_tbl_mygrade">
+		<li class="my_tbl_tit">
+			<div class="my_tbl_info">
+				<p class="grade">회원등급</p>
+				<p class="grade2">구매횟수</p>
+				<p class="grade3">구매금액</p>
+				<p class="grade4">날짜</p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원등급</span>STAFF</p>
+				<p class="grade2"><span class="tit">구매횟수</span>20회 (1만원 이상)</p>
+				<p class="grade3"><span class="tit">구매금액</span>1,456,456원</p>
+				<p class="grade4"><span class="tit">날짜</span>2016.12.01 ~ 2017.4.30</p>
+			</div>
+		</li>
+	</ul>
+
+	<ul class="my_tbl_lst my_tbl_grade">
+		<li class="my_tbl_tit">
+			<div class="my_tbl_info">
+				<p class="grade">회원단계</p>
+				<p class="grade2">최근5개월간 구매금액</p>
+				<p class="grade3">최근5개월간 1만원 이상 구매횟수</p>
+				<p class="grade4">월간 지급 보너스 쿠폰</p>
+				<p class="grade5">무료배송</p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원단계</span>VIP</p>
+				<p class="grade2"><span class="tit">최근5개월간 구매금액</span>50만원 이상</p>
+				<p class="grade3"><span class="tit">최근5개월간 1만원 이상 구매횟수</span>10회 이상</p>
+				<p class="grade4"><span class="tit">월간 지급 보너스 쿠폰</span>10% 할인쿠폰 2장</p>
+				<p class="grade5"><span class="tit">무료배송</span>2만원 이상<br><span>(29CM 자체 배송상품)</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원단계</span>Red</p>
+				<p class="grade2"><span class="tit">최근5개월간 구매금액</span>30만원 이상, 50만원 미만</p>
+				<p class="grade3"><span class="tit">최근5개월간 1만원 이상 구매횟수</span>5회 이상, 10회 미만</p>
+				<p class="grade4"><span class="tit">월간 지급 보너스 쿠폰</span>10% 할인쿠폰 1장<br>무료배송쿠폰 2장<br><span>(29CM 자체 배송상품)</span></p>
+				<p class="grade5"><span class="tit">무료배송</span>3만원 이상<br><span>(29CM 자체 배송상품)</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원단계</span>Orange</p>
+				<p class="grade2"><span class="tit">최근5개월간 구매금액</span>10만원 이상, 30만원 미만</p>
+				<p class="grade3"><span class="tit">최근5개월간 1만원 이상 구매횟수</span>1회 이상, 5회 미만</p>
+				<p class="grade4"><span class="tit">월간 지급 보너스 쿠폰</span>5% 할인쿠폰 2장<br>무료배송쿠폰 1장<br><span>(29CM 자체 배송상품)</span></p>
+				<p class="grade5"><span class="tit">무료배송</span>4만원 이상<br><span>(29CM 자체 배송상품)</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원단계</span>Yellow</p>
+				<p class="rowspan"><span class="tit">최근5개월간 구매금액</span>5개월 이내 재구매 경험이 없는 고객</p>
+				<p class="grade4"><span class="tit">월간 지급 보너스 쿠폰</span>5% 할인쿠폰 1장<br>무료배송쿠폰 1장<br><span>(29CM 자체 배송상품)</span></p>
+				<p class="grade5"><span class="tit">무료배송</span>5만원 이상<br><span>(29CM 자체 배송상품)</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="grade"><span class="tit">회원단계</span>Green</p>
+				<p class="rowspan"><span class="tit">최근5개월간 구매금액</span>신규가입회원, 구매 경험이 없는 고객</p>
+				<p class="grade4"><span class="tit">월간 지급 보너스 쿠폰</span>-</p>
+				<p class="grade5"><span class="tit">무료배송</span>5만원 이상<br><span>(29CM 자체 배송상품)</span></p>
+			</div>
+		</li>
+	</ul>
+
+	<h2 class="ui_info">mypage_mileage.html <span>my_tbl_mileage</span><h2>
+	<ul class="my_tbl_lst my_tbl_mileage">
+		<li class="my_tbl_tit">
+			<div class="my_tbl_info">
+				<p class="mileage">적립일자</p>
+				<p class="mileage2">적립내용</p>
+				<p class="mileage3">마일리지</p>
+				<p class="mileage4">관련주문번호</p>
+			</div>
+		</li>
+		<li>
+			<div class="my_tbl_info">
+				<p class="mileage">2017.02.01</p>
+				<p class="mileage2">주문적립</p>
+				<p class="mileage3">333</p>
+				<p class="mileage4">2017060136529 </p>
+			</div>
+		</li>
+	</ul>
+
+	<h2 class="ui_info">mypage_07_order_detail.html <span>mypage_07_order_detail</span><h2>
+	<!-- MYPAGE 배송지정보 -->
+	<section class="my_infowrap">
+		<h3 class="my_tit">배송지정보</h3>
+		<div class="tbl_react">
+			<div class="row">
+				<div class="cell title">받는사람</div>
+				<div class="cell field">
+					<div class="inpbx">
+						<!-- [D] jquery include -->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell title">전화번호</div>
+				<div class="cell field">
+					<div class="textfidle">
+						-
+					</div>
+				</div>
+				<div class="cell title">휴대폰번호</div>
+				<div class="cell field">
+					<div class="textfidle">
+						010-8409-9485
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell title">주소</div>
+				<div class="cell field">
+					<div class="address">
+						<div class="inpbx">
+							<!-- [D] jquery include -->
+						</div>
+						<a href="#" class="btn btn_address">우편번호찾기</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell title">배송지요청사항</div>
+				<div class="cell field">
+					<div class="inpbx">
+						<!-- [D] jquery include -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="btn_bor">구매자 정보변경</a>
+	</section>
+
+	<h2 class="ui_info">mypage_10_cancel_list.html <span>mypage_10_cancel_list</span><h2>
+	<!-- 주문취소 -->
+	<div class="return_goods">
+		<div class="return_tit">
+			<p class="goods_tit">상품정보</p>
+			<p class="option">옵션</p>
+			<p class="option_num">수량</p>
+			<p class="price">결제금액</p>
+			<p class="state">진행상태</p>
+		</div>
+		<div class="goods">
+			<div class="info_bx">
+				<span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg?cmd=thumbnail&width=150" alt=""/></span>
+				<div class="info">
+					<p class="goods_tit">[B7AMA1007M] 최대 두줄 [B7AMA1007M] 최대 두줄</p>
+					<p class="option"><span class="m_view">옵션 : </span> M, Black</p>
+					<p class="option_num"><span class="m_view">수량 : </span> 1</p>
+					<p class="price"><span class="num">270,000</span>원</p>
+					<p class="state">배송완료<span>취소불가</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="goods">
+			<div class="info_bx">
+				<span class="img_wrap"><img src="//image.29cm.co.kr/contents/itemIcon/201705/20170523180154.jpg?cmd=thumbnail&width=150" alt=""/></span>
+				<div class="info">
+					<p class="goods_tit">[B7AMA1007M] 최대 두줄 [B7AMA1007M] 최대 두줄</p>
+					<p class="option"><span class="m_view">옵션 : </span> M, Black</p>
+					<p class="option_num"><span class="m_view">수량 : </span> 1</p>
+					<p class="price"><span class="num">270,000</span>원</p>
+					<p class="state">상품준비중</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- MYPAGE 환불정보 refund -->
+	<section class="my_payment_refund">
+	    <h3 class="my_tit">환불정보</h3>
+	    <ul class="refund">
+	        <li class="lftsection">
+	            <ul>
+	                <li>
+	                    <div class="lft">상품취소금액</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">배송비</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">마일리지 차감</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">보너스쿠폰</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	            </ul>
+	        </li>
+	        <li class="rgtsection">
+	            <ul>
+	                <li class="refund_inparea">
+	                    <div class="lft">결제수단 : 무통장입금</div>
+	                    <div class="rgt">
+	                        <style>
+	                        .selbx{display:inline-block;position:relative;width:100%;height:40px;margin-right:5px;padding:9px 0 0 14px;border:1px solid #d4d4d4;vertical-align:top;box-sizing:border-box}
+	                        .selbx select{display:block;width:100%;margin:-4px 0 0;padding:0;border:0 none;background:#fff;font-size:14px;line-height:30px;color:#4a4a4a;color:#000;vertical-align:top;-webkit-appearance:none;outline:none;box-sizing:border-box}
+	                        .selbx:after{position:absolute;top:16px;right:10px;width:13px;height:6px;background:url(../../svg/open-g.svg) no-repeat;background-size:100% 100%;pointer-events:none;content:''}
+	                        .inpbx{position:relative;width:100%;height:40px;padding:9px 0 0 14px;border:1px solid #d4d4d4;background:#fff;vertical-align:top;box-sizing:border-box}
+	                        .inpbx input{display:block;width:100%;font-size:15px;color:#1a1a1a;vertical-align:top;border:0;background:transparent;outline:none}
+	                        .bankinp{margin:-15px 0}
+	                        .bankinp .in{display:flex;margin-top:10px}
+	                        @media screen and (max-width:540px){
+	                            .bankinp{margin:5px 0 -15px}
+	                        }
+	                        </style>
+
+	                        <div class="bankinp">
+	                            <div class="in">
+	                                <span class="selbx">
+	                                    <select id="">
+	                                        <option value="">은행명</option>
+	                                    </select>
+	                                </span>
+	                                <div class="inpbx">
+	                                    <input type="text" id="textField_text" placeholder="예금주명">
+	                                </div>
+	                            </div>
+	                            <div class="in">
+	                                <div class="inpbx">
+	                                    <input type="text" id="textField_text" placeholder="예금계좌번호">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">결제금액환불</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	            </ul>
+	            <div class="refund_total tt_price">
+	                <div class="lft">
+	                    <strong>총 환불(예정)금액</strong>
+	                </div>
+	                <div class="rgt">
+	                    <p class="price"><em>95,555</em>원</p>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	</section>
+	<section class="my_payment_refund">
+	    <h3 class="my_tit">취소정보</h3>
+	    <ul class="refund">
+	        <li class="lftsection">
+	            <ul>
+	                <li>
+	                    <div class="lft">상품취소금액</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">배송비 취소금액</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div class="lft">환불방법</div>
+	                    <div class="rgt">
+	                        <span class="price"><em>82,000</em>원</span>
+	                    </div>
+	                </li>
+	            </ul>
+	        </li>
+	        <li class="rgtsection">
+	            <div class="refund_total tt_price">
+	                <div class="lft">
+	                    <strong>총 환불(예정)금액</strong>
+	                </div>
+	                <div class="rgt">
+	                    <p class="price"><em>95,555</em>원</p>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	</section>
+	<section class="my_payment_refund">
+	    <style>
+	    .refund_end p{display:flex;height:200px;align-items: center;font-size:30px;justify-content: center}
+	    .refund_end .btn_black{display:block;width:300px;margin:0 auto;text-align:center}
+	    </style>
+	    <h3 class="my_tit">주문취소</h3>
+	    <div class="refund_end">
+	        <p>주문취소가 완료되었습니다</p>
+	        <a href="#" class="btn_black">접수내역 확인</a>
+	    </div>
+	</section>
+
+</body>
+</html>

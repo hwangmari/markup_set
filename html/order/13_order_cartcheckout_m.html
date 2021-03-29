@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>주문서
+</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order_m.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<!--- container : start -->
+<div id="wrap" class="wrap">
+    <div class="container-s container-order">
+        <div class="container container-fluid">
+            <!--- content : start -->
+            <fieldset class="orderC checkout__form">
+                <form method="post" name="frmCart" onsubmit="return false;">
+                    <input type="hidden" name="deviceMode" value="M">
+                    <input type="hidden" name="device" value="">
+                    <dl class="order__list">
+                        <!-- 주문 리스트 -->
+                        <dt class="order__header order__header--first active">
+                            <h3 class="title">
+                                <span class="total--count">총<span class="count">1개</span></span>
+                                <span class="total--price">16,800</span>
+                            </h3>
+                        </dt>
+                        <dd style="display:block">
+                            <div class="product">
+                                <div class="product__information">
+                                    <a
+                                        href="/shop/shop_detail.asp?idx=142015"
+                                        target="_blank"
+                                        class="product__name">Ali Short-Sleeve T</a>
+
+                                    <dl class="product__option">
+
+                                        <dt>옵션</dt>
+                                        <dd>[Color]Beige,[Size]Free</dd>
+
+                                        <dt>수량</dt>
+                                        <dd>1<br/></dd>
+                                    </dl>
+                                </div>
+                                <div class="product__image">
+                                    <a href="/shop/shop_detail.asp?idx=142015">
+                                        <img
+                                            src="http://image.29cm.co.kr/contents/itemIcon/201705/20170524111714.jpg?cmd=thumb&width=100&height=100"
+                                            alt="Ali Short-Sleeve T">
+                                    </a>
+                                </div>
+                                <div class="product__buy">
+                                    <!-- 총금액 -->
+                                    <span class="product__price">
+                                        <span class="product__price--discount">30% 16,800</span>
+                                        <span class="coupon12px" id="HTML_itemcouponcost_0"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </dd>
+                    </dl>
+                </form>
+
+                <form name="frmOrder" method="post" onsubmit="return false;">
+                    <!-- 상점아이디 -->
+
+                    <input type="hidden" name="mid" value="aplusb1002">
+
+                    <!-- 화폐단위 -->
+                    <input type="hidden" name="MobileItemName" value="Ali Short-Sleeve T">
+                    <input type="hidden" name="currency" value="WON">
+                    <!-- 무이자 할부 -->
+                    <input type="hidden" name="nointerest" value="no">
+                    <input
+                        type="hidden"
+                        name="quotabase"
+                        value="선택:일시불:2개월:3개월:4개월:5개월:6개월:7개월:8개월:9개월:10개월:11개월:12개월:18개월">
+                    <input type="hidden" name="acceptmethod" value="VERIFY:NOSELF:Vbank(20170731)">
+
+                    <input type="hidden" name="quotainterest" value="">
+                    <input type="hidden" name="paymethod" value="">
+                    <input type="hidden" name="cardcode" value="">
+                    <input type="hidden" name="cardquota" value="">
+                    <input type="hidden" name="rbankcode" value="">
+                    <input type="hidden" name="reqsign" value="DONE">
+                    <input type="hidden" name="encrypted" value="">
+                    <input type="hidden" name="sessionkey" value="">
+                    <input type="hidden" name="uid" value="">
+                    <input type="hidden" name="sid" value="">
+                    <input type="hidden" name="version" value="4000">
+                    <input type="hidden" name="clickcontrol" value="enable">
+                    <input type="hidden" name="price" value="16800">
+                    <input type="hidden" name="goodname" value="Ali Short-Sleeve T">
+                    <input type="hidden" name="buyername" value="">
+                    <input type="hidden" name="buyeremail" value="">
+                    <input type="hidden" name="buyertel" value="">
+                    <input type="hidden" name="gopaymethod" value="onlycard">
+                    <!-- or onlydbank -->
+                    <input
+                        type="hidden"
+                        name="ini_logoimage_url"
+                        value="//image.29cm.co.kr/2010_fix/header/29logo.gif">
+
+                    <input type="hidden" name="itemcouponmoney" value="0">
+                    <input type="hidden" name="couponmoney" value="0">
+                    <input type="hidden" name="device" value="">
+                    <input type="hidden" name="totOrderCount" value="1">
+
+                    <!-- ***** 현대카드 payshot ***** -->
+                    <input
+                        type="hidden"
+                        name="P_PAYSHOT_KEY"
+                        value="29CM201701021552589000000685140">
+                    <!--현대카드고객키값 (29CM(4)+고객 가입일시채번 (17)+고객번호(10)) -->
+
+                    <div id="KaKaoSign_zone"></div>
+
+                    <dl class="order__list">
+                        <!-- 주문자 정보 -->
+                        <dt class="order__header order__header--open" style="display:none;">
+                            <h3 class="title">주문자 정보</h3>
+                        </dt>
+                        <dd class="order__info__wrap" style="display:none;">
+                            <div class="order__info order__table">
+                                <table summary="주문을 하는 사람의 이름, 연락처, 메일주소에 대한 정보를 제공합니다.">
+                                    <caption>주문 고객 정보</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="OrderName">이름</label>
+                                            </th>
+                                            <td>
+                                                <div class="input--text">
+                                                    <input id="OrderName" name="OrderName" type="text" maxlength="50" value="황혜경">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="OrderEmail">메일주소</label>
+                                            </th>
+                                            <td>
+                                                <div class="input--text">
+                                                    <input
+                                                        id="OrderEmail"
+                                                        name="OrderEmail"
+                                                        type="email"
+                                                        maxlength="50"
+                                                        value="hwangmari@naver.com">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <label for="o-htel1">연락처</label>
+                                            </th>
+                                            <td>
+                                                <div class="info--phone">
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="o-htel1"
+                                                            class="mid"
+                                                            name="OrderHpNo1"
+                                                            type="tel"
+                                                            maxlength="3"
+                                                            value="010"
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 첫자리">
+                                                    </div>
+                                                    &ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="o-htel2"
+                                                            class="mid"
+                                                            name="OrderHpNo2"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value="6613"
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 중간자리">
+                                                    </div>
+                                                    &ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="o-htel3"
+                                                            class="mid"
+                                                            name="OrderHpNo3"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value="6155"
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 끝자리">
+                                                    </div>
+                                                </div>
+                                                <input name="OrderTelNo1" id="OrderTelNo1" type="hidden" value="">
+                                                <input name="OrderTelNo2" id="OrderTelNo2" type="hidden" value="">
+                                                <input name="OrderTelNo3" id="OrderTelNo3" type="hidden" value="">
+                                                <input name="buyZip1" id="buyZip1" type="hidden" value="463">
+                                                <input name="buyZip2" id="buyZip2" type="hidden" value="400">
+                                                <input
+                                                    name="buyAddr1"
+                                                    id="buyAddr1"
+                                                    type="hidden"
+                                                    readonly="ReadOnly"
+                                                    value="경기 성남시 분당구 대왕판교로 660 (삼평동, 유스페이스1)">
+                                                <input name="buyAddr2" id="buyAddr2" type="hidden" value="A동 406호 하이브랩 ">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <ul class="notice">
+                                                    <li style="font-weight:600; color:#ff2600; margin-left: 3%;">상품이 품절되는 경우 SMS 안내와 함께 자동 주문취소처리 및 환불 처리가 진행됩니다.</li>
+                                                    <li style="font-weight:600; margin-left: 3%;">신용 카드는 즉시 취소, 무통장 환불 - 계좌 확인 후 환불가능</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                        <!-- // 주문자 정보 -->
+                        <!-- 배송정보 -->
+                        <dt class="order__header  order__header--open" style="border-top:2px solid #000;">
+                            <h3 class="title">배송정보</h3>
+                            <!-- 기본 배송지 -->
+
+                            <dl class="receiver--default" id="receiverDefault">
+
+                                <dt>받는 사람</dt>
+                                <dd class="receiver-name">황혜경
+                                    <span class="text--default">[기본배송지]</span></dd>
+                                <dt>연락처</dt>
+                                <dd class="receiver-phone">010-6613-6155</dd>
+                                <dt>배송 주소</dt>
+                                <dd class="receiver-address">463-400&nbsp;경기 성남시 분당구 대왕판교로 660 (삼평동, 유스페이스1)&nbsp;A동 406호 하이브랩
+                                </dd>
+                                <!-- td onClick="btn.addressDel(0);">삭제</td -->
+
+                            </dl>
+
+                            <dl>
+                                <div
+                                    class="checkbox-basic"
+                                    id="divsaveaddress"
+                                    style="padding-top:1em;display:none;z-index:10000;">
+                                    <label for="saveaddress"><input
+                                        type="checkbox"
+                                        name="saveaddress"
+                                        id="saveaddress"
+                                        value="1"
+                                        class="checkbox">
+                                        <span class="label-text">회원정보 기본 배송지로 설정</span></label>
+                                </div>
+                            </dl>
+                        </dt>
+                        <dd>
+
+                            <ul class="receiver__tab">
+                                <li>
+                                    <label>
+                                        <input
+                                            checked="CHECKED"
+                                            id="rdDlvOpt"
+                                            name="rdDlvOpt"
+                                            onclick="copyDefaultinfo(this);"
+                                            type="radio"
+                                            value="O">
+                                        <span>배송지 목록</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input
+                                            id="rdDlvOpt"
+                                            name="rdDlvOpt"
+                                            onclick="copyDefaultinfo(this);"
+                                            type="radio"
+                                            value="N">
+                                        <span>새로 입력</span>
+                                    </label>
+                                </li>
+                            </ul>
+
+                            <!-- 배송지 목록 -->
+                            <div id="receiverList" class="receiver__list">
+
+                                <ul>
+
+                                    <li>
+                                        <a
+                                            href="#"
+                                            id="receiver0"
+                                            onclick="selectAddr(this, '463','400','경기 성남시 분당구 대왕판교로 660 (삼평동, 유스페이스1)','A동 406호 하이브랩 ','황혜경','','','','010','6613','6155','0');return false;">
+                                            <span class="receiver__name">황혜경
+                                                <span class="text--default" style="color: #375fff;">[기본배송지]</span></span>
+                                            <span class="receiver__phone">010-6613-6155</span>
+                                            <span class="receiver__address">463-400&nbsp;경기 성남시 분당구 대왕판교로 660 (삼평동, 유스페이스1)&nbsp;A동 406호 하이브랩
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <!-- td onClick="btn.addressDel(0);">삭제</td -->
+
+                                    <li>
+                                        <a
+                                            href="#"
+                                            id="receiver1"
+                                            onclick="selectAddr(this, '127','68 ','경기 광주시 텃골길26번길 31 (중대동, 텃골전원타운)','없음','황혜경','','','','010','6613','6155','337311');return false;">
+                                            <span class="receiver__name">황혜경</span>
+                                            <span class="receiver__phone">010-6613-6155</span>
+                                            <span class="receiver__address">127-68 &nbsp;경기 광주시 텃골길26번길 31 (중대동, 텃골전원타운)&nbsp;없음</span>
+                                        </a>
+                                    </li>
+                                    <!-- td onClick="btn.addressDel(337311);">삭제</td -->
+
+                                    <li>
+                                        <a
+                                            href="#"
+                                            id="receiver2"
+                                            onclick="selectAddr(this, '121','840','서울 마포구 양화로10길 45 (서교동)','29cm ','황혜경','','','','010','6613','6155','331862');return false;">
+                                            <span class="receiver__name">황혜경</span>
+                                            <span class="receiver__phone">010-6613-6155</span>
+                                            <span class="receiver__address">121-840&nbsp;서울 마포구 양화로10길 45 (서교동)&nbsp;29cm
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <!-- td onClick="btn.addressDel(331862);">삭제</td -->
+
+                                    <li>
+                                        <a href="#" id="receiver3" onclick="selectAddr(this, '127','68 ','경기 광주시 텃골길26번길 31 (중대동, 텃골전원타운)','105동 302호 ','황혜경','','','','010','6613','6155','294767');return false;">
+                                            <span class="receiver__name">황혜경</span>
+                                            <span class="receiver__phone">010-6613-6155</span>
+                                            <span class="receiver__address">127-68 &nbsp;경기 광주시 텃골길26번길 31 (중대동, 텃골전원타운)&nbsp;105동 302호
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <!-- td onClick="btn.addressDel(294767);">삭제</td -->
+
+                                </ul>
+
+                            </div>
+
+                            <!-- 새로 입력 -->
+                            <div id="receiverInfo" class="receiver__info order__table" style="display: none;">
+                                <table summary="배송을 받는 사람의 이름, 연락처, 배송주소에 대한 정보를 제공합니다.">
+                                    <caption>배송 정보</caption>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <label for="ReceiveName">받는 사람</label>
+                                            </th>
+                                            <td>
+                                                <div class="input--text">
+                                                    <input id="ReceiveName" name="ReceiveName" type="text" maxlength="16">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="r-htel1">연락처</label>
+                                            </th>
+                                            <td>
+                                                <div class="info--phone">
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel1"
+                                                            class="mid"
+                                                            name="ReceiveHpNo1"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 첫자리">
+                                                    </div>
+                                                    &ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel2"
+                                                            class="mid"
+                                                            name="ReceiveHpNo2"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 중간자리">
+                                                    </div>
+                                                    &ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel3"
+                                                            class="mid"
+                                                            name="ReceiveHpNo3"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="핸드폰 끝자리">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="r-htel-add1">추가 연락처<br/>(선택)</label>
+                                            </th>
+                                            <td>
+                                                <div class="info--phone">
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel-add1"
+                                                            class="mid"
+                                                            name="ReceiveTelNo1"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="연락처 첫자리">
+                                                    </div>&ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel-add2"
+                                                            class="mid"
+                                                            name="ReceiveTelNo2"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="연락처 중간자리">
+                                                    </div>&ndash;
+                                                    <div class="input--tel">
+                                                        <input
+                                                            id="r-htel-add3"
+                                                            class="mid"
+                                                            name="ReceiveTelNo3"
+                                                            type="tel"
+                                                            maxlength="4"
+                                                            value=""
+                                                            pattern="[0-9]*"
+                                                            title="연락 끝자리">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <label for="f-Z1">배송 주소</label>
+                                            </th>
+                                            <td>
+                                                <div class="input--text input--search">
+                                                    <input id="findZipCode" name="sD" type="text" value="" placeholder="지역명">
+                                                    <button class="button--search" onclick="mAddrZipFinder();">찾기</button>
+                                                    <!-- <button class="btn-typeG" onClick="jsPostCodeByTarget2();">찾기</button> -->
+                                                </div>
+                                                <div id="zipCodeListView" class="findZipCode receiver__list">
+                                                    <ul>
+                                                        <!--<li>서울시 종로구 이화동</li>-->
+                                                    </ul>
+                                                </div>
+                                                <div class="info--zipcode">
+                                                    <div class="input--text">
+                                                        <input
+                                                            id="ReceiveZip1"
+                                                            class="mid"
+                                                            name="ReceiveZip1"
+                                                            type="text"
+                                                            value=""
+                                                            readonly="readonly">
+                                                    </div>&ndash;
+                                                    <div class="input--text">
+                                                        <input
+                                                            id="ReceiveZip2"
+                                                            name="ReceiveZip2"
+                                                            type="text"
+                                                            value=""
+                                                            readonly="readonly">
+                                                    </div>
+                                                </div>
+                                                <div class="input--text">
+                                                    <input
+                                                        id="ReceiveAddr1"
+                                                        class="w-m top"
+                                                        name="ReceiveAddr1"
+                                                        type="text"
+                                                        maxlength="60"
+                                                        title="주소">
+                                                </div>
+                                                <div class="input--text">
+                                                    <input
+                                                        id="ReceiveAddr2"
+                                                        class="w-m top"
+                                                        name="ReceiveAddr2"
+                                                        type="text"
+                                                        maxlength="60"
+                                                        title="나머지 주소">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <ul class="notice">
+                                                    <li style="font-weight:600; color:#ff2600;">배송지 불분명 및 수신불가 연락처 기입으로 반송되는 왕복 택배 비용은 구매자 부담으로 정확한 주소 및 통화 가능한 연락처 필수 기입.</li>
+                                                    <li style="font-weight:600; color:#ff2600;">대리 주문으로 해외 주소로 발송 전, 주문품 꼭 확인해주세요. 오배송 및 불량 교환에 따른 배송비는 국내 택배 비용만 지원됩니다.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                        <!-- 배송요청사항 -->
+
+						<!-- pc와 동일하게 사용  -->
+                        <dt class="order__header">
+                            <h3 class="title">배송요청사항 선택</h3>
+                        </dt>
+                        <dd>
+                            <div class="order-memo">
+
+                                <div class="radio-basic">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="deliveryMsg"
+                                            id=""
+                                            value=""
+                                            class="radio"
+                                            onclick="$('#EtcAsk').val('부재 시 경비실에 맡겨 주세요.');">
+                                        <span class="label-text">부재 시 경비실에 맡겨 주세요.</span>
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="deliveryMsg"
+                                            id=""
+                                            value=""
+                                            class="radio"
+                                            onclick="$('#EtcAsk').val('부재 시 전화 또는 문자 주세요.');">
+                                        <span class="label-text">부재 시 전화 또는 문자 주세요.</span>
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="deliveryMsg"
+                                            id=""
+                                            value=""
+                                            class="radio"
+                                            onclick="$('#EtcAsk').val('택배함에 넣어 주세요.');">
+                                        <span class="label-text">택배함에 넣어 주세요.</span>
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="deliveryMsg"
+                                            id=""
+                                            value=""
+                                            class="radio"
+                                            onclick="$('#EtcAsk').val('');"
+                                            checked="checked">
+                                        <span class="label-text">직접 입력</span>
+                                    </label>
+                                    <div class="input-basic">
+                                        <input id="EtcAsk" name="EtcAsk" type="text" maxlength="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                        <dt class="order__header order__header--open">
+                            <h3 class="title">쿠폰/마일리지 사용</h3>
+                        </dt>
+                        <dd>
+                            <!-- 보너스 쿠폰 -->
+                            <div class="coupon-area">
+                                <div class="radio-basic">
+                                    <label for="itemcouponOrsailcoupon">
+                                        <input
+                                            type="radio"
+                                            name="itemcouponOrsailcoupon"
+                                            id="itemcouponOrsailcoupon"
+                                            value="S"
+                                            class="radio"
+                                            checked="checked"
+                                            onclick="defaultCouponSet(this);">
+                                        <span class="label-text ">보너스 쿠폰</span>
+                                    </label>
+                                </div>
+                                <select name="sailcoupon" onchange="RecalcuSubTotal(this);">
+                                    <option value="">보너스 쿠폰 선택 (10개)</option>
+                                </select>
+                            </div>
+                            <!-- 상품 쿠폰 -->
+                            <div class="coupon-area">
+                                <div class="radio-basic">
+                                    <label for="itemcouponOrcoupon">
+                                        <input
+                                            type="radio"
+                                            name="itemcouponOrsailcoupon"
+                                            id="itemcouponOrsailcoupon"
+                                            value="I"
+                                            class="radio"
+                                            disabled="disabled"
+                                            onclick="defaultCouponSet(this);">
+                                        <span class="label-text ">상품 쿠폰</span>
+                                    </label>
+                                </div>
+
+                                <p class="coupon--disabled">적용 가능한 쿠폰이 없습니다.</p>
+
+                                <input type="hidden" name="availitemcouponlist" value="">
+                                <input name="checkitemcouponlist" type="hidden" value="">
+                            </div>
+                            <!-- 마일리지 -->
+                            <div class="mileage-area">
+                                <input type="hidden" id="nowmileage" value="6234">
+                                <label for="spendmileage">마일리지 [<span class="point" id="leftmileage">6,234P</span>
+                                    보유]</label>
+
+                                <div class="checkbox-basic">
+                                    <label><input
+                                        type="checkbox"
+                                        name=""
+                                        id=""
+                                        value=""
+                                        class="checkbox"
+                                        onclick="if(this.checked == true) { document.getElementsByName('spendmileage')[0].value='6234';RecalcuSubTotal(document.getElementsByName('spendmileage')[0]);} else {document.getElementsByName('spendmileage')[0].value='0';RecalcuSubTotal(document.getElementsByName('spendmileage')[0]);}">
+                                        <span class="label-text">모두 사용</span></label>
+                                </div>
+
+                                <div class="input-basic input-basic--point input-basic--">
+                                    <input
+                                        name="spendmileage"
+                                        type="number"
+                                        pattern="[0-9]*"
+                                        min="0"
+                                        value=""
+                                        onkeyup="RecalcuSubTotal(this);">
+                                    <span class="unit-point">P</span>
+                                </div>
+                            </div>
+                            <div class="" style="display: none;">
+                                <ul class="notice">
+                                    <li>상품쿠폰과 보너스쿠폰은 중복사용이 불가능합니다.</li>
+                                    <li>보너스쿠폰 중 할인쿠폰은 이미 할인을 하는 상품에 대해서는 중복 적용이 되지 않습니다.</li>
+                                    <li>상품 중 일부 상품[할인쿠폰제외상품]은 할인쿠폰이 적용되지 않습니다.</li>
+                                    <li>무료배송 보너스 쿠폰은 주문 금액 기준입니다.</li>
+                                    <li>무료배송쿠폰은 총결제액(마일리지및 쿠폰적용금액) 기준 10,000원 이상일 경우만 사용가능합니다.</li>
+                                    <li>업체조건배송상품은 무료배송 쿠폰 적용이 불가합니다.</li>
+                                </ul>
+                            </div>
+                        </dd>
+						<!-- //pc와 동일하게 사용  -->
+                        <dt class="order__header order__header--open">
+                            <h3 class="title">주문금액 확인</h3>
+                        </dt>
+                        <dd>
+                            <dl class="order-price">
+                                <dt>주문상품 금액</dt>
+                                <dd>16,800</dd>
+                                <dt>배송비</dt>
+                                <dd>0</dd>
+                                <dt>마일리지 사용</dt>
+                                <dd id="DISP_SPENDMILEAGE">0</dd>
+                                <dt>보너스쿠폰 사용</dt>
+                                <dd id="DISP_SAILCOUPON_TOTAL">0</dd>
+                                <dt>상품쿠폰 사용</dt>
+                                <dd id="DISP_ITEMCOUPON_TOTAL">0</dd>
+                                <dt class="price--total">최종 결제 금액</dt>
+                                <dd>
+                                    <span id="DISP_SUBTOTALPRICE">16,800</span>
+                                    <span style="display:none;" id="DISP_SUBTOTALPRICE2">16,800</span>
+                                </dd>
+                            </dl>
+                        </dd>
+
+                        <!-- 결제수단 -->
+                        <dt class="order__header order__header--open">
+                            <h3 class="title">결제하기</h3>
+                        </dt>
+                        <dd>
+							<div class="order_pay_type_m">
+								<!-- [D] jquery include -->
+							</div>
+                            <!-- // 결제 관련 공지 -->
+                        </dd>
+                    </dl>
+                </form>
+                <div class="checkbox-basic order-agree">
+                    <label for="orderAgree"><input
+                        type="checkbox"
+                        name="orderAgree"
+                        id="orderAgree"
+                        value="1"
+                        class="checkbox">
+                        <span class="label-text">주문하실 상품 및 결제, 주문정보를 확인 하였으며, 이에 동의합니다.(필수)</span></label>
+                </div>
+            </fieldset>
+
+            <!-- CHECK OUT -->
+            <div id="nextbutton1" name="nextbutton1">
+                <button class="button--checkout" type="button" onclick="OrderProc('');">CHECK OUT</button>
+            </div>
+            <div id="nextbutton2" name="nextbutton2" style="display: none;">
+                <button
+                    class="button--checkout button--checkout--disabled"
+                    type="button"
+                    disabled="disabled">CHECK OUT</button>
+            </div>
+            <!--- content : end -->
+        </div>
+    </div>
+
+</div>
+<!-- container : end -->
+
+<div id="appView" class="app-view" style="display:none;">
+    <div class="content">
+        <div class="column-img"><img class="img" src="//image.29cm.co.kr/2014_fix/banner/20150416.png" alt=""></div>
+        <div class="column-link">
+            <a class="link" href="#" data-link="data-link">
+                <span class="lang-en">29CM</span>
+                앱으로 보기</a>
+        </div>
+    </div>
+    <div class="control">
+        <div class="item">
+            <button class="btn" data-reminder="data-reminder">3일동안 보지 않기</button>
+        </div>
+        <div class="item">
+            <button class="btn" data-close="data-close">X 닫기</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

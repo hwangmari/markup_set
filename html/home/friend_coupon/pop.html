@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>29CM :: 모일수록쿠폰</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+</head>
+<body>
+<style>
+.pop_wrap .m_view{display:none}
+.pop_wrap{position:relative;overflow:hidden;width:540px;height:591px;text-align:center}
+.pop_wrap .title{margin:70px 0 35px;font-weight:600;font-size:32px;line-height:42px}
+.sprite{background:url(https://img.29cm.co.kr/next29cm/event/fridend/pc_sp.png)}
+.pop_wrap .coupon_wrap{position:relative;height:100%;background-position:-2px 99%}
+.pop_inner .point{color:#375fff}
+.pop_wrap{position:fixed;top:0;right:0;left:0;bottom:0;z-index:200}
+.pop_wrap .coupon_inner{margin:0 auto;width:345px;height:190px}
+.pop_wrap .text_wrap{padding-top:60px;font-size:15px;line-height:26px;color:#303033}
+.coupon_wrap .point{display:inline-block;position:absolute;left:40%;right:27%;top:30px;margin-left:-90px;font-weight:500;font-size:79px;line-height:114px;color:#375fff}
+.coupon_wrap .point i{font-size:45px;font-style:normal}
+
+.btn_close{border:1px solid red;position:absolute;top:20px;right:20px;width:40px;height:40px}
+.btn_close .sp{overflow:hidden;font-size:1px;line-height:9999px;white-space:nowrap}
+
+@media screen and (max-width:540px){
+    .pop_wrap .m_view{display:block}
+    .pop_wrap{width:auto;height:667px;color:#fff}
+    .pop_wrap .title{margin:100px 0 35px;font-weight:normal;font-size:26px;line-height:34px}
+    .sprite{background:url(https://img.29cm.co.kr/next29cm/event/fridend/m_sp.png) no-repeat;background-size:300px 450px}
+    .pop_wrap .coupon_wrap{background-position:0 -150px}
+    .pop_wrap .kakaotalk{display:block;overflow:hidden;margin:0 auto;width:48px;height:48px;background-position:-220px -80px;text-indent:101%;white-space:nowrap}
+    .pop_wrap{background:rgba(0,0,0,.8)}
+    .pop_wrap .coupon_inner{width:266px;height:133px;margin-top:35px}
+    .pop_wrap .text_wrap{padding:30px 4px 0 4px;font-weight:100;color:#fff}
+    .pop_wrap .text_wrap .sub_text{position:relative;display:block;padding:38px 0 13px 0;font-size:14px;line-height:24px}
+    .coupon_wrap .point{top:15px;margin-left:-50px}
+
+    .btn_close{top:20px;left:20px;width:20px;height:20px}
+}
+</style>
+<div class="pop_wrap">
+    <button type="button" class="btn_close"><span class="sp">닫기</span></button>
+    <div class="pop_inner">
+        <h4 class="title">총 <span class="point">4</span>명의 회원에게<br/>할인 쿠폰이 발급되었습니다.</h4>
+        <div class="coupon">
+            <div class="coupon_inner">
+                <div class="sprite coupon_wrap">
+                    <span class="point">12<i>%</i></span>
+                </div>
+            </div>
+        </div>
+        <p class="text_wrap">
+           쿠폰은 로그인 후 마이페이지 안에서 확인 가능하며,<br/>사용자 환경에 따라 발급까지<br/>약 5분가량의 시간이 소요될 수 있습니다.<br/>
+           <em class="sub_text">함께한 친구에게도<br class="m_view"/>쿠폰 발급 소식을 알려주세요.</em>
+        </p>
+        <a href="#" title="kakaotalk" target="_blank" class="sprite m_view kakaotalk">카카오톡 아이콘</a>
+    </div>
+</div>
+</body>
+</html>

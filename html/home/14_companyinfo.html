@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>ABOUT :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+<style>
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+    .pc_view{display:none}
+    .m_view{display:block}
+}
+</style>
+<style>
+/* About */
+.about_wrap{min-width:900px;max-width:1200px;margin:0 auto;padding:60px 50px}
+.about_wrap img{width:100%}
+.about_section{position:relative;padding:100px 10px 100px 32%}
+.about_section+.about_section{border-top:2px solid #000}
+.about_section .about_tit{position:absolute;top:100px;left:0;font-size:66px;color:#000;font-weight:700;line-height:64px}
+.about_section .about_tit .sp{display:block;overflow:hidden;width:35px;height:35px;margin-top:18px;background:url(//image.29cm.co.kr/mall/daily/img_blog.png) no-repeat;background-size:100% 100%;font-size:1px;line-height:9999px;white-space:nowrap}
+.about_section .about_em{display:block;font-size:28px;font-weight:600;color:#000}
+.about_section .about_txt{margin-top:8px;font-size:14px;color:#5d5d5d;line-height:24px}
+.about_section .about_txt em{display:block;font-weight:700;color:#303033}
+.about_section .contact_lst{display:flex;margin-bottom:-30px;flex-wrap:wrap}
+.about_section .contact_lst li{width:28%;margin-bottom:30px;line-height:26px}
+.about_section .contact_lst li:nth-child(4n){width:16%}
+.about_section .contact_lst a{display:block;font-size:14px;color:#5d5d5d}
+.about_section .contact_lst .about_em{font-size:21px}
+.about_section .inside_lst{margin:-12px -23px}
+.about_section .inside_lst:after{display:block;clear:both;content:''}
+.about_section .inside_lst li{float:left;position:relative;width:33.3%;padding-top:33.3%;box-sizing:border-box}
+.about_section .inside_lst a{position:absolute;top:12px;right:12px;bottom:12px;left:12px;padding:26px 24px;border:1px solid #d4d4d4;font-size:21px;font-weight:600;color:#000;line-height:28px}
+.about_section .inside_lst a:after{position:absolute;right:20px;bottom:20px;width:10px;height:20px;background:red;content:''}
+.about_section .inside_lst a:hover{border-color:#000;background:#000;color:#fff}
+.about_section .inside_lst a:hover:after{background:#fff}
+.about_sect1 .about_txt{margin-top:27px}
+.about_sect2 .about_em{margin-top:40px}
+.about_sect2 .about_em:first-of-type{margin-top:0}
+@media screen and (max-width: 540px){
+    .about_wrap{min-width:0;max-width:100%;padding:60px 45px}
+    .about_wrap .img_wrap{overflow:hidden;position:relative;height:215px;margin:0 -45px}
+    .about_wrap .img_wrap img{position:absolute;top:0;left:50%;width:auto;height:100%;transform:translate(-50%,0)}
+    .about_section{padding:70px 0}
+    .about_section+.about_section{border-top:1px solid #d4d4d4}
+    .about_section .about_tit{position:static;margin-bottom:20px;font-size:35px;line-height:40px}
+    .about_section .about_tit .sp{display:none}
+    .about_section .about_em{font-size:20px}
+    .about_section .about_txt{margin-top:4px;font-size:13px;line-height:22px}
+    .about_section .about_em{margin-top:20px}
+    .about_section .contact_lst{display:block;margin-bottom:-20px}
+    .about_section .contact_lst li{width:auto;margin-bottom:20px;line-height:22px}
+    .about_section .contact_lst li:nth-child(4n){width:auto}
+    .about_section .contact_lst a{display:inline-block;position:relative;font-size:13px}
+    .about_section .contact_lst a+a{margin-left:14px}
+    .about_section .contact_lst a+a:before{position:absolute;top:0;left:-12px;content:'/'}
+    .about_section .contact_lst .about_em{font-size:14px}
+    .about_section .inside_lst{display:block;margin:30px 0}
+    .about_section .inside_lst li{float:none;width:auto;margin-top:10px;padding-top:0}
+    .about_section .inside_lst a{display:-webkit-box;position:static;height:84px;padding:0 60px 0 20px;font-size:14px;line-height:24px;-webkit-box-orient:vertical;-webkit-box-pack:center}
+    .about_section .inside_lst a:after{bottom:50%;right:17px;width:5px;height:12px;margin-bottom:-6px}
+}
+</style>
+<div class="about_wrap">
+    <div class="img_wrap"><img src="../img/bg_about.jpg" alt=""></div>
+    <section class="about_section about_sect1">
+        <h2 class="about_tit">Our <br class="pc_view">mission</h2>
+        <strong class="about_em">Guide to better choice</strong>
+        <p class="about_txt">사람들은 평소 익숙한 제품과 브랜드를 습관적으로 선택하곤 합니다. <br class="pc_view">
+        하지만 세상에는 당신이 몰랐던 가치를 지닌 제품과 브랜드도 많죠. <br class="pc_view">
+        우리는 이런 관습적 선택에서 벗어나 잘 몰랐던 제품과 브랜드를 발굴하고 그들이 가진 가치를 탐구합니다. <br class="pc_view">
+        뿐만 아니라 그것을 잘 소개하기 위한 방법을 개발해 사람들의 더 나은 선택을 돕습니다.</p>
+    </section>
+    <section class="about_section about_sect2">
+        <h2 class="about_tit">Our <br class="pc_view">way</h2>
+        <strong class="about_em">Goody</strong>
+        <p class="about_txt"><em>새로운경험</em>기존 방식을 따라가기 보다 남들과 다른 생각을 하고 과감한 도전을 시도해 사용자에게 전에 없던 경험을 제공합니다.</p>
+        <strong class="about_em">Hearty</strong>
+        <p class="about_txt"><em>더 나은 관계</em>동등한 위치에서 모든 대상을 존중하고 우리가 만드는 모든 것이 소비자뿐만 아니라 우리의 파트너에게도 긍정적인 영향을 줄 수 있는 더 나은 관계를 만들어갑니다.</p>
+        <strong class="about_em">Wacky</strong>
+        <p class="about_txt"><em>특별한 기억</em>우리를 경험하는 누군가에게 예상치 못한 만족과 함께 크고 작은 감동과 영감을 줄 수 있는 특별한 기억을 남깁니다. </p>
+    </section>
+    <section class="about_section">
+        <h2 class="about_tit">Contact <br class="pc_view">us</h2>
+        <ul class="contact_lst">
+            <li>
+                <strong class="about_em">고객센터</strong>
+                <a href="mailto:customer@29cm.co.kr">customer@29cm.co.kr</a>
+                <a href="tel:1644-0560">1644-0560</a>
+            </li>
+            <li>
+                <strong class="about_em">입점문의</strong>
+                <a href="mailto:partner@29cm.co.kr">partner@29cm.co.kr</a>
+            </li>
+            <li>
+                <strong class="about_em">마케팅 제휴</strong>
+                <a href="mailto:mkt@29cm.co.kr">mkt@29cm.co.kr</a>
+            </li>
+            <li>
+                <strong class="about_em">PT제휴</strong>
+                <a href="mailto:pt@29cm.co.kr">pt@29cm.co.kr</a>
+            </li>
+            <li>
+                <strong class="about_em">매거진 제휴</strong>
+                <a href="mailto:magazine@29cm.co.kr">magazine@29cm.co.kr</a>
+            </li>
+        </ul>
+    </section>
+    <section class="about_section">
+        <h2 class="about_tit">Inside <br class="pc_view">us <a href="#" class="sp">blog</a></h2>
+        <ul class="inside_lst">
+            <li>
+                <a href="#">29CM가 <br class="pc_view">무슨뜻 인가요?</a>
+            </li>
+            <li>
+                <a href="#">29CM 직원은 <br class="pc_view">어느 연령대가 가장 <br>많은가요?</a>
+            </li>
+            <li>
+                <a href="#">타 쇼핑몰과 다른 <br class="pc_view">29CM 타이틀, <br>어떻게 쓰나요?</a>
+            </li>
+            <li>
+                <a href="#">29CM의 브랜드와 <br class="pc_view">제품은 <br class="m_view">어떤 기준으로 <br class="pc_view">선정되나요?</a>
+            </li>
+            <li>
+                <a href="#">29CM의 인재상이 <br class="pc_view">궁금합니다</a>
+            </li>
+            <li>
+                <a href="#">29CM는 모든 사진을 <br class="pc_view">직접 찍나요?</a>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>주문완료</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order.css">
+<link rel="stylesheet" type="text/css" href="../dist/css/order_m.css">
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="container-s">
+	<script type="text/javascript">
+	//<![CDATA[
+		var siteFlag = "my";
+		var myFlag = "order";
+	//]]>
+	</script>
+	<div class="container container-fluid container-order">
+
+		<!--- content : start -->
+		<header class="container-header">
+			<ol class="order-flow">
+				<li>SHOPPING BAG</li>
+				<li>ORDER</li>
+				<li class="active">ORDER CONFIRMED</li>
+			</ol>
+		</header>
+
+		<!-- 주문완료 -->
+		<div class="order__confirmed">
+
+			<style type="text/css">
+				.confirmed-box{position:relative;padding-right:280px;margin:70px 0 50px 0;overflow:hidden;background:#000}
+				.confirmed-box .info{position:relative;float:left;width:100%;min-height:186px;padding:0 0 82px 0;border:6px solid #000;border-right:none;background:#fff}
+				.confirmed-box .info h2{font-size:42px;line-height:115px;padding:0 20px 0 42px;margin-bottom:25px}
+				.confirmed-box .info .txt{line-height:1.4;padding:0 20px 0 42px}
+				.confirmed-box .info .slogan{position:absolute;right:0;bottom:0;width:280px;height:60px;padding-left:30px;font-size:8px;line-height:60px;border-left:2px solid #000}
+				.confirmed-box .info .url{position:absolute;right:-9px;top:50px;color:#a0a0a0;font-size:8px;transform:rotate(90deg);-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg)}
+				.confirmed-box .bi{position:absolute;right:0;top:0;width:280px}
+				.confirmed-box .bi .char{position:relative;float:left;width:140px;height:140px}
+				.confirmed-box .bi .char_2:after{position:absolute;left:0;top:33.3%;display:block;width:66.6%;height:4px;margin-top:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_2:before{position:absolute;right:0;top:66.6%;display:block;width:66.6%;height:4px;margin-top:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_9:after{position:absolute;left:33.3%;top:33.3%;display:block;width:33.3%;height:4px;margin-top:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_9:before{position:absolute;left:0;top:66.6%;display:block;width:66.6%;height:4px;margin-top:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_c:before{position:absolute;right:0;top:50%;display:block;width:66.6%;height:4px;margin-top:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_m:before{position:absolute;left:33.3%;bottom:0;display:block;width:4px;height:66.6%;margin-left:-2px;background:#fff;content:''}
+				.confirmed-box .bi .char_m:after{position:absolute;left:66.6%;bottom:0;display:block;width:4px;height:66.6%;margin-left:-2px;background:#fff;content:''}
+				.confirmed-box .bi .bg{position:absolute;right:-30px;top:50%;z-index:1;width:2px;height:2px;margin-top:-30px;border:28px solid #fff;border-radius:50%;background:#fff}
+				.confirmed-box .order_no{position:absolute;left:0;bottom:0;width:100%;height:60px;line-height:60px;text-indent:42px;font-size:18px;border-top:2px solid #000}
+				.confirmed-box .order_no strong{color:#ff4800;font-size:18px}
+				@media screen and (max-width:540px){
+					.confirmed-box{margin:0;padding-right:0;background:none}
+					.confirmed-box .info{min-height:0;padding:22.5% 0 27%;border:0;text-align:center}
+					.confirmed-box .info h2{padding:0;margin-bottom:0;font-size:5.3125vw;font-weight:600;line-height:1.25}
+					.confirmed-box .info .slogan,.confirmed-box .info .url{display:none}
+					.confirmed-box .order_no{position:static;height:auto;margin-top:2%;border:0;font-size:4.375vw;line-height:1.25;text-indent:0}
+					.confirmed-box .order_no strong{font-weight:400}
+					.confirmed-box .bi{display:none}
+				}
+			</style>
+			<div class="confirmed-box">
+				<div class="info">
+                    <h2>주문이 완료되었습니다.</h2>
+					<p class="order_no">주문번호 <strong>2017060238949</strong></p>
+					<p class="slogan">GUIDE TO BETTER CHOICE 29CM</p>
+					<p class="url">29CM.CO.KR</p>
+				</div>
+				<div class="bi">
+					<div class="char char_2"></div>
+					<div class="char char_9"></div>
+					<div class="char char_c"></div>
+					<div class="char char_m"></div>
+					<div class="bg"></div>
+				</div>
+			</div>
+
+			<style type="text/css">
+				.order__confirmed .order_info{padding-bottom:16px}
+				.order__confirmed .tit{margin-bottom:15px}
+				.order__confirmed .confirmed-table{margin-bottom:16px;border-top:6px solid #000}
+				.order__confirmed .confirmed-table table{width:100%}
+				.order__confirmed .confirmed-table th{width:120px;padding:20px 0;text-align:center;vertical-align:middle;font-size:12px;border:1px solid #d4d4d4;border-top:none}
+				.order__confirmed .confirmed-table th:first-child{border-left:none}
+				.order__confirmed .confirmed-table td{padding:20px 19px;font-size:14px;border-bottom:1px solid #d4d4d4}
+				.order__confirmed .confirmed-table .inner_list{padding:0}
+				.order__confirmed .confirmed-table .inner_list li{padding:20px 19px;font-size:14px;border-top:1px solid #d4d4d4}
+				.order__confirmed .confirmed-table .inner_list li:first-child{border-top:0}
+				.order__confirmed .button--delivery_info{display:inline-block;height:28px;padding:0 15px;margin:-16px 0 -14px 10px;line-height:28px;font-size:12px;color:#5d5d5d;text-decoration:none;border:1px solid #a0a0a0}
+				@media screen and (max-width:540px) {
+					.order__confirmed .tit{font-size:5.312vw;font-weight:600}
+					.order__confirmed .confirmed-table{position:relative;border-top-width:2px}
+					.order__confirmed .confirmed-table th,.order__confirmed .confirmed-table td{padding:6% 0;font-size:4.375vw;font-weight:500;line-height:1.6em;text-align:left}
+					.order__confirmed .confirmed-table th{width:32%;border-right:0}
+					.order__confirmed .confirmed-table td{vertical-align:top}
+					.order__confirmed .button--delivery_info{position:absolute;right:0;bottom:100%;height:auto;margin:0 0 17px;padding:0;border:0;font-size:4.375vw;color:#999;line-height:27px;text-decoration:underline}
+				}
+			</style>
+			<div class="order_info">
+				<h3 class="tit">결제정보 / <span>1</span>개 상품</h3>
+				<div class="confirmed-table">
+					<table>
+						<tbody>
+							<tr>
+								<th scope="row">결제방법</th>
+								<td>무통장</td>
+							</tr>
+							<tr>
+								<th scope="row">주문일시</th>
+								<td>2017-07-28 오후 5:07:13</td>
+							</tr>
+							<tr>
+								<th scope="row">배송비</th>
+								<td>0원</td>
+							</tr>
+							<tr>
+								<th scope="row">마일리지<br>사용금액</th>
+								<td>0P</td>
+							</tr>
+							<tr>
+								<th scope="row">쿠폰 사용금액</th>
+								<td>0원</td>
+							</tr>
+							<tr>
+								<th scope="row">결제금액</th>
+								<td>63,750원</td>
+							</tr>
+
+							<tr>
+								<th scope="row">입금 예정자명</th>
+								<td>조가윤</td>
+							</tr>
+							<tr>
+								<th scope="row">입금계좌</th>
+								<td>
+									하나&nbsp;58390645939237<br>(주)에이플러스비
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="delivery_info">
+				<h3 class="tit">배송정보</h3>
+				<div class="confirmed-table">
+					<table>
+						<tbody>
+							<tr>
+								<th scope="row">받으시는 분</th>
+								<td>조가윤</td>
+							</tr>
+							<tr>
+								<th scope="row">휴대폰번호</th>
+								<td>010-4201-9123</td>
+							</tr>
+							<tr>
+								<th scope="row">추가번호</th>
+								<td>--</td>
+							</tr>
+							<tr>
+								<th scope="row">주소</th>
+								<td>(442843) 경기 수원시 팔달구 정조로715번길 40 (매교동) <a class="button--delivery_info" href="/cscenter/order/myOrderEditDetail.asp?&amp;page=1&amp;orderSerial=2017060238949">배송정보변경</a></td>
+							</tr>
+							<tr>
+								<th scope="row">배송요청사항</th>
+								<td>없음</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<style type="text/css">
+				.order__confirmed .guide{line-height:1.5;font-size:12px;color:#5d5d5d}
+				.order__confirmed .btn-bottom{padding:50px 0;text-align:center}
+				@media screen and (max-width:540px) {
+					.order__confirmed .guide{font-size:4vw;color:#999}
+					.order__confirmed .guide:before{margin-right:1%;font-size:1rem;content:'\24d8'}
+					.order__confirmed .btn-bottom{display:table;position:fixed;right:0;bottom:0;left:0;z-index:100;width:100%;padding:0;table-layout:fixed}
+					.order__confirmed .btn-bottom .button--shopping,.order__confirmed .btn-bottom .button--order_details{display:table-cell;width:50%;height:auto;padding:5.73375% 0;border:0;background:#222;font-size:15px;font-weight:500;color:#fff}
+					.order__confirmed .btn-bottom .button--order_details{border-left:1px solid #2f2f2f}
+				}
+			</style>
+			<p class="guide">
+				상품이 품절되는 경우 주문이 자동으로 취소되며, 주문하신 분의 SMS와 이메일로 관련안내를 발송해드립니다.<br>
+				상세내역은 마이페이지에서 확인하실 수 있습니다.
+			</p>
+
+			<div class="btn-bottom">
+				<button class="button--shopping" type="button" onclick="fnGoShopping();">CONTINUE SHOPPING</button>
+				<button class="button--order_details" type="button" onclick="fnGoOrderDetails();">주문 / 배송조회</button>
+			</div>
+
+		</div>
+		<!-- //주문완료 -->
+
+
+
+<!--- content : end -->
+
+	<form action="/cscenter/order/popOrderReceipt.asp" method="post" name="frmprt">
+		<input type="hidden" name="orderserial" value="2017060238949">
+	</form>
+
+	</div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

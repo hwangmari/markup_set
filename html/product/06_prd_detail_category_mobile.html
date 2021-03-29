@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no" />
+<title>카테고리 메뉴 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<style type="text/css">
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;background:red;font-size:1px;line-height:9999px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+	.pc_view{display:none}
+	.m_view{display:block}
+	.detail_cnt_wrap{max-width:auto;padding:0 20px}
+}
+
+/* 카테고리 */
+.category_wrap{overflow-y:auto;position:fixed;top:0;right:0;left:0;bottom:0;z-index:1000;background:#fff}
+.category_wrap .category_inner{padding:0 20px 150px}
+.category_wrap .btn_close{width:60px;height:60px}
+.category_wrap .btn_close .sp{width:22px;height:22px}
+.category_lst>li{margin-top:13px}
+.category_lst>li:first-child{margin-top:0}
+.category_lst .btn_cate{width:100%;height:45px;font-size:26px;font-weight:600;color:#000;text-align:left}
+.category_lst .btn_cate .num{font-size:14px;font-weight:normal;color:#a0a0a0}
+.category_lst .sel_lst{display:none}
+.category_lst .sel_lst ul a{display:block;font-size:15px;color:#000;line-height:42px}
+.category_lst .opened .sel_lst{display:block}
+.category_lst .opened .btn_cate{color:#ff4800}
+.category_lst .opened .btn_cate:after{display:inline-block;width:20px;height:20px;margin-left:15px;background:red;vertical-align:middle;content:''}
+.category_lst .opened .btn_cate .num{color:#ff4800}
+.category_lst .opened .selected a{color:#ff4800}
+.category_bot{display:-webkit-box;position:fixed;bottom:0;right:0;left:0;height:120px;padding:0 20px;background:#d8d8d8;font-size:18px;color:#fff;line-heigth:22px;-webkit-box-orient:vertical;-webkit-box-pack:center}
+
+@media screen and (min-width: 541px){
+	.category_lst .num{display:none}
+	.category_lst .small{display:none}
+}
+@media screen and (max-width: 540px){
+}
+</style>
+</style>
+</head>
+<body>
+	<div class="category_wrap">
+		<button type="button" class="btn_close"><span class="sp">닫기</span></button>
+		<div class="category_inner">
+			<ul class="category_lst">
+				<li>
+					<button type="button" class="btn_cate">All Women <span class="num">(3246)</span></button> <!--[D] 대 카테고리 // 클릭 시 부모 li에 .opened 추가 -->
+					<!--[D] 중 카테고리 -->
+					<div class="sel_lst">
+						<ul>
+							<li><a href="#">New &amp; Best</a></li>
+							<li><a href="#">Sale</a></li>
+						</ul>
+					</div>
+					<!-- //중 카테고리 -->
+				</li>
+				<li class="opened">
+					<button type="button" class="btn_cate">Outer <span class="num">(3246)</span></button> <!--[D] 중 카테고리 // 클릭 시 부모 li에 .opened 추가 -->
+					<!--[D] 소 카테고리 -->
+					<div class="sel_lst">
+						<ul>
+							<li><a href="#">All <span class="small">Outer</span></a></li>
+							<li class="selected"><a href="#">코트</a></li> <!--[D] 선택된 항목 부모 li에 .selected -->
+							<li><a href="#">재킷</a></li>
+							<li><a href="#">All Outer</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">재킷</a></li>
+						</ul>
+					</div>
+					<!-- //소 카테고리 -->
+				</li>
+				<li>
+					<button type="button" class="btn_cate">KnitWear <span class="num">(324)</span></button> <!--[D] 중 카테고리 // 클릭 시 부모 li에 .opened 추가 -->
+					<!--[D] 소 카테고리 -->
+					<div class="sel_lst">
+						<ul>
+							<li><a href="#">All <span class="small">Outer</span></a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">재킷</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">재킷</a></li>
+						</ul>
+					</div>
+					<!-- //소 카테고리 -->
+				</li>
+				<li>
+					<button type="button" class="btn_cate">One-Piece <span class="num">(999)</span></button> <!--[D] 중 카테고리 // 클릭 시 부모 li에 .opened 추가 -->
+					<!--[D] 소 카테고리 -->
+					<div class="sel_lst">
+						<ul>
+							<li><a href="#">All Outer</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">재킷</a></li>
+							<li><a href="#">코트</a></li>
+							<li><a href="#">재킷</a></li>
+						</ul>
+					</div>
+					<!-- //소 카테고리 -->
+				</li>
+			</ul>
+			<div class="category_bot">
+				<p class="info">로맨틱무브<br>Black Beauty 20%</p>
+			</div>
+		</div>
+	</div>
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

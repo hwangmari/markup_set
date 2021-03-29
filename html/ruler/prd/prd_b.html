@@ -1,0 +1,89 @@
+<style>
+.prd_b{position:relative}
+.prd_b>a{display:block;position:relative;color:#000}
+.prd_b .imgbx{overflow:hidden;position:relative;width:100%;padding-top:120%}
+.prd_b .imgin{position:absolute;top:0;left:0;bottom:0;right:0;display:flex;align-items:center;justify-content:center}
+.prd_b .imgin img{width:100%}
+.prd_b .info{margin-top:20px;font-size:13px;line-height:1.5;color:#000}
+.prd_b .info .brand{margin-bottom:4px;font-weight:bold;text-decoration:underline}
+.prd_b .price{margin-top:11px;font-size:12px;line-height:16px;vertical-align:top}
+.prd_b .price .num{font-size:14px;line-height:18px}
+.prd_b .price .sellprice{color:#303033}
+.prd_b .price .discount .sell{display:block;margin-bottom:2px;color:#a0a0a0}
+.prd_b .price .discount strong{color:#ff4800;font-weight:500}
+.prd_b .heart_area{margin-top:12px;text-align:left}
+.prd_b .heart_area button{display:inline-block;height:20px;line-height:20px;vertical-align:top}
+.prd_b .heart_area .active{color:#ff4800}
+.prd_b .heart_area .heart{margin-right:12px}
+.prd_b .heart_area .count{display:inline-block;margin-top:-2px;vertical-align:top}
+.prd_b .heart_area .count i{display:inline-block;overflow:hidden;width:1px;height:1px;vertical-align:top;color:transparent}
+.prd_b .prd_brand_go{position:absolute;top:20px;left:0;right:0;margin-top:120%;font-size:13px;line-height:1.5;color:transparent}
+@media screen and (max-width:540px){
+    .prd_b .prd_brand_go{display:none}
+    .prd_b .info{margin-top:0;padding:10px;}
+    .prd_b .heart_area{padding-left:10px}
+}
+.prd_icon{position:absolute;top:100%;left:0;margin-top:-25px}
+.prd_icon span {display:inline-block;float:left;border-radius:0;border:0;padding:0;width:25px;height:25px;line-height:25px;font-size:0;font-weight:500;color:#fff;text-align:center;vertical-align:top;text-transform: uppercase; }
+.prd_icon span:first-letter {font-size:12px;}
+.prd_icon span:first-of-type {margin-left:0;}
+.prd_icon .coupon{background:#a0a0a0}
+.prd_icon .new{background:#000}
+.prd_icon .sale,.prd_icon .sail{background:#ff4800}
+.prd_icon .soldout{padding:0 8px;width:auto;font-size:12px;background:#d4d4d4}
+.prd_icon:after{display:block;clear:both;content:''}
+</style>
+
+<!-- <div class="prd_b"> -->
+    <a href="#red">
+        <!-- 이미지 비율에 맞춰 사이즈 조정 필요 이미지 비율과 동일한 값을 prd_brand_go 의 margin-top:% 로 넣어줘야 함 -->
+        <div class="imgbx">
+            <div class="imgin">
+                <img src="https://img.29cm.co.kr/next-edition/2018/08/31/7ebc7462f80d4eb494fb4bafe1ebd260_20180831113903.jpg" alt=""/>
+            </div>
+            <div class="prd_icon">
+                <span class="sale">sale</span>
+                <span class="coupon">coupon</span>
+                <span class="sail">sail</span>
+                <span class="new">new</span>
+                <span class="soldout">soldout</span>
+            </div>
+        </div>
+        <div class="info">
+            <div class="brand">
+                브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능
+            </div>
+            <div class="name">
+                Cloud, Matte Black Col.<br>두줄로 가도 대응 가능
+            </div>
+            <div class="price">
+                <!-- [D] 판매가  -->
+                <!--
+                <div class="sellprice">
+                    <strong><span class="num">[10%] 207,000</span>원</strong>
+                </div>
+                -->
+                <!-- [D] 할인가 -->
+                <div class="discount">
+                    <span class="sell"><span class="num">300,000</span>원</span>
+                    <strong><span class="num">10% 207,000</span>원</strong>
+                </div>
+            </div>
+        </div>
+    </a>
+    <!-- [D]  브랜드 샾으로 이동 피씨만 대응 필요 이미지 비율의 맞춰 margin-top:120% 값변경 필수 -->
+    <a href="#ccc" target="_blank" title="아워그레이" class="prd_brand_go">브랜드샵과 동일한 네이밍 적용<br>두줄로 가도 대응 가능</a>
+
+    <div class="heart_area">
+        <button type="button" class="heart">
+            <i class="svg">하트</i>
+            <span class="count">3</span>
+        </button>
+
+        <button type="button" class="review">
+            <i class="svg">리뷰</i>
+            <span class="count">35</span>
+        </button>
+    </div>
+
+<!-- </div> -->

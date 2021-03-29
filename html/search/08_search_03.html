@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>검색 브랜드</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+<style>
+.search_wrap{max-width:800px;margin:60px auto 0}
+.search_wrap .searchinput{position:relative;padding-right:60px;border-bottom:4px solid #000}
+.search_wrap .searchinput input{display:block;width:100%;border:0;background:#fff;font-size:43px;line-height:74px;color:#000;font-weight:bold}
+.search_wrap .searchinput input::-webkit-input-placeholder{font-size:43px;color:#000}
+.search_wrap .btn_search{position:absolute;right:0;bottom:0;width:60px;height:80px;text-align:right;outline:none}
+.search_wrap .related{margin-top:24px;font-size:14px}
+.search_wrap .related:after{display:block;clear:both;content:''}
+.search_wrap .related dt{float:left;font-weight:bold}
+.search_wrap .related dd{float:left;margin-left:20px}
+.search_wrap .related a{display:block;overflow:hidden;font-size:14px;color:#000;white-space:nowrap;word-break:break-all;text-overflow:ellipsis}
+
+</style>
+<div class="search_wrap">
+    <div class="searchinput">
+        <input type="text" id="textField_text" value="가방"/>
+        <button type="button" class="btn btn_search"><i class="svg svg_close_02">검색</i></button>
+    </div>
+    <div class="search_lst">
+        <div class="related">
+            <dl>
+                <dt>연관검색어 </dt>
+                <dd>
+                    <a href="#">검색어검색어검색</a>
+                </dd>
+                <dd>
+                    <a href="#">검색어</a>
+                </dd>
+                <dd>
+                    <a href="#">검색어</a>
+                </dd>
+                <dd>
+                    <a href="#">검색어</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<div class="tab_category2">
+    <!-- [D] jquery include -->
+</div>
+
+<style>
+.search_none_content{max-width:1820px;margin:0 auto 30px;padding:0 50px}
+.search_none_content .none_guide{margin-bottom:118px;font-size:18px;color:#000;line-height:34px;vertical-align: text-bottom;text-align: center}
+.search_none_content .none_guide span{font-size:30px;color:#ff4800}
+.search_none_content p{padding-bottom:10px;border-bottom:4px solid #030303;font-size:22px;line-height:30px;}
+</style>
+<div class="search_none_content">
+    <div class="none_guide">
+        <span>'가방끈'</span>에 대한 검색결과가 없습니다.<br>
+        다른 검색어를 입력하시거나 철자와 띄어쓰기를 확인해보세요.
+    </div>
+    <!-- <p>다른 사람들은 이런 상품을 보고있어요.</p>
+    <p>이런 브랜드는 어때요?</p> -->
+    <p>이런 포스트는 어때요?</p>
+</div>
+
+<style>
+.category_warp{display:-webkit-flex;display:flex;max-width:1820px;margin:0 auto;padding:0 50px}
+.category_option{width:200px;padding-right:80px}
+
+.category_lst{-webkit-flex:1;flex:1}
+
+@media (max-width:540px) {
+    .category_warp{display:block;padding:0}
+    .category_option{width:auto;padding:0}
+    .category_lst{-webkit-flex:none;flex:none}
+}
+</style>
+<div class="category_warp">
+    <div class="category_lst">
+        <style>
+        /* 포스트 */
+        .post_section{display:flex;flex-wrap:wrap}
+        .post_section > li{padding-bottom:40px}
+        @media (min-width:541px){
+        .post_section{margin-left:-3.33%}
+        .post_section > li{width:30%;margin-left:3.33%}
+        }
+        @media (max-width:540px){
+        .post_section{margin-left:-2%}
+        .post_section > li{width:48%;margin-left:2%}
+        }
+        </style>
+        <!-- [D] post  -->
+        <div class="post_content">
+            <ul class="post_section">
+                <li>
+                    <a href="#" class="evt_area">
+                        <!-- <ruler-evt-area></ruler-evt-area> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="evt_area">
+                        <!-- <ruler-evt-area></ruler-evt-area> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="evt_area">
+                        <!-- <ruler-evt-area></ruler-evt-area> -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

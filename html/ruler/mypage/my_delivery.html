@@ -1,0 +1,185 @@
+<style>
+.my_step{position:relative;margin:0 -2%;font-size:0}
+.my_step .info_txt{display:inline-block;position:relative;margin:20px 0 0 2%;padding-top:25px;border-top:1px solid #303033;font-size:16px;font-weight:700;text-align:center;box-sizing:border-box}
+.my_step .info_txt:before,.my_step .info_txt:after{position:absolute;top:-4px;width:1px;height:8px;background:#303033;content:''}
+.my_step .info_txt:before{left:0}
+.my_step .info_txt:after{right:0}
+.my_step .info_txt.info1{width:29%}
+.my_step .info_txt.info2{margin-left:4%;width:63%}
+.my_step .step{display:table;width:100%;margin-top:45px;table-layout:fixed}
+.my_step .step li{display:table-cell;position:relative;padding:0 2%;text-align:center;vertical-align:top}
+.my_step .step li:first-child .rect:before{display:none}
+.my_step .step .txt{margin-top:8px;font-size:14px;line-height:24px}
+.my_step .step .rect{display:block;position:relative;padding-top:100%;margin:0 auto;border-radius:50%;background:#f4f4f4;font-size:16px;color:#303033}
+.my_step .step .rect:before{position:absolute;top:50%;left:-19%;width:10px;height:21px;margin-top:-11px;background:red;content:''}
+.my_step .step .rect span{ display:block;position:absolute;top: 50%;width:100%;transform:translate(-0%, -50%);text-align:center}
+.my_step .step .rect em{ display:block;padding-bottom:7px;font-size:36px;font-weight:700;line-height:1}
+.my_step .step .dark .rect{background:#303033;color:#fff}
+
+.delivery_lst{margin-top:50px;font-size:0}
+.delivery_lst li{display:inline-block;width:50%}
+.delivery_lst strong,.delivery_lst p{display:inline-block;font-size:16px;line-height:52px;vertical-align:top}
+.delivery_lst strong{width:130px;font-weight:700}
+.delivery_lst p{overflow:hidden;max-width:60%;white-space:nowrap;text-overflow:ellipsis}
+
+@media screen and (max-width:540px) {
+    .my_step{margin:0 -20px}
+    .my_step .step li{padding:0}
+    .my_step .step .rect{display:-webkit-box;height:140px;padding-top:0;border-radius:0;background:#303033;font-size:12px;color:#5d5d5d;line-height:17px;-webkit-box-orient:vertical;-webkit-box-pack:center}
+    .my_step .step .rect:before{display:none}
+    .my_step .step .rect span{display:inline-block;width:auto;position:static;text-align:left;transform:none}
+    .delivery_lst{margin-top:0}
+    .delivery_lst li{display:list-item;width:auto}
+    .delivery_lst strong,.delivery_lst p{font-size:13px;line-height:35px}
+    .delivery_lst strong{font-weight:normal;color:#adadad}
+    .delivery_lst .goods{position:relative;margin-bottom:10px;padding:20px 0;border-bottom:1px solid #e4e4e4}
+    .delivery_lst .goods .info_bx{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-pack:center}
+    .delivery_lst .goods .info p{max-width:100%;font-size:13px;line-height:22px;white-space:normal}
+    .delivery_lst .goods .img_wrap{top:50%;right:auto;left:0;margin-top:-38px}
+    .delivery_lst .goods .date{color:#d4d4d4}
+    .delivery_lst .goods .goods_tit{display:-webkit-box;color:#222;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+}
+</style>
+<!-- <section class="my_delivery"> -->
+    <h3 class="pc_view my_tit">배송조회</h3>
+    <div class="pc_view my_step">
+        <ol class="step">
+            <li>
+                <div class="rect"><span>주문접수</span></div>
+            </li>
+            <li>
+                <div class="rect"><span>결제완료</span></div>
+            </li>
+            <li>
+                <div class="rect"><span>상품준비중</span></div>
+            </li>
+            <li>
+                <div class="rect"><span>배송시작</span></div>
+            </li>
+            <li>
+                <div class="rect"><span>배송중</span></div>
+            </li>
+            <li class="dark">
+                <div class="rect"><span>배송완료</span></div>
+            </li>
+        </ol>
+    </div>
+    <!-- PC View :: 배송정보 안내 -->
+    <ul class="pc_view delivery_lst">
+        <li>
+            <strong>주문상품</strong>
+            <p>AND STRIPE FRILL BLOUSE (WHITE) AND STRIPE FRILL BLOUSE (WHITE) AND STRIPE FRILL BLOUSE (WHITE)</p>
+        </li>
+        <li>
+            <strong>받는사람</strong>
+            <p>강나* (수령인 : 강나* - 본인) </p>
+        </li>
+        <li>
+            <strong>택배사</strong>
+            <p>우체국택배</p>
+        </li>
+        <li>
+            <strong>받는주소</strong>
+            <p>서울특별시 마포구 양화로 10길 45 2층</p>
+        </li>
+        <li>
+            <strong>운송장번호</strong>
+            <p>1234567890123456</p>
+        </li>
+        <li>
+            <strong>배송요청사항</strong>
+            <p>부재시 전화주세요.</p>
+        </li>
+    </ul>
+
+    <!-- Mobile View :: 배송정보 안내 -->
+    <ul class="m_view delivery_lst">
+        <li class="goods">
+            <strong class="blind">주문상품</strong>
+            <div class="info_bx">
+                <div class="info">
+                    <p class="date">2017/04/06</p>
+                    <p class="goods_tit">[29CM 선발매] 2017 리미티드 에디션 미니언즈-룰드/옐로우 (L) [29CM 선발매] 2017 리미티드 에디션 미니언즈-룰드/옐로우 (L)</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong>운송장번호</strong>
+            <p>6069505550999/우페국택배(등기)</p>
+        </li>
+        <li>
+            <strong>받는 사람</strong>
+            <p>강나* (수령인:강나-본인)</p>
+        </li>
+        <li>
+            <strong>보낸사람</strong>
+            <p>현대홈쇼핑-501 동서 서울창고</p>
+        </li>
+        <li>
+            <strong>수령주소</strong>
+            <p>택배사에서 제공하지 않은 정보입니다.</p>
+        </li>
+    </ul>
+
+    <!--[D] 배송 시작했을 경우 -->
+    <div class="delivery_tb">
+        <table>
+            <caption class="blind">배송 정보 안내</caption>
+            <thead>
+            <tr>
+                <th scope="col">시간</th>
+                <th scope="col">현재위치</th>
+                <th scope="col" class="pc_view">연락처</th>
+                <th scope="col">배송상태</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2017.5.15 <br class="m_view">22:03</td>
+                <td>서울광진</td>
+                <td class="pc_view">02-395-4985</td>
+                <td class="state">발송</td>
+            </tr>
+            <tr>
+                <td>2017.5.15 <br class="m_view">22:03</td>
+                <td>서울광진</td>
+                <td class="pc_view">02-395-4985</td>
+                <td class="state">도착</td>
+            </tr>
+            <tr>
+                <td>2017.5.15 <br class="m_view">22:03</td>
+                <td>서울광진</td>
+                <td class="pc_view">02-395-4985</td>
+                <td class="state">배달준비</td>
+            </tr>
+            <tr>
+                <td>2017.5.15 <br class="m_view">22:03</td>
+                <td>서울광진</td>
+                <td class="pc_view">02-395-4985</td>
+                <td class="state">배달완료</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--[D] 배송 시작되지 않았을 경우 -->
+    <div class="delivery_tb delivery_none">
+        <table>
+            <caption class="blind">배송 정보 안내</caption>
+            <thead>
+            <tr>
+                <th scope="col">시간</th>
+                <th scope="col">현재위치</th>
+                <th scope="col" class="pc_view">연락처</th>
+                <th scope="col">배송상태</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="4" class="pc_view">배송이 시작되면 택배사, 운송장 번호화 함께<br>상세한 배송상태 확인이 가능합니다</td>
+                <td colspan="3" class="m_view">배송이 시작되면 택배사, 운송장 번호화 함께<br>상세한 배송상태 확인이 가능합니다</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- </section> -->

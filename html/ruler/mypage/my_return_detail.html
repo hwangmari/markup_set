@@ -1,0 +1,142 @@
+<style>
+
+.my_return_detail{margin-top:30px}
+.info_tblst>li{display:table;width:100%;border-bottom:1px solid #d4d4d4;table-layout:fixed}
+.info_tblst .in_td{display:table-cell;height:60px;padding:10px 0 10px 20px;vertical-align:middle;box-sizing:border-box}
+.info_tblst .in_td:first-child{width:150px;padding-left:0;border-right:1px solid #d4d4d4}
+.info_tblst .type{font-size:12px;font-weight:700}
+.info_tblst .rabx{display:inline-block;margin-left:30px;vertical-align:middle}
+.info_tblst .rabx:first-child{margin-left:0}
+.info_tblst .rabx label{color:#303033}
+.info_tblst .tip{display:inline-block;margin-left:42px;font-size:12px;color:#5d5d5d;vertical-align:middle}
+.info_tblst .txt{font-size:16px;font-weight:700}
+.info_tblst .refund_price{font-size:12px;font-weight:normal}
+.info_tblst .refund_price strong{font-size:16px;font-weight:700}
+.info_tblst .refund_detail{margin-top:3px;font-size:12px;line-height:24px}
+.info_tblst .refund_detail span{display:inline-block;min-width:130px;margin-right:4px}
+.info_tblst .refund_detail em{font-size:14px;color:#ff4800}
+.info_tblst .refund_detail em span{min-width:0;font-size:12px}
+.info_tblst .inptxtbx textarea{font-size:12px;resize:none}
+.info_tblst .m_view{display:none}
+
+@media screen and (max-width:540px){
+    .info_tblst .m_view{display:table}
+    .info_tblst .in_td{height:50px;padding:10px 0}
+    .info_tblst .in_td:first-child{width:94px;border-right:0}
+    .info_tblst .type{font-size:13px}
+    .info_tblst .rabx{margin:0 14px 0 0}
+    .info_tblst .rabx label{padding-left:25px}
+    .info_tblst .tip{display:none}
+    .info_tblst .txt{font-size:13px;font-weight:normal;line-height:22px}
+    .info_tblst .refund_price{font-size:13px}
+    .info_tblst .refund_price strong{font-size:13px;color:#ff4800}
+    .info_tblst .refund_detail{margin-top:15px;line-height:22px}
+    .info_tblst .refund_detail span{min-width:0}
+    .info_tblst .refund_detail em{color:#303033}
+    .info_tblst .selbx{width:120px;margin-top:14px}
+    .info_tblst .selbx select{font-size:13px}
+    .info_tblst .selbx .sp{display:inline-block;margin-top:15px;background:red}
+    .info_tblst .inpbx{margin-top:10px;padding-top:12px}
+    .info_tblst .inpbx input{font-size:13px}
+}
+</style>
+<!-- <section class="my_return_detail"> -->
+    <h3 class="my_tit">반품상세정보</h3>
+    <ul class="info_tblst">
+        <li>
+            <div class="in_td"><strong class="type">반품사유</strong></div>
+            <div class="in_td">
+                <span class="rabx">
+                    <input type="radio" id="re_reason1" name="re_reason">
+                    <label for="re_reason1">고객변심</label>
+                </span>
+                <span class="rabx">
+                    <input type="radio" id="re_reason2" name="re_reason">
+                    <label for="re_reason2">상품불량</label>
+                </span>
+                <span class="rabx">
+                    <input type="radio" id="re_reason3" name="re_reason">
+                    <label for="re_reason3">오배송</label>
+                </span>
+                <p class="tip pc_view">제주, 도서 지역의 반품은 추가비용이 발생될 수 있습니다</p>
+            </div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">환불방법</strong></div>
+            <div class="in_td">
+                <span class="rabx">
+                    <input type="radio" id="re_refund1" name="re_refund">
+                    <label for="re_refund1">고객변심</label>
+                </span>
+            </div>
+        </li>
+        <li class="refund m_view">
+            <div class="in_td"><strong class="type">환불방법</strong></div>
+            <div class="in_td">
+                <p class="txt">무통장입금</p>
+                <span class="selbx">
+                    <select>
+                    <option>은행명</option>
+                    <option>신한</option>
+                    <option>KB</option>
+                    <option>농협</option>
+                    </select>
+                    <span class="icon"><span class="sp"></span></span>
+                </span>
+                <div class="inpbx">
+                    <input type="text" placeholder="입금계좌번호">
+                </div>
+                <div class="inpbx">
+                    <input type="text" placeholder="예금주명">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">반품배송비</strong></div>
+            <div class="in_td">
+                <span class="rabx">
+                    <input type="radio" id="re_deliver1" name="re_deliver">
+                    <label for="re_deliver1">선불지급하여 발송</label>
+                </span>
+                <span class="rabx">
+                    <input type="radio" id="re_deliver2" name="re_deliver">
+                    <label for="re_deliver2">환불금액에서 차감</label>
+                </span>
+            </div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">환불예정금액</strong></div>
+            <div class="in_td">
+                <p class="refund_price"><strong>36,000</strong>원</p>
+                <ul class="refund_detail">
+                    <li><span>반품배송비 (왕복) 차감 :</span><em>-5,000<span>원</span></em></li>
+                    <li><span>실제환불금액 : </span><em>36,000<span>원</span></em></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">반품사유 및 <br class="m_view">기타요청사항</strong></div>
+            <div class="in_td">
+                <div class="inptxtbx">
+                    <textarea rows="5" cols="1" class="field_inp" placeholder="반품사유를 입력해주세요"></textarea>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">배송정보</strong></div>
+            <div class="in_td"><p class="txt">387459827369872546987 (CJ 대한통운 / 1588-1235)</p></div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">회사명</strong></div>
+            <div class="in_td"><p class="txt">(주) 오아이스튜디오 (oi studio co)</p></div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">연락처</strong></div>
+            <div class="in_td"><p class="txt">070-4959-4574</p></div>
+        </li>
+        <li>
+            <div class="in_td"><strong class="type">반품 주소지</strong></div>
+            <div class="in_td"><p class="txt">[124-234] 서울특별시 금천구 가산디지털 1로 160</p></div>
+        </li>
+    </ul>
+<!-- </section> -->

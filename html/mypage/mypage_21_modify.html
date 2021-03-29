@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>회원정보 수정 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/mypage.css">
+<style type="text/css">
+.tb_lst>li{display:table;position:relative;width:100%;border-bottom:1px solid #d4d4d4;table-layout:fixed}
+.tb_lst p{font-size:16px;font-weight:700;color:#303033;line-height:20px}
+.tb_lst strong{font-weight:700}
+.tb_lst .in_td{display:table-cell;height:60px;padding-left:20px;vertical-align:middle;box-sizing:border-box}
+.tb_lst .in_td:first-child{width:140px;padding:0;border-right:1px solid #d4d4d4;vertical-align:top}
+.tb_lst .type{display:inline-block;font-size:12px;font-weight:700;color:#303033;line-height:60px}
+.tb_lst .btn_black,.tb_lst .btn_bor{border-radius:2px}
+.tb_lst .inpbx input{font-size:16px;font-weight:700}
+.tb_lst .in_row{display:table;width:340px;table-layout:fixed}
+.tb_lst .in_row span{display:table-cell;vertical-align:middle}
+.tb_lst .in_row .split{width:20px;font-size:14px;text-align:center}
+.tb_lst .in_row .inpbx{padding-top:0}
+.tb_lst .in_half{position:relative;width:340px}
+.tb_lst .in_half .inpbx{margin-bottom:10px}
+
+.tb_lst .u_id p,.tb_lst .u_id_email p{display:inline-block}
+.tb_lst .u_id .btn_black,.tb_lst .u_id_email .btn_black{margin-left:7px}
+.tb_lst .u_id_email .in_td:first-child{padding-top:0}
+.tb_lst .u_id_email .btn_black{width:111px;padding:0;text-align:center}
+.tb_lst .u_id_email .inpbx{width:155px}
+.tb_lst .u_id_email .split{width:30px}
+.tb_lst .u_id_email .txt{margin-top:21px;font-size:14px;font-weight:normal;color:#303033;line-height:24px}
+.tb_lst .u_id_email .txt a{color:#375fff}
+.tb_lst .edit_btnbx{margin-top:14px}
+.tb_lst .edit_btnbx .btn_bor{width:111px;height:30px;box-sizing:border-box}
+.tb_lst .edit_mode p{line-height:40px}
+.tb_lst .edit_mode .type{display:block;border-bottom:1px solid #d4d4d4;line-height:58px}
+.tb_lst .edit_mode .btn_black{display:none}
+.tb_lst .edit_mode .in_td{padding-top:9px}
+.tb_lst .edit_mode .pc_step{display:block}
+.tb_lst .edit_mode .edit_email .btn_black{display:inline-block}
+.tb_lst .edit_mode .step2,.tb_lst .edit_mode .step3{display:none}
+.tb_lst .email .split{width:30px}
+.tb_lst .email .btn_black{position:absolute;top:20px;right:0}
+.tb_lst .email .inpbx{width:155px}
+.tb_lst .email .inptxtbx{margin-top:10px}
+.tb_lst .email .inptxtbx textarea{resize:none}
+.tb_lst .password .inpbx{position:relative;margin-left:120px}
+.tb_lst .password .inpbx label{position:absolute;top:0;left:-120px;font-size:12px;line-height:40px}
+.tb_lst .password .err{position:absolute;top:100%;left:120px;margin-top:2px;font-size:12px;font-weight:normal;line-height:24px;color:#ff4800}
+.tb_lst .password .btn_black{position:absolute;bottom:0;left:100%;margin-left:5px;white-space:nowrap}
+.tb_lst .email .in_td,.tb_lst .password .in_td,.tb_lst .addr .in_td,.tb_lst .agree .in_td{padding:20px 0 16px 20px}
+.tb_lst .email .in_td:first-child,.tb_lst .password .in_td:first-child,.tb_lst .addr .in_td:first-child,.tb_lst .agree .in_td:first-child{padding:0}
+.tb_lst .addr .in_row{margin-bottom:10px}
+.tb_lst .addr .btn_bor{width:100%;height:40px}
+.tb_lst .addr .info{position:absolute;top:100%;left:0;margin-top:2px;font-size:12px;font-weight:normal;color:#303033;line-height:24px}
+.tb_lst .birth .in_row{width:360px}
+.tb_lst .birth .in_row .split{font-size:12px}
+.tb_lst .choose{font-size:0}
+.tb_lst .choose li{display:inline-block;margin-right:56px}
+.tb_lst .choose .tt{display:inline-block;margin-right:18px;font-size:14px;font-weight:700;line-height:30px;vertical-align:top}
+.tb_lst .choose .rabx{display:inline-block;margin-right:30px;vertical-align:top}
+.tb_lst .agree .info{margin:14px 0 20px;font-size:12px;font-weight:normal;color:#5d5d5d;line-height:24px}
+.tb_lst .sns p{display:inline-block;font-size:12px;color:#303033;line-height:40px}
+.tb_lst .sns p:before{display:inline-block;width:40px;height:40px;margin-right:10px;vertical-align:top;content:''}
+.tb_lst .sns .facebook:before{background:blue}
+.tb_lst .sns .google:before{background:red}
+.tb_lst .sns .btn_link{display:inline-block;width:75px;height:30px;margin-left:10px;padding:0;border-radius:2px;line-height:30px;text-align:center;box-sizing:border-box}
+.tb_lst .sns .btn_link.unlink{background:#fff}
+
+.my_modify .btn_bx{position:relative;margin-top:21px;text-align:center}
+.my_modify .btn_bx .btn_bor,.my_modify .btn_bx .btn_black{position:relative;z-index:1;width:82px;height:40px;border-radius:0;font-size:13px;line-height:40px;box-sizing:border-box;vertical-align:top}
+.my_modify .posi_bx{position:absolute;bottom:0;right:0;text-align:right}
+.my_modify .posi_bx .txt{display:inline-block;font-size:12px;color:#5d5d5d;line-height:40px}
+.my_modify .posi_bx .btn_bor{margin-left:10px}
+
+.edit_email{display:none;margin:9px 0 0 -20px;padding:9px 0 20px 20px;border-top:1px solid #d4d4d4}
+
+@media screen and (max-width:540px){
+.tb_lst .in_td{padding:7px 0 7px 20px}
+.tb_lst .in_td:first-child{width:90px;border-right:0}
+.tb_lst .in_row{width:100%}
+.tb_lst .in_row .split{width:18px}
+.tb_lst .in_half{width:auto}
+.tb_lst .in_half .inpbx:last-child{margin-bottom:0}
+.tb_lst .inpbx input::-webkit-input-placeholder{font-size:13px;font-weight:normal}
+
+.tb_lst .u_id_email p{line-height:60px}
+.tb_lst .u_id_email .in_td{padding-top:0}
+.tb_lst .u_id_email .btn_black{margin-left:0}
+.tb_lst .email .in_row{margin-bottom:10px}
+.tb_lst .email .btn_black{position:static;width:111px;padding:0;text-align:center}
+.tb_lst .email .inpbx{width:auto}
+.tb_lst .email .in_td,.tb_lst .password .in_td,.tb_lst .addr .in_td,.tb_lst .agree .in_td{padding:7px 0 7px 20px}
+.tb_lst .password .inpbx{margin-left:0}
+.tb_lst .addr .info{display:none}
+.tb_lst .birth .in_row{width:auto}
+.tb_lst .choose li{display:list-item;margin:6px 0 0 0}
+.tb_lst .choose .tt{display:block}
+.tb_lst .agree .info{margin:10px 0 0}
+.tb_lst .sns .choose li{position:relative;margin-top:16px;padding-right:90px}
+.tb_lst .sns .choose li:first-child{margin-top:0}
+.tb_lst .sns .btn_link{position:absolute;top:0;right:0;width:75px;height:40px;line-height:40px}
+.tb_lst .edit_mode .pc_step{display:none}
+.tb_lst .edit_mode .type{border:0;line-height:60px}
+.tb_lst .edit_btnbx .btn_bor{width:49%;height:40px;line-height:40px}
+.tb_lst .edit_email .inpbx{width:auto}
+.tb_lst .edit_email .txt{margin-top:0;font-size:13px;color:#303033;line-height:22px}
+.tb_lst .edit_step2 .btn_black,.tb_lst .edit_step3 .btn_black{display:none}
+.tb_lst .edit_step2 .step2 .btn_black{display:block;margin-top:10px;width:97px}
+.tb_lst .edit_step2 .step2{display:block}
+.tb_lst .edit_step3 .step3{display:block}
+.tb_lst .edit_step3 .step3 .btn_black{display:block}
+
+.edit_email{margin:0;padding:0;border:0}
+
+.my_modify .posi_bx{position:static;margin-top:16px}
+
+}
+</style>
+</head>
+<body>
+<div class="header_wrap">
+    <!-- [D] jquery include -->
+</div>
+
+<div class="my_wrap">
+	<!--[D] PC view -->
+	<div class="article_left">
+		<!--  MYPAGE 01  -->
+		<section class="my_my">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!-- Mobile view :: My 정보 안내 m_view -->
+		<section class="my_grade">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 02  -->
+		<section class="my_shop">
+			<!-- [D] jquery include -->
+		</section>
+
+		<!--  MYPAGE 03  -->
+		<section class="my_call">
+			<!-- [D] jquery include -->
+		</section>
+	</div>
+
+	<div class="article_right">
+
+		<section class="my_modify">
+			<h3 class="pc_view my_tit">회원정보수정</h3>
+			<form action="#">
+			<fieldset>
+				<legend>회원정보 수정 양식 작성</legend>
+				<ul class="tb_lst">
+					<li class="u_id">
+						<div class="in_td"><strong class="type">아이디</strong></div>
+						<div class="in_td">
+							<p>abc1234</p>
+						</div>
+					</li>
+					<li class="u_id_email edit_mode edit_step2 edit_step3">
+						<div class="in_td"><strong class="type">아이디 (이메일)</strong></div>
+						<div class="in_td">
+							<p>abc1234@naver.com</p>
+							<!--[D]
+								PC 일 경우 :: 이메일 변경하기 클릭시 li에 .edit_mode 추가,
+								Mobile 일 경우 :: 이메일 변경하기 클릭시 li에 .edit_step2 추가 -->
+							<button type="button" class="btn_black">이메일 변경</button>
+
+							<!-- PC View :: 이메일 변경하기 -->
+							<div class="edit_email pc_step">
+								<div class="in_row">
+									<span class="inpbx">
+										<input type="text" title="이메일 아이디 입력">
+									</span>
+									<span class="split">@</span>
+									<span class="inpbx">
+										<input type="text" title="이메일 도메인 입력">
+									</span>
+									<a href="#" class="btn_black">인증메일 전송</a>
+								</div>
+								<p class="txt">회원님은 현재 이메일주소를 변경하여, 신청하신 이메일 (<a href="mailto:kkangna0@ghmdi.com">kkangna0@ghmdi.com</a>)로 인증메일이 발송되었습니다.<br>이메일 확인 후 회원정보 수정 인증 버튼을 클릭하시면 이메일 변경이 완료되며, 변경하신 이메일주소로 로그인 하실 수 있습니다.</p>
+								<div class="edit_btnbx">
+									<button type="button" class="btn_bor">이메일 변경취소</button>
+									<a href="#" class="btn_bor">인증메일 재전송</a>
+								</div>
+							</div>
+
+							<!-- Mobile View :: 이메일 변경하기 step2  -->
+							<div class="edit_email step2">
+								<p class="txt">이메일 변경을 위해서 인증이 필요합니다</p>
+								<div class="inpbx">
+									<input type="text" title="이메일 아이디 입력">
+								</div>
+								<a href="#" class="btn_black">인증메일 전송</a> <!--[D] 클릭시, 부모 li에 .edit_step2 클래스 제거 후 .edit_step3 추가 -->
+							</div>
+
+							<!-- Mobile View :: 이메일 변경하기 step3 -->
+							<div class="edit_email step3">
+								<p class="txt">test123@naver.com (으)로 인증메일이 발송되었습니다. 이메일 확인 후 인증버튼을 클릭하시면 변경하신 이메일 주소로 로그인할 수 있습니다.</p>
+								<div class="edit_btnbx">
+									<button type="button" class="btn_bor">이메일 변경취소</button>
+									<a href="#" class="btn_bor">인증메일 재전송</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="email">
+						<div class="in_td"><strong class="type">이메일</strong></div>
+						<div class="in_td">
+							<div class="in_row">
+								<span class="inpbx">
+									<input type="text" title="이메일 아이디 입력">
+								</span>
+								<span class="split">@</span>
+								<span class="inpbx">
+									<input type="text" title="이메일 도메인 입력">
+								</span>
+							</div>
+							<a href="#" class="btn_black">이메일 인증하기</a>
+							<div class="inptxtbx">
+								<textarea rows="5" cols="1" class="field_inp"></textarea>
+							</div>
+						</div>
+					</li>
+					<li class="password">
+						<div class="in_td"><strong class="type">비밀번호변경</strong></div>
+						<div class="in_td">
+							<!--[D] PC View :: 비밀번호 변경 -->
+							<div class="pc_view in_half">
+								<div class="inpbx">
+									<label for="u_password">현재 비밀번호</label>
+									<input type="password" id="u_password">
+								</div>
+								<div class="inpbx">
+									<label for="u_password2">신규 비밀번호</label>
+									<input type="password" id="u_password2">
+								</div>
+								<div class="inpbx">
+									<label for="u_password3">비밀번호 다시 입력</label>
+									<input type="password" id="u_password3">
+								</div>
+								<p class="err">현재 비밀번호와 다릅니다</p>
+								<a href="#" class="btn_black">비밀번호 변경</a>
+							</div>
+
+							<div class="m_view in_half">
+								<div class="inpbx">
+									<input type="password" placeholder="현재 비밀번호">
+								</div>
+								<div class="inpbx">
+									<input type="password" placeholder="신규 비밀번호">
+								</div>
+								<div class="inpbx">
+									<input type="password" placeholder="비밀번호 다시 입력">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="name">
+						<div class="in_td"><strong class="type">이름</strong></div>
+						<div class="in_td">
+							<p>강나영</p>
+						</div>
+					</li>
+					<li class="hp">
+						<div class="in_td"><strong class="type">핸드폰번호</strong></div>
+						<div class="in_td">
+							<div class="in_row">
+								<span class="inpbx">
+									<input type="tel" title="첫 3자리 입력">
+								</span>
+								<span class="split">-</span>
+								<span class="inpbx">
+									<input type="tel" title="가운데 번호 입력">
+								</span>
+								<span class="split">-</span>
+								<span class="inpbx">
+									<input type="tel" title="마지막 번호 입력">
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="addr">
+						<div class="in_td"><strong class="type">주소</strong></div>
+						<div class="in_td">
+							<div class="in_row">
+								<span class="inpbx">
+									<input type="text" title="우편번호 처음 번호">
+								</span>
+								<span class="split">-</span>
+								<span class="inpbx">
+									<input type="text" title="우편번호 마지막 번호">
+								</span>
+								<span class="split">&nbsp;</span>
+								<span><button type="button" class="btn_bor">우편번호</button></span>
+							</div>
+							<div class="in_half">
+								<div class="inpbx">
+									<input type="text" title="주소 입력">
+								</div>
+								<div class="inpbx">
+									<input type="text" title="주소 상세입력">
+								</div>
+								<p class="info">주소를 수정할 경우 ‘기본배송지정보’ 도 추가됩니다</p>
+							</div>
+						</div>
+					</li>
+					<li class="birth">
+						<div class="in_td"><strong class="type">생일</strong></div>
+						<div class="in_td">
+							<div class="in_row">
+								<span class="inpbx">
+									<input type="tel" title="생년 입력">
+								</span>
+								<span class="split">년</span>
+								<span class="inpbx">
+									<input type="tel" title="달 입력">
+								</span>
+								<span class="split">월</span>
+								<span class="inpbx">
+									<input type="tel" title="일 입력">
+								</span>
+								<span class="split">일</span>
+							</div>
+						</div>
+					</li>
+					<li class="agree">
+						<div class="in_td"><strong class="type">수신여부</strong></div>
+						<div class="in_td">
+							<ul class="choose">
+								<li>
+									<strong class="tt">SNS 수신동의</strong>
+									<span class="rabx">
+										<input type="radio" id="u_agree" name="agree_sns">
+										<label for="u_agree">동의함</label>
+									</span>
+									<span class="rabx">
+										<input type="radio" id="u_agree2" name="agree_sns">
+										<label for="u_agree2">동의안함</label>
+									</span>
+								</li>
+								<li>
+									<strong class="tt">메일 수신동의</strong>
+									<span class="rabx">
+										<input type="radio" id="u_agree3" name="agree_mail">
+										<label for="u_agree3">동의함</label>
+									</span>
+									<span class="rabx">
+										<input type="radio" id="u_agree4" name="agree_mail">
+										<label for="u_agree4">동의안함</label>
+									</span>
+								</li>
+							</ul>
+							<p class="info">이벤트정보, 기타 다양한 정보를 빠르게 만나실 수 있습니다 (주문, 배송내역은 수신여부와 상관 없이 기본 발송됩니다)</p>
+						</div>
+					</li>
+					<li class="sns">
+						<div class="in_td"><strong class="type">SNS 연결정보</strong></div>
+						<div class="in_td">
+							<ul class="choose">
+								<li>
+									<p class="facebook">페이스북 계정</p>
+									<a href="#" class="btn_link">계정연결</a>
+								</li>
+								<li>
+									<p class="google">구글 계정</p>
+									<a href="#" class="btn_link unlink">연결해제</a> <!--[D] 이미 연결되어있을 경우 .unlink 추가 -->
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>회원정보 작성 완료</legend>
+				<div class="btn_bx">
+					<button type="reset" class="btn_bor">취소</button>
+					<button type="submit" class="btn_black">저장</button>
+					<div class="posi_bx">
+						<p class="txt">탈퇴를 원하시면 회원탈퇴 버튼을 눌러주세요</p>
+						<a href="#" class="btn_bor">회원탈퇴</a>
+					</div>
+				</div>
+			</fieldset>
+			</form>
+		</section>
+	</div>
+</div>
+<div class="footer">
+    <!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

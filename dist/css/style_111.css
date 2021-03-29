@@ -1,0 +1,84 @@
+
+/* add */
+.svg{overflow:hidden;display:inline-block;line-height:1000em;vertical-align:middle;background-repeat:no-repeat;background-size:100% 100%;}
+.svg_combined_black{width:43px;height:8px;background-image:url(../../svg/combined-shape-black.svg)}
+.svg_combined_grey{width:33px;height:8px;background-image:url(../../svg/combined-shape-grey.svg)}
+.svg_combined_white{width:43px;height:8px;background-image:url(../../svg/combined-shape-white.svg)}
+.svg_close_01{width:82px;height:82px;background-image:url(../../svg/close-bt-01.svg)}
+.svg_close_02{width:40px;height:40px;background-image:url(../../svg/close-bt-02.svg)}
+.svg_close_03{width:20px;height:20px;background-image:url(../../svg/close-bt-03.svg)}
+.svg_del_x_01{width:8px;height:8px;background-image:url(../../svg/del-x-01.svg)}
+.svg_del_x_02{width:16px;height:16px;background-image:url(../../svg/del-x-02.svg)}
+.svg_prve_b_01{width:40px;height:80px;background-image:url(../../svg/prve-b-01.svg)}
+.svg_next_b_01{width:40px;height:80px;background-image:url(../../svg/next-b-01.svg)}
+.svg_prve_w_01{width:40px;height:80px;background-image:url(../../svg/prve-w-01.svg)}
+.svg_next_w_01{width:40px;height:80px;background-image:url(../../svg/next-w-01.svg)}
+.svg_play{width:150px;height:150px;background-image:url(../../svg/play-bt.svg)}
+.svg_facebook{width:40px;height:40px;background-image:url(../../svg/facebook.svg)}
+.svg_search_big{width:40px;height:42px;background-image:url(../../svg/search-big.svg)}
+.svg_search_small{width:16px;height:17px;background-image:url(../../svg/search-small.svg)}
+.svg_heart_big_b{width:26px;height:22px;background-image:url(../../svg/heart-big-b.svg)}
+.svg_heart_big_r{width:26px;height:22px;background-image:url(../../svg/heart-big-r.svg)}
+.svg_heart_big_w{width:26px;height:22px;background-image:url(../../svg/heart-big-w.svg)}
+.svg_heart_small_b{width:16px;height:14px;background-image:url(../../svg/heart-small-b.svg)}
+.svg_heart_small_r{width:16px;height:14px;background-image:url(../../svg/heart-small-r.svg)}
+.svg_review{width:13px;height:14px;background-image:url(../../svg/review.svg)}
+.svg_login{width:18px;height:18px;background-image:url(../../svg/login-icon.svg)}
+.svg_my{width:16px;height:19px;background-image:url(../../svg/my-icon.svg)}
+.svg_cart{width:16px;height:19px;background-image:url(../../svg/cart-icon.svg)}
+.svg_heart{width:18px;height:16px;background-image:url(../../svg/heart-icon.svg)}
+.svg_navi_open{width:20px;height:20px;background-image:url(../../svg/navi-open.svg)}
+.svg_open_b{width:10px;height:5px;background-image:url(../../svg/open-b.svg)}
+.svg_open_g{width:10px;;height:5px;background-image:url(../../svg/open-g.svg)}
+.svg_price{width:30px;height:20px;background-image:url(../../svg/price.svg)}
+.svg_photo{width:15px;height:15px;background-image:url(../../svg/photo.svg)}
+.svg_list_01{width:14px;height:14px;background-image:url(../../svg/list-icon-01-b.svg)}
+.svg_list_02{width:20px;height:12px;background-image:url(../../svg/list-icon-02-b.svg)}
+.svg_more{width:28px;height:16px;background-image:url(../../svg/more.svg)}
+
+/*button*/
+.btn{display:inline-block;position:relative;text-align:center;vertical-align:top;box-sizing:border-box;outline:none;cursor:pointer}
+.btn_link{padding:6px 9px 4px;border:1px solid #d4d4d4;border-radius:2px;background:#fff;font-size:11px;line-height:15px;color:#000}
+.btn_home{position:relative;padding:20px 90px 18px 18px;border:1px solid #fff;border-radius:2px;font-size:15px;line-height:18px;color:#fff}
+.btn_home:after{position:absolute;top:50%;right:16px;width:43px;height:8px;margin-top:-4px;background:transparent url(../../svg/combined-shape-white.svg) no-repeat;content:''}
+.btn_view{position:relative;padding:14px 90px 14px 15px;border:1px solid #d4d4d4;border-radius:2px;font-size:15px;line-height:18px;color:#5d5d5d}
+.btn_view:after{position:absolute;top:50%;right:16px;width:33px;height:8px;margin-top:-4px;background:transparent url(../../svg/combined-shape-grey.svg) no-repeat;content:''}
+.btn_bd_txt{background:#fff;border-bottom:1px solid #a0a0a0;font-size:13px;line-height:15px;color:#a0a0a0}
+.btn_more{margin-top:20px;padding:10px 15px 10px;border:1px solid #5d5d5d;border-radius:2px;background:#fff;font-size:12px;line-height:15px;color:#000}
+.btn_sizehelp{width:100%;height:40px;background:#303033;font-size:13px;line-height:40px;color:#fff}
+.btn_shopbag,.btn_buynow{width:100%;height:60px;font-size:18px;line-height:60px;font-weight:600;color:#fff}
+.btn_shopbag{background:#303033}
+.btn_buynow{background:#ff4800;box-shadow:10px 10px 20px 0 rgba(0,0,0,0.3)}
+
+/*heart */
+.heart_area{overflow:hidden;text-align:center}
+.heart_area button{display:inline-block;vertical-align:top;outline:none}
+.heart_area .count{font-size:11px;color:#5d5d5d}
+.heart_area .active .count{color:#ff4800}
+.heart i{width:16px;height:14px;background-image:url(../../svg/heart-small-b.svg)}
+.heart.active i{background-image:url(../../svg/heart-small-r.svg)}
+.review i{width:13px;height:14px;background-image:url(../../svg/review.svg)}
+.review.active i{background-image:url(../../svg/review-r.svg)}
+
+/**/
+.dday_area{position:relative;margin:0 auto;box-sizing:border-box}
+.dday_area .dday_date{position:absolute;bottom:-30px;color:#000;font-size:.825em}
+.dday_area .dday_date.start{left:0}
+.dday_area .dday_date.end{right:0;color:rgba(0,0,0,0.24)}
+.dday_area .dday{position:relative;height:4px;background:#e4e4e4;margin-top:74px}
+.dday_area .day_remain{top:-60px}
+.day_remain{display:none;position:absolute;min-width:48px;padding:5px 10px;background:#ff4800;color:#fff;font-size:14px;text-align:center;font-family:"campton";font-weight:800}
+.day_remain:after{display:block;position:absolute;bottom:-6px;left:50%;width:0;height:0;margin-left:-3px;border-style:solid;border-width:6px 6px 0 0;border-color:#ff4800 transparent transparent transparent;content:''}
+.day_remain.active{display:block}
+
+/* 가이드 */
+.my_guide_tit{font-size:16px}
+.my_guide_info{margin-top:10px}
+.my_guide_info dt{display:block;font-weight: bold;font-size:12px;line-height:24px;color:#5d5d5d}
+.my_guide_info dd{font-size:12px;line-height:24px;color:#5d5d5d}
+.my_guide_info li{position: relative;padding-left:10px;font-size:14px;line-height:32px;color:#303033}
+.my_guide_info li:after{position:absolute;top:13px;left:0;width:4px;height:4px;border-radius: 50%;background:#000;content:'';}
+@media screen and (max-width:540px){
+    .my_guide_info li{font-size:13px;line-height:22px;}
+    .my_guide_info li:after{top:10px}
+}

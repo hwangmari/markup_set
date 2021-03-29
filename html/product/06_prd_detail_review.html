@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>상품상세 상품후기 :: 29CM</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+</head>
+<body>
+<div class="header_wrap">
+	<!-- [D] jquery include -->
+</div>
+
+<style type="text/css">
+/* 페이지 공통 */
+fieldset{padding:0;border:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.sp{display:inline-block;overflow:hidden;background:red;font-size:1px;line-height:9999px;white-space:nowrap}
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width: 540px){
+	.pc_view{display:none}
+	.m_view{display:block}
+	.detail_cnt_wrap{max-width:auto;padding:0 20px}
+}
+</style>
+
+<div class="detail_wrap">
+	<style>
+	.detail_cnt_wrap{padding:0 200px;max-width:1520px;margin:0 auto}
+	@media screen and (max-width: 1920px){
+		.detail_cnt_wrap{max-width:auto}
+	}
+	@media screen and (max-width: 1600px){
+		.detail_cnt_wrap{max-width:1200px;padding:0 50px}
+	}
+	@media screen and (max-width: 1000px){
+		.detail_cnt_wrap{max-width:900px}
+	}
+	@media screen and (max-width: 540px){
+		.detail_cnt_wrap{max-width:auto;padding:0 20px}
+	}
+	</style>
+	<div class="detail_cnt_wrap">
+		<div class="review_section write_mode">
+			<style>
+			.review_section {margin-top:40px;}
+			.review_section .dsc_btnbx{position:relative;padding-right:200px}
+			.review_section .btn_sizehelp{position:absolute;right:0;top:-5px;width:110px;}
+			.review_section h2{margin-top:15px;padding-bottom:10px;font-size:22px;line-height: 1.63;}
+			.review_section .my_tbl_lst{margin-top:40px;border-top:1px solid #d4d4d4}
+			@media screen and (max-width: 540px){
+				.review_section h2{display:inline-block;margin-top:0;padding:0;line-height:40px}
+				.review_section .dsc_btnbx{margin-bottom:10px;padding-right:0}
+				.review_section .btn_sizehelp{top:0}
+				.review_section .btn_review_more{display:block;position:relative;margin-top:20px;padding:0 40px 0 14px;border:1px solid #d4d4d4;border-radius:2px;font-size:12px;color:#000;line-height:48px}
+				.review_section .btn_review_more:after{position:absolute;top:50%;right:14px;width:33px;height:7px;margin-top:-3px;background:red;content:''}
+			}
+
+			/* 리스트 테이블 공통 스타일 */
+			.my_tbl_tit{border-top:4px solid #000;border-bottom:1px solid #000;font-weight: bold}
+			.my_tbl_lst .my_tbl_tit .tit{text-align: center}
+			.my_tbl_lst li{border-bottom:1px solid #d4d4d4}
+			.my_tbl_lst .btn_bor{position:absolute;top:50%;right:20px;width:43px;height:34px;margin-top:-17px;border-radius:2px;line-height:34px}
+			.my_tbl_info{display:table;table-layout:fixed;position:relative;width:100%;box-sizing: border-box;color:#303033}
+			.my_tbl_info .infoinner{display:table;table-layout:fixed;width:100%}
+			.my_tbl_info p{display:table-cell;min-height:50px;text-align:center;vertical-align:middle;font-size:14px}
+			@media screen and (max-width:540px){
+				.write_btnbx{margin-top:15px;text-align:left}
+				.write_btnbx .btn_black{width:93px;padding:0;line-height:36px;text-align:center}
+				.my_tbl_tit{display:none}
+				.my_tbl_lst{border-top:1px solid #e4e4e4}
+				.my_tbl_lst>li{position:relative}
+				.my_tbl_lst>li:last-child{border-bottom:0}
+				.my_tbl_lst .btn_bor{display:block;position:static;top:auto;bottom:auto;margin-top:10px}
+				.my_tbl_info{display:block}
+				.my_tbl_info p{display:block;min-height:auto;text-align:left;font-size:13px;line-height:22px}
+			}
+
+			/* 상품 후기 */
+			.my_tbl_review .infoinner p{padding:15px 0;color:#000}
+			.my_tbl_review .infoinner .tit{padding:15px 5% 15px 0;text-align:left}
+			.my_tbl_review .infoinner .col2{padding-right:20px;text-align:right}
+			.my_tbl_review .col2{width:170px}
+			.my_tbl_review .col3{width:114px}
+			.my_tbl_review .col4{width:114px}
+			.my_tbl_review .tit .in{display:inline-block;overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis}
+			.my_tbl_review .photo_type{position:relative}
+			.my_tbl_review .photo_type:after{position:absolute;width:15px;height:15px;margin-left:4px;background:red;vertical-align:middle;content:''}
+			.my_tbl_review .img_wrap{display:none}
+			.my_tbl_review .reply_row{display:none}
+			.my_tbl_review .reply_view .reply_row{display:block}
+			.my_tbl_review .reply_view .my_tbl_info{display:none}
+			@media screen and (max-width:540px){
+				.my_tbl_review .my_tbl_info{padding:15px 0}
+				.my_tbl_review .infoinner{display:block;position:relative;text-align:right}
+				.my_tbl_review .infoinner p{padding:0;font-size:12px;color:#a0a0a0;line-height:1}
+				.my_tbl_review .infoinner .col2{padding:0 12px 0 0;text-align:left}
+				.my_tbl_review .infoinner .tit{margin-bottom:10px;padding:0;text-align:left}
+				.my_tbl_review .col2,.my_tbl_review .col3,.my_tbl_review .col4{display:inline-block;width:auto}
+				.my_tbl_review .col4{position:absolute;bottom:0;left:0}
+			}
+
+			/* 포토후기 */
+			.review_thumbx{margin-top:20px}
+			.review_thumbx .my_tit{font-size:16px;color:#303033}
+			.slide_review_photo{overflow:hidden;position:relative;margin-top:8px;padding:0 40px}
+			.slide_review_photo img{width:100%;height:100%}
+			.slide_review_photo .slide_lst li{float:left;width:120px;height:120px;margin-left:15px;background:#d8d8d8}
+			.slide_review_photo .slide_lst li:first-child{margin-left:0}
+			.slide_review_photo .slide_btn_bx button{position:absolute;top:0;width:30px;height:120px;border:1px solid #e4e4e4;background:#fff}
+			.slide_review_photo .slide_btn_bx button .sp{width:8px;height:16px}
+			.slide_review_photo .slide_btn_bx .btn_prev{left:0}
+			.slide_review_photo .slide_btn_bx .btn_next{right:0}
+			@media screen and (max-width:540px){
+				.review_thumbx{margin-top:0;padding-top:20px;border-top:1px solid #d4d4d4}
+				.review_thumbx .my_tit{font-size:14px}
+				.slide_review_photo{overflow-x:auto;padding:0}
+				.slide_review_photo .slide_lst li{width:100px;height:100px;margin-left:10px}
+			}
+
+			/* 후기 쓰기 */
+			.review_write_wrap{display:none;position:relative;padding:40px 90px 28px 60px;border:1px solid #d4d4d4;border-top:4px solid #000;background:#fff;margin-bottom:-4px}
+			.review_write_wrap .field_section li{display:table;width:100%;table-layout:fixed}
+			.review_write_wrap .field_section li+li{margin-top:10px}
+			.review_write_wrap .field_section .title,.review_write_wrap .field_section .field{display:table-cell;vertical-align:top}
+			.review_write_wrap .field_section .title{width:80px}
+			.review_write_wrap .field_section .title label{display:inline-block;font-size:14px;font-weight:600;color:#303033;line-height:40px}
+			.review_write_wrap .btn_bx{margin-top:10px;text-align:right}
+			.review_write_wrap .btn_bx .btn_sizehelp{position:static;width:82px}
+			.review_write_wrap .inpbx,.review_write_wrap .selbx{display:inline-block;width:160px}
+			.review_write_wrap .inptxtbx{margin-top:10px}
+			.review_write_wrap .inptxtbx textarea{resize:none}
+			.review_write_wrap .ckbx{margin:9px 0 -9px 8px;vertical-align:middle}
+			.write_mode .review_write_wrap{display:block}
+
+			/* 후기 보기 */
+			.review_detail{position:relative;padding:30px 0 36px}
+			.review_detail .buying_option{font-size:14px;color:#000;line-height:22px}
+			.review_detail .buying_option strong{display:inline-block;font-size:16px;font-weight:600;vertical-align:top}
+			.review_detail .review{margin-top:11px;font-size:14px;color:#303033;line-height:24px;word-break:break-all}
+			.review_detail .btn_detail{margin-top:20px;font-size:12px;color:#000;text-decoration:underline}
+			.review_detail .review_info{position:absolute;top:33px;right:0;font-size:0}
+			.review_detail .review_info dt,.review_detail .review_info dd{display:inline-block}
+			.review_detail .review_info dd{width:114px;font-size:14px;color:#000;text-align:center}
+			.review_detail .review_info .user_id{width:170px;padding-right:20px;text-align:right}
+			.review_detail .img_lst{margin-top:18px}
+			.review_detail .img_lst:after{display:block;clear:both;content:''}
+			.review_detail .img_lst li{float:left;width:120px;height:120px;margin:15px 15px 0 0;background:#d8d8d8}
+			.review_detail .img_lst img{width:100%;height:100%}
+			@media screen and (max-width:540px){
+				.review_detail .review_info{position:relative;top:auto;margin-top:24px;text-align:right}
+				.review_detail .review_info dd{width:auto;font-size:12px;color:#a0a0a0}
+				.review_detail .review_info .user_id{width:auto;padding-right:12px}
+				.review_detail .review_info .star{position:absolute;top:0;left:0;}
+				.review_detail .img_lst li{width:100px;height:100px;margin:10px 10px 0 0}
+			}
+			</style>
+			<!--[D] 상품문의 쓰기 클릭시, .review_section에 .write_mode 클래스 추가 및 .btn.btn_sizehelp 버튼 문구 '닫기'로 변경 /
+					닫기 클릭시, .qa_write_mode 클래스 제거 및 .btn.btn_sizehelp 버튼 문구 '상품문의쓰기'로 변경  -->
+			<div class="dsc_btnbx">
+				<h2>상품 후기</h2>
+				<a href="#" class="btn btn_sizehelp">상품후기쓰기</a>
+				<!-- <a href="#" class="btn btn_sizehelp">닫기</a> -->
+			</div>
+			<form action="#">
+			<fieldset>
+				<legend>상품 후기 쓰기</legend>
+				<div class="review_write_wrap">
+					<ul class="field_section">
+						<li>
+							<div class="title">
+								<label for="textField_text1">이름</label>
+							</div>
+							<div class="field">
+								<div class="inpbx">
+									<input type="text" id="textField_text1">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<label for="textField_text2">이메일주소</label>
+							</div>
+							<div class="field">
+								<div class="inpbx">
+									<input type="text" id="textField_text2">
+								</div>
+								<span class="ckbx">
+									<!-- [D] jquery include -->
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="title">
+								<label for="textField_text3">리뷰내용</label>
+							</div>
+							<div class="field">
+								<div class="inptxtbx">
+									 <textarea id="textField_text3" rows="5" cols="1" class="field_inp"></textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_bx">
+						<button type="submit" class="btn_sizehelp">등록하기</button>
+					</div>
+				</div>
+			</fieldset>
+			</form>
+			<!--[D] 상품후기 있을 경우 -->
+			<div class="review_thumbx">
+				<h3 class="my_tit">포토후기</h3>
+				<div class="slide_wrap slide_review_photo">
+					<!--[D] slide, .slide_review_photo>.slide_lst width = li width값(120) + li여백(15)의 합 -->
+					<ul class="slide_lst" style="width:1215px">
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li></li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li></li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+						<li>
+							<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+						</li>
+					</ul>
+					<div class="slide_btn_bx pc_view">
+						<button type="button" class="btn_prev"><span class="sp">이전</span></button>
+						<button type="button" class="btn_next"><span class="sp">다음</span></button>
+					</div>
+				</div>
+			</div>
+			<ul class="my_tbl_lst my_tbl_review">
+				<li class="reply_view">
+					<div class="my_tbl_info"><!--[D] .infoinner 클릭시 li에 .reply_view 추가 -->
+						<a href="#" class="infoinner">
+							<p class="col tit photo_type"><span class="blind">후기내용</span><span class="in">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</span></p> <!--[D] 포토 후기 일 경우 .photo_type 클래스 추가 -->
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4">
+								<span class="blind">별점</span>
+								<span class="rating">
+									<!-- [D] jquery include -->
+								</span>
+							</p>
+						</a>
+					</div>
+					<div class="reply_row">
+						<div class="review_detail">
+							<p class="buying_option"><strong>NAVY, M size</strong> 구매</p>
+							<p class="review">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</p>
+							<button type="button" class="btn_detail">더보기</button> <!--[D] 3줄 이상일 경우 더보기버튼 노출 -->
+							<dl class="review_info">
+								<dt class="blind">작성자</dt>
+								<dd class="user_id">sandafdsdghun**</dd>
+								<dt class="blind">작성일</dt>
+								<dd class="date">2017.04.06</dd>
+								<dt class="blind">별점</dt>
+								<dd class="star">
+									<span class="rating">
+										<!-- [D] jquery include -->
+									</span>
+								</dd>
+							</dl>
+							<ul class="img_lst">
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+								<li>
+									<a href="#"></a>
+								</li>
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+								<li>
+									<a href="#"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="reply_view">
+					<div class="my_tbl_info"><!--[D] .infoinner 클릭시 li에 .reply_view 추가 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">후기내용</span><span class="in">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4">
+								<span class="blind">별점</span>
+								<span class="rating">
+									<!-- [D] jquery include -->
+								</span>
+							</p>
+						</a>
+					</div>
+					<div class="reply_row">
+						<div class="review_detail">
+							<p class="buying_option"><strong>NAVY, M size</strong> 구매</p>
+							<p class="review">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<!-- <button type="button" class="btn_detail">더보기</button> --> <!--[D] 3줄 이상일 경우 더보기버튼 노출 -->
+							<dl class="review_info">
+								<dt class="blind">작성자</dt>
+								<dd class="user_id">sandafdsdghun**</dd>
+								<dt class="blind">작성일</dt>
+								<dd class="date">2017.04.06</dd>
+								<dt class="blind">별점</dt>
+								<dd class="star">
+									<span class="rating">
+										<!-- [D] jquery include -->
+									</span>
+								</dd>
+							</dl>
+							<ul class="img_lst">
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+								<li>
+									<a href="#"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="my_tbl_info"><!--[D] .infoinner 클릭시 li에 .reply_view 추가 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">후기내용</span><span class="in">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</span></p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4">
+								<span class="blind">별점</span>
+								<span class="rating">
+									<!-- [D] jquery include -->
+								</span>
+							</p>
+						</a>
+					</div>
+					<div class="reply_row">
+						<div class="review_detail">
+							<p class="buying_option"><strong>NAVY, M size</strong> 구매</p>
+							<p class="review">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</p>
+							<button type="button" class="btn_detail">더보기</button> <!--[D] 3줄 이상일 경우 더보기버튼 노출 -->
+							<dl class="review_info">
+								<dt class="blind">작성자</dt>
+								<dd class="user_id">sandafdsdghun**</dd>
+								<dt class="blind">작성일</dt>
+								<dd class="date">2017.04.06</dd>
+								<dt class="blind">별점</dt>
+								<dd class="star">
+									<span class="rating">
+										<!-- [D] jquery include -->
+									</span>
+								</dd>
+							</dl>
+							<ul class="img_lst">
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="my_tbl_info"><!--[D] .infoinner 클릭시 li에 .reply_view 추가 -->
+						<a href="#" class="infoinner">
+							<p class="col tit"><span class="blind">후기내용</span><span class="in">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</span></p>
+							<p class="col2 user"><span class="blind">작성자</span>sandafdsdghun**</p>
+							<p class="col3 date"><span class="blind">작성일</span>2017.04.06</p>
+							<p class="col4">
+								<span class="blind">별점</span>
+								<span class="rating">
+									<!-- [D] jquery include -->
+								</span>
+							</p>
+						</a>
+					</div>
+					<div class="reply_row">
+						<div class="review_detail">
+							<p class="buying_option"><strong>NAVY, M size</strong> 구매</p>
+							<p class="review">플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다. 플리츠 치마가 유행이라 구입하고 싶었는데 콜라보토리에서 세련된 스웨셔츠 원피스가 나온걸 보고 바로 구매했습니다.</p>
+							<button type="button" class="btn_detail">더보기</button> <!--[D] 3줄 이상일 경우 더보기버튼 노출 -->
+							<dl class="review_info">
+								<dt class="blind">작성자</dt>
+								<dd class="user_id">sandafdsdghun**</dd>
+								<dt class="blind">작성일</dt>
+								<dd class="date">2017.04.06</dd>
+								<dt class="blind">별점</dt>
+								<dd class="star">
+									<span class="rating">
+										<!-- [D] jquery include -->
+									</span>
+								</dd>
+							</dl>
+							<ul class="img_lst">
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="//image.29cm.co.kr/contents/site/201707/20170721164115.jpg" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<a href="#" class="btn_review_more m_view">상품 후기 더보기</a>
+
+			<style type="text/css">
+			.pagnation{margin-top:34px;font-size:0;text-align:center}
+			.pagnation .sp{display:inline-block;width:11px;height:20px;margin:0 32px;background:red;vertical-align:middle}
+			.pagnation .prev{background-position:0 -160px}
+			.pagnation .next{background-position:-33px -160px}
+			.pagnation .num{display:inline-block;position:relative;padding:0 11px;font-size:16px;color:#8a8a8a;line-height:20px;vertical-align:middle;text-align:center}
+			.pagnation .on{font-weight:700;color:#000}
+			.pagnation .on:after{position:absolute;right:11px;left:11px;bottom:0;height:2px;background:#808080;content:''}
+			@media screen and (max-width:540px){
+				.pagnation .num{font-size:22px;line-height:auto}
+			}
+			</style>
+			<div class="pagnation pc_view">
+				<a href="#" class="sp prev">이전 페이지</a>
+				<a href="#" class="num on">1<span class="blind">현재 페이지</span></a>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="num">4</a>
+				<a href="#" class="num">5</a>
+				<a href="#" class="num">6</a>
+				<a href="#" class="num">7</a>
+				<a href="#" class="num">8</a>
+				<a href="#" class="num">...</a>
+				<a href="#" class="num">32</a>
+				<a href="#" class="sp next">다음 페이지</a>
+			</div>
+
+			<style type="text/css">
+			/* 리스트 없을 경우 */
+			.my_tbl_none{padding:104px 0 98px;border-top:4px solid #000;border-bottom:1px solid #d4d4d4;font-size:16px;font-weight:600;color:#303033;line-height:26px;text-align:center}
+			@media screen and (max-width:540px) {
+				.my_tbl_none{padding:200px 0;border:0}
+			}
+			</style>
+			<!--[D] 상품후기 없을 경우 -->
+			<p class="my_tbl_none">등록된 상품후기가 없습니다</p>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<!-- [D] jquery include -->
+</div>
+
+<!-- [D] 소스 관리를 위한 jquery 선언입니다. 개발시 삭제 부탁드립니다 -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../../js/jquery.include.js"></script>
+</body>
+</html>

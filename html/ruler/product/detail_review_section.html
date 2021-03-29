@@ -1,0 +1,225 @@
+<style>
+.review_section{position:relative}
+.review_section .imgbx{display:block;overflow:hidden;position:relative;width:100%;padding-top:100%}
+.review_section .imgin{position:absolute;top:0;left:0;bottom:0;right:0;display:flex;align-items:center;justify-content:center}
+.review_section .imgin img{width:100%}
+.review_section ruler-basic-pagination{display:block}
+@media screen and (min-width:541px){
+.review_section{padding-top:100px}
+.review_section .item_tit{margin-top:15px;padding-bottom:10px}
+.review_section .dsc_btnbx{position:relative;padding-right:200px;border-bottom:4px solid #000}
+.review_section .btn_sizehelp{position:absolute;right:0;top:-10px;width:110px}
+.review_section .btn_review_more{display:none}
+.review_section ruler-basic-pagination{margin:35px auto 0}
+
+}
+@media screen and (max-width:540px){
+.review_section{margin-top:-40px;padding:50px 20px 0;min-height:150px}
+.review_section .item_tit{display:inline-block;margin-top:0;padding:0;line-height:40px}
+.review_section .dsc_btnbx{position:relative;padding-right:0;font-size:18px}
+.review_section .btn_review_more{display:block;position:relative;margin:20px 0 60px;padding:0 40px 0 14px;border:1px solid #d4d4d4;border-radius:2px;font-size:12px;color:#a0a0a0;line-height:48px}
+.review_section .btn_review_more .ico{position:absolute;top:50%;right:14px;width:33px;height:7px;margin-top:-1px}
+.review_section .btn_review_more .ico ruler-svg-icon-combinedshape{display:inline-block;font-size:0;line-height:1;vertical-align:top}
+.review_section .btn_review_more .ico ruler-svg-icon-combinedshape svg{vertical-align:top}
+/deep/ .review_section ruler-basic-pagination{display:none!important}
+/deep/ .review_section ruler-basic-dialog ruler-dialog{background:none!important}
+/deep/ .review_section ruler-basic-dialog .body{top:0!important;right:0;left:0!important;bottom:0;box-shadow:none!important;transform:none!important}
+}
+
+/* 리스트 없을 경우 */
+.review_none{padding:104px 0 98px;border-bottom:1px solid #d4d4d4;font-size:16px;font-weight:600;color:#303033;line-height:26px;text-align:center}
+.review_none .btn_sizehelp{display:none}
+@media screen and (max-width:540px) {
+.dsc_btnbx .btn_sizehelp{display:none}
+.review_none{padding:50px 0 20px;border:0;font-size:18px}
+.review_none .btn_sizehelp{display:block;position:static;width:100%;height:60px;margin-top:50px;font-size:18px;line-height:60px}
+}
+
+/* 상품 후기 리스트 */
+.my_tbl_review .infoinner p{padding:12px 0 11px}
+.my_tbl_review .infoinner .tit{padding-right:3%;text-align:left;font-size:15px;color:#303033}
+.my_tbl_review .tit .in{display:inline-block;overflow:hidden;max-width:90%;margin-top:5px;white-space:nowrap;text-overflow:ellipsis}
+.my_tbl_review .md_review{display:inline-block;margin-right:5px;font-size:15px;font-weight:bold;line-height:24px;color:#ff4800}
+.my_tbl_review .buying_option .md_review{display:none}
+.my_tbl_review .sp_photo{display:none;width:15px;height:15px;margin:-8px 0 0 10px;background-position:-25px 0}
+.my_tbl_review .photo_type{position:relative}
+.my_tbl_review .photo_type .sp_photo{display:inline-block;position:absolute}
+.my_tbl_review .img_wrap{display:none}
+@media screen and (min-width:541px){
+.my_tbl_review .infoinner .col2{padding-right:20px;text-align:right}
+.my_tbl_review .col2{width:170px}
+.my_tbl_review .col3{width:114px}
+.my_tbl_review .col4{width:114px}
+.my_tbl_review .col2,
+.my_tbl_review .col3{font-size:13px;color:#000}
+.my_tbl_review .col4 .rating{display:block;margin-top:5px}
+.my_tbl_review .photo_type .sp_photo{top:50%}
+}
+@media screen and (max-width:540px){
+.my_tbl_review{border-top:1px solid #e4e4e4}
+.my_tbl_review >li{position:relative;display:none;padding-bottom:40px}
+.my_tbl_review >li .infoinner{position:static}
+.my_tbl_review >li .my_tbl_info{position:static}
+.my_tbl_review >li:nth-child(1),
+.my_tbl_review >li:nth-child(2){display:block}
+/* .my_tbl_review .my_tbl_info{padding:15px 0 0} */
+.my_tbl_review .infoinner{display:block;text-align:right}
+.my_tbl_review .infoinner p{padding:0;font-size:11px;color:#000;line-height:1}
+.my_tbl_review .infoinner .col2{padding:0 12px 0 0;text-align:left}
+.my_tbl_review .infoinner .tit{margin-bottom:10px;padding:0;text-align:left;font-weight:bold}
+/* .my_tbl_review .infoinner .tit .in{display:none} */
+.my_tbl_review .md_review{display:block;margin-bottom:5px;font-size:14px}
+.my_tbl_review .buying_option .md_review{display:block}
+.my_tbl_review .col2,.my_tbl_review .col3,.my_tbl_review .col4{display:inline-block;position:absolute;bottom:15px;width:auto}
+.my_tbl_review .col2{right:70px}
+.my_tbl_review .col3{right:0}
+.my_tbl_review .col4{left:0}
+.my_tbl_review .col4 .rating{display:inline-block}
+/deep/ .my_tbl_review ruler-rating .rating{width:13px!important;height:13px!important;line-height:13px!important}
+/deep/ .my_tbl_review ruler-rating .rating_cout_in{width:13px!important;height:13px!important}
+.my_tbl_review .photo_type .sp_photo{top:14px}
+}
+
+/* 후기 전체보기 */
+.review_detail{position:relative;padding:0}
+.review_detail .buying_option{margin-bottom:11px;font-size:14px;color:#000;line-height:22px}
+.review_detail .buying_option strong{display:inline-block;font-size:16px;font-weight:600;vertical-align:top}
+.review_detail .review{line-height:1.6;font-size:15px;color:#303033;word-break:break-all}
+.review_detail .img_lst:after{display:block;clear:both;content:''}
+.review_detail .img_lst li{float:left}
+.review_detail .img_lst img{width:100%}
+@media screen and (min-width:541px){
+.reply_row{display:none;padding:30px;background:#f8f8f8}
+.reply_view .reply_row{display:block}
+.review_detail .review{padding-right:100px}
+.review_detail .img_lst li{width:120px;height:120px;margin:15px 15px 0 0;background:#d8d8d8}
+}
+@media screen and (max-width:540px){
+.reply_row{display:none}
+.reply_view .reply_row{display:block}
+/* .reply_row .review_detail .review{display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-wrap: break-word}
+.reply_view .reply_row .review_detail .review{-webkit-line-clamp:unset} */
+
+.review_detail .review{padding-right:20px;box-sizing:border-box}
+.review_detail .img_lst li{width:80px;height:80px;margin:10px 10px 0 0;border:0!important}
+
+}
+
+.btn_close{display:block;position:absolute;top:0}
+.btn_close ruler-svg-icon-close{display:block;vertical-align:top}
+@media screen and (min-width:541px){
+.btn_close{right:0;width:80px;height:80px;padding:20px}
+.btn_close ruler-svg-icon-close{width:40px;height:40px}
+/deep/ .btn_close g{stroke-width:2px!important}
+}
+@media screen and (max-width:540px){
+.btn_close{left:0;width:60px;height:60px;padding:18px}
+.btn_close ruler-svg-icon-close{width:22px;height:22px}
+/deep/ .btn_close g{stroke-width:6px!important}
+}
+
+/* 모바일용 상품후기 더보기 레이어 */
+.photo_review_mwrap{display:none}
+@media screen and (max-width:540px) {
+/deep/ .photo_review_mwrap ruler-dialog{background:none!important}
+/deep/ .photo_review_mwrap ruler-dialog header{position:relative;padding-top:20px;z-index:10;background:#fff}
+/deep/ .photo_review_mwrap ruler-dialog .btn_close{z-index:15}
+/deep/ .isAppView .photo_review_mwrap ruler-dialog .btn_close{display:none}
+
+/deep/ .photo_review_mwrap .body{overflow-y:auto;top:0!important;right:0;left:0!important;bottom:0;height:100%;padding:0px!important;box-shadow:none!important;transform:none!important;box-sizing:border-box}
+/deep/ .photo_review_mwrap ruler-basic-pagination{display:block!important;margin:20px auto 0}
+
+.photo_review_mwrap{display:block}
+.photo_review_mwrap .my_tit{padding-bottom:15px;text-align:center}
+.photo_review_mwrap .my_tbl_lst{border-top:0}
+.photo_review_mwrap .my_tbl_lst>li{padding:10px 20px 40px}
+.photo_review_mwrap .my_tbl_lst li{display:list-item}
+.photo_review_mwrap .infoinner p{color:#a0a0a0}
+.photo_review_mwrap .my_tbl_review .col2{right:90px}
+.photo_review_mwrap .my_tbl_review .col3{right:20px}
+.photo_review_mwrap .my_tbl_review .col4{left:20px}
+.photo_review_mwrap .scroll_wrap{position:absolute;top:0px;left:0;right:0;bottom:0px;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-transform:translateZ(0);-webkit-perspective:0}
+.photo_review_mwrap .scroll_wrap .inner{padding:60px 0 100px 0}
+/* /deep/ .isInApp .photo_review_mwrap ruler-dialog .scroll_wrap .inner{padding-top:0!important} */
+.photo_review_mwrap .btn_wrap {position:fixed;left:0;right:0;bottom:0;z-index:100;width:auto;background:#fff;padding:0 20px 20px 20px}
+.photo_review_mwrap .btn_wrap .btn_sizehelp{height:60px;font-size:18px;line-height:60px;font-weight:600}
+/* .photo_review_mwrap .btn_sizehelp{position:fixed;left:20px;right:20px;bottom:20px;z-index:100;width:auto;height:60px;font-size:18px;line-height:60px;font-weight:600} */
+}
+
+
+/* 포토 스와이퍼 */
+.review_thumbx{margin-top:25px}
+.review_thumbx .my_tit{font-size:16px;color:#303033}
+.slide_review_photo{overflow:hidden;position:relative;margin-top:12px;padding:0 40px}
+.slide_review_photo .slide_lst li{float:left;width:120px;height:120px;margin-left:15px;background:#d8d8d8}
+.slide_review_photo .slide_lst li:first-child{margin-left:0}
+.slide_review_photo .slide_btn_bx button{position:absolute;top:0;width:30px;height:120px;padding:0 10px;border:1px solid #e4e4e4;background:#fff;box-sizing:border-box}
+.slide_review_photo .slide_btn_bx .btn_prev{left:0}
+.slide_review_photo .slide_btn_bx .btn_next{right:0}
+.review_listbx .my_tit{padding-bottom:12px;border-bottom:2px solid #303033;font-size:16px;color:#303033}
+/deep/ .swiper-slide{width:120px;height:120px;background:#d8d8d8}
+/deep/ .review_thumbx .recent_view_swiper{padding:0!important}
+/deep/ .review_thumbx .recent_view_swiper .swiper-slide{width:120px!important;background:none}
+/deep/ .review_thumbx .recent_view_swiper .swiper-button-prev, /deep/ .review_thumbx .recent_view_swiper .swiper-button-next{display:none!important}
+/deep/ .review_thumbx .recent_view_swiper .swiper-pagination .swiper-pagination-bullet{vertical-align:top}
+/deep/ .review_thumbx .swiper-button-prev{display:none}
+/deep/ .review_thumbx .swiper-button-next{display:none}
+/deep/ .slide_review_photo .slide_btn_bx path,/deep/ .slide_review_photo .slide_btn_bx path{stroke-width:5px!important;stroke:#a0a0a0!important}
+/deep/ .slide_review_photo .swiper-container .swiper-slide{width:120px;height:120px;background:#d8d8d8}
+/deep/ .slide_review_photo .swiper-container{padding-bottom:25px!important}
+@media screen and (max-width:540px){
+.review_thumbx{margin-top:0;padding-top:10px;border-top:1px solid #d4d4d4}
+.review_thumbx .my_tit{font-size:14px}
+.review_listbx .my_tit{font-size:14px;border-bottom:1px solid #e4e4e4}
+.slide_review_photo{overflow-x:auto;margin-top:5px;padding:0}
+.slide_review_photo .slide_lst li{width:100px;height:100px;margin-left:10px}
+/deep/ .review_thumbx .recent_view_swiper .swiper-pagination{display:block!important;bottom:0}
+/deep/ .slide_review_photo .swiper-container{padding-bottom:15px!important}
+/deep/ .slide_review_photo .swiper-container .swiper-slide{width:100px;height:100px}
+/deep/ .review_thumbx .recent_view_swiper .swiper-slide{width:100px!important}
+}
+
+
+/* full 후기 이미지  */
+.slide_review_photo .imgin,
+.img_lst .imgin{background-repeat:no-repeat;background-size:cover;background-position:50% 50%}
+
+/* 후기이미지 */
+/deep/ .layer_images_view .body{background:none!important}
+/deep/ .layer_images_view .btn_close{display:none!important}
+
+ruler-message-dialog{text-align:center}
+ruler-message-dialog ruler-svg-icon-next{display:inline-block;width:4px;height:10px;margin-left:20px}
+.btn_bor{display:inline-block;width:161px;margin-top:24px;border:1px solid #d4d4d4;border-radius:2px;font-size:14px;color:#5d5d5d;line-height:40px;text-align:center;box-sizing:border-box}
+
+.pc_view{display:block}
+.m_view{display:none}
+@media screen and (max-width:540px){
+.pc_view{display:none}
+.m_view{display:block}
+}
+
+/deep/ .isInApp .container{display:none}
+/deep/ .isInApp .footer{display:none}
+/deep/ .isInApp .review_section{padding-top:10px;margin-top:0}
+@media screen and (max-width:540px) {
+/deep/ .isInApp  section.product{padding-top:0}
+/deep/ .isInApp .review_section{padding-top:10px;margin-top:0}
+}
+
+/deep/ .review_section .ico_progress{display:block;position:absolute;top:50%;left:50%;width:32px!important;height:32px!important;margin-top:-16px;margin-left:-16px}
+/deep/ .review_section .ico_progress .container{display:block;width:32px}
+
+</style>
+<div class="review_section" id="review_section" name="name_item_review">
+   <div class="dsc_btnbx">
+        <h2 class="item_tit">상품 후기 </h2>
+        <a class="btn btn_sizehelp" href="#">상품후기쓰기</a>
+    </div>
+    <div class="review_listbx">
+        <div class="review_none">
+            <p class="my_tbl_none">등록된 상품후기가 없습니다</p>
+            <a class="btn btn_sizehelp" href="#">상품후기쓰기</a>
+        </div>
+    </div>
+</div>

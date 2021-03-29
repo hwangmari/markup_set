@@ -1,0 +1,186 @@
+<style>
+.colorpicker{display:inline-block;position:relative}
+.colorpicker .colorbx_set ul{overflow:hidden;clear:both}
+.colorpicker .colorbx_set ul li{float:left;overflow:hidden;margin:0 15px 15px 0}
+.colorpicker .colckbx{display:inline-block;overflow:hidden;position:relative;width:20px;height:20px;line-height:20px;vertical-align:top}
+.colorpicker .colckbx input{position:absolute;top:-100%;left:-100%;z-index:-10;width:13px;height:13px;background:transparent}
+.colorpicker .colckbx label{position:absolute;top:0;left:0;z-index:10;width:20px;height:20px;box-sizing:border-box;border:1px solid #d4d4d4;line-height:100em;vertical-align:top}
+.colorpicker .colckbx ruler-svg-icon-ck{position:absolute;top:0;left:0;width:20px;height:20px;box-sizing:border-box;text-align: center}
+.colorpicker .colckbx input[type=checkbox]:checked +label+ ruler-svg-icon-ck{z-index:20}
+
+</style>
+
+<!-- <div class="colorpicker"> -->
+    <div class="colorbx_set">
+        <ul>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_01" value=""/>
+                    <label for="colorpicker_01" title="" style="border-color:#bb193e;background-color:#bb193e">와인</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_02" value=""/>
+                    <label for="colorpicker_02" title="" style="border-color:#d50c0c;background-color:#d50c0c">레드</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_03" value=""/>
+                    <label for="colorpicker_03" title="" style="border-color:#f66800;background-color:#f66800">오렌지</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_04" value=""/>
+                    <label for="colorpicker_04" title="" style="border-color:#764006;background-color:#764006">브라운</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_05" value=""/>
+                    <label for="colorpicker_05" title="" style="border-color:#c47c26;background-color:#c47c26">카멜</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_06" value=""/>
+                    <label for="colorpicker_06" title="" class="b" style="border-color:#f3e219;background-color:#f3e219">옐로우</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_07" value=""/>
+                    <label for="colorpicker_07" title="" class="b" style="border-color:#f5ecc3;background-color:#f5ecc3">베이지</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_08" value=""/>
+                    <label for="colorpicker_08" title="" class="b" style="border-color:#fbfcdf;background-color:#fbfcdf">아이보리</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_09" value=""/>
+                    <label for="colorpicker_09" title="" style="border-color:#526931;background-color:#526931">카키</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_10" value=""/>
+                    <label for="colorpicker_10" title="" style="border-color:#21ba21;background-color:#21ba21">그린</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_11" value=""/>
+                    <label for="colorpicker_11" title="" style="border-color:#5ad99f;background-color:#5ad99f">민트</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_12" value=""/>
+                    <label for="colorpicker_12" title="" style="border-color:#47bbdc;background-color:#47bbdc">스카이블루</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_13" value=""/>
+                    <label for="colorpicker_13" title="" style="border-color:#3585c2;background-color:#3585c2">블루</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_14" value=""/>
+                    <label for="colorpicker_14" title="" style="border-color:#0f4384;background-color:#0f4384">네이비</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_15" value=""/>
+                    <label for="colorpicker_15" title="" style="border-color:#83007e;background-color:#83007e">바이올렛</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_16" value=""/>
+                    <label for="colorpicker_16" title="" style="border-color:#b163af;background-color:#b163af">라일락</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_17" value=""/>
+                    <label for="colorpicker_17" title="" style="border-color:#ea8cbb;background-color:#ea8cbb">베이비핑크</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_18" value=""/>
+                    <label for="colorpicker_18" title="" style="border-color:#eb3691;background-color:#eb3691">핑크</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_19" value=""/>
+                    <label for="colorpicker_19" title="" class="b" style="border-color:#ccc;background-color:#fff">화이트</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_20" value=""/>
+                    <label for="colorpicker_20" title="" class="b" style="border-color:#d9d9d9;background-color:#d9d9d9">그레이</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_21" value=""/>
+                    <label for="colorpicker_21" title="" style="border-color:#6b6b6b;background-color:#6b6b6b">차콜</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_22" value=""/>
+                    <label for="colorpicker_22" title="" style="border-color:#000;background-color:#000">블랙</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_23" value=""/>
+                    <label for="colorpicker_23" title="" class="b" style="border-color:#ededed;background-color:#ededed">실버</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#000"></ruler-svg-icon-ck>
+                </span>
+            </li>
+            <li>
+                <span class="colckbx">
+                    <input type="checkbox" id="colorpicker_24" value=""/>
+                    <label for="colorpicker_24" title="" style="border-color:#ebbd87;background-color:#ebbd87">골드</label>
+                    <ruler-svg-icon-ck width="14" height="11" stroke="#fff"></ruler-svg-icon-ck>
+                </span>
+            </li>
+        </ul>
+    </div>
+<!-- </div> -->
