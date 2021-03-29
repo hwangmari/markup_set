@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>스크롤 체이팅 현상 </title>
+<body>
+
+<style media="screen">
+.scroll{width:500px;padding:50px;border:1px dotted #000;overflow:auto}
+.scrollin{overflow:auto;width:1000px;margin:30px;border:1px solid #000;background:#ccc;height:100px;}
+.bx{width:2000px;height:50px;background:#ddd;}
+.behavior{overscroll-behavior-x:contain}
+
+
+</style>
+<div class="scroll">
+  body - 전체 스크롤 영역 / 스크롤 체이팅 현상 막는법 <br>
+  ex 가로스크롤
+
+  <div class="scrollin">
+    <div class="bx">
+      기본 스크롤 <br>
+      바디 스크롤과 컨텐츠 스크롤이 동일하게 반응합니다.
+    </div>
+  </div>
+  <div class="scrollin behavior">
+    <div class="bx">
+      overscroll-behavior-x:contain <br>
+      컨텐츠 스크롤이 다 이뤄진 후에 body 스크롤이 반응합니다.
+    </div>
+  </div>
+</div>
+
+<a href="https://codepen.io/hwangmari/pen/gOgMJEJ">codepen</a>
+
+
+</body>
+</html>
